@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11px" height="6px" viewBox="0 0 11 6" version="1.1">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>›</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Flight-Depart" transform="translate(-335.000000, -103.000000)" fill="#6522FF">
+            <g id="Group-6">
+                <path d="M343.428571,105.819549 L343.428571,106.180451 C343.26817,106.350878 342.786971,106.822051 341.984962,107.593985 L340.285714,109.24812 L338.195489,111.398496 L338,111.428571 L337.443609,111.037594 L337.428571,110.87218 C339.313293,108.416028 340.471176,106.791984 340.902256,106 C340.661653,105.58897 340.162911,104.852136 339.406015,103.789474 C338.649119,102.726812 337.989978,101.839603 337.428571,101.12782 L337.443609,100.962406 L338,100.571429 L338.195489,100.601504 C339.568929,102.015045 340.822049,103.273177 341.954887,104.37594 L343.428571,105.819549 Z" id="›" transform="translate(340.428571, 106.000000) rotate(-270.000000) translate(-340.428571, -106.000000) "/>
+            </g>
+        </g>
+    </g>
+</svg>

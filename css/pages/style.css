@@ -1,0 +1,367 @@
+@import url("base.css");
+
+/* Style.css */
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body,
+#fusion {
+     overflow-x: hidden;
+}
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+img {
+    max-width:100%;
+    height: auto;
+}
+body,
+html,
+form,
+#fusion p,
+#fusion h1,
+#fusion h2,
+#fusion h3,
+#fusion h4,
+#fusion h5,
+#fusion h6,
+#fusion label,
+#fusion button,
+#fusion input,
+#fusion select,
+#fusion textarea,
+#fusion .pure-g [class *="pure-u"] {
+    margin: 0;
+    padding: 0;
+   	font-family: 'Montserrat', sans-serif;
+   	color: #292929;
+    
+}
+#fusion .fusion-select,
+#fusion .pure-input,
+#fusion .pure-button,
+#fusion input,
+#fusion input[readonly],
+#fusion button,
+#fusion select {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+     -ms-box-shadow: none;
+     -o-box-shadow: none;
+     box-shadow: none;
+     box-sizing: border-box;
+     background: #FFFFFF;
+     color: inherit;
+     outline: 0;
+}
+#fusion .dd-options,
+#fusion .dd-select,
+#fusion input,
+#fusion select {
+     border: 1px solid #D8D8D8;
+     background: #FFFFFF;
+     font-size: 16px;
+     font-weight: 400;
+     color: #5e6067;
+     height: auto;
+}
+
+#fusion .pure-input {
+     border: 1px solid #d3d3d3;
+     background: #FFFFFF;
+     padding: 0 13px;
+}
+
+#fusion textarea.pure-input {
+     resize: none;
+     line-height: inherit;
+     padding: 13px;
+}
+
+#fusion .pure-input,
+#fusion .pure-button {
+     border-radius: 3px;
+     -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+}
+
+#fusion .pure-button {
+     display: block;
+     padding: 0;
+     background-color: #FE4210;
+     color: #FFFFFF;
+     box-sizing: border-box;
+}
+
+#fusion .fusion-label {
+     display: block;
+     position: relative;
+     margin: 0;
+     padding: 0;
+}
+
+#fusion .fusion-checkbox {
+     padding-left: 35px;
+     line-height: 20px;
+}
+
+#fusion .fusion-checkbox > span {
+     display: inline-block;
+     margin-top: 3px;
+}
+
+/* ASSUMES LIST ITEM */
+
+#fusion .fusion-inline > * {
+     display: inline-block;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+}
+
+#fusion .fusion-block > *,
+#fusion .fusion-block > a {
+     display: block;
+}
+
+#fusion .fusion-top > * {
+     display: inline-block;
+     vertical-align: top;
+}
+
+#fusion .fusion-middle > * {
+     display: inline-block;
+     vertical-align: middle;
+}
+
+#fusion .fusion-bottom > * {
+     display: inline-block;
+     vertical-align: bottom;
+}
+
+#fusion b,
+#fusion strong {
+     color: #292929;
+     color: inherit;
+}
+
+#fusion a:link,
+#fusion a:visited,
+#fusion a {
+     text-decoration: none;
+}
+
+#fusion a {
+     color: #6522FF;
+}
+
+#fusion .fusion-align {
+     height: 100%;
+     text-align: center;
+}
+
+#fusion .fusion-align:before {
+     content: '';
+     height: 100%;
+     margin-right: 0.0px;
+}
+
+#fusion .fusion-align:before,
+#fusion .fusion-align > * {
+     display: inline-block;
+     vertical-align: middle;
+}
+
+#fusion .fusion-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 977px;
+    min-height: 200px;
+    box-sizing: border-box;
+}
+
+#fusion header nav.fusion-container {
+	min-height: 0;
+}
+
+/* Icons */
+#fusion .icon {
+     display: inline-block;
+     background-image: url('../../images/global.png');
+}
+
+html.svg.touch #fusion .icon {
+     background-image: url('../../images/global.svg');
+}
+
+#fusion .icon-logo {
+	width: 130px;
+	height: 46px;
+	background-position: -10px -954px;
+}
+
+#fusion .icon-footer-logo {
+	width: 80px;
+	height: 28px;
+	background-position: -10px -654px;
+}
+
+#fusion .icon-facebook {
+	width: 7px;
+	height: 17px;
+	background-position: -10px -617px;
+}
+
+#fusion .icon-twitter {
+	width: 16px;
+	height: 13px;
+	background-position: -10px -1493px;
+}
+
+#fusion .icon-instagram {
+	width: 16px;
+	height: 16px;
+	background-position: -10px -812px;
+}
+
+#fusion .icon-arrow-down {
+	width: 18px;
+	height: 10px;
+	background-position: -10px -183px;
+}
+
+/* HEADER */
+.top-section {
+	padding: 10px 15px 30px;
+}
+#fusion .nav-wrap {
+	position: relative;
+}
+#fusion nav {
+	padding: 12px 0;
+}
+#fusion nav ul {
+	margin: 0;
+}
+#fusion nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right: 40px;
+}
+#fusion nav ul li a {
+	color: #fff;
+}
+#fusion nav ul li a:hover {
+	text-decoration: underline;
+}
+#fusion .purple-fill {
+	position: absolute;
+	width: 50%;
+	height: 43px;
+	top: 0;
+	right:0;
+}
+
+/* FOOTER */
+#fusion footer .fusion-container {
+	border-top: 2px solid #EAEAEA;
+	padding-top: 40px;
+}
+#fusion footer a {
+	color: #292929;
+}
+#fusion footer .footer-links p {
+	font-size: 11px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+#fusion footer ul:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+#fusion footer ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right: 20px;
+}
+#fusion footer ul li:last-child {
+	margin-right: 0;
+}
+#fusion footer p.copyright {
+	display: block;
+	float: right;
+	text-align: right;
+	font-size: 10px;
+}
+
+
+/* DESKTOP - Tablet */
+@media (min-width: 768px) {
+	#fusion nav {
+		margin-bottom: 40px;
+	}
+	#fusion footer ul {
+		float: right;
+		margin-top: 0;
+	}
+	#fusion footer .left-links {
+		width: 215px;
+	}
+}
+
+/* DESKTOP */
+@media(min-width: 1040px) {
+	
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1039px) {
+	#fusion nav {
+		width: 100%;
+	}
+}
+
+/* MOBILE */
+@media (max-width: 766px) {
+	#fusion nav {
+		width: 100%;
+	}
+	#fusion .fusion-container {
+	    width: 100%!important;
+	}
+	#fusion footer .fusion-container {
+		padding: 30px 10px 0;
+	}
+	#fusion footer .pure-g [class *="pure-u"].footer-content {
+		border-left: 1px solid #EAEAEA;
+		box-sizing: border-box;
+		padding-left: 20px;
+	}
+	#fusion footer .left-links, #fusion footer .right-links {
+		float: none;
+		width: 100%;
+	}
+	#fusion footer .footer-links p {
+		margin-bottom: 20px;
+	}
+	#fusion footer .footer-links p a {
+		font-weight: 600;
+		font-size: 12px;
+	}
+	#fusion footer .footer-content ul {
+		padding-left: 0;
+	}
+	#fusion footer p.copyright {
+		float: none;
+		text-align: left;
+	}
+
+}

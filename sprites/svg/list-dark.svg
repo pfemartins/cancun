@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="15px" viewBox="0 0 23 15" version="1.1">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="SR---Hotels" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g transform="translate(-1173.000000, -303.000000)" id="Group-2" stroke="#292929" stroke-width="3">
+            <g transform="translate(1175.000000, 303.000000)">
+                <path d="M7.28571429,1.5 L18.7285625,1.5" id="Line"/>
+                <path d="M7.28571429,7.5 L18.7285625,7.5" id="Line"/>
+                <path d="M7.28571429,13.5 L18.7285625,13.5" id="Line"/>
+                <path d="M0.0476190476,1.5 L1.95476042,1.5" id="Line"/>
+                <path d="M0.0476190476,7.5 L1.95476042,7.5" id="Line"/>
+                <path d="M0.0476190476,13.5 L1.95476042,13.5" id="Line"/>
+            </g>
+        </g>
+    </g>
+</svg>

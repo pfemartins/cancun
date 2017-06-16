@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="15px" viewBox="0 0 23 15" version="1.1">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="23" height="15" rx="5"/>
+    </defs>
+    <g id="Checkout---Hotel-+-Flights" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Checkout-2" transform="translate(-793.000000, -1016.000000)">
+            <g id="Group-7" transform="translate(793.000000, 1016.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"/>
+                </mask>
+                <use id="Mask" fill="#F4F4F4" xlink:href="#path-1"/>
+                <rect id="Rectangle-25" fill="#4361C3" mask="url(#mask-2)" x="0" y="-1" width="24" height="17"/>
+                <image id="Bitmap" mask="url(#mask-2)" x="6" y="4" width="12" height="6" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAdCAYAAADl208VAAAABGdBTUEAA1teXP8meAAABCZJREFUWAm9WM1vE0cUf2/WCdECbZUUDFISpEpUQiX1wYmNiMTHNaUq2Igb1/bEAVX0BD2UXFHJpZX4Gygpn8qNgNQ6iQUUsAQHpKjlM2oTVWoIArLz+puNvfGmdrJ4d/qk2Z15M+8383v7ZmZnmCLIbD7f7WldIOZ9TPQJTLYibUT6B2kGqSIi1x2i0a5y+THKkUV+yncDtwCDfcS0E2+DvQFpHgnYcp+Er5PIBS5OPoFuVcH4msufuVw/gE6hwwNopZq3DGo0cldZ5PSH5XI50DbIyEVgewrYFB1b6AqJGubir02xGxJ6ls26bY5zBuP4EikKkZVDNsTOieue2Dw+bjwdiFzOuuS1nSGJgc10jt50nOAjYWzTyX8IzQ4M9Ai8LMx9wShazACn4ogM1cJQfh7oIXGuAi42NjAqxN4QHwyHeIiQmSta5Bc07m2RQyOzPxTzYOc3qFKcODZpGayfW0E4mTADGeO9JMkYgr2aZEw8NWYDG0665oex6QkSEKrOmU+X1Mk+2aGPF25oszrakD5/TlaR/ZD7q78/J0qVoAsIJtlz5zGllQtsK+j+SDFdeRcfKk35XYDMt7bIgIRwOylZxI6CZEkYy5vhQDyXzfZ6jjONvB3/1aMiHjq/wod63wotTVp9pECmaI2M8ViqLuFX4s0jRIcdUeToArqjvXbwl1C7jtd/IuhCG0XCPQvvTQE/Y9FngnkTpoAStyVMJICTDON/7SXKbqBLOrPyAyEmur5eoUyuzwUTclbJmDn0P4prultAskIqtYX0B0eVtc/RwFELprOnDSoSUS2+IK7tP8HbSwS6GcizFBaECubp9mYtYuk18ez3OgTRvp3pvUJ4nQg1iFWQCvZxGY+FsYYxIwbq96L2bWsYxKse5+qR4XfgWIn1DUMsHX28/Ems9OJ7AX8Ksk11Tfrn9EvxHNPcen4Mtw3V/zgJR19zo5Zq+LI5Fy35S6nTwLAzXTWpubOa5kY0ebMtjTSKkfk635mGPqFNExO3sTj8GMWylTYCV63LMKXSrVhHsvmBixO3Tcsgol87jjkk/xbJ/B0bMcv99fv53juaRW1+l96yGbsvAaGeUukVzv6fQztdrUvqNc2khtiRz2xgI9QO8JHSq9pgA0JG4S8QnjeI7J1ag5jvOwQ8g+tfZOi3yWIDr/6CxIw1RMgoNt269XzedXdjfzqLYqtnzEVcNo4YHINncI1wEfm/O3bj7BoLG0gjBsfHW4IOnsv7Q6BazszkchmcyU5iwTgELbJrigfAUawBw+mpqburtZYLuQwgT+LnKDI2DvOjWIyHudAce1VCtQHN5PNpsDmMHWUPPL8Dl5DdqFuH9BrlJyg/YOabIHI+PTlp7roji1zMp7FhHMZ18x4Y7UAKsHG7+hinqYeIlptw53n+Ym3sfwE5KV2fqwPBzQAAAABJRU5ErkJggg=="/>
+                <polygon id="Rectangle-25" fill-opacity="0.15" fill="#FFFFFF" mask="url(#mask-2)" points="-11 6.28244197 21.7581413 -11 28 -0.282441968 -4.75814135 17"/>
+            </g>
+        </g>
+    </g>
+</svg>
