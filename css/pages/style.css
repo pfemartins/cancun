@@ -61,6 +61,10 @@ form,
      color: inherit;
      outline: 0;
 }
+#fusion input[type=checkbox]
+{
+  -webkit-appearance:checkbox;
+}
 #fusion .dd-options,
 #fusion .dd-select,
 #fusion input,
@@ -72,7 +76,7 @@ form,
      color: #5e6067;
      height: auto;
 }
-
+#
 #fusion .pure-input {
      border: 1px solid #d3d3d3;
      background: #FFFFFF;
@@ -106,6 +110,10 @@ form,
      margin: 0;
      padding: 0;
 }
+#fusion button {
+	box-shadow: none;
+	border: none;
+}
 
 #fusion .fusion-checkbox {
      padding-left: 35px;
@@ -115,6 +123,18 @@ form,
 #fusion .fusion-checkbox > span {
      display: inline-block;
      margin-top: 3px;
+}
+
+#fusion .fusion-checkbox .icon-checkbox {
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     margin: auto;
+}
+
+#fusion input:checked + .icon-checkbox {
+     background-position: -10px -2130px;
 }
 
 /* ASSUMES LIST ITEM */
@@ -191,6 +211,17 @@ form,
 	min-height: 0;
 }
 
+#fusion .fusion-select {
+	position: relative;
+	box-sizing: border-box;
+}
+
+#fusion .fusion-select .icon {
+	position: absolute;
+    right: 2px;
+    top: 5px;
+}
+
 /* Icons */
 #fusion .icon {
      display: inline-block;
@@ -204,7 +235,7 @@ html.svg.touch #fusion .icon {
 #fusion .icon-logo {
 	width: 130px;
 	height: 46px;
-	background-position: -10px -954px;
+	background-position: -10px -987px;
 }
 
 #fusion .icon-footer-logo {
@@ -222,19 +253,82 @@ html.svg.touch #fusion .icon {
 #fusion .icon-twitter {
 	width: 16px;
 	height: 13px;
-	background-position: -10px -1493px;
+	background-position: -10px -1559px;
 }
 
 #fusion .icon-instagram {
 	width: 16px;
 	height: 16px;
-	background-position: -10px -812px;
+	background-position: -10px -845px;
 }
 
 #fusion .icon-arrow-down {
 	width: 18px;
 	height: 10px;
 	background-position: -10px -183px;
+}
+
+#fusion .icon-arrow-down-small {
+	width: 12px;
+	height: 7px;
+	background-position: -10px -98px;
+}
+
+#fusion .icon-star {
+	width: 14px;
+	height: 14px;
+	background-position: -10px -1464px;
+}
+
+#fusion .icon-half-star {
+	width: 9px;
+	height: 14px;
+	background-position: -10px -772px;
+}
+#fusion .icon-tripadvisor {
+	width: 21px;
+	height: 12px;
+	background-position: -10px -1527px;
+}
+#fusion .icon-list-dark {
+	width: 19px;
+	height: 14px;
+	background-position: -10px -882px;
+}
+#fusion .icon-map-light {
+	width: 26px;
+	height: 20px;
+	background-position: -10px -1054px;
+}
+#fusion .icon-wifi {
+	width: 23px;
+	height: 17px;
+	background-position: -10px -1627px;
+}
+#fusion .icon-room-service {
+	width: 25px;
+	height: 17px;
+	background-position: -10px -1354px;
+}
+#fusion .icon-pool {
+	width: 24px;
+	height: 21px;
+	background-position: -11px -1314px;
+}
+#fusion .icon-gym {
+	width: 22px;
+	height: 21px;
+	background-position: -11px -702px;
+}
+#fusion .icon-spa {
+	width: 22px;
+	height: 23px;
+	background-position: -10px -1391px;
+}
+#fusion .icon-arrow-up {
+	width: 12px;
+	height: 7px;
+	background-position: -10px -364px;
 }
 
 /* HEADER */

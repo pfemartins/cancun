@@ -112,6 +112,25 @@ img,legend{border:0}legend,td,th{padding:0}.pure-button:focus,a:active,a:hover{o
 #fusion .pink {
 	color: #DD949D;
 }
+#fusion .purple {
+	color: #6522FF;
+}
+#fusion .purple-bg {
+	background: #6522ff;
+}
+#fusion a.button, #fusion button {
+	padding: 10px;
+	display: block;
+	border-radius: 3px;
+	text-align: center;
+	box-sizing: border-box;
+}
+#fusion a.button.purple-bg, #fusion button.purple-bg {
+	color: #fff;
+}
+#fusion a.button.purple, #fusion button.purple {
+	border: 1px solid #6522FF;
+}
 
 
 /* DESKTOP */
