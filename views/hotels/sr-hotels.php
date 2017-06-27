@@ -33,8 +33,8 @@
 						</div>
 						<div class="pure-u-1-4 pure-u-md-6-24 section hide-for-small">
 							<div class="location">Cozumel</div>
-							<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
-							<button>Update Search</button>
+							<a href=""><i class="icon icon-arrow-down hide-for-small last"></i></a>
+							<button class="purple update-search">Update Search</button>
 						</div>
 					</div>
 
@@ -122,7 +122,7 @@
 										<a href=""><i class="icon icon-map-light"></i></a>
 										<a href=""><i class="icon icon-list-dark"></i></a>
 									</div>
-									<a class="button mobile-filters-button">Filters</a>
+									<a class="button mobile-filters-button hide-for-large hide-for-medium">Filters</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
