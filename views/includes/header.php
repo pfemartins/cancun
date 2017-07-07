@@ -1,7 +1,7 @@
 <header>
 	<div class="pure-g row top-section fusion-middle">
 		<div class="pure-u-1">
-			<i class="icon icon-logo"></i>
+			<a href="?"><i class="icon icon-logo"></i></a>
 		</div>
 	</div>
 	<div class="pure-g row">

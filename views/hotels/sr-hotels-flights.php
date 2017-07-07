@@ -11,35 +11,30 @@
 			<form action="" method="POST">
 				<div class="fusion-container">
 					<div class="pure-g row filter-box">
-						<div id="wedding-labels" class="fusion-dates" data-date-output="#wedding-labels .fusion-date-checkin,#wedding-labels .fusion-date-checkout">
-							<div class="pure-u-1-4 pure-u-md-5-24 section check-in-wrap">
-								<h4 class="pink hide-for-small">Check-In</h4>
-								<div class="date"><span class="number">21</span> / June</div>
-								<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
-								<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
-							</div>
-							<div class="pure-u-1-4 pure-u-md-5-24 section check-out-wrap">
-								<h4 class="pink hide-for-small">Check-Out</h4>
-								<div class="date"><span class="number">27</span> / June</div>
-								<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
-								<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
-							</div>
-
-							<div class="pure-u-1-4 pure-u-md-4-24 section">
-								<h4 class="pink">Guests</h4>
-								<div class="guests"><span class="number">1</span></div>
-								<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
-							</div>
-							<div class="pure-u-1-4 pure-u-md-4-24 section">
-								<h4 class="pink">Rooms</h4>
-								<div class="rooms"><span class="number">1</span></div>
-								<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
-							</div>
-							<div class="pure-u-1-4 pure-u-md-6-24 section hide-for-small">
-								<div class="location">Cozumel</div>
-								<a href=""><i class="icon icon-arrow-down hide-for-small last"></i></a>
-								<button class="purple update-search">Update Search</button>
-							</div>
+						<div class="pure-u-1-4 pure-u-md-5-24 section">
+							<h4 class="pink hide-for-small">Check-In</h4>
+							<div class="date"><span class="number">21</span> / June</div>
+							<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
+						</div>
+						<div class="pure-u-1-4 pure-u-md-5-24 section">
+							<h4 class="pink hide-for-small">Check-Out</h4>
+							<div class="date"><span class="number">27</span> / June</div>
+							<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
+						</div>
+						<div class="pure-u-1-4 pure-u-md-4-24 section">
+							<h4 class="pink">Guests</h4>
+							<div class="guests"><span class="number">1</span></div>
+							<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
+						</div>
+						<div class="pure-u-1-4 pure-u-md-4-24 section">
+							<h4 class="pink">Rooms</h4>
+							<div class="rooms"><span class="number">1</span></div>
+							<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
+						</div>
+						<div class="pure-u-1-4 pure-u-md-6-24 section hide-for-small">
+							<div class="location">Cozumel</div>
+							<a href=""><i class="icon icon-arrow-down hide-for-small last"></i></a>
+							<button class="purple update-search">Update Search</button>
 						</div>
 					</div>
 
@@ -181,8 +176,89 @@
 									Taxes included</p>
 									<a href="" class="button purple-bg hide-for-small">Book</a>
 								</div>
+								<div class="flight-wrap">
+									<div class="pure-u-1 flight-info">
+										<div class="pure-g row intro-info">
+											<div class="pure-u-1-6 hide-for-small">
+												<img src="images/hotels/search-results/aero-mexico.png">
+											</div>
+											<div class="pure-u-7-8 pure-u-md-7-12">
+												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
+											</div>
+											<div class="pure-u-1-8 pure-u-md-1-4">
+												<a href="" class="toggle-flight">
+													<i class="icon icon-arrow-down-purple right"></i>
+													<p class="right hide-for-small">VIEW | EDIT</p>
+												</a>
+											</div>
+										</div>
+										<div class="pure-g row flight-to-from">
+											<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
+											<div class="pure-u-1-6 hide-for-small">
+												<div class="img-box">
+													<img src="images/hotels/search-results/aero-mexico.png">
+												</div>
+											</div>
+											<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+												<p>San Francisco</p>
+												<h2>SFO</h2>
+												<p>00:01 hrs<br>
+												Flight 359/394</p>
+											</div>
+											<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+												<i class="icon icon-arrow-left"></i>
+											</div>
+											<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+												<p>Cancun</p>
+												<h2>CUN</h2>
+												<p>10:00 hrs<br>
+												<b>1 Stop:</b> Guadalajara</p>
+											</div>
+											<div class="pure-u-1 pure-u-md-1-3 duration-details">
+												<p>Duration<br>
+												7hr 59m</p>
+												<a href="" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+											</div>
+											<div class="pure-u-1"><hr></div>
+										</div>
+										<div class="pure-g row flight-to-from">
+											<div class="pure-u-1"><i class="icon icon-plane-left left"></i><h5>Flight back</h5></div>
+											<div class="pure-u-1-6 hide-for-small">
+												<div class="img-box">
+													<img src="images/hotels/search-results/aero-mexico.png">
+												</div>
+											</div>
+											<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+												<p>Cancun</p>
+												<h2>CUN</h2>
+												<p>10:00 hrs<br>
+												<b>1 Stop:</b> Guadalajara</p>
+											</div>
+											<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+												<i class="icon icon-arrow-left"></i>
+											</div>
+											<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+												<p>San Francisco</p>
+												<h2>SFO</h2>
+												<p>00:01 hrs<br>
+												Flight 359/394</p>
+											</div>
+											<div class="pure-u-1 pure-u-md-1-3 duration-details">
+												<p>Duration<br>
+												7hr 59m</p>
+												<a href="" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+											</div>
+										</div>
+									</div>
+									<div class="pure-u-1 change-flight">
+										<p>This is the cheapest flight available!</p>
+										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+									</div>
+								</div>
+								
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button purple-bg book-btn">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -230,8 +306,8 @@
 									</div>
 								</div>
 								<div class="pure-u-6-24 pure-u-md-5-24 price-wrap">
-									<div class="retail">$299</div>
-									<div class="price"><sup>$</sup>239</div>
+									<div class="retail">$1,493</div>
+									<div class="price"><sup>$</sup>1,289</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
 									<a href="" class="button purple-bg hide-for-small">Book</a>
@@ -285,8 +361,8 @@
 									</div>
 								</div>
 								<div class="pure-u-6-24 pure-u-md-5-24 price-wrap">
-									<div class="retail">$299</div>
-									<div class="price"><sup>$</sup>239</div>
+									<div class="retail">$1,493</div>
+									<div class="price"><sup>$</sup>1,489</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
 									<a href="" class="button purple-bg hide-for-small">Book</a>
@@ -340,8 +416,8 @@
 									</div>
 								</div>
 								<div class="pure-u-6-24 pure-u-md-5-24 price-wrap">
-									<div class="retail">$299</div>
-									<div class="price"><sup>$</sup>239</div>
+									<div class="retail">$1,493</div>
+									<div class="price"><sup>$</sup>743</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
 									<a href="" class="button purple-bg hide-for-small">Book</a>

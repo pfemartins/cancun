@@ -22,19 +22,19 @@ img {
 body,
 html,
 form,
-#fusion p,
-#fusion h1,
-#fusion h2,
-#fusion h3,
-#fusion h4,
-#fusion h5,
-#fusion h6,
-#fusion label,
-#fusion button,
-#fusion input,
-#fusion select,
-#fusion textarea,
-#fusion .pure-g [class *="pure-u"] {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+button,
+input,
+select,
+textarea,
+.pure-g [class *="pure-u"] {
     margin: 0;
     padding: 0;
    	font-family: 'Montserrat', sans-serif;
@@ -235,100 +235,135 @@ html.svg.touch #fusion .icon {
 #fusion .icon-logo {
 	width: 130px;
 	height: 46px;
-	background-position: -10px -987px;
+	background-position: -10px -990px;
 }
 
 #fusion .icon-footer-logo {
 	width: 80px;
 	height: 28px;
-	background-position: -10px -654px;
+	background-position: -10px -657px;
 }
 
 #fusion .icon-facebook {
 	width: 7px;
 	height: 17px;
-	background-position: -10px -617px;
+	background-position: -10px -620px;
 }
 
 #fusion .icon-twitter {
 	width: 16px;
 	height: 13px;
-	background-position: -10px -1559px;
+	background-position: -10px -1562px;
 }
 
 #fusion .icon-instagram {
 	width: 16px;
 	height: 16px;
-	background-position: -10px -845px;
+	background-position: -10px -848px;
 }
 
 #fusion .icon-arrow-down {
 	width: 18px;
 	height: 10px;
-	background-position: -10px -183px;
+	background-position: -10px -186px;
 }
 
 #fusion .icon-arrow-down-small {
 	width: 12px;
 	height: 7px;
-	background-position: -10px -98px;
+	background-position: -10px -101px;
 }
 
 #fusion .icon-star {
 	width: 14px;
 	height: 14px;
-	background-position: -10px -1464px;
+	background-position: -10px -1467px;
 }
 
 #fusion .icon-half-star {
 	width: 9px;
 	height: 14px;
-	background-position: -10px -772px;
+	background-position: -10px -775px;
 }
 #fusion .icon-tripadvisor {
 	width: 21px;
 	height: 12px;
-	background-position: -10px -1527px;
+	background-position: -10px -1530px;
 }
 #fusion .icon-list-dark {
 	width: 19px;
 	height: 14px;
-	background-position: -10px -882px;
+	background-position: -10px -885px;
 }
 #fusion .icon-map-light {
 	width: 26px;
 	height: 20px;
-	background-position: -10px -1054px;
+	background-position: -10px -1057px;
 }
 #fusion .icon-wifi {
 	width: 23px;
 	height: 17px;
-	background-position: -10px -1627px;
+	background-position: -10px -1630px;
 }
 #fusion .icon-room-service {
 	width: 25px;
 	height: 17px;
-	background-position: -10px -1354px;
+	background-position: -10px -1357px;
 }
 #fusion .icon-pool {
 	width: 24px;
 	height: 21px;
-	background-position: -11px -1314px;
+	background-position: -11px -1317px;
 }
 #fusion .icon-gym {
 	width: 22px;
 	height: 21px;
-	background-position: -11px -702px;
+	background-position: -11px -705px;
 }
 #fusion .icon-spa {
 	width: 22px;
 	height: 23px;
-	background-position: -10px -1391px;
+	background-position: -10px -1394px;
 }
 #fusion .icon-arrow-up {
 	width: 12px;
 	height: 7px;
-	background-position: -10px -364px;
+	background-position: -10px -367px;
+}
+#fusion .icon-arrow-down-purple {
+	width: 17px;
+	height: 9px;
+	background-position: -10px -72px;
+}
+#fusion .icon-arrow-down-purple-small {
+	width: 12px;
+	height: 7px;
+	background-position: -10px -45px;
+}
+#fusion .icon-plane-right {
+	width: 17px;
+	height: 17px;
+	background-position: -10px -1280px;
+}
+#fusion .icon-plane-left {
+	width: 17px;
+	height: 17px;
+	background-position: -10px -1206px;
+}
+#fusion .icon-plane-purple {
+	width: 17px;
+	height: 17px;
+	background-position: -10px -1243px;
+}
+#fusion .icon-arrow-left {
+	width: 24px;
+	height: 21px;
+	background-position: -12px -251px;
+}
+#fusion .icon-arrow-up-purple-small {
+	width: 12px;
+	height: 7px;
+	background-position: -10px -367px;
 }
 
 /* HEADER */

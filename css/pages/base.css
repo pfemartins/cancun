@@ -131,6 +131,9 @@ img,legend{border:0}legend,td,th{padding:0}.pure-button:focus,a:active,a:hover{o
 #fusion a.button.purple, #fusion button.purple {
 	border: 1px solid #6522FF;
 }
+#fusion p.light {
+	font-weight: 300;
+}
 
 
 /* DESKTOP */
@@ -138,6 +141,18 @@ img,legend{border:0}legend,td,th{padding:0}.pure-button:focus,a:active,a:hover{o
    	.hide-for-large {
 		display: none!important;
    	}  
+   	#fusion .m {
+          position: absolute !important;
+          overflow: hidden !important;
+          clip: rect(0 0 0 0);
+          height: 1px !important;
+          width: 1px !important;
+          margin: -1px !important;
+          padding: 0 !important;
+          border: 0 !important;
+          z-index: 0 !important;
+          display: none !important;
+     }
 }
 
 /* TABLET */

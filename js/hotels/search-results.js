@@ -167,3 +167,6 @@ mobileTripAdvisorSlider.noUiSlider.on('update', function ( values, handle ) {
 		var numVal = parseFloat(newValue.replace(/,/g, ''));
 		document.getElementById("mobile-tripAdvisorValue").value = numVal;
 });
+
+
+/* Grab date info */

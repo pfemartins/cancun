@@ -8,5 +8,5 @@
      <link rel="stylesheet" href="css/pages/base.css">
      <link rel="stylesheet" href="css/pages/style.css">
      <link rel="stylesheet" href="css/pages/plugins.css">
-     
+     <link rel="stylesheet" href="css/pages/date.css">
      
