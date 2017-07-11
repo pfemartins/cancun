@@ -456,6 +456,10 @@ html.svg.touch #fusion .icon {
 	#fusion nav {
 		width: 100%;
 	}
+	#fusion .fusion-container {
+		width: 100%;
+		padding: 10px;
+	}
 }
 
 /* MOBILE */
@@ -493,4 +497,8 @@ html.svg.touch #fusion .icon {
 		text-align: left;
 	}
 
+	/* Calendar mobile fix */
+	#fusion .pika-single.overlay .overlay-labels button {
+		width: 50%;
+	}
 }
