@@ -34,12 +34,12 @@
 .filter-box .section .date .number, #fusion .filter-box .section .guests .number, #fusion .filter-box .section .rooms .number, #fusion .mobile-search-bar .date, #fusion .mobile-search-bar .guests, #fusion .mobile-search-bar .rooms {
 	font-size: 32px;
 }
-.filter-box .section .icon-arrow-down {
+.filter-box .section .icon-arrow-down, #mobile-dates .section .icon-arrow-down {
 	position: absolute;
 	bottom: 10px;
 	right: 15px;
 }
-.filter-box .section .icon-arrow-down.last {
+.filter-box .section .icon-arrow-down.last, #mobile-dates .section .icon-arrow-down.last {
 	top: 10px;
 	bottom: 0;
 }

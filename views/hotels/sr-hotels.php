@@ -11,7 +11,7 @@
 			<form action="" method="POST">
 				<div class="fusion-container">
 					<div class="pure-g row filter-box">
-						<div id="wedding-labels" class="fusion-dates" data-date-output="#wedding-labels .fusion-date-checkin,#wedding-labels .fusion-date-checkout">
+						<div id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
 							<div class="pure-u-1-4 pure-u-md-5-24 section check-in-wrap">
 								<h4 class="pink hide-for-small">Check-In</h4>
 								<div class="date"><span class="number">21</span> / June</div>
@@ -485,15 +485,19 @@
 						
 					</div>
 					<div class="pure-g row">
-						<div class="pure-u-1-2 section">
-							<h4 class="pink">Check-In</h4>
-							<a href=""><i class="icon icon-arrow-down right"></i></a>
-							<div class="date"><span class="number">21</span> / June</div>
-						</div>
-						<div class="pure-u-1-2 section">
-							<h4 class="pink">Check-Out</h4>
-							<a href=""><i class="icon icon-arrow-down right"></i></a>
-							<div class="date"><span class="number">27</span> / June</div>
+						<div id="mobile-dates" class="fusion-dates" data-date-output="#mobile-dates .fusion-date-checkin,#mobile-dates .fusion-date-checkout">
+							<div class="pure-u-1-2 section check-in-wrap">
+								<h4 class="pink">Check-In</h4>
+								<div class="date"><span class="number">21</span> / June</div>
+								<a><i class="icon icon-arrow-down"></i></a>
+								<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
+							</div>
+							<div class="pure-u-1-2 section check-out-wrap">
+								<h4 class="pink">Check-Out</h4>
+								<div class="date"><span class="number">27</span> / June</div>
+								<a><i class="icon icon-arrow-down"></i></a>
+								<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
+							</div>
 						</div>
 					</div>
 					<div class="pure-g row">
