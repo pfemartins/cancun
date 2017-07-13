@@ -11,29 +11,51 @@
 			<form action="" method="POST">
 				<div class="fusion-container">
 					<div class="pure-g row filter-box">
-						<div class="pure-u-1-4 pure-u-md-5-24 section">
-							<h4 class="pink hide-for-small">Check-In</h4>
-							<div class="date"><span class="number">21</span> / June</div>
-							<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
-						</div>
-						<div class="pure-u-1-4 pure-u-md-5-24 section">
-							<h4 class="pink hide-for-small">Check-Out</h4>
-							<div class="date"><span class="number">27</span> / June</div>
-							<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
-						</div>
+						<span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
+							<div class="pure-u-1-4 pure-u-md-5-24 section check-in-wrap">
+								<h4 class="pink hide-for-small">Check-In</h4>
+								<div class="date"><span class="number">21</span> / June</div>
+								<a><i class="icon icon-arrow-down hide-for-small"></i></a>
+								<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
+							</div>
+							<div class="pure-u-1-4 pure-u-md-5-24 section check-out-wrap">
+								<h4 class="pink hide-for-small">Check-Out</h4>
+								<div class="date"><span class="number">27</span> / June</div>
+								<a><i class="icon icon-arrow-down hide-for-small"></i></a>
+								<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
+							</div>
+						</span>
 						<div class="pure-u-1-4 pure-u-md-4-24 section">
 							<h4 class="pink">Guests</h4>
-							<div class="guests"><span class="number">1</span></div>
-							<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
+							<div class="guests"><span class="number"><select name="guests_num" id="">
+								<option value="1" selected>1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select></span></div>
+							<a><i class="icon icon-arrow-down hide-for-small"></i></a>
 						</div>
 						<div class="pure-u-1-4 pure-u-md-4-24 section">
 							<h4 class="pink">Rooms</h4>
-							<div class="rooms"><span class="number">1</span></div>
-							<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
+							<div class="rooms"><span class="number"><select name="room_num" id="">
+								<option value="1" selected>1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select></span></div>
+							<a><i class="icon icon-arrow-down hide-for-small"></i></a>
 						</div>
-						<div class="pure-u-1-4 pure-u-md-6-24 section hide-for-small">
-							<div class="location">Cozumel</div>
-							<a href=""><i class="icon icon-arrow-down hide-for-small last"></i></a>
+						<div class="pure-u-1-4 pure-u-md-6-24 section hide-for-small last">
+							<div class="location"><select name="location" id="">
+								<option value="cozumel" selected>Cozumel</option>
+								<option value="xel-ha">Xel-Ha</option>
+								<option value="puerto-vallarta">Puerto Vallarta</option>
+							</select></div>
+							<a><i class="icon icon-arrow-down hide-for-small last"></i></a>
 							<button class="purple update-search">Update Search</button>
 						</div>
 					</div>
@@ -187,74 +209,513 @@
 												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
 											</div>
 											<div class="pure-u-1-8 pure-u-md-1-4">
-												<a href="" class="toggle-flight">
+												<a class="toggle-flight">
 													<i class="icon icon-arrow-down-purple right"></i>
 													<p class="right hide-for-small">VIEW | EDIT</p>
 												</a>
 											</div>
 										</div>
-										<div class="pure-g row flight-to-from">
-											<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
-											<div class="pure-u-1-6 hide-for-small">
-												<div class="img-box">
-													<img src="images/hotels/search-results/aero-mexico.png">
+										<div class="flight-dropdown-wrap active">
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br></p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><hr></div>
+												<div class="pure-u-1"><i class="icon icon-plane-left left"></i><h5>Flight back</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													<b>1 Stop:</b> Guadalajara</p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
-											<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
-												<p>San Francisco</p>
-												<h2>SFO</h2>
-												<p>00:01 hrs<br>
-												Flight 359/394</p>
-											</div>
-											<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
-												<i class="icon icon-arrow-left"></i>
-											</div>
-											<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
-												<p>Cancun</p>
-												<h2>CUN</h2>
-												<p>10:00 hrs<br>
-												<b>1 Stop:</b> Guadalajara</p>
-											</div>
-											<div class="pure-u-1 pure-u-md-1-3 duration-details">
-												<p>Duration<br>
-												7hr 59m</p>
-												<a href="" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
-											</div>
-											<div class="pure-u-1"><hr></div>
-										</div>
-										<div class="pure-g row flight-to-from">
-											<div class="pure-u-1"><i class="icon icon-plane-left left"></i><h5>Flight back</h5></div>
-											<div class="pure-u-1-6 hide-for-small">
-												<div class="img-box">
-													<img src="images/hotels/search-results/aero-mexico.png">
-												</div>
-											</div>
-											<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
-												<p>Cancun</p>
-												<h2>CUN</h2>
-												<p>10:00 hrs<br>
-												<b>1 Stop:</b> Guadalajara</p>
-											</div>
-											<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
-												<i class="icon icon-arrow-left"></i>
-											</div>
-											<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
-												<p>San Francisco</p>
-												<h2>SFO</h2>
-												<p>00:01 hrs<br>
-												Flight 359/394</p>
-											</div>
-											<div class="pure-u-1 pure-u-md-1-3 duration-details">
-												<p>Duration<br>
-												7hr 59m</p>
-												<a href="" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="pure-u-1 change-flight">
-										<p>This is the cheapest flight available!</p>
+											<div class="pure-u-1 change-flight">
 										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<p class="right">This is the cheapest flight available!</p>
 									</div>
+										</div>
+									</div>
+									
 								</div>
 								
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
@@ -312,8 +773,529 @@
 									Taxes included</p>
 									<a href="" class="button purple-bg hide-for-small">Book</a>
 								</div>
+
+								<div class="flight-wrap">
+									<div class="pure-u-1 flight-info">
+										<div class="pure-g row intro-info">
+											<div class="pure-u-1-6 hide-for-small">
+												<img src="images/hotels/search-results/aero-mexico.png">
+											</div>
+											<div class="pure-u-7-8 pure-u-md-7-12">
+												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
+											</div>
+											<div class="pure-u-1-8 pure-u-md-1-4">
+												<a class="toggle-flight">
+													<i class="icon icon-arrow-down-purple right"></i>
+													<p class="right hide-for-small">VIEW | EDIT</p>
+												</a>
+											</div>
+										</div>
+										<div class="flight-dropdown-wrap active">
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br></p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><hr></div>
+												<div class="pure-u-1"><i class="icon icon-plane-left left"></i><h5>Flight back</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													<b>1 Stop:</b> Guadalajara</p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="pure-u-1 change-flight">
+										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<p class="right">This is the cheapest flight available!</p>
+									</div>
+										</div>
+									</div>
+									
+								</div>
+								
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button purple-bg book-btn">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -367,8 +1349,528 @@
 									Taxes included</p>
 									<a href="" class="button purple-bg hide-for-small">Book</a>
 								</div>
+								<div class="flight-wrap">
+									<div class="pure-u-1 flight-info">
+										<div class="pure-g row intro-info">
+											<div class="pure-u-1-6 hide-for-small">
+												<img src="images/hotels/search-results/aero-mexico.png">
+											</div>
+											<div class="pure-u-7-8 pure-u-md-7-12">
+												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
+											</div>
+											<div class="pure-u-1-8 pure-u-md-1-4">
+												<a class="toggle-flight">
+													<i class="icon icon-arrow-down-purple right"></i>
+													<p class="right hide-for-small">VIEW | EDIT</p>
+												</a>
+											</div>
+										</div>
+										<div class="flight-dropdown-wrap active">
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br></p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><hr></div>
+												<div class="pure-u-1"><i class="icon icon-plane-left left"></i><h5>Flight back</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													<b>1 Stop:</b> Guadalajara</p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="pure-u-1 change-flight">
+										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<p class="right">This is the cheapest flight available!</p>
+									</div>
+										</div>
+									</div>
+									
+								</div>
+								
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button purple-bg book-btn">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -422,6 +1924,526 @@
 									Taxes included</p>
 									<a href="" class="button purple-bg hide-for-small">Book</a>
 								</div>
+								<div class="flight-wrap">
+									<div class="pure-u-1 flight-info">
+										<div class="pure-g row intro-info">
+											<div class="pure-u-1-6 hide-for-small">
+												<img src="images/hotels/search-results/aero-mexico.png">
+											</div>
+											<div class="pure-u-7-8 pure-u-md-7-12">
+												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
+											</div>
+											<div class="pure-u-1-8 pure-u-md-1-4">
+												<a class="toggle-flight">
+													<i class="icon icon-arrow-down-purple right"></i>
+													<p class="right hide-for-small">VIEW | EDIT</p>
+												</a>
+											</div>
+										</div>
+										<div class="flight-dropdown-wrap active">
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br></p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><hr></div>
+												<div class="pure-u-1"><i class="icon icon-plane-left left"></i><h5>Flight back</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													<b>1 Stop:</b> Guadalajara</p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="pure-u-1 change-flight">
+										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<p class="right">This is the cheapest flight available!</p>
+									</div>
+										</div>
+									</div>
+									
+								</div>
+
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
 									<a href="" class="button purple-bg">Book</a>
 								</div>
@@ -477,8 +2499,528 @@
 									Taxes included</p>
 									<a href="" class="button purple-bg hide-for-small">Book</a>
 								</div>
+								<div class="flight-wrap">
+									<div class="pure-u-1 flight-info">
+										<div class="pure-g row intro-info">
+											<div class="pure-u-1-6 hide-for-small">
+												<img src="images/hotels/search-results/aero-mexico.png">
+											</div>
+											<div class="pure-u-7-8 pure-u-md-7-12">
+												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
+											</div>
+											<div class="pure-u-1-8 pure-u-md-1-4">
+												<a class="toggle-flight">
+													<i class="icon icon-arrow-down-purple right"></i>
+													<p class="right hide-for-small">VIEW | EDIT</p>
+												</a>
+											</div>
+										</div>
+										<div class="flight-dropdown-wrap active">
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br></p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><hr></div>
+												<div class="pure-u-1"><i class="icon icon-plane-left left"></i><h5>Flight back</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													<b>1 Stop:</b> Guadalajara</p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="pure-u-1 change-flight">
+										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<p class="right">This is the cheapest flight available!</p>
+									</div>
+										</div>
+									</div>
+									
+								</div>
+								
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button purple-bg book-btn">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -532,12 +3074,530 @@
 									Taxes included</p>
 									<a href="" class="button purple-bg hide-for-small">Book</a>
 								</div>
+								<div class="flight-wrap">
+									<div class="pure-u-1 flight-info">
+										<div class="pure-g row intro-info">
+											<div class="pure-u-1-6 hide-for-small">
+												<img src="images/hotels/search-results/aero-mexico.png">
+											</div>
+											<div class="pure-u-7-8 pure-u-md-7-12">
+												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
+											</div>
+											<div class="pure-u-1-8 pure-u-md-1-4">
+												<a class="toggle-flight">
+													<i class="icon icon-arrow-down-purple right"></i>
+													<p class="right hide-for-small">VIEW | EDIT</p>
+												</a>
+											</div>
+										</div>
+										<div class="flight-dropdown-wrap active">
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br></p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<div class="pure-g row flight-to-from">
+												<div class="pure-u-1"><hr></div>
+												<div class="pure-u-1"><i class="icon icon-plane-left left"></i><h5>Flight back</h5></div>
+												<div class="pure-u-1-6 hide-for-small">
+													<div class="img-box">
+														<img src="images/hotels/search-results/aero-mexico.png">
+													</div>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>Cancun</p>
+													<h2>CUN</h2>
+													<p>10:00 hrs<br>
+													Flight 359/394</p>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+													<i class="icon icon-arrow-left"></i>
+												</div>
+												<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+													<p>San Francisco</p>
+													<h2>SFO</h2>
+													<p>00:01 hrs<br>
+													<b>1 Stop:</b> Guadalajara</p>
+												</div>
+												<div class="pure-u-1 pure-u-md-1-3 duration-details">
+													<p>Duration<br>
+													7hr 59m</p>
+													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+												</div>
+												<div class="flight-details-wrap active pure-u-1">
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row stops-timeout">
+														<div class="pure-u-1-3">
+															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+														</div>
+														<div class="pure-u-1-3">
+															<p>Timeout:    <span class="light">1h 26m</span></p>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>San Francisco</p>
+															<h2>SFO</h2>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-1-12 flight-details">
+															<i class="icon icon-arrow-left"></i>
+														</div>
+														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
+															<p>Cancun</p>
+															<h2>CUN</h2>
+														</div>
+													</div>
+													<div class="pure-g row">
+														<div class="pure-u-1">
+															<hr>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Airline</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Aeromexico</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight number</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">662</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Departs</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">19:56 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Flight</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">738</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Arrives</p>
+																	<p class="light">2017</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">22:26 hrs - Fri, Jun 29</p>
+																</div>
+															</div>
+														</div>
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">4h 30m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Class</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">Economy/Coach</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="pure-g row flight-info-columns">
+														<div class="pure-u-1 pure-u-md-1-2">
+															<div class="pure-g row">
+																<div class="pure-u-1-3">
+																	<p>Total Duration</p>
+																</div>
+																<div class="pure-u-2-3">
+																	<p class="light">8h 36m</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="pure-u-1 change-flight">
+										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<p class="right">This is the cheapest flight available!</p>
+									</div>
+										</div>
+									</div>
+									
+								</div>
+								
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button purple-bg book-btn">Book</a>
 								</div>
 							</div>
-						</div>
-					</div>
 
 				</div>
 			</form>
@@ -561,15 +3621,30 @@
 						
 					</div>
 					<div class="pure-g row">
-						<div class="pure-u-1-2 section">
-							<h4 class="pink">Check-In</h4>
-							<a href=""><i class="icon icon-arrow-down right"></i></a>
-							<div class="date"><span class="number">21</span> / June</div>
+						<div class="pure-u-1 flying-from">
+							<h4 class="pink">Flying From</h4>
+							<div class="flying-from-city">San Francisco, CA</div>
 						</div>
-						<div class="pure-u-1-2 section">
-							<h4 class="pink">Check-Out</h4>
-							<a href=""><i class="icon icon-arrow-down right"></i></a>
-							<div class="date"><span class="number">27</span> / June</div>
+					</div>
+					<div class="pure-g row">
+						<div class="pure-u-1">
+							<hr>
+						</div>
+					</div>
+					<div class="pure-g row">
+						<div id="mobile-dates" class="fusion-dates" data-date-output="#mobile-dates .fusion-date-checkin,#mobile-dates .fusion-date-checkout">
+							<div class="pure-u-1-2 section check-in-wrap">
+								<h4 class="pink">Check-In</h4>
+								<div class="date"><span class="number">21</span> / June</div>
+								<a><i class="icon icon-arrow-down"></i></a>
+								<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
+							</div>
+							<div class="pure-u-1-2 section check-out-wrap">
+								<h4 class="pink">Check-Out</h4>
+								<div class="date"><span class="number">27</span> / June</div>
+								<a><i class="icon icon-arrow-down"></i></a>
+								<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
+							</div>
 						</div>
 					</div>
 					<div class="pure-g row">
@@ -587,6 +3662,72 @@
 							<h4 class="pink">Rooms</h4>
 							<a href=""><i class="icon icon-arrow-down right"></i></a>
 							<div class="date"><span class="number">01</span></div>
+						</div>
+					</div>
+					<div class="pure-g row">
+						<div class="pure-u-1">
+							<h4 class="pink">
+								Room 1
+							</h4>
+						</div>
+					</div>
+					<div class="pure-g row counter-row">
+						<div class="pure-u-7-12">
+							<p>Adults</p>
+						</div>
+						<div class="pure-u-5-12">
+							<div class="adults counter">
+								<div class="circle minus left">
+									-
+								</div>
+								<div class="circle plus right">
+									+
+								</div>
+								<div class="counter-number">2</div>
+								<input type="text" class="counter-number-input" name="adults" hidden>
+							</div>
+						</div>
+					</div>
+					<div class="pure-g row counter-row">
+						<div class="pure-u-7-12">
+							<p>Children</p>
+						</div>
+						<div class="pure-u-5-12">
+							<div class="children counter">
+								<div class="circle minus left">
+									-
+								</div>
+								<div class="circle plus right">
+									+
+								</div>
+								<div class="counter-number">1</div>
+								<input type="text" class="counter-number" name="children" hidden>
+							</div>
+						</div>
+					</div>
+					<div class="pure-g row">
+						<div class="pure-u-1">
+							<hr>
+						</div>
+					</div>
+					<div class="pure-g row">
+						<div class="pure-u-1">
+							<h4 class="pink">Age of Children</h4>
+						</div>
+					</div>
+					<div class="pure-g row">
+						<div class="pure-u-1-2">
+							<p>Child 1</p>
+						</div>
+						<div class="pure-u-1-2">
+							<div class="fusion-select">
+								<i class="icon icon-arrow-down-small"></i>
+								<select name="child-age" id="child-age" dir="rtl">
+									<option value="0-17" selected>0-17</option>
+									<option value=">2">>2</option>
+									<option value="10">10</option>
+								</select>
+							</div>
 						</div>
 					</div>
 					<div class="pure-g row">

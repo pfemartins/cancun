@@ -131,8 +131,14 @@ img,legend{border:0}legend,td,th{padding:0}.pure-button:focus,a:active,a:hover{o
 #fusion a.button.purple, #fusion button.purple {
 	border: 1px solid #6522FF;
 }
-#fusion p.light {
+#fusion .light {
 	font-weight: 300;
+}
+#fusion .bold {
+	font-weight: 700;
+}
+#fusion .semi-bold {
+	font-weight: 600;
 }
 
 

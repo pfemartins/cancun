@@ -335,10 +335,20 @@ html.svg.touch #fusion .icon {
 	height: 9px;
 	background-position: -10px -72px;
 }
+#fusion .icon-arrow-up-purple {
+	width: 17px;
+	height: 9px;
+	background-position: -10px -394px;
+}
 #fusion .icon-arrow-down-purple-small {
 	width: 12px;
 	height: 7px;
 	background-position: -10px -45px;
+}
+#fusion .icon-arrow-up-purple-small {
+	width: 12px;
+	height: 7px;
+	background-position: -10px -367px;
 }
 #fusion .icon-plane-right {
 	width: 17px;

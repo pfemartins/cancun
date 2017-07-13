@@ -168,5 +168,60 @@ mobileTripAdvisorSlider.noUiSlider.on('update', function ( values, handle ) {
 		document.getElementById("mobile-tripAdvisorValue").value = numVal;
 });
 
+/* Filters Counter */
+var plus = document.getElementsByClassName("plus");
+var minus = document.getElementsByClassName("minus");
 
-/* Grab date info */
+var plusFunction = function() {
+	var notes;
+	var counterParent = this.parentNode;
+	for(var i = 0; i < counterParent.childNodes.length; i++) {
+		if (counterParent.childNodes[i].className == "counter-number") {
+	     	counterNum = parseInt(counterParent.childNodes[i].innerHTML);
+	     	if (counterNum < 10) {
+	     		counterNum = counterNum + 1;
+	     		counterParent.childNodes[i].innerHTML = counterNum;
+	     		var inputNum = $(this).find('input').value = counterNum;
+	     	}
+	     	break;
+	    }   
+	}
+    
+};
+
+for (var i = 0; i < plus.length; i++) {
+    plus[i].addEventListener('click', plusFunction, false);
+}
+
+var minusFunction = function() {
+	var notes;
+	var counterParent = this.parentNode;
+	for(var i = 0; i < counterParent.childNodes.length; i++) {
+		if (counterParent.childNodes[i].className == "counter-number") {
+	     	counterNum = parseInt(counterParent.childNodes[i].innerHTML);
+	     	if (counterNum > 0) {
+	     		counterNum = counterNum - 1;
+	     		counterParent.childNodes[i].innerHTML = counterNum;
+	     		var inputNum = $(this).find('input').value = counterNum;
+	     	}
+	     	break;
+	    }   
+	}
+    
+};
+
+for (var i = 0; i < minus.length; i++) {
+    minus[i].addEventListener('click', minusFunction, false);
+}
+
+/* Flight dropdown */
+$('a.toggle-flight').click(function() {
+	$(this).find('i').toggleClass('active');
+	$(this).parent().parent().parent().children('.flight-dropdown-wrap').toggleClass('active');
+});
+
+$('a.flight-details').click(function() {
+	$(this).toggleClass('active');
+	$(this).parent().parent().children('.flight-details-wrap').toggleClass('active');
+	console.log($(this).parent().parent().children('.flight-details-wrap'));
+});

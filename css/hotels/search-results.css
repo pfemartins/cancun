@@ -14,9 +14,9 @@
 	padding: 6px 10px!important;
 	position: relative;
 }
-.filter-box .section:last-child {
+.filter-box .section.last {
 	border-right: none;
-	background-color: #FEE6E9;
+	background-color: #FEF0F2;
 }
 .mobile-search-bar .section:last-child {
 	border-right: none;
@@ -31,7 +31,7 @@
 #fusion .filter-box .section .date, #fusion .filter-box .section .guests, #fusion .filter-box .section .rooms, #fusion .mobile-search-bar .date, #fusion .mobile-search-bar .guests, #fusion .mobile-search-bar .rooms {
 	font-size: 14px;
 }
-.filter-box .section .date .number, #fusion .filter-box .section .guests .number, #fusion .filter-box .section .rooms .number, #fusion .mobile-search-bar .date, #fusion .mobile-search-bar .guests, #fusion .mobile-search-bar .rooms {
+.filter-box .section .date .number, #fusion .filter-box .section .guests .number, #fusion .filter-box .section .rooms .number, #fusion .mobile-search-bar .date, #fusion .mobile-search-bar .guests, #fusion .mobile-search-bar .rooms, #fusion .filter-box span select {
 	font-size: 32px;
 }
 .filter-box .section .icon-arrow-down, #mobile-dates .section .icon-arrow-down {
@@ -42,6 +42,13 @@
 .filter-box .section .icon-arrow-down.last, #mobile-dates .section .icon-arrow-down.last {
 	top: 10px;
 	bottom: 0;
+}
+#fusion #hotels .filter-box select {
+	width: 100%;
+	color: #292929;
+}
+#fusion #hotels .filter-box .location select {
+	background: transparent;
 }
 #fusion #hotels .filters-sidebar {
 	box-sizing: border-box;
@@ -242,6 +249,7 @@
 #fusion #hotels .flight-info .toggle-flight {
 	display: block;
 	margin-top: 8px;
+	cursor: pointer;
 }
 #fusion #hotels .flight-info .toggle-flight:after {
 	clear: both;
@@ -256,15 +264,24 @@
 	margin-right: 15px;
 	color: #6522FF;
 }
+#fusion #hotels .flight-info .icon-arrow-down-purple.active {
+	background-position: -10px -394px;
+}
+.flight-wrap .flight-dropdown-wrap {
+	display: none;
+}
+.flight-wrap .flight-dropdown-wrap.active {
+	display: block;
+}
 .flight-wrap .flight-to-from {
 	background: #FEF0F2;
-	padding: 10px;
+	padding: 14px 10px;
 }
 #fusion #hotels .flight-wrap hr {
 	background-color: #E2D7D9;
     color: #E2D7D9;
-    margin-top: 12px;
-    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 #fusion .flight-wrap .icon-plane-right, #fusion .flight-wrap .icon-plane-left {
 	margin-right: 10px;
@@ -280,6 +297,7 @@
 	height: 78px;
 	padding: 28px 5px;
 	background: #fff;
+	margin-bottom: 15px;
 }
 #fusion #hotels .flight-info .flight-details p {
 	font-weight: 300;
@@ -294,17 +312,31 @@
 	font-size: 12px;
 }
 #fusion #hotels .flight-info .duration-details a.flight-details {
-	float: right;
 	font-size: 10px;
 	font-weight: 400;
 	text-transform: uppercase;
+	position: absolute;
+	right: 0;
+	top: 60px;
+	padding: 10px 5px;
 }
 #fusion #hotels .flight-info .duration-details a.flight-details .icon-arrow-down-purple-small {
 	margin-left: 8px;
 }
+#fusion #hotels .flight-info .duration-details {
+	position: relative;
+}
 #fusion #hotels .flight-wrap .change-flight a.button {
 	width: 180px;
-	font-size: 12px;
+	font-size: 14px;
+	font-weight: 500;
+	padding: 10px 5px;
+}
+#fusion #hotels .flight-wrap .change-flight a.button .icon-plane-purple {
+	margin-right: 10px;
+}
+#fusion #hotels .flight-wrap .change-flight  {
+	margin: 20px 0 10px;
 }
 #fusion #hotels .flight-wrap .change-flight p {
 	font-style: italic;
@@ -312,6 +344,45 @@
 	font-weight: 400;
 	text-align: right;
 	display: block;
+	margin-right: 30px;
+	margin-top: 15px;
+}
+
+
+/* Open Flight deals */
+#fusion #hotels .flight-info .duration-details a.flight-details.active {
+	background: #fff;
+}
+#hotels .flight-info .flight-details-wrap {
+	display: none;
+	background: #fff;
+	padding: 10px;
+	box-sizing: border-box;
+}
+#hotels .flight-info .flight-details-wrap.active {
+	display: block;
+}
+#fusion #hotels .flight-info .duration-details a.flight-details.active .icon-arrow-down-purple-small {
+	background-position: -10px -367px;
+}
+#fusion #hotels .flight-wrap .flight-details-wrap hr {
+	color: #DFDFDF;
+	background-color: #DFDFDF;
+	margin-top: 10px;
+}
+#fusion #hotels .flight-info .flight-details-wrap .flight-details .icon-arrow-left {
+	margin-right: 40px;
+}
+#fusion #hotels .flight-info-columns .pure-g {
+	margin-bottom: 10px;
+}
+.flight-details-wrap .stops-timeout {
+	box-sizing: border-box;
+	border: 1px solid #C9C9C9;
+	background: #FEF0F2;
+	padding: 15px;
+	border-radius: 3px;
+	margin: 10px 0;
 }
 
 
@@ -332,11 +403,11 @@
     	margin-top: 18px;
     	margin-right: 20px;
 	}
-	#fusion #hotels .flight-info .duration-details a.flight-details {
-		margin-top: 60px;
-	}
 	#fusion #hotels .flight-wrap .change-flight a.button {
 		float: right;
+	}
+	.flight-details-wrap .stops-timeout {
+		padding-left: 80px;
 	}
 }
 
@@ -364,7 +435,7 @@
 	.filter-box .section:first-child {
 		border-right: none;
 	}
-	.filter-box .guests {
+	.filter-box .guests, .filter-box .rooms {
 		float: left;
 	}
 	.filter-box h4, .mobile-search-bar h4 {
@@ -416,6 +487,9 @@
 		border: 1px solid #6522FF;
 		margin-bottom: 25px;
 	}
+	.mobile-search-bar .flying-from-city {
+		font-size: 24px;
+	}
 	.mobile-search-bar {
 		display: none;
 	}
@@ -463,13 +537,46 @@
 	#fusion #hotels .flight-info .duration-details p {
 		float: left;
 	}
+	#hotels .mobile-search-bar .counter-row {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+	#hotels .mobile-search-bar .counter-row .counter-number {
+		text-align: center;
+	}
+	#hotels .mobile-search-bar .counter-row .circle {
+		width: 23px;
+		height: 23px;
+		text-align: center;
+		box-sizing: border-box;
+		padding: 2px 0;
+		border-radius: 50%;
+		border: 1px solid #333333;
+		line-height: 1;
+		cursor: pointer;
+	}
+	#fusion #hotels .mobile-search-bar select {
+		width: 100%;
+		padding-right: 30px;
+	}
+	#fusion #hotels .mobile-search-bar #child-age {
+		font-size: 24px;
+	}
+
+	/* Open Flight deals */
+	#fusion #hotels .flight-info .duration-details {
+		margin-bottom: 10px;
+	}
 	#fusion #hotels .flight-info .duration-details a.flight-details {
-		margin-top: 14px;
+		top: 7px;
 	}
 	#fusion #hotels .flight-wrap .change-flight a.button {
 		margin: 10px auto;
 	}
 	#fusion #hotels .flight-wrap .change-flight p {
 		text-align: center;
+	}
+	#fusion #hotels .flight-wrap .icon-arrow-left {
+		margin-top: 20px;
 	}
 }

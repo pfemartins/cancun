@@ -11,35 +11,52 @@
 			<form action="" method="POST">
 				<div class="fusion-container">
 					<div class="pure-g row filter-box">
-						<div id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
+						<span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
 							<div class="pure-u-1-4 pure-u-md-5-24 section check-in-wrap">
 								<h4 class="pink hide-for-small">Check-In</h4>
 								<div class="date"><span class="number">21</span> / June</div>
-								<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
+								<a><i class="icon icon-arrow-down hide-for-small"></i></a>
 								<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
 							</div>
 							<div class="pure-u-1-4 pure-u-md-5-24 section check-out-wrap">
 								<h4 class="pink hide-for-small">Check-Out</h4>
 								<div class="date"><span class="number">27</span> / June</div>
-								<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
+								<a><i class="icon icon-arrow-down hide-for-small"></i></a>
 								<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
 							</div>
-
-							<div class="pure-u-1-4 pure-u-md-4-24 section">
-								<h4 class="pink">Guests</h4>
-								<div class="guests"><span class="number">1</span></div>
-								<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
-							</div>
-							<div class="pure-u-1-4 pure-u-md-4-24 section">
-								<h4 class="pink">Rooms</h4>
-								<div class="rooms"><span class="number">1</span></div>
-								<a href=""><i class="icon icon-arrow-down hide-for-small"></i></a>
-							</div>
-							<div class="pure-u-1-4 pure-u-md-6-24 section hide-for-small">
-								<div class="location">Cozumel</div>
-								<a href=""><i class="icon icon-arrow-down hide-for-small last"></i></a>
-								<button class="purple update-search">Update Search</button>
-							</div>
+						</span>
+						<div class="pure-u-1-4 pure-u-md-4-24 section">
+							<h4 class="pink">Guests</h4>
+							<div class="guests"><span class="number"><select name="guests_num" id="">
+								<option value="1" selected>1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select></span></div>
+							<a><i class="icon icon-arrow-down hide-for-small"></i></a>
+						</div>
+						<div class="pure-u-1-4 pure-u-md-4-24 section">
+							<h4 class="pink">Rooms</h4>
+							<div class="rooms"><span class="number"><select name="room_num" id="">
+								<option value="1" selected>1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select></span></div>
+							<a><i class="icon icon-arrow-down hide-for-small"></i></a>
+						</div>
+						<div class="pure-u-1-4 pure-u-md-6-24 section hide-for-small last">
+							<div class="location"><select name="location" id="">
+								<option value="cozumel" selected>Cozumel</option>
+								<option value="xel-ha">Xel-Ha</option>
+								<option value="puerto-vallarta">Puerto Vallarta</option>
+							</select></div>
+							<a><i class="icon icon-arrow-down hide-for-small last"></i></a>
+							<button class="purple update-search">Update Search</button>
 						</div>
 					</div>
 
