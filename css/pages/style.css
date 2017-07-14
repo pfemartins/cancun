@@ -65,10 +65,34 @@ textarea,
 {
   -webkit-appearance:checkbox;
 }
-#fusion input[type=radio] {
-	-webkit-appearance: radio;
-	appearance: radio;
-	-moz-appearance: radio;
+#fusion input[type="radio"] {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+     -ms-box-shadow: none;
+     -o-box-shadow: none;
+     box-shadow: none;
+     background: #FFFFFF;
+     color: inherit;
+     outline: 0;
+     padding: 0;
+     border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	line-height: normal;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 100%;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #979797;
+}
+
+#fusion input[type="radio"]:checked {
+    border: 5px solid #42B299;
 }
 #fusion .dd-options,
 #fusion .dd-select,
@@ -142,8 +166,7 @@ textarea,
      background-position: -10px -2130px;
 }
 #fusion input[type='radio']:checked {
-	background-color: #ffa500;
-	border-color: red;
+	border-color: #6522ff;
 }
 
 /* ASSUMES LIST ITEM */
