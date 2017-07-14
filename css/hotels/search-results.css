@@ -21,7 +21,7 @@
 .mobile-search-bar .section:last-child {
 	border-right: none;
 }
-.filter-box .section h4, .mobile-search-bar h4 {
+.filter-box h4, .mobile-search-bar h4 {
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: 400;
@@ -49,6 +49,35 @@
 }
 #fusion #hotels .filter-box .location select {
 	background: transparent;
+}
+#fusion #hotels .filter-box .leaving-wrap {
+	position: relative;
+	box-sizing: border-box;
+	padding-right: 30px;
+}
+#fusion #hotels .filter-box .flight-row {
+	box-sizing: border-box;
+	padding: 10px;
+}
+#fusion #hotels .filter-box .leaving-wrap a.cancel {
+	position: absolute;
+	right: 30px;
+	top: 0;
+	font-size: 20px;
+	color: #292929;
+}
+#fusion #hotels .filter-box input[type="text"] {
+	border: none;
+	color: #292929;
+	font-size: 18px;
+	width: 100%;
+	border-bottom: 1px solid #D5D5D5;
+}
+#fusion #hotels .filter-box .radio-buttons {
+	font-size: 12px;
+}
+#fusion #hotels .filter-box .radio-buttons input.last {
+	margin-left: 40px;
 }
 #fusion #hotels .filters-sidebar {
 	box-sizing: border-box;

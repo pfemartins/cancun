@@ -65,6 +65,11 @@ textarea,
 {
   -webkit-appearance:checkbox;
 }
+#fusion input[type=radio] {
+	-webkit-appearance: radio;
+	appearance: radio;
+	-moz-appearance: radio;
+}
 #fusion .dd-options,
 #fusion .dd-select,
 #fusion input,
@@ -135,6 +140,10 @@ textarea,
 
 #fusion input:checked + .icon-checkbox {
      background-position: -10px -2130px;
+}
+#fusion input[type='radio']:checked {
+	background-color: #ffa500;
+	border-color: red;
 }
 
 /* ASSUMES LIST ITEM */
