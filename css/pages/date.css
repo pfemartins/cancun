@@ -1,19 +1,6 @@
-/* Date.css */
-#fusion .pika-single {
-     margin-top: 15px;
-     position: relative;
-     color: #4D4D4E;
-     background: #FFFFFF;
+#fusion .pika-single,
+#fusion .pika-single * {
      border: 0;
-}
-
-#fusion .pika-single .pure-button,
-#fusion .pika-single input,
-#fusion .pika-single button,
-#fusion .pika-single select,
-#fusion .pika-single input[readonly] {
-     border: 0;
-     box-sizing: border-box;
 }
 
 #fusion .pika-single:before,
@@ -22,91 +9,85 @@
      display: table;
 }
 
-#fusion .pika-single:after {
-     clear: both
+#fusion .pika-single,
+#fusion .pika-button span,
+#fusion .pika-button {
+     position: relative;
 }
 
-#fusion .pika-single {
-     *zoom: 1;
-     opacity: 1;
-}
-
+#fusion .pika-prev,
+#fusion .pika-next,
+#fusion .pika-button:before,
 #fusion .pika-single.is-bound {
      position: absolute;
 }
 
-#fusion .pika-lendar {
-     float: left;
-     width: 225px;
-     padding: 10px;
-     box-sizing: border-box;
+#fusion .pika-single {
+     display: inline-block;
+     margin-top: -1px;
+     background: #FFFFFF;
+     opacity: 1;
+     width: 360px;
+     -webkit-transition: opacity 0.3s,top 0.2s linear;
+     -o-transition: opacity 0.3s,top 0.2s linear;
+     transition: opacity 0.3s,top 0.2s linear;
+}
+
+#fusion .pika-single:after {
+     clear: both
+}
+
+body #date-overlay,
+#fusion .pika-single.is-hidden,
+#fusion .pika-single .pika-title select,
+#fusion .pika-single .is-empty span {
+     display: none;
+}
+
+body.dates-active .pika-single.active {
+     opacity: 1;
+     visibility: visible;
+     z-index: 1001;
+}
+
+body.dates-active #date-overlay {
+     display: block;
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     z-index: 1000;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     background-color: transparent;
 }
 
 #fusion .pika-title {
-     position: relative;
-     text-align: center;
-}
-
-#fusion .pika-label {
-     display: inline-block;
-     *display: inline;
-     position: relative;
-     z-index: 9;
-     overflow: hidden;
-     margin: 0;
-     padding: 0 2px;
-     font-size: 23px;
-     line-height: 23px;
-     font-weight: normal;
-     background: #FFFFFF;
-     color: #007DA5;
      text-transform: uppercase;
-     font-weight: 300;
-}
-
-#fusion .pika-title > .pika-label:first-child {
-     font-weight: 700;
-}
-
-#fusion .pika-title select {
-     cursor: pointer;
-     position: absolute;
-     z-index: 9998;
-     margin: 0;
-     left: 0;
-     top: 5px;
-     filter: alpha(opacity=0);
-     opacity: 0;
+     position: relative;
+     padding-bottom: 15px;
 }
 
 #fusion .pika-prev,
 #fusion .pika-next {
+     opacity: 1;
      display: block;
      cursor: pointer;
-     position: relative;
-     outline: none;
-     border: 0;
-     padding: 0;
-     opacity: 1;
-     background: none;
-     *position: absolute;
-     *top: 0;
+     top: 0;
 }
 
 #fusion .pika-prev {
-     float: left;
-     *left: 0;
+     left: 0;
 }
 
 #fusion .pika-next {
-     float: right;
-     *right: 0;
+     right: 0;
 }
 
 #fusion .pika-prev.is-disabled,
 #fusion .pika-next.is-disabled {
-     cursor: default;
-     opacity: .2;
+     opacity: 0;
 }
 
 #fusion .pika-table {
@@ -120,6 +101,7 @@
 #fusion .pika-table td {
      width: 14.285714285714286%;
      padding: 0;
+     font-weight: normal;
 }
 
 #fusion .pika-week,
@@ -127,525 +109,57 @@
 #fusion .is-empty span,
 #fusion .pika-button {
      text-align: center;
-     font-weight: normal;
-     font-size: 12px;
-     background: #FFFFFF;
-     padding: 0;
-     line-height: 29px;
+     line-height: 30px;
 }
 
 #fusion .is-empty span,
-#fusion .pika-button,
-#fusion .is-selected .pika-button {
+#fusion .pika-button {
      cursor: pointer;
      display: block;
-     box-sizing: border-box;
-     -moz-box-sizing: border-box;
-     outline: none;
-     text-align: center;
-     border: 0;
-     margin: 0;
-     width: 100%;
-     color: #797979;
-     box-shadow: none;
+     color: $default;
 }
 
-#fusion .is-empty span {
-     cursor: initial;
+#fusion .pika-button {
+     content: '';
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     margin: auto;
+     width: 25px;
+     height: 25px;
 }
 
-#fusion .is-today .pika-button {
-     color: inherit;
-     font-weight: inherit;
+#fusion .is-empty span,
+#fusion .pika-single .pika-title select,
+#fusion .is-disabled .pika-button {
+     pointer-events: none;
+     cursor: default;
+     opacity: 0.6;
 }
 
-#fusion .pika-single .pika-table .is-startrange .pika-button,
-#fusion .pika-single .pika-table .is-endrange .pika-button,
-#fusion .pika-single .pika-table .is-hovering .pika-button,
-#fusion .pika-single .pika-table .is-inrange .pika-button {
-     background: #54caf0;
+#fusion .pika-single .is-startrange .pika-button,
+#fusion .pika-single .is-endrange .pika-button,
+#fusion .pika-single .is-hovering .pika-button,
+#fusion .pika-single .is-inrange .pika-button {
+     opacity: 1;
+}
+
+#fusion .pika-single .is-startrange .pika-button,
+#fusion .pika-single .is-endrange .pika-button {
+     background: #42B299;
      color: #FFFFFF;
 }
 
-#fusion .pika-single .overlay-labels,
-#fusion .pika-single .overlay-labels button,
-#fusion .pika-single .pika-table th,
-#fusion .pika-single .pika-table td,
-#fusion .pika-single .pika-table .pika-button,
-#fusion .pika-single .pika-table .pika-button span {
-     position: relative;
-     overflow: hidden;
-     z-index: 1;
+#fusion .pika-single .is-hovering .pika-button,
+#fusion .pika-single .is-inrange .pika-button {
+     background: #F9F9F9;
 }
-
-#fusion .is-empty span,
-#fusion .pika-single select,
-#fusion .is-disabled .pika-button,
-#fusion .is-outside-current-month .pika-button {
-     pointer-events: none;
-     cursor: default;
-}
-
-#fusion .is-empty span,
-#fusion .pika-single select,
-#fusion .is-disabled .pika-button,
-#fusion .is-outside-current-month .pika-button,
-#fusion .pika-table th {
-     color: #CCCCCC;
-}
-
-#fusion .pika-table abbr {
-     border: 0;
-     text-decoration: none;
-}
-
-#fusion .date-content {
-     display: block;
-     clear: both;
-     position: relative;
-}
-
-#fusion .pika-single .fusion-label,
-#fusion .pika-single .pure-label {
-     display: block;
-}
-
-#fusion .pika-single .fusion-label {
-     position: relative;
-     margin: 0;
-}
-
-
-/* MOBILE */
-
-@media(max-width: 767px) {
-     body.dates-overlay {
-          overflow: hidden;
-          height: 100%;
-          width: 100%;
-          position: fixed;
-     }
-     #fusion .pika-single .is-empty span,
-     #fusion .pika-single .pika-week,
-     #fusion .pika-single .pika-table th,
-     #fusion .pika-single .pika-button {
-          padding: 10px 0;
-     }
-     #fusion .pika-single {
-          margin: auto;
-          display: block;
-          background: #FFFFFF;
-          box-shadow: none;
-     }
-     #fusion .pika-single,
-     #fusion .pika-lendar {
-          width: 100%;
-          box-sizing: border-box;
-          padding: 0;
-     }
-     #fusion .pika-single.overlay {
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          -webkit-transition: top 0.5s ease-in-out;
-          -o-transition: top 0.5s ease-in-out;
-          transition: top 0.5s ease-in-out;
-          transform: translate3d(0,0,0);
-          -webkit-transform: translate3d(0,0,0);
-          -webkit-transform: translateZ(0);
-     }
-
-     #fusion .pika-single.overlay .pika-week,
-     #fusion .pika-single.overlay .pika-table th,
-     #fusion .pika-single.overlay .is-empty span,
-     #fusion .pika-single.overlay .pika-button {
-          line-height: 40px;
-     }
-     #fusion .pika-single.overlay p {
-          margin: 0;
-     }
-     #fusion .pika-single.overlay .date-content {
-          height: 100%;
-          box-sizing: border-box;
-          overflow-y: scroll;
-          -webkit-overflow-scrolling: touch;
-     }
-     #fusion .pika-single.overlay .pika-lendar {
-          padding: 0;
-     }
-     #fusion .pika-single.overlay .pika-lendar.active {
-          background: #DDDDDD;
-     }
-     #fusion .pika-single.overlay .overlay-labels .overlay-placeholder,
-     #fusion .pika-single.overlay .pika-week,
-     #fusion .pika-single.overlay .pika-table th,
-     #fusion .pika-single.overlay .is-empty span,
-     #fusion .pika-single.overlay .pika-button,
-     #fusion .pika-single.overlay .pika-label,
-     #fusion .pika-single.overlay .overlay-bar,
-     #fusion .pika-single.overlay .overlay-close {
-          font-size: 15px;
-          line-height: 20px;
-          letter-spacing: inherit;
-     }
-     #fusion .pika-single.overlay .pika-label,
-     #fusion .pika-single.overlay .overlay-bar,
-     #fusion .pika-single.overlay .overlay-close {
-          color: #FFFFFF;
-     }
-     #fusion .pika-single.overlay .pika-title {
-          padding: 11px 0 6px;
-     }
-     #fusion .pika-single.overlay .pika-label {
-          color: #007DA5;
-          font-weight: 400;
-          padding: 0 2px;
-     }
-     #fusion .pika-single.overlay .pika-table > thead > tr > th,
-     #fusion .pika-single.overlay .pika-table > tbody > tr > td {
-          border: 1px solid #F2F2F2;
-     }
-     #fusion .pika-single.overlay .pika-table > tbody > tr > td.is-startrange,
-     #fusion .pika-single.overlay .pika-table > tbody > tr > td.is-endrange,
-     #fusion .pika-single.overlay .pika-table > tbody > tr > td.is-inrange {
-          border: 1px solid #54caf0;
-     }
-     #fusion .pika-single.overlay .overlay-bar {
-          background: #54caf0;
-          color: #FFFFFF;
-          text-align: center;
-          font-weight: 500;
-          padding: 12px 0 13px;
-     }
-     #fusion .pika-single.overlay .overlay-close {
-          position: absolute;
-          top: 8px;
-          right: 8px;
-          background: #FE4210;
-          padding: 5px 8px;
-     }
-     #fusion .pika-single.overlay .overlay-labels {
-          padding-left: 36px;
-     }
-     #fusion .pika-single.overlay .overlay-week,
-     #fusion .pika-single.overlay .overlay-labels button {
-          color: #808080;
-     }
-     #fusion .pika-single.overlay .overlay-labels button {
-          font-size: 11px;
-          line-height: 13px;
-          display: inline-block;
-          text-align: left;
-          padding: 11px 10px 13px;
-          min-height: 68px;
-          background: none;
-     }
-     #fusion .pika-single.overlay .overlay-labels button > span {
-          display: block;
-     }
-     #fusion .pika-single.overlay .overlay-labels > div > button:first-child {
-          border-right: 1px solid #F2F2F2;
-     }
-     #fusion .pika-single.overlay .overlay-labels .overlay-month,
-     #fusion .pika-single.overlay .overlay-labels .overlay-dayweek,
-     #fusion .pika-single.overlay .overlay-labels .overlay-day {
-          color: #54caf0;
-     }
-     #fusion .pika-single.overlay .overlay-labels .overlay-arrow {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          border-left: 7px solid transparent;
-          border-right: 7px solid transparent;
-          border-bottom: 7px solid #F2F2F2;
-          z-index: 20;
-     }
-     #fusion .pika-single.overlay .overlay-labels .overlay-label {
-          padding-bottom: 3px;
-     }
-     #fusion .pika-single.overlay .overlay-labels .overlay-month {
-          font-weight: 700;
-          line-height: 15px;
-     }
-     #fusion .pika-single.overlay .overlay-labels .overlay-day {
-          position: absolute;
-          bottom: 7px;
-          right: 10px;
-          font-size: 28px;
-          font-weight: 300;
-          line-height: 33px;
-     }
-     #fusion .pika-single.overlay .overlay-labels .icon-date {
-          right: inherit;
-          left: 10px;
-     }
-     #fusion .pika-single.overlay .pika-title,
-     #fusion .pika-single.overlay .pika-title .pika-label,
-     #fusion .pika-single.overlay .overlay-week {
-          background: #F2F2F2;
-     }
-     #fusion .pika-single.overlay .overlay-week {
-          font-size: 12px;
-          line-height: 14px;
-          padding: 12px 0;
-     }
-     #fusion .pika-single.overlay .overlay-week > span {
-          text-transform: uppercase;
-          display: inline-block;
-          text-align: center;
-          width: 14.285714285714286%;
-          padding: 0;
-     }
-     #fusion .pika-single.overlay .overlay-labels button > span:empty,
-     #fusion .pika-single.overlay .overlay-labels button > span.overlay-placeholder,
-     #fusion .pika-single.overlay .icon-arrow,
-     #fusion .pika-single.overlay .pika-lendar thead,
-     #fusion .pika-single.overlay .pika-prev,
-     #fusion .pika-single.overlay .pika-next {
-          display: none !important;
-     }
-     #fusion .pika-single.overlay .overlay-labels button > span.overlay-day:empty + span.overlay-placeholder {
-          display: inherit !important;
-     }
-}
-
-
-/* DESKTOP */
-
-@media(min-width: 768px) {
-     #fusion .pika-single {
-          display: inline-block;
-          width: 452px;
-          box-sizing: border-box;
-          border: 1px solid #D8D8D8;
-          border-radius: 3px;
-          -webkit-border-radius: 3px%;
-          -moz-border-radius: 3px;
-     }
-     #fusion .pika-title {
-          margin-bottom: 8px;
-          padding-bottom: 6px;
-          border-bottom: 3px solid #54caf0;
-     }
-     #fusion .pika-prev,
-     #fusion .pika-next {
-          position: absolute;
-          top: 0;
-          width: 35px;
-          height: 14px;
-     }
-     #fusion .pika-prev {
-          left: 0;
-     }
-     #fusion .pika-next {
-          right: 0;
-     }
-     #fusion .pika-prev i,
-     #fusion .pika-next i {
-          width: 8px;
-          height: 16px;
-     }
-     #fusion .pika-prev i,
-     #fusion .pika-next i,
-     #fusion .pika-prev span,
-     #fusion .pika-next span {
-          position: relative;
-          z-index: 999;
-          vertical-align: middle;
-     }
-     #fusion .pika-prev span {
-          padding-left: 4px;
-     }
-     #fusion .pika-next span {
-          padding-right: 4px;
-     }
-     #fusion .pika-prev span,
-     #fusion .pika-next span {
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 19px;
-          color: #54caf0;
-     }
-     #fusion .pika-prev i {
-          background-position: -10px -4730px;
-     }
-     #fusion .pika-next i {
-          text-align: right;
-          background-position: -12px -4766px;
-     }
-     #fusion .pika-week,
-     #fusion .pika-table th,
-     #fusion .is-empty span,
-     #fusion .pika-button {
-          border-radius: 100%;
-          -webkit-border-radius: 100%;
-          -moz-border-radius: 100%;
-     }
-     #fusion .pika-single .pika-table .pika-button {
-          box-sizing: border-box;
-          border: 2px solid #FFFFFF;
-          line-height: 25px;
-     }
-     #fusion .pika-table abbr {
-          font-weight: 300;
-     }
-     #fusion .pika-single.is-bound .date-arrow {
-          position: absolute;
-          top: 0;
-          width: 16px;
-          height: 10px;
-     }
-     #fusion .pika-single.is-bound .date-arrow:before,
-     #fusion .pika-single.is-bound .date-arrow:after {
-          position: absolute;
-          content: '';
-          display: inline-block;
-          width: 0;
-          height: 0;
-          border-bottom: 10px solid #B3B3B3;
-          border-left: 8px solid transparent;
-          border-right: 8px solid transparent;
-          top: -10px;
-     }
-     #fusion .pika-single.is-bound .date-arrow:after {
-          top: -9px;
-          border-bottom: 10px solid #FFFFFF;
-     }
-     #fusion .date-content:before {
-          display: inline-block;
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          margin: auto;
-          background: #B3B3B3;
-          width: 1px;
-          height: 100%;
-          pointer-events: none;
-     }
-     #fusion .pika-single .is-empty span {
-          display: none;
-     }
-     #fusion .pika-single.active {
-          opacity: 1;
-          visibility: visible;
-     }
-}
-
-
-/* Desktop */
-
-@media(min-width: 1040px) {
-     #fusion .pika-button:hover {
-          color: #FFFFFF;
-          background: #54caf0;
-     }
-     #fusion .pika-single {
-          -webkit-transition: opacity 0.3s;
-          -o-transition: opacity 0.3s;
-          transition: opacity 0.3s;
-     }
-}
-
-
-/* Custom */
-
-@media(max-width: 767px) {
-     #fusion .fusion-date-state > * {
-          pointer-events: none;
-     }
-     body.dates-active #property #property-dates-mobile {
-          margin-top: 5px;
-     }
-     body #fusion #property .fusion-date-state {
-          background: #E5E5E1;
-     }
-     body #fusion #hotel .fusion-date-state,
-     body.dates-active:not(.dates-checkout) #fusion #property .fusion-date-checkin,
-     body.dates-active.dates-checkout #fusion #property .fusion-date-checkout {
-          background: #FFFFFF;
-          position: relative;
-     }
-     body #fusion #property #property-dates {
-          margin-bottom: 10px;
-     }
-     body #fusion #property #property-dates-mobile {
-          margin: 5px 5px 10px;
-     }
-     body #fusion #property #property-dates-mobile #fusion .pika-single {
-          margin: 0 0 10px;
-          box-sizing: border-box;
-          box-shadow: none;
-          border: 0;
-          -webkit-box-shadow: none;
-     }
-     body #property .fusion-date-state input {
-          color: #2C75BB;
-          border: 0;
-          outline: 0;
-          box-shadow: none;
-          -webkit-box-shadow: none;
-          font-size: 15px;
-          font-weight: 400;
-          line-height: 18px;
-     }
-     body.dates-active:not(.dates-checkout) #fusion #property .fusion-date-checkin:before,
-     body.dates-active.dates-checkout #fusion #property .fusion-date-checkout:before {
-          content: "";
-          position: absolute;
-          bottom: -10px;
-          width: 0;
-          height: 0;
-          border-left: 10px solid transparent;
-          border-right: 10px solid transparent;
-          border-top: 10px solid #FFFFFF;
-          z-index: 1;
-     }
-     body:not(.dates-checkout) #fusion #property .fusion-date-checkin:before {
-          left: 55%;
-     }
-     body.dates-checkout #fusion #property .fusion-date-checkout:before {
-          left: 35%;
-     }
-     /* Hiding Hotel */
-     body.dates-active #fusion #property-wrapper + #date-overlay,
-     body #fusion #form-calendar,
-     body #fusion #fusion-dropdowns,
-     body #fusion #property-dates-mobile,
-     body #fusion #property-dates-mobile + div {
-          display: none;
-     }
-     body.dates-active #fusion #form-calendar,
-     body #fusion #hotel.hotel-dates #form-calendar + div,
-     body.dates-set #fusion #fusion-dropdowns,
-     body.dates-active #fusion #fusion-dropdowns,
-     body #hotel.hotel-dates #fusion #fusion-dropdowns,
-     body.dates-active #fusion #property-dates-mobile,
-     body #fusion #hotel.hotel-dates #property-dates-mobile + div,
-     body.dates-active #fusion #property-dates-mobile + div,
-     body.dates-set #fusion #property-dates-mobile + div {
-          display: block;
-     }
-     body #hotel #hotel-form #form-dropdowns {
-          margin-bottom: 0;
-     }
-     body.dates-set #fusion #fusion-dropdowns,
-     body.dates-active #fusion #fusion-dropdowns,
-     body #hotel.hotel-dates #fusion #fusion-dropdowns {
-          margin-bottom: 10px;
-     }
-}
-
-
-/* Transitions */
 
 #fusion .pika-single.is-hidden {
      opacity: 0;
      visibility: hidden;
-     position: absolute !important;
+     position: absolute;
      overflow: hidden;
      clip: rect(0 0 0 0);
      height: 1px;
@@ -653,40 +167,4 @@
      margin: -1px;
      padding: 0;
      border: 0;
-}
-
-
-/* Hiding Content */
-#fusion .pika-single.overlay .pika-next span,
-#fusion .pika-single.overlay .pika-prev span,
-#fusion .pika-single .is-empty span {
-     display: none;
-}
-
-body.dates-active #fusion #date-overlay {
-     position: fixed;
-     width: 100%;
-     height: 100%;
-     z-index: 100000;
-     left: 0;
-     right: 0;
-     top: 0;
-     bottom: 0;
-     background: rgba(0, 0, 0, 0.6);
-}
-
-body #fusion .pika-single.active {
-     z-index: 111111;
-}
-
-
-/* CSS for Landing Pages */
-body #fusion.landing .pika-single .date-active {
-     color: #007DA5;
-     font-weight: 700;
-}
-
-body #fusion.landing .pika-single .is-disabled .date-active {
-     font-weight: 400;
-     color: #CCCCCC;
 }

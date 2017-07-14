@@ -28,7 +28,6 @@
 		</div>
 	</div>
 </footer>
- <script src="//code.jquery.com/jquery-latest.js"></script>
-          <script src="//cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-          <script src="js/pages/globals.js"></script>
-          <script src="js/pages/date.js"></script>
+<div id="fusion-scripts">
+	<script src="js/main.js"></script>
+</div>

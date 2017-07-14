@@ -1,8 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-      <?php include ("views/includes/head.php"); ?>
-<link rel="stylesheet" href="css/hotels/search-results.css"> 
+     <?php include ("views/includes/head.php"); ?>
+	<link rel="stylesheet" href="css/hotels/search-results.css"> 
 </head>
 <body>
 	<div id="fusion" class="sr-hotels">
@@ -655,7 +655,7 @@
 			</form>
 		</main>
 		<div class="fusion-overlay inactive"></div>
-        <?php include ("views/includes/footer.php"); ?>
+		<?php include ("views/includes/footer.php"); ?>
 		<script src="js/hotels/search-results.js?version=1"></script>
 	</div>
 </html>

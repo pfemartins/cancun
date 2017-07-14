@@ -1,172 +1,203 @@
-var priceRangeSlider = document.getElementById('price-range');
-var priceMax = document.getElementById('price-high-value');
-var priceNum = priceMax.innerText;
-var priceValue = parseFloat(priceNum.replace(/,/g, ''));
-noUiSlider.create(priceRangeSlider, {
-	start: priceValue,
-	connect: [true, false],
-	range: {
-	  'min': 530,
-	  'max': 2000
+var search = {
+	init: function() {
+		search.scripts();
+		search.binds();
 	},
-	format: wNumb({
-		decimals: 0,
-		thousand: ','
-	})
-});
+	scripts: function() {
+		f.getScript(f.base.jsp + 'nouislider.js', function() {
+			f.getScript(f.base.jsp + 'wnumb.js', function() {
+				var priceRangeSlider = document.getElementById('price-range');
+				var priceMax = document.getElementById('price-high-value');
 
+				noUiSlider.create(priceRangeSlider, {
+					start: parseFloat(priceMax.innerText.replace(/,/g, '')),
+					connect: [true, false],
+					range: {
+					  'min': 530,
+					  'max': 2000
+					},
+					format: wNumb({
+						decimals: 0,
+						thousand: ','
+					})
+				});
 
-priceRangeSlider.noUiSlider.on('update', function ( values, handle ) {
-		priceMax.innerHTML = values[handle];
-		var newValue = values[handle];
-		var numVal = parseFloat(newValue.replace(/,/g, ''));
-		document.getElementById("priceValue").value = numVal;
-});
+				priceRangeSlider.noUiSlider.on('update', function ( values, handle ) {
+					priceMax.innerHTML = values[handle];
+					document.getElementById("priceValue").value = parseFloat(values[handle].replace(/,/g, ''));
+				});
 
+				var starRatingSlider = document.getElementById('star-rating');
+				var starMax = document.getElementById('star-rating-value');
 
-var starRatingSlider = document.getElementById('star-rating');
-var starMax = document.getElementById('star-rating-value');
-var starNum = parseFloat(starMax.innerText);
+				noUiSlider.create(starRatingSlider, {
+					start: parseFloat(starMax.innerText),
+					connect: [true, false],
+					range: {
+					  'min': 2.0,
+					  'max': 5.0
+					},
+					format: wNumb({
+						decimals: 1,
+					})
+				});
 
-noUiSlider.create(starRatingSlider, {
-	start: starNum,
-	connect: [true, false],
-	range: {
-	  'min': 2.0,
-	  'max': 5.0
+				starRatingSlider.noUiSlider.on('update', function ( values, handle ) {
+					starMax.innerHTML = values[handle];
+					document.getElementById("starValue").value = parseFloat(values[handle].replace(/,/g, ''));
+				});
+
+				var tripAdvisorSlider = document.getElementById('tripadvisor-rating');
+				var tripAdvisorMax = document.getElementById('tripadvisor-rating-value');
+
+				noUiSlider.create(tripAdvisorSlider, {
+					start: parseFloat(tripAdvisorMax.innerText),
+					connect: [true, false],
+					range: {
+					  'min': 2.5,
+					  'max': 5.0
+					},
+					format: wNumb({
+						decimals: 1,
+					})
+				});
+
+				tripAdvisorSlider.noUiSlider.on('update', function ( values, handle ) {
+					tripAdvisorMax.innerHTML = values[handle];
+					document.getElementById("tripAdvisorValue").value = parseFloat(values[handle].replace(/,/g, ''));
+				});
+
+				var mobilePriceRangeSlider = document.getElementById('mobile-price-range');
+				var mobilePriceMax = document.getElementById('mobile-price-high-value');
+
+				noUiSlider.create(mobilePriceRangeSlider, {
+					start: parseFloat(mobilePriceMax.innerText.replace(/,/g, '')),
+					connect: [true, false],
+					range: {
+					  'min': 530,
+					  'max': 2000
+					},
+					format: wNumb({
+						decimals: 0,
+						thousand: ','
+					})
+				});
+
+				mobilePriceRangeSlider.noUiSlider.on('update', function ( values, handle ) {
+					mobilePriceMax.innerHTML = values[handle];
+					document.getElementById("mobile-priceValue").value = parseFloat(values[handle].replace(/,/g, ''));
+				});
+
+				var mobileStarRatingSlider = document.getElementById('mobile-star-rating');
+				var mobileStarMax = document.getElementById('mobile-star-rating-value');
+
+				noUiSlider.create(mobileStarRatingSlider, {
+					start: parseFloat(mobileStarMax.innerText),
+					connect: [true, false],
+					range: {
+					  'min': 2.0,
+					  'max': 5.0
+					},
+					format: wNumb({
+						decimals: 1,
+					})
+				});
+
+				mobileStarRatingSlider.noUiSlider.on('update', function ( values, handle ) {
+					mobileStarMax.innerHTML = values[handle];
+					document.getElementById("mobile-starValue").value = parseFloat(values[handle].replace(/,/g, ''));
+				});
+
+				var mobileTripAdvisorSlider = document.getElementById('mobile-tripadvisor-rating');
+				var mobileTripAdvisorMax = document.getElementById('mobile-tripadvisor-rating-value');
+
+				noUiSlider.create(mobileTripAdvisorSlider, {
+					start: parseFloat(mobileTripAdvisorMax.innerText),
+					connect: [true, false],
+					range: {
+					  'min': 2.5,
+					  'max': 5.0
+					},
+					format: wNumb({
+						decimals: 1,
+					})
+				});
+
+				mobileTripAdvisorSlider.noUiSlider.on('update', function ( values, handle ) {
+					mobileTripAdvisorMax.innerHTML = values[handle];
+					document.getElementById("mobile-tripAdvisorValue").value = parseFloat(values[handle].replace(/,/g, ''));
+				});
+			});
+		});
 	},
-	format: wNumb({
-		decimals: 1,
-	})
-});
-var starMax = document.getElementById('star-rating-value');
+	binds: function() {
+		if (document.querySelector('a.mobile-filters-button')) {
+			for (var i = 0; i < document.querySelectorAll('a.mobile-filters-button').length; i++) {
+				document.querySelectorAll('a.mobile-filters-button')[i].addEventListener('click', function() {
+					f.addClass(document.querySelector('.mobile-search-bar'), 'open-filters');
+					document.querySelector('a.mobile-filters-button').style.display = 'none';
+				});
+			}
+		}
 
-starRatingSlider.noUiSlider.on('update', function ( values, handle ) {
-		starMax.innerHTML = values[handle];
-		var newValue = values[handle];
-		var numVal = parseFloat(newValue.replace(/,/g, ''));
-		document.getElementById("starValue").value = numVal;
-});
+		if (document.querySelector('a.close')) {
+			for (var i = 0; i < document.querySelectorAll('a.close').length; i++) {
+				document.querySelectorAll('a.close')[i].addEventListener('click', function() {
+					f.removeClass(document.querySelector('form.mobile-search-bar.open-filters'), 'open-filters');
+					document.querySelector('a.mobile-filters-button').style.display = 'block';
+				});
+			}
+		}
 
-var tripAdvisorSlider = document.getElementById('tripadvisor-rating');
-var tripAdvisorMax = document.getElementById('tripadvisor-rating-value');
-var tripAdvisorNum = parseFloat(tripAdvisorMax.innerText);
+		if (document.querySelector('a.more-filters')) {
+			for (var i = 0; i < document.querySelectorAll('a.more-filters').length; i++) {
+				document.querySelectorAll('a.more-filters')[i].addEventListener('click', function() {
+					document.querySelector('.additional-filters').style.display = 'block';
+					document.querySelector('a.more-filters').style.display = 'none';
+					document.querySelector('.mobile-search-bar button').style.display = 'none';
+				});
+			}
+		}
 
-noUiSlider.create(tripAdvisorSlider, {
-	start: tripAdvisorNum,
-	connect: [true, false],
-	range: {
-	  'min': 2.5,
-	  'max': 5.0
+		if (document.querySelector('a.hide-filters')) {
+			for (var i = 0; i < document.querySelectorAll('a.hide-filters').length; i++) {
+				document.querySelectorAll('a.hide-filters')[i].addEventListener('click', function() {
+					document.querySelector('.additional-filters').style.display = 'none';
+					document.querySelector('a.more-filters').style.display = 'block';
+					document.querySelector('.mobile-search-bar button').style.display = 'block';
+				});
+			}
+		}
+
+		if (document.querySelector('a.toggle-flight')) {
+			for (var i = 0; i < document.querySelectorAll('a.toggle-flight').length; i++) {
+				document.querySelectorAll('a.toggle-flight')[i].addEventListener('click', function() {
+					var selector = this.parentNode.parentNode.parentNode.querySelectorAll('.flight-dropdown-wrap')
+
+					f.toggleClass(this.querySelector('i'), 'active');
+
+					for (var i = 0; i < selector.length; i++) {
+						f.toggleClass(selector[i], 'active');
+					}
+				});
+			}
+		}
+
+		if (document.querySelector('a.flight-details')) {
+			for (var i = 0; i < document.querySelectorAll('a.flight-details').length; i++) {
+				document.querySelectorAll('a.flight-details')[i].addEventListener('click', function() {
+					var selector = this.parentNode.parentNode.querySelectorAll('.flight-details-wrap')
+					
+					f.toggleClass(this, 'active');
+
+					for (var i = 0; i < selector.length; i++) {
+						f.toggleClass(selector[i], 'active');
+					}
+				});
+			}
+		}
 	},
-	format: wNumb({
-		decimals: 1,
-	})
-});
-var tripAdvisorMax = document.getElementById('tripadvisor-rating-value');
-
-tripAdvisorSlider.noUiSlider.on('update', function ( values, handle ) {
-		tripAdvisorMax.innerHTML = values[handle];
-		var newValue = values[handle];
-		var numVal = parseFloat(newValue.replace(/,/g, ''));
-		document.getElementById("tripAdvisorValue").value = numVal;
-});
-
-/* Mobile Filters */
-
-$('a.mobile-filters-button').click(function() {
-	$('.mobile-search-bar').addClass('open-filters');
-	$('a.mobile-filters-button').hide();
-});
-$('a.close').click(function() {
-	$('form.mobile-search-bar.open-filters').removeClass('open-filters');
-	$('a.mobile-filters-button').show();
-});
-$('a.more-filters').click(function() {
-	$('.additional-filters').show();
-	$('a.more-filters').hide();
-	$('.mobile-search-bar button').hide();
-});
-$('a.hide-filters').click(function() {
-	$('.additional-filters').hide();
-	$('a.more-filters').show();
-	$('.mobile-search-bar button').show();
-});
-
-
-var mobilePriceRangeSlider = document.getElementById('mobile-price-range');
-var mobilePriceMax = document.getElementById('mobile-price-high-value');
-var mobilePriceNum = mobilePriceMax.innerText;
-var mobilePriceValue = parseFloat(mobilePriceNum.replace(/,/g, ''));
-noUiSlider.create(mobilePriceRangeSlider, {
-	start: mobilePriceValue,
-	connect: [true, false],
-	range: {
-	  'min': 530,
-	  'max': 2000
-	},
-	format: wNumb({
-		decimals: 0,
-		thousand: ','
-	})
-});
-
-
-mobilePriceRangeSlider.noUiSlider.on('update', function ( values, handle ) {
-		mobilePriceMax.innerHTML = values[handle];
-		var newValue = values[handle];
-		var numVal = parseFloat(newValue.replace(/,/g, ''));
-		document.getElementById("mobile-priceValue").value = numVal;
-});
-
-
-var mobileStarRatingSlider = document.getElementById('mobile-star-rating');
-var mobileStarMax = document.getElementById('mobile-star-rating-value');
-var mobileStarNum = parseFloat(mobileStarMax.innerText);
-
-noUiSlider.create(mobileStarRatingSlider, {
-	start: mobileStarNum,
-	connect: [true, false],
-	range: {
-	  'min': 2.0,
-	  'max': 5.0
-	},
-	format: wNumb({
-		decimals: 1,
-	})
-});
-var mobileStarMax = document.getElementById('mobile-star-rating-value');
-
-mobileStarRatingSlider.noUiSlider.on('update', function ( values, handle ) {
-		mobileStarMax.innerHTML = values[handle];
-		var newValue = values[handle];
-		var numVal = parseFloat(newValue.replace(/,/g, ''));
-		document.getElementById("mobile-starValue").value = numVal;
-});
-
-var mobileTripAdvisorSlider = document.getElementById('mobile-tripadvisor-rating');
-var mobileTripAdvisorMax = document.getElementById('mobile-tripadvisor-rating-value');
-var mobileTripAdvisorNum = parseFloat(mobileTripAdvisorMax.innerText);
-
-noUiSlider.create(mobileTripAdvisorSlider, {
-	start: mobileTripAdvisorNum,
-	connect: [true, false],
-	range: {
-	  'min': 2.5,
-	  'max': 5.0
-	},
-	format: wNumb({
-		decimals: 1,
-	})
-});
-var mobileTripAdvisorMax = document.getElementById('mobile-tripadvisor-rating-value');
-
-mobileTripAdvisorSlider.noUiSlider.on('update', function ( values, handle ) {
-		mobileTripAdvisorMax.innerHTML = values[handle];
-		var newValue = values[handle];
-		var numVal = parseFloat(newValue.replace(/,/g, ''));
-		document.getElementById("mobile-tripAdvisorValue").value = numVal;
-});
+};
 
 /* Filters Counter */
 var plus = document.getElementsByClassName("plus");
@@ -181,7 +212,7 @@ var plusFunction = function() {
 	     	if (counterNum < 10) {
 	     		counterNum = counterNum + 1;
 	     		counterParent.childNodes[i].innerHTML = counterNum;
-	     		var inputNum = $(this).find('input').value = counterNum;
+	     		var inputNum = counterParent.querySelector('input').value = counterNum;
 	     	}
 	     	break;
 	    }   
@@ -202,7 +233,7 @@ var minusFunction = function() {
 	     	if (counterNum > 0) {
 	     		counterNum = counterNum - 1;
 	     		counterParent.childNodes[i].innerHTML = counterNum;
-	     		var inputNum = $(this).find('input').value = counterNum;
+	     		var inputNum = counterParent.querySelector('input').value = counterNum;
 	     	}
 	     	break;
 	    }   
@@ -214,14 +245,4 @@ for (var i = 0; i < minus.length; i++) {
     minus[i].addEventListener('click', minusFunction, false);
 }
 
-/* Flight dropdown */
-$('a.toggle-flight').click(function() {
-	$(this).find('i').toggleClass('active');
-	$(this).parent().parent().parent().children('.flight-dropdown-wrap').toggleClass('active');
-});
-
-$('a.flight-details').click(function() {
-	$(this).toggleClass('active');
-	$(this).parent().parent().children('.flight-details-wrap').toggleClass('active');
-	console.log($(this).parent().parent().children('.flight-details-wrap'));
-});
+search.init();
