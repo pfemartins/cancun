@@ -10,8 +10,22 @@
 		<main id="hotels">
 			<form action="" method="POST">
 				<div class="fusion-container">
-					<div class="pure-g row filter-box">
-						<span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
+					<div class="filter-box">
+						<div class="pure-g row flight-row">
+							<div class="pure-u-md-5-24 hide-for-small">
+								<h4 class="pink">Leaving From</h4>
+							</div>
+							<div class="pure-u-md-13-24 leaving-wrap hide-for-small">
+								<input type="text" name="fly-from" class="fly-from" placeholder="San Francisco, CA">
+								<a class="cancel">X</a>
+							</div>
+							<div class="pure-u-md-6-24 hide-for-small radio-buttons">
+								<input type="radio" name="trip-type" value="one-way" checked> One-way
+  								<input type="radio" name="trip-type" value="roundtrip" class="last"> Roundtrip<br>
+							</div>
+						</div>
+						<div class="pure-g row">
+							<span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
 							<div class="pure-u-1-4 pure-u-md-5-24 section check-in-wrap">
 								<h4 class="pink hide-for-small">Check-In</h4>
 								<div class="date"><span class="number">21</span> / June</div>
@@ -57,6 +71,7 @@
 							</select></div>
 							<a><i class="icon icon-arrow-down hide-for-small last"></i></a>
 							<button class="purple update-search">Update Search</button>
+						</div>
 						</div>
 					</div>
 
@@ -215,7 +230,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="flight-dropdown-wrap active">
+										<div class="flight-dropdown-wrap">
 											<div class="pure-g row flight-to-from">
 												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
 												<div class="pure-u-1-6 hide-for-small">
@@ -240,7 +255,7 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
 												</div>
 												<div class="flight-details-wrap active pure-u-1">
 													<div class="pure-g row">
@@ -791,7 +806,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="flight-dropdown-wrap active">
+										<div class="flight-dropdown-wrap">
 											<div class="pure-g row flight-to-from">
 												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
 												<div class="pure-u-1-6 hide-for-small">
@@ -816,9 +831,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
@@ -1064,9 +1079,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
@@ -1366,7 +1381,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="flight-dropdown-wrap active">
+										<div class="flight-dropdown-wrap">
 											<div class="pure-g row flight-to-from">
 												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
 												<div class="pure-u-1-6 hide-for-small">
@@ -1391,9 +1406,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
@@ -1639,9 +1654,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details ">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
@@ -1941,7 +1956,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="flight-dropdown-wrap active">
+										<div class="flight-dropdown-wrap">
 											<div class="pure-g row flight-to-from">
 												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
 												<div class="pure-u-1-6 hide-for-small">
@@ -1966,9 +1981,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
@@ -2214,9 +2229,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
@@ -2516,7 +2531,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="flight-dropdown-wrap active">
+										<div class="flight-dropdown-wrap">
 											<div class="pure-g row flight-to-from">
 												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
 												<div class="pure-u-1-6 hide-for-small">
@@ -2541,9 +2556,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
@@ -2789,9 +2804,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
@@ -3091,7 +3106,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="flight-dropdown-wrap active">
+										<div class="flight-dropdown-wrap">
 											<div class="pure-g row flight-to-from">
 												<div class="pure-u-1"><i class="icon icon-plane-right left"></i><h5>Outbound flight</h5></div>
 												<div class="pure-u-1-6 hide-for-small">
@@ -3116,9 +3131,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
@@ -3364,9 +3379,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
