@@ -15,19 +15,28 @@
      position: relative;
 }
 
-#fusion .pika-prev,
-#fusion .pika-next,
-#fusion .pika-button:before,
+#fusion abbr {
+     text-decoration: none;
+}
+
+#fusion .pika-nav,
+#fusion .pika-nav:before,
 #fusion .pika-single.is-bound {
      position: absolute;
 }
 
-#fusion .pika-single {
+#fusion .pika-single,
+#fusion .pika-title > * {
      display: inline-block;
+}
+
+#fusion .pika-single {
      margin-top: -1px;
      background: #FFFFFF;
+     box-shadow: 0 10px 11px 0 rgba(0,0,0,0.27);
      opacity: 1;
-     width: 360px;
+     font-size: 14px;
+     width: 300px;
      -webkit-transition: opacity 0.3s,top 0.2s linear;
      -o-transition: opacity 0.3s,top 0.2s linear;
      transition: opacity 0.3s,top 0.2s linear;
@@ -63,24 +72,58 @@ body.dates-active #date-overlay {
      background-color: transparent;
 }
 
-#fusion .pika-title {
-     text-transform: uppercase;
-     position: relative;
-     padding-bottom: 15px;
+#fusion .pika-single thead {
+     background-color: #F0F0F0;     
 }
 
-#fusion .pika-prev,
-#fusion .pika-next {
+#fusion .pika-title {
+     position: relative;
+     padding: 10px 0;
+     text-align: center;
+     background-color: #22AABD;
+     color: #FFFFFF;
+     font-size: 15px;
+     line-height: 18px;
+}
+
+#fusion .pika-nav:before,
+#fusion .pika-nav {
+     top: 0;
+     bottom: 0;
+     margin: auto;
+}
+
+#fusion .pika-nav {
      opacity: 1;
      display: block;
      cursor: pointer;
-     top: 0;
+     width: 35px;
+     height: 100%;
+     margin: auto;
 }
 
+#fusion .pika-nav:before {
+     content: '';
+     width: 0;
+     height: 0;
+     border-top: 4px solid transparent;    
+     border-bottom: 4px solid transparent;
+}
+
+#fusion .pika-prev:before {
+     border-right: 4px solid #FFFFFF;
+}
+
+#fusion .pika-next:before {
+     border-left: 4px solid #FFFFFF;
+}
+
+#fusion .pika-nav:before,
 #fusion .pika-prev {
      left: 0;
 }
 
+#fusion .pika-nav:before,
 #fusion .pika-next {
      right: 0;
 }
@@ -109,25 +152,23 @@ body.dates-active #date-overlay {
 #fusion .is-empty span,
 #fusion .pika-button {
      text-align: center;
-     line-height: 30px;
+     line-height: 38px;
 }
 
 #fusion .is-empty span,
 #fusion .pika-button {
      cursor: pointer;
      display: block;
-     color: $default;
+     color: #292929;
 }
 
 #fusion .pika-button {
-     content: '';
      top: 0;
      bottom: 0;
      left: 0;
      right: 0;
      margin: auto;
-     width: 25px;
-     height: 25px;
+     height: 38px;
 }
 
 #fusion .is-empty span,
@@ -135,7 +176,7 @@ body.dates-active #date-overlay {
 #fusion .is-disabled .pika-button {
      pointer-events: none;
      cursor: default;
-     opacity: 0.6;
+     color: #D4D4D4;
 }
 
 #fusion .pika-single .is-startrange .pika-button,

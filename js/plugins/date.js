@@ -7,104 +7,6 @@ var date = {
      calendars: [],
      id: 0,
      parent: '',
-     configs: {
-          i18n: {
-               previousMonth: '',
-               nextMonth: '',
-               months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-               monthsShorts: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-               weekdays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-               weekdaysShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
-               weekdaysShortAlt: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-          },
-          bound: true,
-          container: undefined,
-          firstDay: 0,
-          format: "MM/DD/YY",
-          minDate: new Date(),
-          position: "left",
-          reposition: true,
-          theme: "fusion",
-          onOpen: function() {
-               this._o.numberOfMonths = 1;
-
-               this.adjustCalendars();
-
-               date.count = 0;
-          },
-          onSelect: function(selected) {
-               f.removeClass('.fusion-date-state', 'active');
-
-               selected.count++;
-
-               if (date.checkin) {
-                    date.start = selected;
-                    this.setStartRange(date.start);
-                    this.setMinDate(date.start);
-                    this.setMaxDate(date.add(date.start,28));
-                    f.addClass(document.body, 'dates-checkout');
-               } else {
-                    date.end = selected;
-                    this.setEndRange(date.end);
-                    this.setMinDate(date.today);
-                    this.setMaxDate(date.end);
-                    f.removeClass(document.body, 'dates-checkout');
-               }
-
-               date.checkin = !date.checkin;
-
-               if (date.start != "" && date.end != "") {
-                    if (date.compare(date.start, date.end) <= 0 || date.compare(date.start, date.end) > 28) {
-                         date.start = selected;
-                         date.end = "";
-                         this.setStartRange(date.start);
-                         this.setEndRange(null);
-                         this.setMinDate(date.start);
-                         this.setMaxDate(date.add(date.start,365));
-                         f.addClass(document.body, 'dates-checkout');
-                         date.checkin = false;
-                    } else {
-                         for (var i = 0; i < date.calendars.length; i++) {
-                              var a, checkin, checkout;
-
-                              a = date.calendars[i]._o.output;
-                              a_format = date.calendars[i]._o.format;
-                              checkin = document.querySelectorAll(a[0])[0];
-                              checkout = a.length > 1 ? document.querySelectorAll(a[1])[0] : undefined;
-
-                              if (checkin.tagName.toLowerCase()=="input") {
-                                   document.querySelectorAll(date.calendars[i]._o.output[0])[0].value = moment(date.start).format(a_format);
-                                   if (checkout !== undefined) {
-                                        document.querySelectorAll(date.calendars[i]._o.output[1])[0].value = moment(date.end).format(a_format);
-                                   }
-                              } else {
-                                   document.querySelectorAll(date.calendars[i]._o.output[0])[0].innerHTML = moment(date.start).format(a_format);
-                                   if (checkout !== undefined) {
-                                        document.querySelectorAll(date.calendars[i]._o.output[1])[0].innerHTML = moment(date.end).format(a_format);
-                                   }
-                              }
-
-                              date.calendars[i].setStartRange(date.start);
-                              date.calendars[i].setEndRange(date.end);
-                         }
-
-                         f.addClass(document.body, 'dates-set');
-
-                         if (f.device != "mobile" && this._o.bound && date.count >= 2) {
-                              date.close();
-                         }
-
-                         this.setMinDate(date.today);
-                         this.setMaxDate(date.add(date.today, 365));
-                    }
-               } else {
-                    f.removeClass(document.body, 'dates-set');
-               }
-
-               this.adjustPosition();
-               this.draw();
-          }
-     },
      init: function() {
           if (document.querySelectorAll('.fusion-dates').length>0) {
                for (var i = 0; i < document.querySelectorAll('.fusion-dates').length; i++) {
@@ -489,7 +391,7 @@ https://github.com/dbushell/Pikaday
                          arr.push('<option value="' + i + '"' + (i === year ? " selected" : "") + ">" + i + "</option>")
                     }
                }
-               yearHtml = '<div class="pika-label">' + year + opts.yearSuffix + '<select class="pika-select pika-select-year" tabindex="-1">' + arr.join("") + "</select></div>";
+               yearHtml = '<span>&nbsp;</span><div class="pika-label">' + year + opts.yearSuffix + '<select class="pika-select pika-select-year" tabindex="-1">' + arr.join("") + "</select></div>";
                if (opts.showMonthAfterYear) {
                     html += yearHtml + monthHtml
                } else {
@@ -502,10 +404,10 @@ https://github.com/dbushell/Pikaday
                     next = false
                }
                if (c === 0) {
-                    html += '<a class="pika-prev' + (prev ? "" : " is-disabled") + '"><span class="d"><i class="icon"></i>' + opts.i18n.monthsShorts[((month - 1) == -1) ? 11 : (month - 1)] + '</span>' + opts.i18n.previousMonth + "</a>"
+                    html += '<a class="pika-prev pika-nav' + (prev ? "" : " is-disabled") + '"></a>'
                }
                if (c === instance._o.numberOfMonths - 1) {
-                    html += '<a class="pika-next' + (next ? "" : " is-disabled") + '"><span class="d">' + opts.i18n.monthsShorts[((month + 1) == 12) ? 0 : (month + 1)] + '</span><i class="icon"></i>' + opts.i18n.nextMonth + "</a>"
+                    html += '<a class="pika-next pika-nav' + (next ? "" : " is-disabled") + '"></a>'
                }
                return html += "</div>"
           },
@@ -1085,3 +987,102 @@ https://github.com/dbushell/Pikaday
      };
      return Pikaday
 });
+
+date.configs = {
+     i18n: {
+          previousMonth: '',
+          nextMonth: '',
+          months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          monthsShorts: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          weekdays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          weekdaysShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+          weekdaysShortAlt: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+     },
+     bound: true,
+     container: undefined,
+     firstDay: 0,
+     format: "MM/DD/YY",
+     minDate: new Date(),
+     position: "left",
+     reposition: true,
+     theme: "fusion",
+     onOpen: function() {
+          this._o.numberOfMonths = 1;
+
+          this.adjustCalendars();
+
+          date.count = 0;
+     },
+     onSelect: function(selected) {
+          f.removeClass('.fusion-date-state', 'active');
+
+          selected.count++;
+
+          if (date.checkin) {
+               date.start = selected;
+               this.setStartRange(date.start);
+               this.setMinDate(date.start);
+               this.setMaxDate(date.add(date.start,28));
+               f.addClass(document.body, 'dates-checkout');
+          } else {
+               date.end = selected;
+               this.setEndRange(date.end);
+               this.setMinDate(date.today);
+               this.setMaxDate(date.end);
+               f.removeClass(document.body, 'dates-checkout');
+          }
+
+          date.checkin = !date.checkin;
+
+          if (date.start != "" && date.end != "") {
+               if (date.compare(date.start, date.end) <= 0 || date.compare(date.start, date.end) > 28) {
+                    date.start = selected;
+                    date.end = "";
+                    this.setStartRange(date.start);
+                    this.setEndRange(null);
+                    this.setMinDate(date.start);
+                    this.setMaxDate(date.add(date.start,365));
+                    f.addClass(document.body, 'dates-checkout');
+                    date.checkin = false;
+               } else {
+                    for (var i = 0; i < date.calendars.length; i++) {
+                         var a, checkin, checkout;
+
+                         a = date.calendars[i]._o.output;
+                         a_format = date.calendars[i]._o.format;
+                         checkin = document.querySelectorAll(a[0])[0];
+                         checkout = a.length > 1 ? document.querySelectorAll(a[1])[0] : undefined;
+
+                         if (checkin.tagName.toLowerCase()=="input") {
+                              document.querySelectorAll(date.calendars[i]._o.output[0])[0].value = moment(date.start).format(a_format);
+                              if (checkout !== undefined) {
+                                   document.querySelectorAll(date.calendars[i]._o.output[1])[0].value = moment(date.end).format(a_format);
+                              }
+                         } else {
+                              document.querySelectorAll(date.calendars[i]._o.output[0])[0].innerHTML = moment(date.start).format(a_format);
+                              if (checkout !== undefined) {
+                                   document.querySelectorAll(date.calendars[i]._o.output[1])[0].innerHTML = moment(date.end).format(a_format);
+                              }
+                         }
+
+                         date.calendars[i].setStartRange(date.start);
+                         date.calendars[i].setEndRange(date.end);
+                    }
+
+                    f.addClass(document.body, 'dates-set');
+
+                    if (f.device != "mobile" && this._o.bound && date.count >= 2) {
+                         date.close();
+                    }
+
+                    this.setMinDate(date.today);
+                    this.setMaxDate(date.add(date.today, 365));
+               }
+          } else {
+               f.removeClass(document.body, 'dates-set');
+          }
+
+          this.adjustPosition();
+          this.draw();
+     }
+};
