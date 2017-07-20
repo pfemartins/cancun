@@ -13,7 +13,7 @@
 					<div class="filter-box">
 						<div class="pure-g row flight-row">
 							<div class="pure-u-md-5-24 hide-for-small">
-								<h4 class="pink">Leaving From</h4>
+								<h4>Leaving From</h4>
 							</div>
 							<div class="pure-u-md-13-24 leaving-wrap hide-for-small">
 								<input type="text" name="fly-from" class="fly-from" placeholder="San Francisco, CA">
@@ -27,20 +27,20 @@
 						<div class="pure-g row">
 							<span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
 							<div class="pure-u-1-4 pure-u-md-5-24 section check-in-wrap">
-								<h4 class="pink hide-for-small">Check-In</h4>
+								<h4 class="hide-for-small gray">Check-In</h4>
 								<div class="date"><span class="number">21</span> / June</div>
 								<a><i class="icon icon-arrow-down hide-for-small"></i></a>
 								<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
 							</div>
 							<div class="pure-u-1-4 pure-u-md-5-24 section check-out-wrap">
-								<h4 class="pink hide-for-small">Check-Out</h4>
+								<h4 class="hide-for-small gray">Check-Out</h4>
 								<div class="date"><span class="number">27</span> / June</div>
 								<a><i class="icon icon-arrow-down hide-for-small"></i></a>
 								<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
 							</div>
 						</span>
 						<div class="pure-u-1-4 pure-u-md-4-24 section">
-							<h4 class="pink">Guests</h4>
+							<h4 class="gray">Guests</h4>
 							<div class="guests"><span class="number"><select name="guests_num" id="">
 								<option value="1" selected>1</option>
 								<option value="2">2</option>
@@ -52,7 +52,7 @@
 							<a><i class="icon icon-arrow-down hide-for-small"></i></a>
 						</div>
 						<div class="pure-u-1-4 pure-u-md-4-24 section">
-							<h4 class="pink">Rooms</h4>
+							<h4 class="gray">Rooms</h4>
 							<div class="rooms"><span class="number"><select name="room_num" id="">
 								<option value="1" selected>1</option>
 								<option value="2">2</option>
@@ -70,7 +70,7 @@
 								<option value="puerto-vallarta">Puerto Vallarta</option>
 							</select></div>
 							<a><i class="icon icon-arrow-down hide-for-small last"></i></a>
-							<button class="purple update-search">Update Search</button>
+							<button class="update-search">Update Search</button>
 						</div>
 						</div>
 					</div>
@@ -80,9 +80,9 @@
 							<input type="hidden" name="price-range" value="">
 							<input type="hidden" name="star-rating" value="">
 							<input type="hidden" name="tripadvisor-rating" value="">
-							<h3>Filters</h3>
+							<h3 class="gray">Filters</h3>
 							<hr>
-							<div class="matches pink">116 matches</div>
+							<div class="matches gray">116 matches</div>
 							<label for="hotel-name">Hotel name</label>
 							<input type="text" id="hotel-name">
 							<hr>
@@ -167,7 +167,7 @@
 									<img src="images/hotels/search-results/result1.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Grand Fiesta Americana Coral Beach Cancun</h3>
+									<h3>Grand Fiesta Americana Coral Beach Cancun</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -211,7 +211,7 @@
 									<div class="price"><sup>$</sup>239</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 								<div class="flight-wrap">
 									<div class="pure-u-1 flight-info">
@@ -220,12 +220,12 @@
 												<img src="images/hotels/search-results/aero-mexico.png">
 											</div>
 											<div class="pure-u-7-8 pure-u-md-7-12">
-												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="regular">Roundtrip flight included SFO - CUN</p>
 												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
 											</div>
 											<div class="pure-u-1-8 pure-u-md-1-4">
 												<a class="toggle-flight">
-													<i class="icon icon-arrow-down-purple right"></i>
+													<i class="icon icon-arrow-down right"></i>
 													<p class="right hide-for-small">VIEW | EDIT</p>
 												</a>
 											</div>
@@ -255,9 +255,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
@@ -280,7 +280,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -290,7 +290,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -302,7 +302,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -313,7 +313,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -325,7 +325,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -336,7 +336,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -348,7 +348,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -358,10 +358,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -386,7 +386,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -396,7 +396,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -408,7 +408,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -419,7 +419,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -431,7 +431,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -442,7 +442,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -454,7 +454,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -503,9 +503,9 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details active">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
-												<div class="flight-details-wrap active pure-u-1">
+												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
 														<div class="pure-u-1-3 pure-u-md-5-24 flight-details">
 															<p>San Francisco</p>
@@ -528,7 +528,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -538,7 +538,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -550,7 +550,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -561,7 +561,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -573,7 +573,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -584,7 +584,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -596,7 +596,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -606,10 +606,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -634,7 +634,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -644,7 +644,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -656,7 +656,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -667,7 +667,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -679,7 +679,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -690,7 +690,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -702,7 +702,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -725,7 +725,7 @@
 												</div>
 											</div>
 											<div class="pure-u-1 change-flight">
-										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<a href="" class="button"><i class="icon icon-plane-right"></i> Change Flight</a>
 										<p class="right">This is the cheapest flight available!</p>
 									</div>
 										</div>
@@ -734,7 +734,7 @@
 								</div>
 								
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg book-btn">Book</a>
+									<a href="" class="button yellow-bg book-btn">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -742,7 +742,7 @@
 									<img src="images/hotels/search-results/result2.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Bel Air Collection Resort and Spa Cancun Adults Only</h3>
+									<h3>Bel Air Collection Resort and Spa Cancun Adults Only</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -786,7 +786,7 @@
 									<div class="price"><sup>$</sup>1,289</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 
 								<div class="flight-wrap">
@@ -796,12 +796,12 @@
 												<img src="images/hotels/search-results/aero-mexico.png">
 											</div>
 											<div class="pure-u-7-8 pure-u-md-7-12">
-												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="regular">Roundtrip flight included SFO - CUN</p>
 												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
 											</div>
 											<div class="pure-u-1-8 pure-u-md-1-4">
 												<a class="toggle-flight">
-													<i class="icon icon-arrow-down-purple right"></i>
+													<i class="icon icon-arrow-down right"></i>
 													<p class="right hide-for-small">VIEW | EDIT</p>
 												</a>
 											</div>
@@ -831,7 +831,7 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
 												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
@@ -856,7 +856,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -866,7 +866,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -878,7 +878,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -889,7 +889,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -901,7 +901,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -912,7 +912,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -924,7 +924,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -934,10 +934,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -962,7 +962,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -972,7 +972,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -984,7 +984,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -995,7 +995,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -1007,7 +1007,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1018,7 +1018,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -1030,7 +1030,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -1079,7 +1079,7 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
 												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
@@ -1104,7 +1104,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -1114,7 +1114,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -1126,7 +1126,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1137,7 +1137,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -1149,7 +1149,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1160,7 +1160,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -1172,7 +1172,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -1182,10 +1182,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -1210,7 +1210,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -1220,7 +1220,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -1232,7 +1232,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1243,7 +1243,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -1255,7 +1255,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1266,7 +1266,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -1278,7 +1278,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -1301,7 +1301,7 @@
 												</div>
 											</div>
 											<div class="pure-u-1 change-flight">
-										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<a href="" class="button"><i class="icon icon-plane-right"></i> Change Flight</a>
 										<p class="right">This is the cheapest flight available!</p>
 									</div>
 										</div>
@@ -1310,7 +1310,7 @@
 								</div>
 								
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg book-btn">Book</a>
+									<a href="" class="button yellow-bg book-btn">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -1318,7 +1318,7 @@
 									<img src="images/hotels/search-results/result3.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Grand Fiesta Americana Coral Beach Cancun</h3>
+									<h3>Grand Fiesta Americana Coral Beach Cancun</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -1362,7 +1362,7 @@
 									<div class="price"><sup>$</sup>1,489</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 								<div class="flight-wrap">
 									<div class="pure-u-1 flight-info">
@@ -1371,12 +1371,12 @@
 												<img src="images/hotels/search-results/aero-mexico.png">
 											</div>
 											<div class="pure-u-7-8 pure-u-md-7-12">
-												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="regular">Roundtrip flight included SFO - CUN</p>
 												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
 											</div>
 											<div class="pure-u-1-8 pure-u-md-1-4">
 												<a class="toggle-flight">
-													<i class="icon icon-arrow-down-purple right"></i>
+													<i class="icon icon-arrow-down right"></i>
 													<p class="right hide-for-small">VIEW | EDIT</p>
 												</a>
 											</div>
@@ -1406,7 +1406,7 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
 												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
@@ -1431,7 +1431,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -1441,7 +1441,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -1453,7 +1453,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1464,7 +1464,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -1476,7 +1476,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1487,7 +1487,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -1499,7 +1499,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -1509,10 +1509,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -1537,7 +1537,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -1547,7 +1547,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -1559,7 +1559,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1570,7 +1570,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -1582,7 +1582,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1593,7 +1593,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -1605,7 +1605,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -1654,7 +1654,7 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details ">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details ">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
 												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
@@ -1679,7 +1679,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -1689,7 +1689,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -1701,7 +1701,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1712,7 +1712,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -1724,7 +1724,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1735,7 +1735,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -1747,7 +1747,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -1757,10 +1757,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -1785,7 +1785,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -1795,7 +1795,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -1807,7 +1807,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1818,7 +1818,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -1830,7 +1830,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -1841,7 +1841,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -1853,7 +1853,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -1876,7 +1876,7 @@
 												</div>
 											</div>
 											<div class="pure-u-1 change-flight">
-										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<a href="" class="button"><i class="icon icon-plane-right"></i> Change Flight</a>
 										<p class="right">This is the cheapest flight available!</p>
 									</div>
 										</div>
@@ -1885,7 +1885,7 @@
 								</div>
 								
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg book-btn">Book</a>
+									<a href="" class="button yellow-bg book-btn">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -1893,7 +1893,7 @@
 									<img src="images/hotels/search-results/result1.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Grand Fiesta Americana Coral Beach Cancun</h3>
+									<h3>Grand Fiesta Americana Coral Beach Cancun</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -1937,7 +1937,7 @@
 									<div class="price"><sup>$</sup>743</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 								<div class="flight-wrap">
 									<div class="pure-u-1 flight-info">
@@ -1946,12 +1946,12 @@
 												<img src="images/hotels/search-results/aero-mexico.png">
 											</div>
 											<div class="pure-u-7-8 pure-u-md-7-12">
-												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="regular">Roundtrip flight included SFO - CUN</p>
 												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
 											</div>
 											<div class="pure-u-1-8 pure-u-md-1-4">
 												<a class="toggle-flight">
-													<i class="icon icon-arrow-down-purple right"></i>
+													<i class="icon icon-arrow-down right"></i>
 													<p class="right hide-for-small">VIEW | EDIT</p>
 												</a>
 											</div>
@@ -1981,7 +1981,7 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
 												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
@@ -2006,7 +2006,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -2016,7 +2016,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -2028,7 +2028,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2039,7 +2039,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -2051,7 +2051,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2062,7 +2062,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -2074,7 +2074,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -2084,10 +2084,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -2112,7 +2112,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -2122,7 +2122,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -2134,7 +2134,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2145,7 +2145,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -2157,7 +2157,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2168,7 +2168,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -2180,7 +2180,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -2229,7 +2229,7 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
 												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
@@ -2254,7 +2254,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -2264,7 +2264,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -2276,7 +2276,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2287,7 +2287,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -2299,7 +2299,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2310,7 +2310,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -2322,7 +2322,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -2332,10 +2332,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -2360,7 +2360,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -2370,7 +2370,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -2382,7 +2382,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2393,7 +2393,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -2405,7 +2405,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2416,7 +2416,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -2428,7 +2428,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -2451,7 +2451,7 @@
 												</div>
 											</div>
 											<div class="pure-u-1 change-flight">
-										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<a href="" class="button"><i class="icon icon-plane-right"></i> Change Flight</a>
 										<p class="right">This is the cheapest flight available!</p>
 									</div>
 										</div>
@@ -2460,7 +2460,7 @@
 								</div>
 
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button yellow-bg">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -2468,7 +2468,7 @@
 									<img src="images/hotels/search-results/result2.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Bel Air Collection Resort and Spa Cancun Adults Only</h3>
+									<h3>Bel Air Collection Resort and Spa Cancun Adults Only</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -2512,7 +2512,7 @@
 									<div class="price"><sup>$</sup>239</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 								<div class="flight-wrap">
 									<div class="pure-u-1 flight-info">
@@ -2521,12 +2521,12 @@
 												<img src="images/hotels/search-results/aero-mexico.png">
 											</div>
 											<div class="pure-u-7-8 pure-u-md-7-12">
-												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="regular">Roundtrip flight included SFO - CUN</p>
 												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
 											</div>
 											<div class="pure-u-1-8 pure-u-md-1-4">
 												<a class="toggle-flight">
-													<i class="icon icon-arrow-down-purple right"></i>
+													<i class="icon icon-arrow-down right"></i>
 													<p class="right hide-for-small">VIEW | EDIT</p>
 												</a>
 											</div>
@@ -2556,7 +2556,7 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
 												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
@@ -2581,7 +2581,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -2591,7 +2591,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -2603,7 +2603,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2614,7 +2614,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -2626,7 +2626,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2637,7 +2637,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -2649,7 +2649,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -2659,10 +2659,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -2687,7 +2687,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -2697,7 +2697,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -2709,7 +2709,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2720,7 +2720,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -2732,7 +2732,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2743,7 +2743,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -2755,7 +2755,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -2804,7 +2804,7 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
 												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
@@ -2829,7 +2829,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -2839,7 +2839,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -2851,7 +2851,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2862,7 +2862,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -2874,7 +2874,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2885,7 +2885,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -2897,7 +2897,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -2907,10 +2907,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -2935,7 +2935,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -2945,7 +2945,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -2957,7 +2957,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2968,7 +2968,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -2980,7 +2980,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -2991,7 +2991,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -3003,7 +3003,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -3026,7 +3026,7 @@
 												</div>
 											</div>
 											<div class="pure-u-1 change-flight">
-										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<a href="" class="button"><i class="icon icon-plane-right"></i> Change Flight</a>
 										<p class="right">This is the cheapest flight available!</p>
 									</div>
 										</div>
@@ -3035,7 +3035,7 @@
 								</div>
 								
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg book-btn">Book</a>
+									<a href="" class="button yellow-bg book-btn">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -3043,7 +3043,7 @@
 									<img src="images/hotels/search-results/result3.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Grand Fiesta Americana Coral Beach Cancun</h3>
+									<h3>Grand Fiesta Americana Coral Beach Cancun</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -3087,7 +3087,7 @@
 									<div class="price"><sup>$</sup>239</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 								<div class="flight-wrap">
 									<div class="pure-u-1 flight-info">
@@ -3096,12 +3096,12 @@
 												<img src="images/hotels/search-results/aero-mexico.png">
 											</div>
 											<div class="pure-u-7-8 pure-u-md-7-12">
-												<p>Roundtrip flight included SFO - CUN</p>
+												<p class="regular">Roundtrip flight included SFO - CUN</p>
 												<p class="light">Departure: 00:01 hrs / Return: 15:50 hrs</p>
 											</div>
 											<div class="pure-u-1-8 pure-u-md-1-4">
 												<a class="toggle-flight">
-													<i class="icon icon-arrow-down-purple right"></i>
+													<i class="icon icon-arrow-down right"></i>
 													<p class="right hide-for-small">VIEW | EDIT</p>
 												</a>
 											</div>
@@ -3131,7 +3131,7 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
 												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
@@ -3156,7 +3156,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -3166,7 +3166,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -3178,7 +3178,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -3189,7 +3189,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -3201,7 +3201,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -3212,7 +3212,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -3224,7 +3224,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -3234,10 +3234,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -3262,7 +3262,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -3272,7 +3272,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -3284,7 +3284,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -3295,7 +3295,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -3307,7 +3307,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -3318,7 +3318,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -3330,7 +3330,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -3379,7 +3379,7 @@
 												<div class="pure-u-1 pure-u-md-1-3 duration-details">
 													<p>Duration<br>
 													7hr 59m</p>
-													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-purple-small"></i></a>
+													<a href="" onclick="return false;" class="flight-details">Flight Details <i class="icon icon-arrow-down-small"></i></a>
 												</div>
 												<div class="flight-details-wrap pure-u-1">
 													<div class="pure-g row">
@@ -3404,7 +3404,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -3414,7 +3414,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -3426,7 +3426,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -3437,7 +3437,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -3449,7 +3449,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -3460,7 +3460,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -3472,7 +3472,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -3482,10 +3482,10 @@
 													</div>
 													<div class="pure-g row stops-timeout">
 														<div class="pure-u-1-3">
-															<p>Stops    <span class="light">Guadalajara GDL</span></p>
+															<p class="regular">Stops    <span class="light">Guadalajara GDL</span></p>
 														</div>
 														<div class="pure-u-1-3">
-															<p>Timeout:    <span class="light">1h 26m</span></p>
+															<p class="regular">Timeout:    <span class="light">1h 26m</span></p>
 														</div>
 													</div>
 													<div class="pure-g row">
@@ -3510,7 +3510,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Airline</p>
+																	<p class="regular">Airline</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Aeromexico</p>
@@ -3520,7 +3520,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight number</p>
+																	<p class="regular">Flight number</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">662</p>
@@ -3532,7 +3532,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Departs</p>
+																	<p class="regular">Departs</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -3543,7 +3543,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Flight</p>
+																	<p class="regular">Flight</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">738</p>
@@ -3555,7 +3555,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Arrives</p>
+																	<p class="regular">Arrives</p>
 																	<p class="light">2017</p>
 																</div>
 																<div class="pure-u-2-3">
@@ -3566,7 +3566,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Duration</p>
+																	<p class="regular">Duration</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">4h 30m</p>
@@ -3578,7 +3578,7 @@
 														<div class="pure-u-1 pure-u-md-1-2">
 															<div class="pure-g row">
 																<div class="pure-u-1-3">
-																	<p>Class</p>
+																	<p class="regular">Class</p>
 																</div>
 																<div class="pure-u-2-3">
 																	<p class="light">Economy/Coach</p>
@@ -3601,7 +3601,7 @@
 												</div>
 											</div>
 											<div class="pure-u-1 change-flight">
-										<a href="" class="button purple"><i class="icon icon-plane-purple"></i> Change Flight</a>
+										<a href="" class="button"><i class="icon icon-plane-right"></i> Change Flight</a>
 										<p class="right">This is the cheapest flight available!</p>
 									</div>
 										</div>
@@ -3610,7 +3610,7 @@
 								</div>
 								
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg book-btn">Book</a>
+									<a href="" class="button yellow-bg book-btn">Book</a>
 								</div>
 							</div>
 
@@ -3625,19 +3625,19 @@
 					</div>
 					<div class="pure-g row">
 						<div class="pure-u-1 nav-wrap">
-							<nav class="purple-bg">
+							<nav class="gradient-bg">
 								<ul>
 									<li><a>Hotels</a></li>
 									<li><a>Hotels + Flight</a></li>
 								</ul>
 							</nav>
-							<div class="purple-bg purple-fill hide-for-medium hide-for-small"></div>
+							<div class="gradient-bg nav-fill hide-for-medium hide-for-small"></div>
 						</div>
 						
 					</div>
 					<div class="pure-g row">
 						<div class="pure-u-1 flying-from">
-							<h4 class="pink">Flying From</h4>
+							<h4>Flying From</h4>
 							<div class="flying-from-city">San Francisco, CA</div>
 						</div>
 					</div>
@@ -3649,13 +3649,13 @@
 					<div class="pure-g row">
 						<div id="mobile-dates" class="fusion-dates" data-date-output="#mobile-dates .fusion-date-checkin,#mobile-dates .fusion-date-checkout">
 							<div class="pure-u-1-2 section check-in-wrap">
-								<h4 class="pink">Check-In</h4>
+								<h4 class="gray">Check-In</h4>
 								<div class="date"><span class="number">21</span> / June</div>
 								<a><i class="icon icon-arrow-down"></i></a>
 								<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
 							</div>
 							<div class="pure-u-1-2 section check-out-wrap">
-								<h4 class="pink">Check-Out</h4>
+								<h4 class="gray">Check-Out</h4>
 								<div class="date"><span class="number">27</span> / June</div>
 								<a><i class="icon icon-arrow-down"></i></a>
 								<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
@@ -3669,19 +3669,19 @@
 					</div>
 					<div class="pure-g row">
 						<div class="pure-u-1-2 section">
-							<h4 class="pink">Guests</h4>
+							<h4 class="gray">Guests</h4>
 							<a href=""><i class="icon icon-arrow-down right"></i></a>
 							<div class="date"><span class="number">02</span></div>
 						</div>
 						<div class="pure-u-1-2 section">
-							<h4 class="pink">Rooms</h4>
+							<h4 class="gray">Rooms</h4>
 							<a href=""><i class="icon icon-arrow-down right"></i></a>
 							<div class="date"><span class="number">01</span></div>
 						</div>
 					</div>
 					<div class="pure-g row">
 						<div class="pure-u-1">
-							<h4 class="pink">
+							<h4>
 								Room 1
 							</h4>
 						</div>
@@ -3727,7 +3727,7 @@
 					</div>
 					<div class="pure-g row">
 						<div class="pure-u-1">
-							<h4 class="pink">Age of Children</h4>
+							<h4>Age of Children</h4>
 						</div>
 					</div>
 					<div class="pure-g row">
@@ -3752,7 +3752,7 @@
 					</div>
 					<div class="pure-g row">
 						<div class="pure-u-1">
-							<h4 class="pink">Area</h4>
+							<h4>Area</h4>
 							<div class="fusion-select">
 								<i class="icon icon-arrow-down-small"></i>
 								<select name="area" id="area">
@@ -3764,20 +3764,20 @@
 						</div>
 						<div class="pure-g row">
 							<div class="pure-u-1">
-								<button class="purple-bg">
+								<button class="yellow-bg">
 									Go!
 								</button>
 							</div>
 						</div>
 						<div class="pure-g row">
 							<div class="pure-u-1">
-								<a class="more-filters purple">
+								<a class="more-filters">
 									+ More filters
 								</a>
 							</div>
 						</div>
 						<div class="additional-filters" style="display: none;">
-							<div class="pure-g row pink-bg">
+							<div class="pure-g row filters-bg">
 								<div class="pure-u-1">
 									<h3>Filters</h3>
 								</div>
@@ -3849,15 +3849,15 @@
 							</div>
 							<div class="pure-g row button-row">
 								<div class="pure-u-1-2">
-									<a class="button purple-bg">Go!</a>
+									<a class="button yellow-bg">Go!</a>
 								</div>
 								<div class="pure-u-1-2">
-									<a class="button purple close">Cancel</a>
+									<a class="button close">Cancel</a>
 								</div>
 							</div>
 							<div class="pure-g row">
 								<div class="pure-u-1">
-									<p><a class="purple hide-filters">- Hide filters</a></p>
+									<p><a class="hide-filters">- Hide filters</a></p>
 								</div>
 							</div>
 						</div>

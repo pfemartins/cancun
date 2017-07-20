@@ -106,6 +106,31 @@ img,legend{border:0}legend,td,th{padding:0}.pure-button:focus,a:active,a:hover{o
 #fusion .purple-bg {
 	background-color: #6522FF;
 }
+#fusion .green {
+	color: #42B299;
+}
+#fusion .green-bg {
+	background-color: #42B299;
+}
+#fusion .yellow {
+	color: #CAC859;
+}
+#fusion .yellow-bg {
+	background-color: #CAC859;
+}
+#fusion .gradient-bg {
+	background: #1CA9BD; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, #1CA9BD , #44BCA2); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #1CA9BD, #44BCA2); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #1CA9BD, #44BCA2); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #1CA9BD , #44BCA2); /* Standard syntax */
+}
+#fusion .gray {
+	color: #7C7C7C;
+}
+#fusion .gray-bg {
+	background-color: #F7F7F7;
+}
 #fusion .pink-bg {
 	background-color: #FEF0F2;
 }
@@ -124,8 +149,10 @@ img,legend{border:0}legend,td,th{padding:0}.pure-button:focus,a:active,a:hover{o
 	border-radius: 3px;
 	text-align: center;
 	box-sizing: border-box;
+	font-weight: 700;
+	box-shadow: 2px 2px 2px #AFAFAF;
 }
-#fusion a.button.purple-bg, #fusion button.purple-bg {
+#fusion a.button.yellow-bg, #fusion button.yellow-bg {
 	color: #fff;
 }
 #fusion a.button.purple, #fusion button.purple {
@@ -133,6 +160,9 @@ img,legend{border:0}legend,td,th{padding:0}.pure-button:focus,a:active,a:hover{o
 }
 #fusion .light {
 	font-weight: 300;
+}
+#fusion .regular {
+	font-weight: 400;
 }
 #fusion .bold {
 	font-weight: 700;

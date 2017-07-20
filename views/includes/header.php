@@ -6,13 +6,13 @@
 	</div>
 	<div class="pure-g row">
 		<div class="pure-u-1 nav-wrap">
-			<nav class="purple-bg fusion-container">
+			<nav class="gradient-bg fusion-container">
 				<ul>
 					<li><a>Hotels</a></li>
 					<li><a>Hotels + Flight</a></li>
 				</ul>
 			</nav>
-			<div class="purple-bg purple-fill hide-for-medium hide-for-small"></div>
+			<div class="nav-fill hide-for-medium hide-for-small"></div>
 		</div>
 		
 	</div>

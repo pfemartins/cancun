@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="12px" viewBox="0 0 15 12" version="1.1">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="EXPLORE-(regions)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Individual-Region-Guide" transform="translate(-233.000000, -799.000000)" fill="#42B299">
+            <g id="Left-bar-nav" transform="translate(232.000000, 576.000000)">
+                <g id="KnownFor" transform="translate(1.000000, 46.000000)">
+                    <g id="Group-15" transform="translate(0.000000, 173.000000)">
+                        <path d="M13.1162192,4 C13.7651879,4.64896868 14.3889464,5.27272727 15.0001,5.88388083 C11.8308869,9.05347594 8.65785401,12.2265088 5.49322452,15.3915202 C3.67122299,13.5699007 1.83126883,11.7307105 0.000100000001,9.89992361 C0.628442246,9.27387319 1.26289603,8.64132926 1.89391207,8.01260504 C3.07954996,9.19977082 4.28543231,10.4071811 5.49857212,11.6214668 C8.05548579,9.06340718 10.5848976,6.5328495 13.1162192,4" id="Fill-1"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

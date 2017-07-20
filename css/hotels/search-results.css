@@ -16,7 +16,7 @@
 }
 .filter-box .section.last {
 	border-right: none;
-	background-color: #FEF0F2;
+	background-color: #f7f7f7;
 }
 .mobile-search-bar .section:last-child {
 	border-right: none;
@@ -107,6 +107,8 @@
     font-size: 14px;
     padding: 7px;
     margin-top: 6px;
+    border: 1px solid #C9C9C9;
+    font-weight: 400;
 }
 
 /* Slider styles */
@@ -118,7 +120,7 @@
 	margin: 12px 0;
 }
 #hotels .noUi-connect {
-	background: #FAD7DC;
+	background: #42B299;
 	border-radius: 10px;
 	box-shadow: none;
 }
@@ -267,7 +269,7 @@
 	color: #333333;
 }
 #fusion .flight-info .intro-info {
-	background: #E0E4FC;
+	background: #C7EAE3;
 	box-sizing: border-box;
 	padding: 15px;
 	margin-top: 15px;
@@ -291,10 +293,9 @@
 #fusion #hotels .flight-info .toggle-flight p {
 	font-size: 10px;
 	margin-right: 15px;
-	color: #6522FF;
 }
-#fusion #hotels .flight-info .icon-arrow-down-purple.active {
-	background-position: -10px -394px;
+#fusion #hotels .flight-info .icon-arrow-down.active {
+	background-position: -10px -502px;
 }
 .flight-wrap .flight-dropdown-wrap {
 	display: none;
@@ -303,7 +304,6 @@
 	display: block;
 }
 .flight-wrap .flight-to-from {
-	background: #FEF0F2;
 	padding: 14px 10px;
 }
 #fusion #hotels .flight-wrap hr {
@@ -349,7 +349,7 @@
 	top: 60px;
 	padding: 10px 5px;
 }
-#fusion #hotels .flight-info .duration-details a.flight-details .icon-arrow-down-purple-small {
+#fusion #hotels .flight-info .duration-details a.flight-details .icon-arrow-down-small {
 	margin-left: 8px;
 }
 #fusion #hotels .flight-info .duration-details {
@@ -360,8 +360,10 @@
 	font-size: 14px;
 	font-weight: 500;
 	padding: 10px 5px;
+	border: 1px solid #C9C9C9;
+	box-sizing: none;
 }
-#fusion #hotels .flight-wrap .change-flight a.button .icon-plane-purple {
+#fusion #hotels .flight-wrap .change-flight a.button .icon-plane {
 	margin-right: 10px;
 }
 #fusion #hotels .flight-wrap .change-flight  {
@@ -380,19 +382,19 @@
 
 /* Open Flight deals */
 #fusion #hotels .flight-info .duration-details a.flight-details.active {
-	background: #fff;
+	background: #f7f7f7;
 }
 #hotels .flight-info .flight-details-wrap {
 	display: none;
-	background: #fff;
+	background: #F7F7F7;
 	padding: 10px;
 	box-sizing: border-box;
 }
 #hotels .flight-info .flight-details-wrap.active {
 	display: block;
 }
-#fusion #hotels .flight-info .duration-details a.flight-details.active .icon-arrow-down-purple-small {
-	background-position: -10px -367px;
+#fusion #hotels .flight-info .duration-details a.flight-details.active .icon-arrow-down-small {
+	background-position: -10px -475px;
 }
 #fusion #hotels .flight-wrap .flight-details-wrap hr {
 	color: #DFDFDF;
@@ -407,8 +409,7 @@
 }
 .flight-details-wrap .stops-timeout {
 	box-sizing: border-box;
-	border: 1px solid #C9C9C9;
-	background: #FEF0F2;
+	background: #C7EAE3;
 	padding: 15px;
 	border-radius: 3px;
 	margin: 10px 0;
@@ -513,7 +514,9 @@
 	#hotels .mobile-filters-button {
 		display: block;
 		float: right;
-		border: 1px solid #6522FF;
+		border: 1px solid #C9C9C9;
+		width: 135px;
+		font-weight: 400;
 		margin-bottom: 25px;
 	}
 	.mobile-search-bar .flying-from-city {
@@ -531,6 +534,7 @@
 	    font-weight: 500;
 	    margin-bottom: 12px;
 	    line-height: 1;
+	    border: 1px solid #C9C9C9;
 	}
 	#hotels .mobile-search-bar .additional-filters a.close {
 		font-size: 14px
@@ -593,6 +597,9 @@
 	}
 
 	/* Open Flight deals */
+	#fusion .flight-info .intro-info {
+		margin-bottom: 15px;
+	}
 	#fusion #hotels .flight-info .duration-details {
 		margin-bottom: 10px;
 	}
@@ -607,5 +614,8 @@
 	}
 	#fusion #hotels .flight-wrap .icon-arrow-left {
 		margin-top: 20px;
+	}
+	#fusion #hotels .mobile-button a.button {
+		margin-bottom: 10px;
 	}
 }

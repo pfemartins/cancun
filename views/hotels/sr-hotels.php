@@ -13,20 +13,20 @@
 					<div class="pure-g row filter-box">
 						<span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
 							<div class="pure-u-1-4 pure-u-md-5-24 section check-in-wrap">
-								<h4 class="pink hide-for-small">Check-In</h4>
+								<h4 class="gray hide-for-small">Check-In</h4>
 								<div class="date"><span class="number">21</span> / June</div>
 								<a><i class="icon icon-arrow-down hide-for-small"></i></a>
 								<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
 							</div>
 							<div class="pure-u-1-4 pure-u-md-5-24 section check-out-wrap">
-								<h4 class="pink hide-for-small">Check-Out</h4>
+								<h4 class="gray hide-for-small">Check-Out</h4>
 								<div class="date"><span class="number">27</span> / June</div>
 								<a><i class="icon icon-arrow-down hide-for-small"></i></a>
 								<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
 							</div>
 						</span>
 						<div class="pure-u-1-4 pure-u-md-4-24 section">
-							<h4 class="pink">Guests</h4>
+							<h4 class="gray">Guests</h4>
 							<div class="guests"><span class="number"><select name="guests_num" id="">
 								<option value="1" selected>1</option>
 								<option value="2">2</option>
@@ -38,7 +38,7 @@
 							<a><i class="icon icon-arrow-down hide-for-small"></i></a>
 						</div>
 						<div class="pure-u-1-4 pure-u-md-4-24 section">
-							<h4 class="pink">Rooms</h4>
+							<h4 class="gray">Rooms</h4>
 							<div class="rooms"><span class="number"><select name="room_num" id="">
 								<option value="1" selected>1</option>
 								<option value="2">2</option>
@@ -56,7 +56,7 @@
 								<option value="puerto-vallarta">Puerto Vallarta</option>
 							</select></div>
 							<a><i class="icon icon-arrow-down hide-for-small last"></i></a>
-							<button class="purple update-search">Update Search</button>
+							<button class="update-search">Update Search</button>
 						</div>
 					</div>
 
@@ -67,7 +67,7 @@
 							<input type="hidden" name="tripadvisor-rating" value="">
 							<h3>Filters</h3>
 							<hr>
-							<div class="matches pink">116 matches</div>
+							<div class="matches gray">116 matches</div>
 							<label for="hotel-name">Hotel name</label>
 							<input type="text" id="hotel-name">
 							<hr>
@@ -152,7 +152,7 @@
 									<img src="images/hotels/search-results/result1.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Grand Fiesta Americana Coral Beach Cancun</h3>
+									<h3>Grand Fiesta Americana Coral Beach Cancun</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -196,10 +196,10 @@
 									<div class="price"><sup>$</sup>239</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button yellow-bg">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -207,7 +207,7 @@
 									<img src="images/hotels/search-results/result2.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Bel Air Collection Resort and Spa Cancun Adults Only</h3>
+									<h3>Bel Air Collection Resort and Spa Cancun Adults Only</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -251,10 +251,10 @@
 									<div class="price"><sup>$</sup>239</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button yellow-bg">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -262,7 +262,7 @@
 									<img src="images/hotels/search-results/result3.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Grand Fiesta Americana Coral Beach Cancun</h3>
+									<h3>Grand Fiesta Americana Coral Beach Cancun</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -306,10 +306,10 @@
 									<div class="price"><sup>$</sup>239</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button yellow-bg">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -317,7 +317,7 @@
 									<img src="images/hotels/search-results/result1.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Grand Fiesta Americana Coral Beach Cancun</h3>
+									<h3>Grand Fiesta Americana Coral Beach Cancun</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -361,10 +361,10 @@
 									<div class="price"><sup>$</sup>239</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button yellow-bg">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -372,7 +372,7 @@
 									<img src="images/hotels/search-results/result2.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Bel Air Collection Resort and Spa Cancun Adults Only</h3>
+									<h3>Bel Air Collection Resort and Spa Cancun Adults Only</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -416,10 +416,10 @@
 									<div class="price"><sup>$</sup>239</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button yellow-bg">Book</a>
 								</div>
 							</div>
 							<div class="pure-g row result">
@@ -427,7 +427,7 @@
 									<img src="images/hotels/search-results/result3.jpg">
 								</div>
 								<div class="pure-u-3-4 pure-u-md-11-24 hotel-info">
-									<h3 class="purple">Grand Fiesta Americana Coral Beach Cancun</h3>
+									<h3>Grand Fiesta Americana Coral Beach Cancun</h3>
 									<div class="pure-g row stars">
 										<div class="pure-u-1-3">
 											<div class="stars">
@@ -471,10 +471,10 @@
 									<div class="price"><sup>$</sup>239</div>
 									<p>Avg. per night<br>
 									Taxes included</p>
-									<a href="" class="button purple-bg hide-for-small">Book</a>
+									<a href="" class="button yellow-bg hide-for-small">Book</a>
 								</div>
 								<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
-									<a href="" class="button purple-bg">Book</a>
+									<a href="" class="button yellow-bg">Book</a>
 								</div>
 							</div>
 						</div>
@@ -491,26 +491,26 @@
 					</div>
 					<div class="pure-g row">
 						<div class="pure-u-1 nav-wrap">
-							<nav class="purple-bg">
+							<nav class="gradient-bg">
 								<ul>
 									<li><a>Hotels</a></li>
 									<li><a>Hotels + Flight</a></li>
 								</ul>
 							</nav>
-							<div class="purple-bg purple-fill hide-for-medium hide-for-small"></div>
+							<div class="gradient-bg nav-fill hide-for-medium hide-for-small"></div>
 						</div>
 						
 					</div>
 					<div class="pure-g row">
 						<div id="mobile-dates" class="fusion-dates" data-date-output="#mobile-dates .fusion-date-checkin,#mobile-dates .fusion-date-checkout">
 							<div class="pure-u-1-2 section check-in-wrap">
-								<h4 class="pink">Check-In</h4>
+								<h4 class="gray">Check-In</h4>
 								<div class="date"><span class="number">21</span> / June</div>
 								<a><i class="icon icon-arrow-down"></i></a>
 								<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
 							</div>
 							<div class="pure-u-1-2 section check-out-wrap">
-								<h4 class="pink">Check-Out</h4>
+								<h4 class="gray">Check-Out</h4>
 								<div class="date"><span class="number">27</span> / June</div>
 								<a><i class="icon icon-arrow-down"></i></a>
 								<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
@@ -524,12 +524,12 @@
 					</div>
 					<div class="pure-g row">
 						<div class="pure-u-1-2 section">
-							<h4 class="pink">Guests</h4>
+							<h4 class="gray">Guests</h4>
 							<a href=""><i class="icon icon-arrow-down right"></i></a>
 							<div class="date"><span class="number">02</span></div>
 						</div>
 						<div class="pure-u-1-2 section">
-							<h4 class="pink">Rooms</h4>
+							<h4 class="gray">Rooms</h4>
 							<a href=""><i class="icon icon-arrow-down right"></i></a>
 							<div class="date"><span class="number">01</span></div>
 						</div>
@@ -541,7 +541,7 @@
 					</div>
 					<div class="pure-g row">
 						<div class="pure-u-1">
-							<h4 class="pink">Area</h4>
+							<h4 class="gray">Area</h4>
 							<div class="fusion-select">
 								<i class="icon icon-arrow-down-small"></i>
 								<select name="area" id="area">
@@ -553,20 +553,20 @@
 						</div>
 						<div class="pure-g row">
 							<div class="pure-u-1">
-								<button class="purple-bg">
+								<button class="yellow-bg">
 									Go!
 								</button>
 							</div>
 						</div>
 						<div class="pure-g row">
 							<div class="pure-u-1">
-								<a class="more-filters purple">
+								<a class="more-filters">
 									+ More filters
 								</a>
 							</div>
 						</div>
 						<div class="additional-filters" style="display: none;">
-							<div class="pure-g row pink-bg">
+							<div class="pure-g row">
 								<div class="pure-u-1">
 									<h3>Filters</h3>
 								</div>
@@ -638,15 +638,15 @@
 							</div>
 							<div class="pure-g row button-row">
 								<div class="pure-u-1-2">
-									<a class="button purple-bg">Go!</a>
+									<a class="button yellow-bg">Go!</a>
 								</div>
 								<div class="pure-u-1-2">
-									<a class="button purple close">Cancel</a>
+									<a class="button close">Cancel</a>
 								</div>
 							</div>
 							<div class="pure-g row">
 								<div class="pure-u-1">
-									<p><a class="purple hide-filters">- Hide filters</a></p>
+									<p><a class="hide-filters">- Hide filters</a></p>
 								</div>
 							</div>
 						</div>

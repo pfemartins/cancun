@@ -8,6 +8,7 @@
                          <!-- <li><a href="?p=views.master.home">Master</a></li> -->
                          <li><a href="?p=views.hotels.sr-hotels">Search Results - Hotels</a></li>
                          <li><a href="?p=views.hotels.sr-hotels-flights">Search Results - Hotels + Flights</a></li>
+                         <li><a href="?p=views.hotels.landing">Hotel Landing Page</a></li>
                     </ul>
                </div>
                <div class="pure-u-1 pure-sm-1-2">

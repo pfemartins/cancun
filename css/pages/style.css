@@ -165,8 +165,11 @@ textarea,
 #fusion input:checked + .icon-checkbox {
      background-position: -10px -2130px;
 }
+#fusion input[type='checkbox']:checked {
+	
+}
 #fusion input[type='radio']:checked {
-	border-color: #6522ff;
+	border-color: #42B299;
 }
 
 /* ASSUMES LIST ITEM */
@@ -211,7 +214,7 @@ textarea,
 }
 
 #fusion a {
-     color: #6522FF;
+     color: #373737;
 }
 
 #fusion .fusion-align {
@@ -254,6 +257,11 @@ textarea,
     top: 5px;
 }
 
+#fusion p {
+	font-size: 14px;
+	font-weight: 300;
+}
+
 /* Icons */
 #fusion .icon {
      display: inline-block;
@@ -265,148 +273,149 @@ html.svg.touch #fusion .icon {
 }
 
 #fusion .icon-logo {
-	width: 130px;
-	height: 46px;
-	background-position: -10px -990px;
+	width: 143px;
+	height: 76px;
+	background-position: -10px -1241px;
 }
 
 #fusion .icon-footer-logo {
-	width: 80px;
-	height: 28px;
-	background-position: -10px -657px;
+	width: 88px;
+	height: 47px;
+	background-position: -10px -800px;
 }
 
 #fusion .icon-facebook {
 	width: 7px;
 	height: 17px;
-	background-position: -10px -620px;
+	background-position: -10px -763px;
 }
 
 #fusion .icon-twitter {
 	width: 16px;
 	height: 13px;
-	background-position: -10px -1562px;
+	background-position: -10px -1885px;
 }
 
 #fusion .icon-instagram {
 	width: 16px;
 	height: 16px;
-	background-position: -10px -848px;
+	background-position: -10px -1099px;
 }
 
 #fusion .icon-arrow-down {
 	width: 18px;
 	height: 10px;
-	background-position: -10px -186px;
+	background-position: -10px -157px;
 }
 
 #fusion .icon-arrow-down-small {
 	width: 12px;
 	height: 7px;
-	background-position: -10px -101px;
+	background-position: -10px -75px;
 }
 
 #fusion .icon-star {
-	width: 14px;
+	width: 15px;
 	height: 14px;
-	background-position: -10px -1467px;
+	background-position: -10px -1790px;
 }
 
 #fusion .icon-half-star {
 	width: 9px;
-	height: 14px;
-	background-position: -10px -775px;
+	height: 13px;
+	background-position: -11px -940px;
 }
 #fusion .icon-tripadvisor {
 	width: 21px;
 	height: 12px;
-	background-position: -10px -1530px;
+	background-position: -10px -1853px;
 }
 #fusion .icon-list-dark {
 	width: 19px;
 	height: 14px;
-	background-position: -10px -885px;
+	background-position: -10px -1136px;
 }
 #fusion .icon-map-light {
 	width: 26px;
 	height: 20px;
-	background-position: -10px -1057px;
+	background-position: -10px -1338px;
 }
 #fusion .icon-wifi {
 	width: 23px;
 	height: 17px;
-	background-position: -10px -1630px;
+	background-position: -10px -1953px;
 }
 #fusion .icon-room-service {
 	width: 25px;
 	height: 17px;
-	background-position: -10px -1357px;
+	background-position: -10px -1678px;
 }
 #fusion .icon-pool {
 	width: 24px;
 	height: 21px;
-	background-position: -11px -1317px;
+	background-position: -11px -1638px;
 }
 #fusion .icon-gym {
 	width: 22px;
 	height: 21px;
-	background-position: -11px -705px;
+	background-position: -11px -868px;
 }
 #fusion .icon-spa {
 	width: 22px;
 	height: 23px;
-	background-position: -10px -1394px;
+	background-position: -10px -1715px;
+}
+#fusion .icon-outlet {
+	width: 25px;
+	height: 16px;
+	background-position: -11px -1452px;
 }
 #fusion .icon-arrow-up {
+	width: 17px;
+	height: 10px;
+	background-position: -10px -448px;
+}
+#fusion .icon-arrow-down-small{
 	width: 12px;
 	height: 7px;
-	background-position: -10px -367px;
-}
-#fusion .icon-arrow-down-purple {
-	width: 17px;
-	height: 9px;
 	background-position: -10px -72px;
 }
-#fusion .icon-arrow-up-purple {
-	width: 17px;
-	height: 9px;
-	background-position: -10px -394px;
-}
-#fusion .icon-arrow-down-purple-small {
+#fusion .icon-arrow-up-small {
 	width: 12px;
 	height: 7px;
-	background-position: -10px -45px;
-}
-#fusion .icon-arrow-up-purple-small {
-	width: 12px;
-	height: 7px;
-	background-position: -10px -367px;
+	background-position: -10px -475px;
 }
 #fusion .icon-plane-right {
 	width: 17px;
 	height: 17px;
-	background-position: -10px -1280px;
+	background-position: -10px -1601px;
 }
 #fusion .icon-plane-left {
 	width: 17px;
 	height: 17px;
-	background-position: -10px -1206px;
-}
-#fusion .icon-plane-purple {
-	width: 17px;
-	height: 17px;
-	background-position: -10px -1243px;
+	background-position: -10px -1527px;
 }
 #fusion .icon-arrow-left {
 	width: 24px;
 	height: 21px;
-	background-position: -12px -251px;
+	background-position: -12px -292px;
 }
-#fusion .icon-arrow-up-purple-small {
-	width: 12px;
-	height: 7px;
-	background-position: -10px -367px;
+#fusion .icon-location {
+	width: 10px;
+	height: 14px;
+	background-position: -11px -1206px;
 }
+#fusion .icon-star-small {
+	width: 14px;
+	height: 13px;
+	background-position: -10px -1758px;
+}
+#fusion .icon-half-star-small {
+	width: 9px;
+	height: 13px;
+	background-position: -11px -908px;
+}
+
 
 /* HEADER */
 .top-section {
@@ -432,12 +441,14 @@ html.svg.touch #fusion .icon {
 #fusion nav ul li a:hover {
 	text-decoration: underline;
 }
-#fusion .purple-fill {
+#fusion .nav-fill {
 	position: absolute;
 	width: 50%;
 	height: 43px;
 	top: 0;
 	right:0;
+	background-color: #44BCA2;
+	z-index: -1;
 }
 
 /* FOOTER */
