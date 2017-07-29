@@ -155,8 +155,12 @@ img,legend{border:0}legend,td,th{padding:0}.pure-button:focus,a:active,a:hover{o
 #fusion a.button.yellow-bg, #fusion button.yellow-bg {
 	color: #fff;
 }
-#fusion a.button.purple, #fusion button.purple {
-	border: 1px solid #6522FF;
+#fusion a.button.clear, #fusion button.clear {
+	font-size: 12px;
+	font-weight: 600;
+	box-shadow: none;
+	font-weight: 600;
+	border: 1px solid #9C9C9C;
 }
 #fusion .light {
 	font-weight: 300;
@@ -169,6 +173,15 @@ img,legend{border:0}legend,td,th{padding:0}.pure-button:focus,a:active,a:hover{o
 }
 #fusion .semi-bold {
 	font-weight: 600;
+}
+#fusion .italic {
+	font-style: italic;
+}
+#fusion .underline {
+	text-decoration: underline;
+}
+#fusion .msrp {
+	text-decoration: line-through;
 }
 
 

@@ -1,3 +1,34 @@
+#fusion .main-content {
+	margin-bottom: 20px;
+}
+
+/* Top section styles */
+#hotels h1 {
+	font-size: 32px;
+	font-weight: 400;
+}
+.top-section {
+	font-size: 12px;
+}
+.top-section h5 {
+	font-style: italic;
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 5px;
+}
+.top-section h5 span.hide-for-small {
+	font-style: normal;
+}
+.top-section .star-wrap {
+	margin-right: 8px;
+}
+.top-section .tripadvisor-wrap {
+	margin-left: 15px;
+}
+.top-section .tripadvisor-wrap .icon-tripadvisor {
+	margin-right: 5px;
+}
+
 /* Tab Styles */
 ul.tabs {
 	padding-left: 0;
@@ -16,23 +47,158 @@ ul.tabs li {
 	font-size: 12px;
 }
 li a.is-active {
-	border-bottom: 2px solid #6522FF;
+	border-bottom: 2px solid #42B299;
 }
-ul.tabs + section.tab-content {
+ul.tabs + .show-hide-wrap .section-top  + section.tab-content {
     display: block;
 }
 section.tab-content {
 	display: none;
 }
 
+
 /* About hotel styles */
+#fusion #hotels #tab-one hr {
+	margin: 20px 0;
+}
+.cat-wrap {
+	float: left;
+	width: 50%;
+}
+ul.categories {
+	margin-bottom: 30px;
+	margin-top: 0;
+}
+ul.categories:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+ul.categories li {
+	font-size: 14px;
+	font-weight: 300;
+}
+#hotel-content h4 {
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #7C7C7C;
+	font-weight: 300;
+}
+#hotel-content .amenities-wrap p {
+	margin-bottom: 5px;
+}
+#hotels a.read-more {
+	text-transform: uppercase;
+	font-size: 10px;
+	margin-top: 15px;
+	font-weight: 400;
+	display: block;
+
+}
+#hotels h2 {
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	display: block;
+	border-bottom: 1px solid #EAEAEA;
+}
+
+/* Room rates styles */
+#hotels .room-rate {
+	margin-top: 20px;
+}
+#hotels .room-rate .room-type {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+#hotels .room-rate p.discount {
+	font-style: italic;
+	font-size: 12px;
+	margin-bottom: 15px;
+}
+#hotels .room-rate p a {
+	font-size: 12px;
+	font-weight: 400;
+	margin-bottom: 15px;
+	display: block;
+}
+#hotels .room-rate p {
+	font-weight: 400;
+	font-size: 12px;
+}
+#hotels .room-rate .pricing {
+	text-align: right;
+	font-size: 12px;
+}
+#hotels .room-rate .price {
+	font-size: 24px;
+}
+#hotels .room-rate .pricing a.button {
+	font-size: 14px;
+	margin: 10px 0 5px;
+}
+
+/* user reviews styles */
+#hotels #tab-three h2 {
+	margin-bottom: 15px;
+}
+#fusion .rating p {
+	font-size: 18px;
+	font-weight: 400;
+}
+#fusion .rating p span {
+	font-size: 24px;
+}
+.tripadvisor-rating {
+	margin-top: 15px;
+	font-size: 12px;
+	margin-bottom: 10px;
+	line-height: 1.5;
+}
+.tripadvisor-rating .icon {
+	margin-right: 4px;
+}
+#fusion .ratings-table {
+	box-sizing: border-box;
+	padding: 20px 10px;
+	background: #F7F7F7;
+	font-size: 14px;
+	font-weight: 300;
+}
+.ratings-table .rating-num {
+	margin-right: 10px;
+	font-weight: 400;
+	font-size: 10px;
+}
+.ratings-table .rating-num span {
+	font-size: 14px;
+}
+.user-rating {
+	font-size: 12px;
+	font-weight: 300;
+}
+.user-rating .name {
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+.user-rating .user-num {
+	font-weight: 500;
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+.user-rating .recommend {
+	font-weight: 500;
+	color: #7C7C7C;
+	font-style: italic;
+}
 
 /* Slider styles */
 /* Slideshow container */
 .slideshow-container {
   max-width: 100%;
   position: relative;
-  margin: auto;
+  margin: 10px auto 0;
 }
 
 /* Next & previous buttons */
@@ -96,14 +262,154 @@ section.tab-content {
 	padding: 0 24px;
 }
 
+#fusion .room-rate a {
+	color: #42B299;
+}
+
+/* Gallery styles */
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+.gallery-top {
+    height: 500px;
+    width: 100%;
+}
+.gallery-thumbs {
+    height: 60px;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+.gallery-thumbs .swiper-slide {
+    height: 100%;
+    opacity: 0.4;
+}
+.gallery-thumbs .swiper-slide-active {
+    opacity: 1;
+}
+
+/* sidebar styles */
+#fusion .sidebar {
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+.sidebar .book-block {
+	background: #F7F7F7;
+	box-sizing: border-box;
+	border-radius: 3px;
+	padding: 10px;
+	text-align: center;
+}
+.sidebar .book-block .msrp {
+	font-style: italic;
+	font-size: 12px;
+}
+.sidebar .book-block .price {
+	font-size: 32px;
+	font-weight: 400;
+	margin: 2px 0;
+}
+#fusion .sidebar .book-block p {
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+.filter-box {
+	box-shadow: -2px 5px 10px 5px #F0F0F0;
+	margin: 30px 0;
+	box-sizing: border-box;
+	padding: 10px;
+}
+.filter-box h4 {
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 10px;
+	margin-bottom: 5px;
+}
+.filter-box .pure-g:first-child {
+	border-bottom: 1px solid #dfdfdf;
+}
+.filter-box .pure-g:last-child h4 {
+	margin-top: 10px;
+}
+.filter-box .pure-g .pure-u-1-2 {
+	box-sizing: border-box;
+	position: relative;
+	padding-bottom: 5px;
+}
+.filter-box .pure-g .pure-u-1-2:first-child {
+	border-right: 1px solid #DFDFDF;
+}
+.filter-box .pure-g .pure-u-1-2:last-child {
+	padding-left: 10px;
+}
+.filter-box .date {
+	font-size: 12px;
+}
+.filter-box .date span {
+	font-size: 24px;
+}
+.icon-arrow-down-small {
+	position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+#fusion select {
+	width: 100%;
+	border: none;
+}
+#hotels .sidebar h2 {
+	margin-bottom: 15px;
+}
+.sidebar img.map {
+	margin-bottom: 25px;
+}
+.sidebar .social-section {
+	margin: 20px auto;
+	width: 100px;
+	display: block;
+}
+.sidebar .social-section:after {
+	content:'';
+	clear: both;
+	display: block;
+}
+.sidebar .social-section i {
+	margin-right: 20px;
+}
+.sidebar .social-section i:last-child {
+	margin-right: 0;
+}
+#fusion .hotel-wrap p {
+	font-size: 12px;
+	font-weight: 400;
+}
+.hotel-wrap .price {
+	text-align: right;
+	font-size: 16px;
+}
+.hotel-wrap .hotel-zone {
+	font-size: 10px;
+}
+
 /* DESKTOP - Tablet */
 @media (min-width: 768px) {
-	
+	#fusion .hotel-wrap {
+		margin-bottom: 20px;
+	}
 }
 
 /* DESKTOP */
 @media(min-width: 1040px) {
-	
+	#fusion .main-content {
+		padding-right: 20px;
+		box-sizing: border-box;
+	}
 }
 
 /* TABLET */
@@ -113,5 +419,213 @@ section.tab-content {
 
 /* MOBILE */
 @media (max-width: 766px) {
+	#hotels h1 {
+		font-size: 21px;
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+	.gallery-top {
+		height: 218px;
+	}
+	section.tab-content { 
+	}
+	.tabs-wrap {
+		padding: 10px 16px;
+	}
+	.section-top {
+		padding: 10px 0;
+		border-bottom: 1px solid #F1F1F1;
+	}
+	.section-top h3 {
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+	#fusion .main-content {
+		margin-bottom: 0;
+	}
+	#hotels .swiper-container.gallery-bottom h2 {
+		font-weight: 400;
+		text-transform: uppercase;
+		font-size: 16px;
+		margin-bottom: 15px;
+		border-bottom: none;
+	}
+	.plusminus:after {
+		content: '+';
+		display: block;
+	}
+	.plusminus.active:after {
+		content: '-';
+	}
+	#fusion section.show-hide-content {
+		display: none;
+	}
+	#fusion section.show-hide-content.active {
+		display: block;
+	}
+	.swiper-container.gallery-bottom {
+		height: 220px;
+		padding: 0 12px;
+		margin-bottom: 20px;
+	}
+	#hotels .top-section {
+		padding: 0 0 0 15px;
+	}
+	#hotels .top-right {
+		text-align: right;
+		box-sizing: border-box;
+		padding: 15px 10px;
+		background: #F7F7F7;
+	}
 	
-}
+	#hotels .top-right .msrp {
+		font-style: italic;
+		font-size: 12px;
+		margin-bottom: 4px;
+	}
+	#hotels .top-right .price {
+		font-weight: 500;
+		font-size: 18px;
+		margin-bottom: 5px;
+	}
+	.top-section .star-wrap {
+		margin-right: 5px;
+	}
+	.top-section h5 {
+		font-size: 10px;
+	}
+	.tripadvisor-rating .icon {
+		margin-right: 0;
+	}
+	.filter-box {
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+	.filter-box .pure-g:first-child {
+		border: none;
+	}
+	#hotels .room-rate {
+		background: #F7F7F7;
+		box-sizing: border-box;
+		padding: 5px;
+	}
+	#hotels .room-rate .pricing .msrp {
+		font-size: 10px;
+		margin-right: 5px;
+		color: #909090;
+	}
+	#hotels .room-rate .pricing .price {
+		font-size: 18px;
+		float: right;
+	}
+	#hotels .room-rate p a {
+		margin-top: 30px;
+	}
+	#hotels .room-rate p.discount {
+		font-size: 10px;
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+	#hotels .room-rate p.nightly {
+		color: #EC8793;
+		font-size: 10px;
+	}
+
+	/* Mobile Filters */
+	#hotels .sort-wrap {
+		margin-top: 10px;
+	}
+	.mobile-search-bar .flying-from-city {
+		font-size: 24px;
+	}
+	.mobile-search-bar {
+		display: none;
+	}
+	#hotels .mobile-search-bar nav {
+		margin-bottom: 20px;
+	}
+	#hotels .mobile-search-bar a.close {
+		float: right;
+	    font-size: 32px;
+	    font-weight: 500;
+	    margin-bottom: 12px;
+	    line-height: 1;
+	    border: 1px solid #C9C9C9;
+	}
+	#hotels .mobile-search-bar .additional-filters a.close {
+		font-size: 14px
+	}
+	#hotels .mobile-search-bar .additional-filters a.button {
+		width: 98%;
+	}
+	form.mobile-search-bar.open-filters {
+	    position: fixed;
+	    background: #fff;
+	    width: 100%;
+	    z-index: 1;
+	    top: 0;
+	    overflow-y: scroll;
+	    max-height: 100%;
+	    display: block;
+	    height: 100%;
+	}
+	form.mobile-search-bar.open-filters .fusion-container {
+		padding: 10px;
+	}
+	#fusion .mobile-search-bar button {
+		width: 100%;
+		font-size: 14px;
+		font-weight: 700;
+		padding: 10px;
+		margin: 10px 0;
+	}
+	#fusion .mobile-search-bar a.more-filters, #fusion .mobile-search-bar a.hide-filters {
+		text-align: center;
+		display: block;
+	}
+	#fusion #hotels .flight-info .duration-details p {
+		float: left;
+	}
+	#hotels .mobile-search-bar .counter-row {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+	#hotels .mobile-search-bar .counter-row .counter-number {
+		text-align: center;
+	}
+	#hotels .mobile-search-bar .counter-row .circle {
+		width: 23px;
+		height: 23px;
+		text-align: center;
+		box-sizing: border-box;
+		padding: 2px 0;
+		border-radius: 50%;
+		border: 1px solid #333333;
+		line-height: 1;
+		cursor: pointer;
+	}
+	#fusion #hotels .mobile-search-bar select {
+		width: 100%;
+		padding-right: 30px;
+	}
+	#fusion #hotels .mobile-search-bar #child-age {
+		font-size: 24px;
+	}
+	.mobile-search-bar .section {
+	    border-right: 1px solid #DFDFDF;
+	    box-sizing: border-box;
+	    padding: 6px 10px!important;
+	    position: relative;
+	}
+	.mobile-search-bar h4 {
+	    font-size: 10px;
+	    text-transform: uppercase;
+	    font-weight: 400;
+	    text-align: left;
+	    margin-bottom: 5px;
+	}
+	.mobile-search-bar .section:last-child {
+	    border-right: none;
+	}
+

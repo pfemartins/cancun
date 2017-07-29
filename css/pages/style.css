@@ -38,7 +38,7 @@ textarea,
     margin: 0;
     padding: 0;
    	font-family: 'Montserrat', sans-serif;
-   	color: #292929;
+   	color: #373737;
     
 }
 #fusion .fusion-select,
@@ -171,6 +171,16 @@ textarea,
 #fusion input[type='radio']:checked {
 	border-color: #42B299;
 }
+sup {
+	top: -3px;
+	font-size: 70%;
+}
+#fusion #hotels hr {
+	height: 1px;
+	background-color: #EFEFEF;
+	color: #EFEFEF;
+	border: none;
+}
 
 /* ASSUMES LIST ITEM */
 
@@ -203,7 +213,6 @@ textarea,
 
 #fusion b,
 #fusion strong {
-     color: #292929;
      color: inherit;
 }
 
@@ -294,6 +303,12 @@ html.svg.touch #fusion .icon {
 	width: 16px;
 	height: 13px;
 	background-position: -10px -1885px;
+}
+
+#fusion .icon-email {
+	width: 16px;
+	height: 12px;
+	background-position: -10px -681px;
 }
 
 #fusion .icon-instagram {
@@ -415,6 +430,11 @@ html.svg.touch #fusion .icon {
 	height: 13px;
 	background-position: -11px -908px;
 }
+#fusion .icon-heart {
+	width: 21px;
+	height: 18px;
+	background-position: -11px -1021px;
+}
 
 
 /* HEADER */
@@ -457,7 +477,7 @@ html.svg.touch #fusion .icon {
 	padding-top: 40px;
 }
 #fusion footer a {
-	color: #292929;
+	color: #373737;
 }
 #fusion footer .footer-links p {
 	font-size: 11px;
