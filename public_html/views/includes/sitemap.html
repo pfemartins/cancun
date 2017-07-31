@@ -1,0 +1,22 @@
+{% extends '/views/includes/page.html' %}
+{% block head %}
+<link rel="stylesheet" href="public_html/css/pages/sitemap.css">{{ parent() }} {% endblock %}
+{% block main %}
+<main id="sitemap">
+     <div class="fusion-container pure-g row">
+          <div class="fusion-list row nopad">
+               <div class="pure-u-1 pure-sm-1-2">
+                    <h3>Pages</h3>
+                    <ul>
+                         <li><a href="{{ domain }}sr-hotels">Search Results - Hotels</a></li>
+                         <li><a href="{{ domain }}sr-hotels-flights">Search Results - Hotels + Flights</a></li>
+                         <li><a href="{{ domain }}hotel-landing">Hotel Landing Page</a></li>
+                    </ul>
+               </div>
+               <div class="pure-u-1 pure-sm-1-2">
+                    
+               </div>
+          </div>
+     </div>
+</main>
+{% endblock %}
