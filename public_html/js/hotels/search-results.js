@@ -172,7 +172,7 @@ var search = {
 		if (document.querySelector('a.toggle-flight')) {
 			for (var i = 0; i < document.querySelectorAll('a.toggle-flight').length; i++) {
 				document.querySelectorAll('a.toggle-flight')[i].addEventListener('click', function() {
-					var selector = this.parentNode.parentNode.parentNode.querySelectorAll('.flight-dropdown-wrap')
+					var selector = this.parentNode.parentNode.parentNode.querySelectorAll('.flight-dropdown-wrap');
 
 					f.toggleClass(this.querySelector('i'), 'active');
 

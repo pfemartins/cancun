@@ -22,7 +22,7 @@
                break;
           case $url."sr-hotels-flights":
                // $parameters['page'] = 'home';
-               echo $twig->render('views/results/sr-hotels-flights.html', $parameters);
+               echo $twig->render('views/hotels/sr-hotels-flights.html', $parameters);
                break;
           case $url."hotel-landing":
                // $parameters['page'] = 'home';

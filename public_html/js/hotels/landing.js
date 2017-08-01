@@ -119,7 +119,6 @@ var hotel = {
       for (var i = 0; i < document.querySelectorAll('a.show-hide-link').length; i++) {
         document.querySelectorAll('a.show-hide-link')[i].addEventListener('click', function() {
           var selector = this.parentNode.parentNode.querySelectorAll('.show-hide-content')
-          console.log(this.parentNode.parentNode);
           f.toggleClass(this.querySelector('.plusminus'), 'active');
 
           for (var i = 0; i < selector.length; i++) {
