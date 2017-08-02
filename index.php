@@ -1,4 +1,5 @@
 <?php
+     $current = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
      $subdomain = 'cancun';
      require_once $_SERVER['DOCUMENT_ROOT']. '/' . $subdomain . '/Twig/Autoloader.php';
      Twig_Autoloader::register();
@@ -9,6 +10,7 @@
      $parameters = Array();
 
      $parameters['domain'] = $url;
+
 
      switch ("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") {
           // HOME
@@ -33,4 +35,5 @@
                echo $twig->render('views/includes/sitemap.html', $parameters);
                break;
      }
+
 ?>

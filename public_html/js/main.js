@@ -100,6 +100,9 @@ var f = {
           f.getScript(f.base.jsp + 'date.js', function() {
                date.init();
           });
+          f.getScript(f.base.jsp + 'nav.js', function() {
+              
+          });
 
           f.getScript(f.base.jsp + 'webfontloader.js', function() {
                WebFont.load({
