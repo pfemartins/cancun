@@ -283,6 +283,8 @@ html.svg.touch #fusion .icon {
      background-image: url('../../images/global.svg');
 }
 
+
+
 #fusion .icon-logo {
 	width: 143px;
 	height: 76px;
@@ -356,6 +358,11 @@ html.svg.touch #fusion .icon {
 	width: 26px;
 	height: 20px;
 	background-position: -10px -1412px;
+}
+#fusion .icon-search{
+	height: 17px;
+	width: 17px;
+	background-position: -10px -1875px;
 }
 #fusion .icon-wifi {
 	width: 23px;
@@ -446,7 +453,7 @@ html.svg.touch #fusion .icon {
 
 /* HEADER */
 .top-section {
-	padding: 10px 15px 30px;
+	padding: 10px 15px 0px;
 }
 #fusion .nav-wrap {
 	position: relative;
@@ -471,38 +478,42 @@ html.svg.touch #fusion .icon {
 
 
 /* Nav styles */
-#fusion nav.top {
+#navbar nav.top {
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
-#fusion .Menu li>* {
+#navbar .Menu li>* {
 	padding: 0;
 }
-#fusion nav ul.Menu li>ul.-visible {
+#navbar nav ul.Menu li>ul.-visible {
 	z-index: 2;
+	    left: -10px;
+		    width: 255px;
 }
-#fusion nav ul.Menu li>ul.-visible li {
-	display: block;
-	border-bottom: 1px solid #ECECEC;
-	margin-right: 0;
-	padding: 0 10px;
-	margin: 0 10px;
-	width: 181px;
-	box-sizing: border-box;
+#navbar nav ul.Menu li>ul.-visible li {
+	    display: block;
+    margin-right: 0;
+    padding: 0 10px;
+    margin: 0 10px;
+    width: 240px;
+    box-sizing: border-box;
+    text-align: left;
 }
 
-#fusion .Menu li>ul {
+
+
+#navbar .Menu li>ul {
 	left: -64px;
-	top: 45px;
+	top: 42px;
 }
-#fusion .Menu li>ul li>ul {
+#navbar .Menu li>ul li>ul {
 	position: static;
 }
-#fusion .Menu li {
+#navbar .Menu li {
 	height: auto;
 	text-align: center
 }
-#fusion .nav-fill {
+#navbar .nav-fill {
 	position: absolute;
 	width: 50%;
 	height: 43px;
@@ -510,27 +521,28 @@ html.svg.touch #fusion .icon {
 	right:0;
 	background-color: #44BCA2;
 }
-#fusion .Menu li span {
+#navbar .Menu li span {
 	display: block;
 	width: 22px;
 	height: 2px;
 	background: #373737;
 	margin-bottom: 4px;
 }
-#fusion .Menu li span:first-child {
+#navbar .Menu li span:first-child {
 	margin-top: 10px;
 }
-#fusion .Menu li.-active>a:first-child, #fusion .Menu li:hover>a:first-child {
+#navbar .Menu li.-active>a:first-child, #navbar .Menu li:hover>a:first-child {
 	background-color: transparent;
 	text-decoration: none;
 }
-#fusion .Menu li.-active>a:first-child, #fusion .Menu li.-hasSubmenu:hover>a:first-child, #fusion .Menu li.-hasSubmenu li:hover>a:first-child {
+#navbar .Menu li.-active>a:first-child, #navbar .Menu li.-hasSubmenu:hover>a:first-child, #navbar .Menu li.-hasSubmenu li:hover>a:first-child {
 	border-bottom: 2px solid #373737;
+	
 }
-#fusion .Menu .hamburger li.-active>a:first-child, #fusion .Menu .hamburger li.-hasSubmenu:hover>a:first-child {
+#navbar .Menu .hamburger li.-active>a:first-child, #navbar .Menu .hamburger li.-hasSubmenu:hover>a:first-child {
 	border-bottom: none;
 }
-#fusion .Menu li li.-hasSubmenu>a:after, #fusion .Menu:not(.-horizontal)>li.-hasSubmenu>a:after, #fusion .Menu li.-hasSubmenu>a:after {
+#navbar .Menu li li.-hasSubmenu>a:after, #navbar .Menu:not(.-horizontal)>li.-hasSubmenu>a:after, #navbar .Menu li.-hasSubmenu>a:after {
 	content: '';
 	display: none;
 }
@@ -538,6 +550,291 @@ html.svg.touch #fusion .icon {
 	text-transform: uppercase;
 }
 
+#navbar .navbar{
+	display: flex;
+	justify-content: space-between;
+}
+
+#navbar .nav-item{
+	    margin: 0 0px 0 0px;
+}
+
+#navbar .nav-item:not(.small-nav-item):hover{
+	margin: 0 0px 0 0px;
+	background-color: white;
+}
+
+#navbar -hasSubMenu:hover{
+	background-color: white;
+}
+
+#navbar .nav-item a{
+	padding: 0;
+	    margin-right: 22px;
+}
+
+#navbar .nav-item a:hover{
+	border-bottom: 2px solid black;
+	text-decoration: none;
+	background-color: white;
+}
+
+#navbar .nav-item a:after{
+	display: none;
+	content: none;
+}
+
+#navbar .small-nav-item a:hover{
+	border-bottom: none;
+}
+
+
+
+#navbar .lower-menu{
+	width: 220px !important;
+}
+
+#navbar .lower-menu li{
+	    width: 200px !important;
+    margin-left: 14px !important;
+    padding: 0px !important;
+}
+
+#navbar .will-overlap{
+	width: inherit;
+    word-wrap: break-word;
+    white-space: initial;
+    line-height: 1;
+}
+
+#navbar .third-level-menu-title{
+	width: 200px;
+}
+
+#navbar .third-level-menu {
+   width: 221px !important;
+}
+
+#navbar .gray-underline{
+	border-bottom: 1px solid #ECECEC;
+}
+
+#navbar .phone a:hover{
+	border-bottom: none;
+}
+
+#navbar .hamburger-btn{
+	    line-height: 0px;
+}
+
+#navbar .hamburger-menu{
+	width: 528px;
+        height: 82px;
+	background-color: white;
+	display: none;
+}
+
+#navbar .hamburger.-hasSubmenu{
+	margin-right: 0;
+}
+#navbar .hamburger.-hasSubmenu:hover{
+	border-bottom: none;
+}
+#navbar .hamburger.-hasSubmenu a:hover{
+	border-bottom: none !important;
+}
+
+#navbar .hamburger-items-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: right;
+	    padding-top: 16px;
+}
+
+#navbar .hamburger-item{
+	    width: 29%;
+    padding-right: 19px;
+	    font-size: 12px;
+		    margin-top: -11px;
+}
+
+#navbar .hamburger-holder{
+	margin-right: -15px;
+	padding-left: 45px;
+	width: 202px;
+}
+
+#navbar .hamburger-holder li{
+	    margin-left: 50px;
+}
+
+#navbar .hamburger-x{
+	display: none;
+}
+
+#navbar .visible{
+	display: block;
+}
+
+#navbar .invisible{
+	display: none !important;
+}
+
+/*MOBILE NAVBAR*/
+#navbar .mobile-login-row{
+	display: flex;
+}
+
+#navbar .mobile-stuff{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+}
+
+#navbar .mobile-login{
+	width: 90px;
+    list-style: none;
+    margin-left: 5vw;
+    margin-top: 10px;
+}
+
+#navbar .mobile-login a{
+	letter-spacing: 1.5px;
+    margin-right: 0;
+    padding: 0px;
+    width: 90px;
+}
+
+#navbar .mobile-search {
+    display: flex;
+    margin-top: 25px;
+}
+
+#navbar .mobile-search-input{
+width: 90vw;
+    min-width: 200px;
+    margin: 5px auto;
+    border: none;
+    border-bottom: 1px solid black;
+    max-width: 500px;
+}
+
+#navbar .mobile-magnifying{
+    left: -7vw;
+    position: relative;
+}
+
+#navbar .mobile-options{
+	    width: 95%;
+    margin: 0 2vw;
+}
+
+#navbar .nav-item-mobile{
+	border-bottom: 1px solid lightgray;
+}
+
+#navbar .nav-item-mobile a{
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+    margin-left: 6px;
+}
+
+#navbar .has-plus{
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+    margin-left: 6px;
+}
+
+#navbar .natural-wonders{
+	display: flex !important;
+	text-align: left !important;
+	justify-content: flex-start !important;
+}
+
+#navbar .mobile-plus{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+}
+
+#navbar .mobile-minus{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+}
+
+#navbar .mobile-plus-smaller{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+	right: 33px;
+}
+
+#navbar .mobile-minus-smaller{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+	right: 63px;
+}
+
+#navbar .mobile-plus-natural{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+	margin-right: -5px !important;
+}
+
+#navbar .mobile-minus-natural{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+	margin-right: -5px !important;
+}
+
+#navbar .nav-item-mobile:hover{
+	border-bottom: 1px solid lightgray;
+}
+
+#navbar .mobile-menu{
+	position: relative;
+    left: 20px !important;
+    font-size: 13px;
+    top: 0 !important;
+	    width: 89vw;
+    min-width: 150px;
+}
+
+#navbar .book-btn{
+    width: 327px;
+    height: 50px;
+    position: relative;
+    margin: 15px auto;
+    background-color: #C3C247;
+    color: white;
+    box-shadow: 1px 1px 5px #888888;
+    font-weight: 500;
+}
+
+#navbar .gray-line{
+	width: 95%;
+	height: 2px;
+	position: relative;
+	margin: 0 auto;
+	border-bottom: 1px solid lightgray;
+}
+
+#navbar .mobile-items-container{
+	margin: 10px;
+}
+
+#navbar .mobile-item{
+	    margin: 8px 0;
+    font-size: 14px;
+}
 
 /* FOOTER */
 #fusion footer .fusion-container {
