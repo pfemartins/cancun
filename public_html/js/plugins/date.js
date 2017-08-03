@@ -1016,7 +1016,7 @@ date.configs = {
      onSelect: function(selected) {
           f.removeClass('.fusion-date-state', 'active');
 
-          selected.count++;
+          date.count++;
 
           if (date.checkin) {
                date.start = selected;
