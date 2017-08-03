@@ -1,7 +1,7 @@
 (function() {
 	function $(selector, context) {
-		context = context || document;
-		return context['querySelectorAll'](selector);
+		context = context && context.querySelectorAll ? context : null || document;
+		return context.querySelectorAll(selector);
 	}
 
 	function forEach(collection, iterator) {
@@ -11,12 +11,18 @@
 	}
 
 	function showMenu(menu) {
-		var menu = this;
-		var ul = $('ul', menu)[0];
-
+		var ul = $('ul', this)[0];
+		if (this.children[0].children[0].classList.contains('invisible')) {
+			minusToPlus(this);
+			hideThisMenu(this);
+			return;
+		}
 		if (!ul || ul.classList.contains('-visible')) return;
 
-		menu.classList.add('-active');
+		if (this.classList.contains('plus-click')) {
+			plusToMinus(this);
+		}
+		this.classList.add('-active');
 		ul.classList.add('-animating');
 		ul.classList.add('-visible');
 		setTimeout(function() {
@@ -29,7 +35,22 @@
 		var ul = $('ul', menu)[0];
 
 		if (!ul || !ul.classList.contains('-visible')) return;
+		if (menu.classList.contains('plus-click')) {
+			minusToPlus(menu);
+		}
 
+		menu.classList.remove('-active');
+		ul.classList.add('-animating');
+		setTimeout(function() {
+			ul.classList.remove('-visible');
+			ul.classList.remove('-animating');
+		}, 300);
+	}
+
+	function hideThisMenu(menu) {
+		hideMenu(menu);
+		var menu = this;
+		var ul = $('ul', menu)[0];
 		menu.classList.remove('-active');
 		ul.classList.add('-animating');
 		setTimeout(function() {
@@ -72,6 +93,18 @@
 		});
 	}
 
+	function plusToMinus(menu) {
+		menu.children[0].children[0].classList.add('invisible');
+		menu.children[0].children[1].classList.remove('invisible');
+		menu.children[0].children[1].classList.add('visible');
+	}
+
+	function minusToPlus(menu) {
+		menu.children[0].children[0].classList.remove('invisible');
+		menu.children[0].children[1].classList.add('invisible');
+		menu.children[0].children[1].classList.remove('visible');
+	}
+
 	window.addEventListener('load', function() {
 		forEach($('.Menu li.-hasSubmenu'), function(e) {
 			e.showMenu = showMenu;
@@ -83,6 +116,10 @@
 		});
 
 		forEach($('.Menu > span.hamburger > li.-hasSubmenu'), function(e) {
+			e.addEventListener('click', showMenu);
+		});
+
+		forEach($('.plus-click'), function(e) {
 			e.addEventListener('click', showMenu);
 		});
 

@@ -675,10 +675,162 @@ html.svg.touch #fusion .icon {
 }
 
 #navbar .invisible{
-	display: none;
+	display: none !important;
 }
 
+/*MOBILE NAVBAR*/
+#navbar .mobile-login-row{
+	display: flex;
+}
 
+#navbar .mobile-stuff{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+}
+
+#navbar .mobile-login{
+	width: 90px;
+    list-style: none;
+    margin-left: 5vw;
+    margin-top: 10px;
+}
+
+#navbar .mobile-login a{
+	letter-spacing: 1.5px;
+    margin-right: 0;
+    padding: 0px;
+    width: 90px;
+}
+
+#navbar .mobile-search {
+    display: flex;
+    margin-top: 25px;
+}
+
+#navbar .mobile-search-input{
+width: 90vw;
+    min-width: 200px;
+    margin: 5px auto;
+    border: none;
+    border-bottom: 1px solid black;
+    max-width: 500px;
+}
+
+#navbar .mobile-magnifying{
+    left: -7vw;
+    position: relative;
+}
+
+#navbar .mobile-options{
+	    width: 95%;
+    margin: 0 2vw;
+}
+
+#navbar .nav-item-mobile{
+	border-bottom: 1px solid lightgray;
+}
+
+#navbar .nav-item-mobile a{
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+    margin-left: 6px;
+}
+
+#navbar .has-plus{
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+    margin-left: 6px;
+}
+
+#navbar .natural-wonders{
+	display: flex !important;
+	text-align: left !important;
+	justify-content: flex-start !important;
+}
+
+#navbar .mobile-plus{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+}
+
+#navbar .mobile-minus{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+}
+
+#navbar .mobile-plus-smaller{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+	right: 33px;
+}
+
+#navbar .mobile-minus-smaller{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+	right: 63px;
+}
+
+#navbar .mobile-plus-natural{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+	margin-right: -5px !important;
+}
+
+#navbar .mobile-minus-natural{
+	    background: none !important;
+    margin-top: 0px !important;
+    position: relative;
+	margin-right: -5px !important;
+}
+
+#navbar .nav-item-mobile:hover{
+	border-bottom: 1px solid lightgray;
+}
+
+#navbar .mobile-menu{
+	position: relative;
+    left: 20px !important;
+    font-size: 13px;
+    top: 0 !important;
+	    width: 89vw;
+    min-width: 150px;
+}
+
+#navbar .book-btn{
+    width: 327px;
+    height: 50px;
+    position: relative;
+    margin: 15px auto;
+    background-color: #C3C247;
+    color: white;
+    box-shadow: 1px 1px 5px #888888;
+    font-weight: 500;
+}
+
+#navbar .gray-line{
+	width: 95%;
+	height: 2px;
+	position: relative;
+	margin: 0 auto;
+	border-bottom: 1px solid lightgray;
+}
+
+#navbar .mobile-items-container{
+	margin: 10px;
+}
+
+#navbar .mobile-item{
+	    margin: 8px 0;
+    font-size: 14px;
+}
 
 /* FOOTER */
 #fusion footer .fusion-container {
