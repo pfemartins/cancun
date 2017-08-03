@@ -22,8 +22,10 @@
 </head>
 <body>
      <div id="fusion" class="{{ page }}">
-          {% include 'views/includes/header.html' %}
-          
+          {% if 'master' in urlCurrent %}
+               <div id="banner">
+          {% endif %}
+          {% include 'views/includes/header.html' %}          
           {% block main %}{% endblock %}
           <div class="fusion-overlay inactive"></div>
           {% include 'views/includes/footer.html' %}

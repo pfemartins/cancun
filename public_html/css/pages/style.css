@@ -253,6 +253,8 @@ sup {
 
 #fusion header nav.fusion-container {
 	min-height: 0;
+	position: relative;
+	z-index: 1;
 }
 
 #fusion .fusion-select {
@@ -507,7 +509,6 @@ html.svg.touch #fusion .icon {
 	top: 0;
 	right:0;
 	background-color: #44BCA2;
-	z-index: -1;
 }
 #fusion .Menu li span {
 	display: block;
@@ -532,6 +533,9 @@ html.svg.touch #fusion .icon {
 #fusion .Menu li li.-hasSubmenu>a:after, #fusion .Menu:not(.-horizontal)>li.-hasSubmenu>a:after, #fusion .Menu li.-hasSubmenu>a:after {
 	content: '';
 	display: none;
+}
+#fusion #banner nav.top ul li a {
+	text-transform: uppercase;
 }
 
 

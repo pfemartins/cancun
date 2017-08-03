@@ -1,13 +1,14 @@
 {% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent() }}
-
+<link rel="stylesheet" href="public_html/css/master/master.css"> 
 {% endblock %} {% block main %}
+	<div class="fusion-container">
+		<h1>Cancun is waiting for you</h1>
+		<a href="" class="button yello">Book your trip!</a>
+	</div>
+</div><!-- end #banner -->
 	<main id="home">
-		<div class="fusion-container">
-			<h1>Cancun is waiting for you</h1>
-			<a href="" class="button yello">Book your trip!</a>
-		</div>
-
+		
 	</main>
 {% endblock %}{% block foot %} {{ parent() }}
-	<script src="public_html/js/hotels/search-results.js?version=1"></script>
+	<script src="public_html/js/master/master.js?version=1"></script>
 {% endblock %}
