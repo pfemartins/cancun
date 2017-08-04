@@ -63,7 +63,9 @@ textarea,
 }
 #fusion input[type=checkbox]
 {
-  -webkit-appearance:checkbox;
+	appearance:checkbox;
+	-moz-appearance:checkbox;
+  	-webkit-appearance:checkbox;
 }
 #fusion input[type="radio"] {
      -webkit-appearance: none;
@@ -538,6 +540,10 @@ html.svg.touch #fusion .icon {
 	text-transform: uppercase;
 }
 
+
+#fusion a#scroll-to-top {
+	cursor: pointer;
+}
 
 /* FOOTER */
 #fusion footer .fusion-container {

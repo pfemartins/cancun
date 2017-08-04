@@ -183,6 +183,19 @@ var search = {
 			}
 		}
 
+		if (document.querySelector('a.see-more')) {
+			for (var i = 0; i < document.querySelectorAll('a.see-more').length; i++) {
+				document.querySelectorAll('a.see-more')[i].addEventListener('click', function() {
+					var selector = this.parentNode.querySelectorAll('.container');
+					f.toggleClass(this, 'active');
+
+					for (var i = 0; i < selector.length; i++) {
+						f.toggleClass(selector[i], 'active');
+					}
+				});
+			}
+		}
+
 		if (document.querySelector('a.flight-details')) {
 			for (var i = 0; i < document.querySelectorAll('a.flight-details').length; i++) {
 				document.querySelectorAll('a.flight-details')[i].addEventListener('click', function() {

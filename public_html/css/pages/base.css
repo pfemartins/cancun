@@ -150,7 +150,7 @@ img,legend{border:0}legend,td,th{padding:0}.pure-button:focus,a:active,a:hover{o
 	text-align: center;
 	box-sizing: border-box;
 	font-weight: 700;
-	box-shadow: 2px 2px 2px #AFAFAF;
+	box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.4);
 }
 #fusion a.button.yellow-bg, #fusion button.yellow-bg {
 	color: #fff;

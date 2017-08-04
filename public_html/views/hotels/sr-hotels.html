@@ -94,34 +94,69 @@
 						<input type="hidden" name="tripAdvisorValue" id="tripAdvisorValue" value="4.8">
 						<hr>
 						<h5>Amenities</h5>
-						<label><input type="checkbox" name="amenities" value="wifi"> Wireless internet (89)</label>
-						<label><input type="checkbox" name="amenities" value="pool"> Pool(s) (83)</label>
-						<label><input type="checkbox" name="amenities" value="beach"> Beach (51)</label>
-						<a href="">See more...</a>
+						<div class="see-more-wrap">
+							<label><input type="checkbox" name="amenities" value="wifi"> Wireless internet (89)</label>
+							<label><input type="checkbox" name="amenities" value="pool"> Pool(s) (83)</label>
+							<label><input type="checkbox" name="amenities" value="beach"> Beach (51)</label>
+							<div class="container">
+								<label><input type="checkbox" name="amenities" value="wifi"> Wireless internet (89)</label>
+								<label><input type="checkbox" name="amenities" value="pool"> Pool(s) (83)</label>
+								<label><input type="checkbox" name="amenities" value="beach"> Beach (51)</label>
+							</div>
+							<a href="" onclick="return false;" class="see-more"></a>
+						</div>
 						<hr>
 						<h5>Meal Plan</h5>
-						<label><input type="checkbox" name="meal-plan" value="all inclusive"> All Inclusive (33)</label>
-						<label><input type="checkbox" name="meal-plan" value="room only"> Room Only (43)</label>
-						<label><input type="checkbox" name="meal-plan" value="continental breakfast"> Continental Breakfast Include (10)</label>
-						<a href="">See more...</a>
+						<div class="see-more-wrap">
+							<label><input type="checkbox" name="meal-plan" value="all inclusive"> All Inclusive (33)</label>
+							<label><input type="checkbox" name="meal-plan" value="room only"> Room Only (43)</label>
+							<label><input type="checkbox" name="meal-plan" value="continental breakfast"> Continental Breakfast Include (10)</label>
+							<div class="container">
+								<label><input type="checkbox" name="amenities" value="wifi"> Wireless internet (89)</label>
+								<label><input type="checkbox" name="amenities" value="pool"> Pool(s) (83)</label>
+								<label><input type="checkbox" name="amenities" value="beach"> Beach (51)</label>
+							</div>
+							<a href="" onclick="return false;" class="see-more"></a>
+						</div>
 						<hr>
 						<h5>Theme</h5>
-						<label><input type="checkbox" name="theme" value="all inclusive"> All Inclusive (33)</label>
-						<label><input type="checkbox" name="theme" value="beach"> Beach (63)</label>
-						<label><input type="checkbox" name="theme" value="family"> Family (37)</label>
-						<a href="">See more...</a>
+						<div class="see-more-wrap">
+							<label><input type="checkbox" name="theme" value="all inclusive"> All Inclusive (33)</label>
+							<label><input type="checkbox" name="theme" value="beach"> Beach (63)</label>
+							<label><input type="checkbox" name="theme" value="family"> Family (37)</label>
+							<div class="container">
+								<label><input type="checkbox" name="theme" value="all inclusive"> All Inclusive (33)</label>
+								<label><input type="checkbox" name="theme" value="beach"> Beach (63)</label>
+								<label><input type="checkbox" name="theme" value="family"> Family (37)</label>
+							</div>
+							<a href="" onclick="return false;" class="see-more"></a>
+						</div>
 						<hr>
 						<h5>City/Zone</h5>
-						<label><input type="checkbox" name="city-zone" value="cancun hotel zone carribbean sea"> Cancun Hotel Zone Caribbean Sea (33)</label>
-						<label><input type="checkbox" name="city-zone" value="punta cancun cancun hotel zone"> Punta Cancun Cancun Hotel Zone (5)</label>
-						<label><input type="checkbox" name="city-zone" value="puerto juare cancun hotel zone"> Puerto Juare Cancun Hotel Zone (37)</label>
-						<a href="">See more...</a>
+						<div class="see-more-wrap">
+							<label><input type="checkbox" name="city-zone" value="cancun hotel zone carribbean sea"> Cancun Hotel Zone Caribbean Sea (33)</label>
+							<label><input type="checkbox" name="city-zone" value="punta cancun cancun hotel zone"> Punta Cancun Cancun Hotel Zone (5)</label>
+							<label><input type="checkbox" name="city-zone" value="puerto juare cancun hotel zone"> Puerto Juare Cancun Hotel Zone (37)</label>
+							<div class="container">
+								<label><input type="checkbox" name="city-zone" value="cancun hotel zone carribbean sea"> Cancun Hotel Zone Caribbean Sea (33)</label>
+								<label><input type="checkbox" name="city-zone" value="punta cancun cancun hotel zone"> Punta Cancun Cancun Hotel Zone (5)</label>
+								<label><input type="checkbox" name="city-zone" value="puerto juare cancun hotel zone"> Puerto Juare Cancun Hotel Zone (37)</label>
+								</div>
+							<a href="" onclick="return false;" class="see-more"></a>
+						</div>
 						<hr>
 						<h5>Chain</h5>
-						<label><input type="checkbox" name="theme" value="oasis"> Oasis (5)</label>
-						<label><input type="checkbox" name="theme" value="playa resorts"> Playa Resorts (4)</label>
-						<label><input type="checkbox" name="theme" value="beach"> Secrets (2)</label>
-						<a href="">See more...</a>
+						<div class="see-more-wrap">
+							<label><input type="checkbox" name="theme" value="oasis"> Oasis (5)</label>
+							<label><input type="checkbox" name="theme" value="playa resorts"> Playa Resorts (4)</label>
+							<label><input type="checkbox" name="theme" value="beach"> Secrets (2)</label>
+							<div class="container">
+								<label><input type="checkbox" name="theme" value="oasis"> Oasis (5)</label>
+								<label><input type="checkbox" name="theme" value="playa resorts"> Playa Resorts (4)</label>
+								<label><input type="checkbox" name="theme" value="beach"> Secrets (2)</label>
+							</div>
+							<a href="" onclick="return false;" class="see-more"></a>
+						</div>
 					</div> <!-- end filters sidebar -->
 					<div class="pure-u-1 pure-u-md-17-24 results-list">
 						<div class="pure-g row">
@@ -469,6 +504,30 @@
 							</div>
 							<div class="pure-u-1 mobile-button hide-for-medium hide-for-large">
 								<a href="" class="button yellow-bg">Book</a>
+							</div>
+						</div>
+						<div class="pure-g row results-bottom">
+							<div class="pure-u-1-2 hide-for-small">
+								<a id="scroll-to-top">Back to top</a>
+							</div>
+							<div class="pure-u-1 pure-u-md-1-2">
+								<div class="pure-g row">
+									<div class="pure-u-1 pure-u-md-1-2">
+										<p class="results">Showing Reults 1 - 50 of 274</p>
+									</div>
+									<div class="pure-u-1 pure-u-md-1-2 next-prev">
+										<div class="pure-g row">
+											<div class="pure-u-1-2">
+												<a href="" class="prev end">Prev</a>
+											</div>
+											<div class="pure-u-1-2">
+												<a href="" class="next">Next</a>
+											</div>
+										</div>
+										
+										
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
