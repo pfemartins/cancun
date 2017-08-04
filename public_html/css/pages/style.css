@@ -844,6 +844,21 @@ width: 90vw;
 	    margin: 8px 0;
     font-size: 14px;
 }
+@media screen and (max-width: 860px){
+	#navbar .nav-item a {
+		padding: 0;
+		margin-right: 10px;
+	}
+	#fusion .right {
+		float: right;
+		margin-left: 5px;
+		font-size: 15px;
+	}
+}
+
+
+style.css:494
+
 
 #fusion a#scroll-to-top {
 	cursor: pointer;
@@ -905,7 +920,7 @@ width: 90vw;
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1039px) {
 	#fusion nav {
-		width: 100%;
+		/*width: 100%;*/
 	}
 	#fusion .fusion-container {
 		width: 100%;
