@@ -1,7 +1,7 @@
 <?php
      $subdomain = 'cancun';
-     require_once $_SERVER['DOCUMENT_ROOT']. '/Twig/Autoloader.php';
-    //  require_once $_SERVER['DOCUMENT_ROOT']. '/' . $subdomain . '/Twig/Autoloader.php';
+     //require_once $_SERVER['DOCUMENT_ROOT']. '/Twig/Autoloader.php';
+    require_once $_SERVER['DOCUMENT_ROOT']. '/' . $subdomain . '/Twig/Autoloader.php';
      Twig_Autoloader::register();
      $loader = new Twig_Loader_Filesystem($_SERVER['DOCUMENT_ROOT'] . '/' . $subdomain . '/public_html/');
      $twig = new Twig_Environment($loader);
