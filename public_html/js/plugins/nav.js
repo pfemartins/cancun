@@ -12,7 +12,8 @@
 
 	function showMenu(menu) {
 		var ul = $('ul', this)[0];
-		if (this.children[0].children[0].classList.contains('invisible')) {
+		var target = window.matchMedia('(min-width:768px)').matches ? ul : this;
+		if (target.children[0].children[0].classList.contains('invisible')) {
 			minusToPlus(this);
 			hideThisMenu(this);
 			return;
@@ -49,7 +50,7 @@
 
 	function hideThisMenu(menu) {
 		hideMenu(menu);
-		var menu = this;
+		// var menu = this;
 		var ul = $('ul', menu)[0];
 		menu.classList.remove('-active');
 		ul.classList.add('-animating');

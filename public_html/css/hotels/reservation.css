@@ -1,0 +1,135 @@
+#reservation .header{
+    width: 100%;
+}
+
+#reservation .body{
+    display: flex;
+}
+
+#reservation .center-column{
+    flex-grow: 3;
+}
+
+#reservation .title{
+    font-size: 40px;
+}
+
+#reservation .pic-and-details{
+    display: flex;
+}
+
+#reservation .place-details{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .details-title{
+    color: black;
+}
+
+#reservation .location-and-phone{
+    display: flex;
+}
+
+#reservation .reviews-line{
+    display: flex;
+}
+
+#reservation .trip-details{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .supplement-your-trip{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .bullets-box{
+    display: flex;
+}
+
+#reservation .supplement-bullets{
+    display: flex;
+}
+
+#reservation .check-section{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .check-line{
+    display: flex;
+}
+
+#reservation .cars-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .car-container{
+    display: flex;
+}
+
+#reservation .car-right{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .car-details{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .car-deets{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .car-pricing{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .car-view-options{
+    display: flex;
+}
+
+#reservation .tours-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .tour-container{
+    display: flex;
+}
+
+#reservation .tour-details{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .tour-deets{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .tour-pricing{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    #reservation .body{
+        display: block;
+    }
+    #reservation .supplement-bullets{
+        display: flex;
+        flex-direction: column;
+    }
+}
