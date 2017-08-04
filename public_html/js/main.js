@@ -125,20 +125,25 @@ var f = {
 		     clearTimeout(f.update_timeout);
 		     f.update_timeout = setTimeout(f.update, 1);
 		};
-          document.getElementById('scroll-to-top').onclick = function () {
-              scrollTo(document.body, 0, 100);
-          }
 
-              function scrollTo(element, to, duration) {
-                  if (duration < 0) return;
-                  var difference = to - element.scrollTop;
-                  var perTick = difference / duration * 2;
+          var scroller = document.getElementById('scroll-to-top');
+          if(scroller) {
+                  scroller.onclick = function () {
+                   scrollTo(document.body, 0, 100);
+               }
 
-              setTimeout(function() {
-                  element.scrollTop = element.scrollTop + perTick;
-                  scrollTo(element, to, duration - 2);
-              }, 10);
+                   function scrollTo(element, to, duration) {
+                       if (duration < 0) return;
+                       var difference = to - element.scrollTop;
+                       var perTick = difference / duration * 2;
+
+                   setTimeout(function() {
+                       element.scrollTop = element.scrollTop + perTick;
+                       scrollTo(element, to, duration - 2);
+                   }, 10);
+               }  
           }
+          
 	},
      update_watch: [],
      update_timeout: null,

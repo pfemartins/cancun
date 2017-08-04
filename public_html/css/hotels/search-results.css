@@ -17,7 +17,6 @@
 .filter-box .section.last {
 	border-right: none;
 	background-color: #f7f7f7;
-	z-index: -3;
 }
 .mobile-search-bar .section:last-child {
 	border-right: none;
@@ -40,6 +39,9 @@
 	bottom: 10px;
 	right: 15px;
 	z-index: -2;
+}
+.filter-box .section .icon-arrow-down.last, #mobile-dates .section .icon-arrow-down.last {
+	z-index: 0;
 }
 .filter-box .section .icon-arrow-down.last, #mobile-dates .section .icon-arrow-down.last {
 	top: 10px;
@@ -164,6 +166,7 @@
 	padding: 10px;
 	border-radius: 3px;
 	margin-bottom: 6px;
+	max-width: 100%;
 }
 .matches {
 	margin-bottom: 8px;
