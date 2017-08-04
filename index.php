@@ -32,9 +32,9 @@
                // $parameters['page'] = 'home';
                $twigPath = 'views/hotels/landing.html';
                break;
-        case $url."hotel-checkout":
+        case $url."hotel-reservation":
                // $parameters['page'] = 'home';
-               $twigPath = 'views/hotels/checkout.html';
+               $twigPath = 'views/hotels/reservation.html';
                break;
           default:
                break;

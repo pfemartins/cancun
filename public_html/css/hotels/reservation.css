@@ -11,7 +11,9 @@
 }
 
 #reservation .title{
-    font-size: 40px;
+        font-size: 31px;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 #reservation .pic-and-details{
@@ -21,6 +23,7 @@
 #reservation .place-details{
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
 }
 
 #reservation .details-title{
@@ -47,6 +50,7 @@
 
 #reservation .bullets-box{
     display: flex;
+    background-color: lightgray;
 }
 
 #reservation .supplement-bullets{
@@ -93,6 +97,7 @@
 
 #reservation .car-view-options{
     display: flex;
+    align-self: flex-end;
 }
 
 #reservation .tours-container{
@@ -114,11 +119,137 @@
     flex-direction: column;
 }
 
+#reservation .tour-categories{
+    display: flex;
+}
+
+#reservation .tour-rating-line{
+    display: flex;
+}
+
+#reservation .tour-duration-line{
+    display: flex;
+}
+
 #reservation .tour-pricing{
     display: flex;
     flex-direction: column;
 }
 
+#reservation .four-square {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#reservation .square{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#reservation .wip-container{
+    display: flex;
+}
+
+#reservation .shuttle-container{
+    display: flex;
+}
+
+#reservation .right-box-title-row{
+    display: flex;
+}
+
+#reservation .right-box-content-row{
+    display: flex;
+}
+
+#reservation .price-box{
+    display: flex;
+    flex-direction: column;
+}
+
+#reservation .final-price{
+    display: flex;
+}
+
+#reservation .main-pic{
+    width: 186px;
+    height: 137px;
+}
+
+#reservation .location-name{
+    font-size: 14px;
+    margin-left: 6px;
+    margin-right: 60px;
+}
+
+#reservation .vertical-line-black{
+    border-right: 1.4px solid gray;
+    margin: 0px 30px 0 10px;
+}
+
+#reservation .subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 30px 0 10px 0;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 4px;
+}
+
+#reservation .car-pic{
+    width: 242px;
+    height: 161px;
+}
+
+#reservation .tour-pic{
+    height: 156px;
+    width: 252px;
+}
+
+.based-on{
+    font-size: 12px;
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+.icon{
+    margin: 0 5px;
+}
+
+.trip-advisor-score{
+    font-size: 13px;
+    margin: 0 5px;
+}
+
+.phone-number{
+    font-size: 14px;
+}
+
+.all-inclusive{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.adults-cancellation{
+    display: flex;
+
+}
+
+.how-many{
+    font-size: 14px;
+}
+
+.num-adults{
+    font-size: 14px;
+}
+
+.cancellation-policy{
+    color: #42B299 !important;
+    font-size: 14px;
+    margin-left: 20px;
+}
 
 
 

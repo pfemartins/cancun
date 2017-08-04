@@ -1,13 +1,18 @@
-<div id="reservation">
-    <div class="header hide-for-small"></div>
+{% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent()
+}}
+<link rel="stylesheet" href="public_html/css/hotels/reservation.css"> {% endblock %} {% block main %}
 
+<div id="reservation">
+    <div class="header hide-for-small">Your Reservation <span class="icon icon-arrow-right-white"></span> Checkout</div>
+
+    <h1 class="title hide-for-small">Your Reservation</h1>
     <div class="body">
-        <div class="left-column"></div>
+        <div class="left-column hide-for-small"></div>
 
         <div class="center-column">
-            <h1 class="title hide-for-small">Your Reservation</h1>
+
             <div class="pic-and-details">
-                <img src="HOTEL_PIC" class="hide-for-small">
+                <img src="HOTEL_PIC" class="hide-for-small main-pic">
                 <div class="place-details">
                     <div class="details-title">Grand Fiesta Americana Coral Beach Cancun</div>
                     <div class="location-and-phone">
@@ -23,194 +28,323 @@
                         <div class="trip-advisor-score">4/5 Very Good!</div>
                     </div>
                     <div class="trip-details">
-                        <div class="">All-inclusive</div>
-                        <div class="">Royal Honeymoon Ocean Front (1)</div>
+                        <div class="all-inclusive">All-inclusive</div>
+                        <div class="how-many">Royal Honeymoon Ocean Front (1)</div>
                         <div class="adults-cancellation">
-                            <div class="">2 Adults</div>
-                            <div class="cancellation-policy"><a class="">Cancellation Policy</a></div>
+                            <div class="num-adults">2 Adults</div>
+                            <div class=""><a class="cancellation-policy">Cancellation Policy</a></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <h2 class="subtitle supplement-title">SUPPLEMENT YOUR TRIP</h2>
-        <div class="supplement-your-trip">
-            <div class="bullets-box">
-                <span class="GIANT_SHEILD"></span>
-                <div class="supplement-bullets">
-                    <div class="bullet-item">&bull; Worldwide assistance</div>
-                    <div class="bullet-item">&bull; Customer service available 24/7</div>
-                    <div class="bullet-item">&bull; Lost baggage protection</div>
-                    <div class="bullet-item">&bull; Trip cancellation protection</div>
-                </div>
-            </div>
-            <!--NEED TO MAKE CHECK BOXES THAT CHANGE IMAGE WHEN CLICKED-->
-            <div class="check-section">
-                <div class="check-line">
-                    <span class="checkbox unchecked"></span>
-                    <div class="check-text">Penalty Waiver, Cancellation for Any Reason</div>
-                    <div class="check-more-details"><a>More Details</a></div>
-                    <div class="check-price">$25</div>
-                </div>
-                <div class="check-line">
-                    <span class="checkbox unchecked"></span>
-                    <div class="check-text">Worldwide Assistance (WIP) Recommended!</div>
-                    <div class="check-more-details"><a>More Details</a></div>
-                    <div class="check-price">$20</div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="subtitle supplement-title">Transfer</h2>
-        <div class="supplement-your-trip">
-            <div class="bullets-box">
-                <span class="GIANT_BUS"></span>
-                <div class="supplement-bullets">
-                    <div class="bullet-item">&bull; Discounted online</div>
-                    <div class="bullet-item">&bull; Customer service available 24/7</div>
-                    <div class="bullet-item">&bull; Avoid last-minute problems</div>
-                    <div class="bullet-item">&bull; It's safer</div>
-                </div>
-            </div>
-            <!--NEED TO MAKE CHECK BOXES THAT CHANGE IMAGE WHEN CLICKED-->
-            <div class="check-section">
-                <div class="check-line">
-                    <span class="checkbox unchecked"></span>
-                    <div class="check-text">Shared Transportation- Vehicle with Air Conditioning and Wifi Recommended!</div>
-                    <div class="check-more-details"><a>More Details</a></div>
-                    <div class="check-price">$40</div>
-                </div>
-                <div class="check-line">
-                    <span class="checkbox unchecked"></span>
-                    <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
-                    <div class="check-more-details"><a>More Details</a></div>
-                    <div class="check-price">$100</div>
-                </div>
-                <div class="check-line">
-                    <span class="checkbox unchecked"></span>
-                    <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
-                    <div class="check-more-details"><a>More Details</a></div>
-                    <div class="check-price">$170</div>
-                </div>
-                <div class="check-line">
-                    <span class="checkbox unchecked"></span>
-                    <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
-                    <div class="check-more-details"><a>More Details</a></div>
-                    <div class="check-price">$175</div>
-                </div>
-                <div class="check-line">
-                    <span class="checkbox unchecked"></span>
-                    <div class="check-text">None</div>
-                </div>
-            </div>
-        </div>
-        <!--CARS SECTION-->
-        <h2 class="subtitle cars-title">CARS</h2>
-        <div class="cars-container">
-            <div class="car-container">
-                <img src="ECOMONY_CAR" class="car-pic">
-                <div class="car-right">
-                    <div class="car-details">
-                        <div class="car-deets">
-                            <div class="car-title">Category Economy Matiz or similar</div>
-                            <div class="passengers">Passengers: 5</div>
-                        </div>
-                        <div class="dividing-line"></div>
-                        <div class="car-pricing">
-                            <div class="car-pricing-title">Per Day</div>
-                            <div class="car-pricing-cost">$34</div>
-                            <div class="car-pricing-title">Total</div>
-                            <div class="car-pricing-cost">$56</div>
-                            <div class="car-pricing-title">Taxes included</div>
-                        </div>
+            <h2 class="subtitle supplement-title">SUPPLEMENT YOUR TRIP</h2>
+            <div class="supplement-your-trip">
+                <div class="bullets-box">
+                    <span class="GIANT_SHEILD"></span>
+                    <div class="supplement-bullets">
+                        <div class="bullet-item">&bull; Worldwide assistance</div>
+                        <div class="bullet-item">&bull; Customer service available 24/7</div>
+                        <div class="bullet-item">&bull; Lost baggage protection</div>
+                        <div class="bullet-item">&bull; Trip cancellation protection</div>
                     </div>
-                    <div class="car-view-options">View 19 Options <span class="icon icon-arrow-up"></span></div>
                 </div>
-            </div>
-            <div class="car-container">
-                <img src="LUXURY_SUV" class="car-pic">
-                <div class="car-right">
-                    <div class="car-details">
-                        <div class="car-deets">
-                            <div class="car-title">Luxury SUV</div>
-                            <div class="passengers">Passengers: 5</div>
-                        </div>
-                        <div class="dividing-line"></div>
-                        <div class="car-pricing">
-                            <div class="car-pricing-title">Per Day</div>
-                            <div class="car-pricing-cost">$14</div>
-                            <div class="car-pricing-title">Total</div>
-                            <div class="car-pricing-cost">$56</div>
-                            <div class="car-pricing-title">Taxes included</div>
-                        </div>
+                <!--NEED TO MAKE CHECK BOXES THAT CHANGE IMAGE WHEN CLICKED-->
+                <div class="check-section">
+                    <div class="check-line">
+                        <span class="checkbox unchecked"></span>
+                        <div class="check-text">Penalty Waiver, Cancellation for Any Reason</div>
+                        <div class="check-more-details"><a>More Details</a></div>
+                        <div class="check-price">$25</div>
                     </div>
-                    <div class="car-view-options">View 15 Options <span class="icon icon-arrow-up"></span></div>
-                </div>
-            </div>
-            <div class="car-container">
-                <img src="FULL_SIZE_SUV" class="car-pic">
-                <div class="car-right">
-                    <div class="car-details">
-                        <div class="car-deets">
-                            <div class="car-title">Full Size SUV</div>
-                            <div class="passengers">Passengers: 5</div>
-                        </div>
-                        <div class="dividing-line"></div>
-                        <div class="car-pricing">
-                            <div class="car-pricing-title">Per Day</div>
-                            <div class="car-pricing-cost">$30</div>
-                            <div class="car-pricing-title">Total</div>
-                            <div class="car-pricing-cost">$56</div>
-                            <div class="car-pricing-title">Taxes included</div>
-                        </div>
+                    <div class="check-line">
+                        <span class="checkbox unchecked"></span>
+                        <div class="check-text">Worldwide Assistance (WIP) Recommended!</div>
+                        <div class="check-more-details"><a>More Details</a></div>
+                        <div class="check-price">$20</div>
                     </div>
-                    <div class="car-view-options">View 7 Options <span class="icon icon-arrow-up"></span></div>
-                </div>
-            </div>
-        </div>
-        <div class="more-cars">More cars</div>
-        <h2 class="subtitle tours-title">TOURS</h2>
-        <div class="tours-container">
-            <div class="tour-container">
-                <img src="TOUR_PIC_1" class="tour-pic">
-                <div class="tour-right">
-                    <div class="tour-details">
-                        <div class="tour-deets">
-                            <div class="tour-title">Tolum and Xel-ha Exclusive Tour</div>
-                            <div class="tour-rating-line">
-                                <span class="FOUR AND A HALF STARS"></span>
-                                <div class="user-rating">User Rating</div>
-                            </div>
-                            <div class="tour-duration-line">
-                                <div class="tour-duration">Duration: All day</div>
-                                <div class="tour-vertical-line"></div>
-                                <div class="tour-location">Riviera Maya</div>
-                            </div>
-                            <div class="tour-categories-title">CATEGORIES:</div>
-                            <div class="tour-categories">
-                                <div class="tour-category">Adventure</div>
-                                <div class="tour-category">&bull; Archeological Sites</div>
-                                <div class="tour-category">&bull; Parks</div>
-                                <div class="tour-category">&bull; Water</div>
-                                <div class="tour-category">&bull; Activities</div>
-                            </div>
-                        </div>
-                        <div class="dividing-line"></div>
-                        <div class="tour-pricing">
-                            <div class="tour-pricing-title">Adults from</div>
-                            <div class="tour-pricing-cost">$34</div>
-                            <div class="tour-pricing-title">Children from</div>
-                            <div class="tour-pricing-cost">$56</div>
-                            <button class="tour-dates-btn">Dates</button>
-                        </div>
-                    </div>
-                    <div class="tour-view-options">View 19 Options <span class="icon icon-arrow-up"></span></div>
                 </div>
             </div>
 
-            <div class="right-column">
-                <div class="four-square"></div>
+            <h2 class="subtitle supplement-title">TRANSFER</h2>
+            <div class="supplement-your-trip">
+                <div class="bullets-box">
+                    <span class="GIANT_BUS"></span>
+                    <div class="supplement-bullets">
+                        <div class="bullet-item">&bull; Discounted online</div>
+                        <div class="bullet-item">&bull; Customer service available 24/7</div>
+                        <div class="bullet-item">&bull; Avoid last-minute problems</div>
+                        <div class="bullet-item">&bull; It's safer</div>
+                    </div>
+                </div>
+                <!--NEED TO MAKE CHECK BOXES THAT CHANGE IMAGE WHEN CLICKED-->
+                <div class="check-section">
+                    <div class="check-line">
+                        <span class="checkbox unchecked"></span>
+                        <div class="check-text">Shared Transportation- Vehicle with Air Conditioning and Wifi Recommended!</div>
+                        <div class="check-more-details"><a>More Details</a></div>
+                        <div class="check-price">$40</div>
+                    </div>
+                    <div class="check-line">
+                        <span class="checkbox unchecked"></span>
+                        <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
+                        <div class="check-more-details"><a>More Details</a></div>
+                        <div class="check-price">$100</div>
+                    </div>
+                    <div class="check-line">
+                        <span class="checkbox unchecked"></span>
+                        <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
+                        <div class="check-more-details"><a>More Details</a></div>
+                        <div class="check-price">$170</div>
+                    </div>
+                    <div class="check-line">
+                        <span class="checkbox unchecked"></span>
+                        <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
+                        <div class="check-more-details"><a>More Details</a></div>
+                        <div class="check-price">$175</div>
+                    </div>
+                    <div class="check-line">
+                        <span class="checkbox unchecked"></span>
+                        <div class="check-text">None</div>
+                    </div>
+                </div>
+            </div>
+            <!--CARS SECTION-->
+            <h2 class="subtitle cars-title">CARS</h2>
+            <div class="cars-container">
+                <div class="car-container">
+                    <img src="ECOMONY_CAR" class="car-pic">
+                    <div class="car-right">
+                        <div class="car-details">
+                            <div class="car-deets">
+                                <div class="car-title">Category Economy Matiz or similar</div>
+                                <div class="passengers">Passengers: 5</div>
+                            </div>
+                            <div class="dividing-line"></div>
+                            <div class="car-pricing">
+                                <div class="car-pricing-title">Per Day</div>
+                                <div class="car-pricing-cost">$34</div>
+                                <div class="car-pricing-title">Total</div>
+                                <div class="car-pricing-cost">$56</div>
+                                <div class="car-pricing-title">Taxes included</div>
+                            </div>
+                        </div>
+                        <div class="car-view-options">View 19 Options <span class="icon icon-arrow-up"></span></div>
+                    </div>
+                </div>
+                <div class="car-container">
+                    <img src="LUXURY_SUV" class="car-pic">
+                    <div class="car-right">
+                        <div class="car-details">
+                            <div class="car-deets">
+                                <div class="car-title">Luxury SUV</div>
+                                <div class="passengers">Passengers: 5</div>
+                            </div>
+                            <div class="dividing-line"></div>
+                            <div class="car-pricing">
+                                <div class="car-pricing-title">Per Day</div>
+                                <div class="car-pricing-cost">$14</div>
+                                <div class="car-pricing-title">Total</div>
+                                <div class="car-pricing-cost">$56</div>
+                                <div class="car-pricing-title">Taxes included</div>
+                            </div>
+                        </div>
+                        <div class="car-view-options">View 15 Options <span class="icon icon-arrow-up"></span></div>
+                    </div>
+                </div>
+                <div class="car-container">
+                    <img src="FULL_SIZE_SUV" class="car-pic">
+                    <div class="car-right">
+                        <div class="car-details">
+                            <div class="car-deets">
+                                <div class="car-title">Full Size SUV</div>
+                                <div class="passengers">Passengers: 5</div>
+                            </div>
+                            <div class="dividing-line"></div>
+                            <div class="car-pricing">
+                                <div class="car-pricing-title">Per Day</div>
+                                <div class="car-pricing-cost">$30</div>
+                                <div class="car-pricing-title">Total</div>
+                                <div class="car-pricing-cost">$56</div>
+                                <div class="car-pricing-title">Taxes included</div>
+                            </div>
+                        </div>
+                        <div class="car-view-options">View 7 Options <span class="icon icon-arrow-up"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="more-cars">More cars</div>
+            <h2 class="subtitle tours-title">TOURS</h2>
+            <div class="tours-container">
+                <div class="tour-container">
+                    <img src="TOUR_PIC_1" class="tour-pic">
+                    <!--PLUS SIGN SUPER IMPOSED OVER IT-->
+                    <div class="tour-right">
+                        <div class="tour-details">
+                            <div class="tour-deets">
+                                <div class="tour-title">Tolum and Xel-ha Exclusive Tour</div>
+                                <div class="tour-rating-line">
+                                    <span class="FOUR AND A HALF STARS"></span>
+                                    <div class="user-rating">User Rating</div>
+                                </div>
+                                <div class="tour-duration-line">
+                                    <div class="tour-duration">Duration: All day</div>
+                                    <div class="tour-vertical-line"></div>
+                                    <div class="tour-location">Riviera Maya</div>
+                                </div>
+                                <div class="tour-categories-title">CATEGORIES:</div>
+                                <div class="tour-categories">
+                                    <div class="tour-category">Adventure</div>
+                                    <div class="tour-category">&bull; Archeological Sites</div>
+                                    <div class="tour-category">&bull; Parks</div>
+                                    <div class="tour-category">&bull; Water</div>
+                                    <div class="tour-category">&bull; Activities</div>
+                                </div>
+                            </div>
+                            <div class="dividing-line"></div>
+                            <div class="tour-pricing">
+                                <div class="tour-pricing-title">Adults from</div>
+                                <div class="tour-pricing-cost">$34</div>
+                                <div class="tour-pricing-title">Children from</div>
+                                <div class="tour-pricing-cost">$56</div>
+                                <button class="tour-dates-btn">Dates</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-container">
+                    <img src="TOUR_PIC_2" class="tour-pic">
+                    <!--PLUS SIGN SUPER IMPOSED OVER IT-->
+                    <div class="tour-right">
+                        <div class="tour-details">
+                            <div class="tour-deets">
+                                <div class="tour-title">Subsee Explorer Tour</div>
+                                <div class="tour-rating-line">
+                                    <span class="FOUR AND A HALF STARS"></span>
+                                    <div class="user-rating">User Rating</div>
+                                </div>
+                                <div class="tour-duration-line">
+                                    <div class="tour-duration">Duration: All day</div>
+                                    <div class="tour-vertical-line"></div>
+                                    <div class="tour-location">Riviera Maya</div>
+                                </div>
+                                <div class="tour-categories-title">CATEGORIES:</div>
+                                <div class="tour-categories">
+                                    <div class="tour-category">Adventure</div>
+                                    <div class="tour-category">&bull; Archeological Sites</div>
+                                    <div class="tour-category">&bull; Parks</div>
+                                    <div class="tour-category">&bull; Water</div>
+                                    <div class="tour-category">&bull; Activities</div>
+                                </div>
+                            </div>
+                            <div class="dividing-line"></div>
+                            <div class="tour-pricing">
+                                <div class="tour-pricing-title">Adults from</div>
+                                <div class="tour-pricing-cost">$119</div>
+                                <div class="tour-pricing-title">Children from</div>
+                                <div class="tour-pricing-cost">$60</div>
+                                <button class="tour-dates-btn">Dates</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-container">
+                    <img src="TOUR_PIC_3" class="tour-pic">
+                    <!--PLUS SIGN SUPER IMPOSED OVER IT-->
+                    <div class="tour-right">
+                        <div class="tour-details">
+                            <div class="tour-deets">
+                                <div class="tour-title">Jungle Tour "Sunrise Maya"</div>
+                                <div class="tour-rating-line">
+                                    <span class="FOUR AND A HALF STARS"></span>
+                                    <div class="user-rating">User Rating</div>
+                                </div>
+                                <div class="tour-duration-line">
+                                    <div class="tour-duration">Duration: All day</div>
+                                    <div class="tour-vertical-line"></div>
+                                    <div class="tour-location">Riviera Maya</div>
+                                </div>
+                                <div class="tour-categories-title">CATEGORIES:</div>
+                                <div class="tour-categories">
+                                    <div class="tour-category">Adventure</div>
+                                    <div class="tour-category">&bull; Archeological Sites</div>
+                                    <div class="tour-category">&bull; Parks</div>
+                                    <div class="tour-category">&bull; Water</div>
+                                    <div class="tour-category">&bull; Activities</div>
+                                </div>
+                            </div>
+                            <div class="dividing-line"></div>
+                            <div class="tour-pricing">
+                                <div class="tour-pricing-title">Adults from</div>
+                                <div class="tour-pricing-cost">$47</div>
+                                <div class="tour-pricing-title">Children from</div>
+                                <div class="tour-pricing-cost">$24</div>
+                                <button class="tour-dates-btn">Dates</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="more-cars">More tours</div>
+            <button class="continue">Continue to checkout</button>
+        </div>
 
+        <div class="right-column hide-for-small">
+            <div class="four-square">
+                <div class="square square-top-left">
+                    <div class="square-title">CHECK-IN</div>
+                    <div class="square-date">
+                        <div class="square-num">2</div>
+                        <div class="square-month">/ Jun</div>
+                    </div>
+                </div>
+
+                <div class="square square-top-right">
+                    <div class="square-title">CHECK-OUT</div>
+                    <div class="square-date">
+                        <div class="square-num">27</div>
+                        <div class="square-month">/ Jun</div>
+                    </div>
+                </div>
+                <div class="square square-top-left">
+                    <div class="square-title">GUESTS</div>
+                    <div class="square-num">2</div>
+                </div>
+                <div class="square square-top-left">
+                    <div class="square-title">ROOMS</div>
+                    <div class="square-num">1</div>
+                </div>
+            </div>
+            <div class="wip-container">
+                <div class="right-box-title-row">
+                    <div class="right-box-title">Worldwide Assistance (WIP)</div>
+                    <div class="right-box-x">X</div>
+                </div>
+                <div class="right-box-content-row">
+                    <div class="right-box-content">Recommended!</div>
+                    <div class="right-box-price">$20</div>
+                </div>
+            </div>
+            <div class="shuttle-container">
+                <div class="right-box-title-row">
+                    <div class="right-box-title">Transfer Shuttle</div>
+                    <div class="right-box-x">X</div>
+                </div>
+                <div class="right-box-content-row">
+                    <div class="right-box-content">Up to 20% cheaper than at the airport!</div>
+                    <div class="right-box-price">$40</div>
+                </div>
+            </div>
+            <div class="price-box">
+                <div class="old-price">$1300</div>
+                <div class="final-price">
+                    <div class="little-dollar">$</div>
+                    <div class="big-price">965</div>
+                </div>
+                <div class="time-frame">Total 3 Nights/ Taxes included</div>
+                <div class="more-details">More details</div>
+                <button class="continue-smaller">Continue to checkout</button>
             </div>
         </div>
     </div>
+</div>
+{% endblock %}{% block foot %} {{ parent() }} {% endblock %}
