@@ -8,10 +8,13 @@
 
 #reservation .center-column{
     flex-grow: 3;
+        margin: 0 20px;
 }
 
 #reservation .title{
-    font-size: 40px;
+        font-size: 31px;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 #reservation .pic-and-details{
@@ -21,6 +24,7 @@
 #reservation .place-details{
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
 }
 
 #reservation .details-title{
@@ -47,10 +51,16 @@
 
 #reservation .bullets-box{
     display: flex;
+    background-color: #F7F7F7;
+    padding: 10px;
+        height: 70px;
 }
 
 #reservation .supplement-bullets{
     display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    justify-content: space-around;
 }
 
 #reservation .check-section{
@@ -60,6 +70,11 @@
 
 #reservation .check-line{
     display: flex;
+    justify-content: space-between;
+}
+
+#reservation .last-check-line{
+    justify-content: flex-start;
 }
 
 #reservation .cars-container{
@@ -69,30 +84,40 @@
 
 #reservation .car-container{
     display: flex;
+    border: 1px solid #F7F7F7;
+    margin: 5px 0;
 }
 
-#reservation .car-right{
+#reservation .car-right {
     display: flex;
     flex-direction: column;
+    width: 62%;
+    justify-content: space-around;
+    margin: 2px 11px 0 7px;
 }
 
 #reservation .car-details{
     display: flex;
-    flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
 }
 
 #reservation .car-deets{
     display: flex;
     flex-direction: column;
+        width: 60%;
 }
 
 #reservation .car-pricing{
     display: flex;
     flex-direction: column;
+        align-items: flex-end;
 }
 
 #reservation .car-view-options{
     display: flex;
+    align-self: flex-end;
+    font-size: 13px;
 }
 
 #reservation .tours-container{
@@ -100,13 +125,26 @@
     flex-direction: column;
 }
 
-#reservation .tour-container{
+#reservation .tour-container {
     display: flex;
+    width: 678px;
+    height: 185px;
+    border: 1px solid #F7F7F7;
+    margin-bottom: 15px;
+}
+
+#reservation .tour-right {
+    display: flex;
+    flex-direction: column;
+    width: 62%;
+    justify-content: space-around;
+    margin: 2px 11px 0 7px;
 }
 
 #reservation .tour-details{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #reservation .tour-deets{
@@ -114,11 +152,347 @@
     flex-direction: column;
 }
 
+#reservation .tour-categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#reservation .tour-rating-line{
+    display: flex;
+}
+
+#reservation .tour-duration-line{
+    display: flex;
+    margin: 3px 0;
+}
+
 #reservation .tour-pricing{
     display: flex;
     flex-direction: column;
+        align-items: flex-end;
 }
 
+#reservation .four-square {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 263px;
+    height: 139px;
+    box-shadow: 0px 0px 10px #F7F7F7;
+}
+
+#reservation .square{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+        width: 45%;
+    margin-left: 9px;
+    height: 45%;
+}
+
+#reservation .square-top-left{
+    border-right: 1px solid #F7F7F7;
+}
+
+#reservation .square-bottom-left{
+    border-right: 1px solid #F7F7F7;
+}
+
+#reservation .square-title{
+    font-size: 12px;
+}
+
+#reservation .square-month{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#reservation .square-num{
+    font-size: 22px;
+}
+
+#reservation .wip-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 263px;
+    height: 62px;
+    background-color: #F7F7F7;
+    margin: 10px 0;
+}
+
+#reservation .square-date{
+    display: flex;
+    flex-direction: row;
+        align-items: center;
+}
+
+#reservation .shuttle-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 263px;
+    height: 78px;
+    background-color: #F7F7F7;
+    margin: 10px 0;
+}
+
+#reservation .right-box-title-row{
+    display: flex;
+        justify-content: space-between;
+    font-size: 12px;
+        margin: 0 10px;
+    margin-bottom: 4px;
+}
+
+#reservation .right-box-content-row{
+    display: flex;
+        justify-content: space-between;
+            margin: 0 10px;
+    font-size: 12px;
+}
+
+#reservation .right-box-x{
+    position: relative;
+    top: -8px;
+    font-weight: 500;
+}   
+
+#reservation .price-box{
+    display: flex;
+    flex-direction: column;
+    width: 263px;
+    height: 180px;
+    background-color: #F7F7F7;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#reservation .final-price{
+    display: flex;
+}
+
+#reservation .main-pic{
+    width: 186px;
+    height: 137px;
+}
+
+#reservation .location-name{
+    font-size: 14px;
+    margin-left: 6px;
+    margin-right: 60px;
+}
+
+#reservation .vertical-line-black{
+    border-right: 1.4px solid gray;
+    margin: 0px 30px 0 10px;
+}
+
+#reservation .subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 30px 0 10px 0;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 4px;
+}
+
+#reservation .car-pic{
+    width: 242px;
+    height: 161px;
+}
+
+#reservation .tour-pic{
+    height: 156px;
+    width: 252px;
+}
+
+#reservation .based-on{
+    font-size: 12px;
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+#reservation .icon{
+    margin: 0 5px;
+}
+
+#reservation .trip-advisor-score{
+    font-size: 13px;
+    margin: 0 5px;
+}
+
+#reservation .phone-number{
+    font-size: 14px;
+}
+
+#reservation .all-inclusive{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+#reservation .adults-cancellation{
+    display: flex;
+
+}
+
+#reservation .how-many{
+    font-size: 14px;
+}
+
+#reservation .num-adults{
+    font-size: 14px;
+}
+
+#reservation .cancellation-policy{
+    color: #42B299 !important;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+#reservation .GIANT_SHIELD{
+    width: 44px;
+    height: 46px;
+    margin: auto;
+    position: relative;
+}
+
+#reservation .bullet-item{
+        width: 46%;
+}
+
+#reservation .check-section{
+    min-height: 150px;
+    padding: 10px;
+}
+
+#reservation .check-line{
+    width: 85%;
+        margin: 15px 0 15px 15%;
+    font-size: 12px;
+}
+
+#reservation .check-text{
+        max-width: 350px;
+}
+
+#reservation .check-more-details a{
+    color: #42B299 !important;
+}
+
+#reservation .tour-dates-btn{
+    width: 96px;
+    height: 40px;
+    background-color: #CAC859;
+    color: white;
+    margin-top: 20px;
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+#reservation .continue{
+    width: 668px;
+    height: 40px;
+    background-color: #CAC859;
+    color: white;
+    margin: 10px auto 40px auto;
+    font-weight: 400;
+}
+
+#reservation .more-cars{
+    text-align: right;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+#reservation .dividing-line {
+    height: 93px;
+    border-left: 1px solid #F7F7F7;
+    width: 1px;
+}
+
+#reservation .car-title{
+    font-size: 17px;
+}
+
+#reservation .passengers {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#reservation .car-pricing-title{
+    font-size: 12px;
+}
+
+#reservation .car-pricing-cost{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 3px 0;
+}
+
+#reservation .tour-title{
+    font-size: 17px;
+}
+
+#reservation .passengers {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#reservation .tour-pricing-title{
+    font-size: 12px;
+}
+
+#reservation .tour-pricing-cost{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 3px 0;
+}
+
+#reservation .tour-duration{
+    font-size: 12px;
+}
+
+#reservation .tour-location{
+    font-size: 12px;
+}
+
+#reservation .tour-categories-title{
+    font-size: 12px;
+        margin-top: 18px;
+    margin-bottom: 4px;
+}
+
+#reservation .tour-category{
+    font-size: 12px;
+}
+
+#reservation .continue-smaller{
+    width: 242px;
+    height: 40px;
+    background-color: #CAC859;
+    color: white;
+    font-weight: 400;
+}
+
+#reservation .old-price{
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+#reservation .big-price{
+    font-size: 28px;
+}
+
+#reservation .time-frame{
+    font-size: 12px;
+}
+
+#reservation .more-details{
+    font-size: 12px;
+    color: #42B299 !important;
+}
 
 
 
