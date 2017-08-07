@@ -107,6 +107,40 @@
 	}
 
 	window.addEventListener('load', function() {
+		forEach($('.hamburger-menu-main'), function(e) {
+			e.addEventListener('click', function(event) {
+				forEach($('.hamburger-menu-main'), function(el) {
+					el.classList.remove('show');
+				});
+				forEach($('.big-x'), function(el) {
+					el.classList.remove('hide');
+				});
+				// forEach($('.mobile-login-row, .mobile-search, .mobile-options, .book-btn'), function(el) {
+				// 	el.classList.remove('hide');
+				// });
+				forEach($('.mobile-login-row, .mobile-search, header > :not(:first-child)'), function(el) {
+					el.classList.remove('hide');
+				});
+			});
+		});
+
+		forEach($('.big-x'), function(e) {
+			e.addEventListener('click', function(event) {
+				forEach($('.big-x'), function(el) {
+					el.classList.add('hide');
+				});
+				forEach($('.hamburger-menu-main'), function(el) {
+					el.classList.add('show');
+				});
+				// forEach($('.mobile-login-row, .mobile-search, .mobile-options, .book-btn'), function(el) {
+				// 	el.classList.add('hide');
+				// });
+				forEach($('.mobile-login-row, .mobile-search, header > :not(:first-child)'), function(el) {
+					el.classList.add('hide');
+				});
+			});
+		});
+
 		forEach($('.Menu li.-hasSubmenu'), function(e) {
 			e.showMenu = showMenu;
 			e.hideMenu = hideMenu;
