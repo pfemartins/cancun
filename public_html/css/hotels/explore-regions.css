@@ -1,0 +1,9 @@
+#explore-regions > .img-container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+}
+#explore-regions {
+	height: 50vh;
+}
