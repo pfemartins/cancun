@@ -659,6 +659,7 @@ html.svg.touch #fusion .icon {
 	align-items: center;
 	text-align: right;
 	padding-top: 16px;
+	margin-right: 30px;
 }
 
 #navbar .hamburger-item {
@@ -975,10 +976,6 @@ style.css: 494 #fusion a#scroll-to-top {
 	display: none;
 }
 
-.hamburger-holder {
-	display: none;
-}
-
 .hamburger-holder.show {
 	display: block;
 }
@@ -1040,4 +1037,14 @@ input[type="checkbox"]:checked:before {
 
 	/*Rotate the L 45 degrees to turn it into a checkmark*/
 	transform: rotate(45deg);
+}
+
+/*768-861*/
+@media (min-width: 768px) and (max-width: 861px) {
+	#fusion #navbar .Menu {
+		font-size: 14px;
+	}
+	#fusion nav ul li {
+		padding: 5px 3px;
+	}
 }
