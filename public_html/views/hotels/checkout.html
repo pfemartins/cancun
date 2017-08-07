@@ -1,0 +1,253 @@
+ {% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent()
+}}
+<link rel="stylesheet" href="public_html/css/hotels/checkout.css"> {% endblock %} {% block main %}
+
+<div id="check">
+    <div class="left-column hide-for-small"></div>
+
+    <div class="big-right-column">
+        <div class="header gradient-bg">
+            <div class="reservation">Reservation</div>
+            <img class="white-arrow" src="/cancun/public_html/images/hotels/reservation/white-arrow-right.png">
+            <div class="reservation-two">Checkout</div>
+        </div>
+
+
+        <div class="body">
+            <div class="center-column">
+                <h1 class="title hide-for-small">Your Reservation</h1>
+                <div class="pic-and-details">
+                    <img src="/cancun/public_html/images/hotels/reservation/Cancun-Secrets-Todo-Incluido-Suite-Presidencial_4_l.png" class="hide-for-small main-pic">
+                    <div class="place-details">
+                        <div class="details-title">Grand Fiesta Americana Coral Beach Cancun</div>
+                        <div class="location-and-phone">
+                            <span class="icon icon-location hide-for-small"></span>
+                            <div class="location-name">Punta Cancun Hotel Zone</div>
+                            <div class="vertical-line-black VERTICAL_LINE hide-for-small"></div>
+                            <div class="phone-number hide-for-small">1.800.568.5904</div>
+                        </div>
+                        <div class="reviews-line">
+                            <div class="star-line">
+                                <span class="icon icon-star-small star"></span>
+                                <span class="icon icon-star-small star"></span>
+                                <span class="icon icon-star-small star"></span>
+                                <span class="icon icon-star-small star"></span>
+                                <span class="icon icon-half-star-small star"></span>
+                            </div>
+                            <a class="based-on hide-for-small">Based on 45 Reviews</a>
+                            <a class="based-on">3.9/5 User Rating</a>
+                            <span class="icon icon-tripadvisor"></span>
+                            <div class="trip-advisor-score">4/5 Very Good!</div>
+                        </div>
+                        <div class="trip-details hide-for-small">
+                            <div class="all-inclusive">All-inclusive</div>
+                            <div class="how-many">Royal Honeymoon Ocean Front (1)</div>
+                            <div class="adults-cancellation">
+                                <div class="num-adults">2 Adults</div>
+                                <div class=""><a class="cancellation-policy">Cancellation Policy</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-pricing hide-for-large">
+                        <div class="price-box">
+                            <div class="old-price">$1300</div>
+                            <div class="final-price">
+                                <div class="little-dollar">$</div>
+                                <div class="big-price-mobile">965</div>
+                            </div>
+                            <div class="time-frame">Total 3 Nights/ Taxes and fees included</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trip-details-mobile hide-for-large">
+                    <img src="/cancun/public_html/images/hotels/reservation/Cancun-Secrets-Todo-Incluido-Suite-Presidencial_4_l.png" class="mobile-pic">
+                    <div class="trip-details">
+                        <div class="all-inclusive-mobile">
+                            <div class="all-inclusive">All-inclusive</div>
+                            <div class="price-breakdown-mobile">Price breakdown</div>
+                        </div>
+                        <div class="how-many">Royal Honeymoon Ocean Front (1)</div>
+                        <div class="adults-cancellation">
+                            <div class="num-adults">2 Adults</div>
+                            <div class=""><a class="cancellation-policy">Cancellation Policy</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-dates hide-for-large">
+                    <div class="four-square">
+                        <div class="square square-top-left">
+                            <div class="square-title">CHECK-IN</div>
+                            <div class="square-date">
+                                <div class="square-num">2</div>
+                                <div class="square-month">/ Jun</div>
+                            </div>
+                        </div>
+                        <div class="square square-top-right">
+                            <div class="square-title">CHECK-OUT</div>
+                            <div class="square-date">
+                                <div class="square-num">27</div>
+                                <div class="square-month">/ Jun</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="subtitle supplement-title">GUEST INFORMATION</h2>
+                <div class="guest-information-container">
+                    <div class="info-title">Room 1 Guest*</div>
+                    <input class="guest-info" type="text" placeholder="First and Last Name*">
+                    <input class="guest-info" type="text" type="email" placeholder="Email Address*">
+                    <input class="guest-info" type="text" type="phone" placeholder="Phone Number*">
+                </div>
+                <h2 class="subtitle supplement-title">DATA FOR TRANSFER</h2>
+                <div class="data-for-transfer-container">
+                    <div class="info-title">Arrival time*</div>
+                    <div class="arrival-row">
+                        <div class="select-arrow-container">
+                            <select class="time-select">
+                                <option value="hh">hh</option>
+                            </select>
+                            <span class="icon icon-arrow-down-small down-arrow"></span>
+                        </div>
+                        <div class="select-arrow-container">
+                            <select class="time-select">
+                                <option value="mm">mm</option>
+                            </select>
+                            <span class="icon icon-arrow-down-small down-arrow"></span>
+                        </div>
+                        <div class="select-arrow-container">
+                            <select class="airline-select">
+                                <option value="Airline">Airline</option>
+                            </select>
+                            <span class="icon icon-arrow-down-small down-arrow"></span>
+                        </div>
+                        <input type="text" class="flight-num" placeholder="Flight Number">
+                    </div>
+                    <div class="info-title">Departure time*</div>
+                    <div class="arrival-row">
+                        <div class="select-arrow-container">
+                            <select class="time-select">
+                                <option value="hh">hh</option>
+                            </select>
+                            <span class="icon icon-arrow-down-small down-arrow"></span>
+                        </div>
+                        <div class="select-arrow-container">
+                            <select class="time-select">
+                                <option value="mm">mm</option>
+                            </select>
+                            <span class="icon icon-arrow-down-small down-arrow"></span>
+                        </div>
+                        <div class="select-arrow-container">
+                            <select class="airline-select">
+                                <option value="Airline">Airline</option>
+                            </select>
+                            <span class="icon icon-arrow-down-small down-arrow"></span>
+                        </div>
+                        <input type="text" class="flight-num" placeholder="Flight Number">
+                    </div>
+                </div>
+                <h2 class="subtitle supplement-title">PAYMENT INFORMATION</h2>
+                <div class="payment-information-container">
+                    <div class="info-title">Card Holder's Name*</div>
+                    <input class="guest-info" type="text" placeholder="First name as it appears on card">
+                    <input class="guest-info" type="text" placeholder="Last name as it appears on card">
+                    <input class="guest-info" type="text" placeholder="Credit card number*">
+                    <div class="info-title">Expiration Date*</div>
+                    <div class="expiration-container">
+                        <input class="expiration-input" type="text" placeholder="MM">
+                        <input class="expiration-input" type="text" placeholder="YY">
+                    </div>
+                    <div class="security-code-container">
+                        <input class="expiration-input" type="text" placeholder="Security Code*">
+                        <div class="what-this">What's this?</div>
+                    </div>
+                </div>
+                <h2 class="subtitle supplement-title">BILLING INFORMATION</h2>
+                <div class="billing-container">
+                    <div class="info-title">Country*</div>
+                    <div class="select-arrow-container">
+                        <select class="country-select">
+                                <option value="United States">United States</option>
+                            </select>
+                        <span class="icon icon-arrow-down-small down-arrow"></span>
+                    </div>
+                    <input class="guest-info" type="text" placeholder="Billing Address*">
+                    <input class="guest-info" type="text" placeholder="Zip Code*">
+                    <div class="checkbox-line">
+                        <input type="checkbox" class="green-checkbox">
+                        <div class="text-me">Text me my reservation</div>
+                    </div>
+                </div>
+                <button class="book-btn">Book</button>
+                <div class="fine-print">By continuing with your booking, you agree you have read and accept our <span class="fine-print-green">terms and conditions</span>,
+                    <span class="fine-print-green">privacy policy</span>, and <span class="fine-print-green">hotel policies</span>.
+                    Your credit card will be charged for the full payment upon submitting your reservation request.</div>
+
+            </div>
+
+
+            <!--RIGHT COLUMN, HIDDEN ON MOBILE-->
+            <div class="right-column hide-for-small">
+                <div class="four-square">
+                    <div class="square square-top-left">
+                        <div class="square-title">CHECK-IN</div>
+                        <div class="square-date">
+                            <div class="square-num">2</div>
+                            <div class="square-month">/ Jun</div>
+                        </div>
+                    </div>
+
+                    <div class="square square-top-right">
+                        <div class="square-title">CHECK-OUT</div>
+                        <div class="square-date">
+                            <div class="square-num">27</div>
+                            <div class="square-month">/ Jun</div>
+                        </div>
+                    </div>
+                    <div class="square square-bottom-left">
+                        <div class="square-title">GUESTS</div>
+                        <div class="square-num">2</div>
+                    </div>
+                    <div class="square square-bottom-right">
+                        <div class="square-title">ROOMS</div>
+                        <div class="square-num">1</div>
+                    </div>
+                </div>
+                <div class="wip-container">
+                    <div class="right-box-title-row">
+                        <div class="right-box-title">Worldwide Assistance (WIP)</div>
+                        <div class="right-box-x">X</div>
+                    </div>
+                    <div class="right-box-content-row">
+                        <div class="right-box-content">Recommended!</div>
+                        <div class="right-box-price">$20</div>
+                    </div>
+                </div>
+                <div class="shuttle-container">
+                    <div class="right-box-title-row">
+                        <div class="right-box-title">Transfer Shuttle</div>
+                        <div class="right-box-x">X</div>
+                    </div>
+                    <div class="right-box-content-row">
+                        <div class="right-box-content">Up to 20% cheaper than at the airport!</div>
+                        <div class="right-box-price">$40</div>
+                    </div>
+                </div>
+                <div class="price-box">
+                    <div class="old-price">$1300</div>
+                    <div class="final-price">
+                        <div class="little-dollar">$</div>
+                        <div class="big-price">965</div>
+                    </div>
+                    <div class="time-frame">Total 3 Nights/ Taxes included</div>
+                    <div class="more-details">More details</div>
+                </div>
+            </div>
+
+
+            <div class="far-right-column"></div>
+        </div>
+
+    </div>
+</div>
+</div>
+{% endblock %}{% block foot %} {{ parent() }} {% endblock %}
