@@ -336,10 +336,22 @@ html.svg.touch #fusion .icon {
 	background-position: -10px -1989px;
 }
 
+#fusion .icon-star-small {
+	width: 14px;
+	height: 12px;
+	background-position: -10px -1979px;
+}
+
 #fusion .icon-half-star {
 	width: 9px;
 	height: 13px;
 	background-position: -11px -940px;
+}
+
+#fusion .icon-half-star-small {
+	width: 9px;
+	height: 13px;
+	background-position: -11px -920px;
 }
 #fusion .icon-tripadvisor {
 	width: 21px;
@@ -996,7 +1008,7 @@ style.css: 494 #fusion a#scroll-to-top {
 	display: none;
 }
 
-input[type="checkbox"] {
+#fusion input.green-checkbox[type="checkbox"] {
 	content: '';
 	cursor: pointer;
 	width: 1em;
@@ -1009,11 +1021,11 @@ input[type="checkbox"] {
 	appearance: none;
 	position: relative;
 }
-input[type="checkbox"]:checked {
+#fusion input.green-checkbox[type="checkbox"]:checked {
 	border: 2px solid #42af96;
 	content: '<span class="checkmark">';
 }
-input[type="checkbox"]:checked:before {
+#fusion input.green-checkbox[type="checkbox"]:checked:before {
 	position: absolute;
 	left: 3px;
 	display: inline-block;
