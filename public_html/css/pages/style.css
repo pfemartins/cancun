@@ -330,6 +330,12 @@ html.svg.touch #fusion .icon {
 	background-position: -10px -72px;
 }
 
+#fusion .icon-arrow-right {
+	width: 9px;
+	height: 17px;
+	background-position: -10px -438px;
+}
+
 #fusion .icon-star {
 	width: 15px;
 	height: 14px;
@@ -482,7 +488,7 @@ html.svg.touch #fusion .icon {
 #fusion nav ul li {
 	list-style-type: none;
 	display: inline-block;
-	margin-right: 40px;
+	padding: 5px 10px;
 }
 #fusion nav.gradient-bg ul li a {
 	color: #fff;
@@ -587,7 +593,12 @@ html.svg.touch #fusion .icon {
 
 #navbar .nav-item a {
 	padding: 0;
-	margin-right: 22px;
+	/*margin-right: 22px;*/
+}
+
+#navbar .hamburger > a {
+	width: 24px;
+	min-width: 24px;
 }
 
 #navbar .nav-item a:hover {
@@ -666,6 +677,7 @@ html.svg.touch #fusion .icon {
 	align-items: center;
 	text-align: right;
 	padding-top: 16px;
+	margin-right: 30px;
 }
 
 #navbar .hamburger-item {
@@ -982,6 +994,10 @@ style.css: 494 #fusion a#scroll-to-top {
 	display: none;
 }
 
+.hamburger-holder.show {
+	display: block;
+}
+
 .hamburger-menu-main > div {
 	width: 20px;
 	height: 2px;
@@ -1023,12 +1039,10 @@ style.css: 494 #fusion a#scroll-to-top {
 }
 #fusion input.green-checkbox[type="checkbox"]:checked {
 	border: 2px solid #42af96;
-	content: '<span class="checkmark">';
 }
 #fusion input.green-checkbox[type="checkbox"]:checked:before {
 	position: absolute;
 	left: 3px;
-	display: inline-block;
 	content: '';
 	display: block;
 	/*Make it a small rectangle so the border will create an L-shape*/
@@ -1041,4 +1055,14 @@ style.css: 494 #fusion a#scroll-to-top {
 
 	/*Rotate the L 45 degrees to turn it into a checkmark*/
 	transform: rotate(45deg);
+}
+
+/*768-861*/
+@media (min-width: 768px) and (max-width: 861px) {
+	#fusion #navbar .Menu {
+		font-size: 14px;
+	}
+	#fusion nav ul li {
+		padding: 5px 3px;
+	}
 }

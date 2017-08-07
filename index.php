@@ -36,7 +36,11 @@
                // $parameters['page'] = 'home';
                $twigPath = 'views/hotels/reservation.html';
                break;
-          default:
+        case $url."explore-regions":
+               // $parameters['page'] = 'home';
+               $twigPath = 'views/hotels/explore-regions.html';
+               break;
+        default:
                break;
      }
 

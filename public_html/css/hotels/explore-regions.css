@@ -1,0 +1,13 @@
+#explore-regions > .img-container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: linear-gradient(rgba(220, 220, 220, .15), rgba(220, 220, 220, .05)),
+		url(../../images/hotels/explore-regions/shutterstock_84440260.png);
+	background-size: cover;
+	width: 100vw;
+	z-index: -1;
+}
+#explore-regions {
+	height: 50vh;
+}
