@@ -17,12 +17,12 @@
 }
 
 #reservation .reservation{
-    text-decoration: underline;
+    text-decoration: none;
         margin-left: 22px;
 }
 
 #reservation .reservation-two{
-    
+    text-decoration: underline;
 }
 
 #reservation .star-line{
@@ -349,7 +349,7 @@
 }
 
 #reservation .subtitle {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
     margin: 30px 0 10px 0;
     border-bottom: 1px solid lightgrey;
@@ -568,6 +568,8 @@
 #reservation .check-line-top{
     display: flex;
 }
+
+
 
 
 
