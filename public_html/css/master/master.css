@@ -26,6 +26,42 @@
     padding: 15px;
 }
 
+/* Swipper styles */
+.swiper-slide {
+    height: 313px;
+    width: 230px;
+    box-sizing: border-box;
+}
+.swiper-container .button-next {
+    right: 10px;
+    left: auto;
+    background: #fff;
+    padding: 7px 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #CDCDCD;
+}
+.swiper-container .button-next .icon {
+    margin-top: 3px;
+}
+.swiper-overlay {
+    height: 313px;
+    width: 230px;
+    background: #fff;
+    background: -webkit-linear-gradient(left, transparent 30%, #fff 86%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, transparent 30%, #fff 86%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, transparent 30%, #fff 86%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, transparent 30%, #fff 86%); /* Standard syntax */
+    position: absolute;
+    right: 1px;
+    left: auto;
+    top: 0;
+    z-index: 2;
+}
 
 /* DESKTOP - Tablet */
 @media (min-width: 768px) {
@@ -65,4 +101,6 @@
     #banner .fusion-container {
         padding: 0 30px;
     }
+    /* Swipper styles */
+
 }

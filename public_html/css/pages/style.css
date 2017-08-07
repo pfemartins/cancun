@@ -335,6 +335,12 @@ html.svg.touch #fusion .icon {
 	background-position: -10px -72px;
 }
 
+#fusion .icon-arrow-right {
+	width: 9px;
+	height: 17px;
+	background-position: -10px -438px;
+}
+
 #fusion .icon-star {
 	width: 15px;
 	height: 14px;
