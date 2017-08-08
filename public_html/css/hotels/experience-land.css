@@ -1,0 +1,218 @@
+header {
+    background: linear-gradient(to right, rgba(0, 209, 0, 0.10), rgba(0, 0, 0, 0.10)), url(../../images/hotels/experience-land/Chichenitza.png);
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;
+    height: 50vh;
+}
+
+#land .header-stuff{
+    position: relative;
+    bottom: 200px;
+        width: 60%;
+    margin: auto;
+}
+
+#land .desktop-title {
+    color: white;
+    font-size: 45px;
+    
+}
+
+#land .big-underline{
+    width: 385px;
+    border-bottom: 4px solid white;
+    margin: 20px 0;
+}
+
+#land .desktop-text{
+    color: white;
+}
+
+#land .title {
+    font-size: 18px;
+    font-weight: 400;
+    margin: -100px 0 15px 0;
+}
+
+#land .four-square {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 139px;
+    box-shadow: 0px 0px 10px #F7F7F7;
+}
+#land .square {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;
+    height: 100%;
+    padding: 5px 9px 5px 9px;
+}
+#land .square-top-left{
+    border-right: 1px solid #F7F7F7;
+    width: 50%;
+}
+#land .square-top-right{
+    width: 50%;
+}
+
+#land .square-title {
+    font-size: 14px;
+}
+#land .square-date{
+    display: flex;
+    flex-direction: row;
+        align-items: center;
+}
+#land .square-num {
+    font-size: 45px;
+}
+#land .square-month {
+    font-size: 15px;
+    margin-top: 18px;
+}
+#land .square-bottom-left{
+    border-right: 1px solid #F7F7F7;
+}
+#land .fusion-dates{
+    width: 50%;
+    height: 100%;
+}
+#land .top-squares{
+    display: flex !important;
+    height: 100%;
+}
+#land .number-select {
+    width: 100%;
+    border: none;
+    padding-left: 12px;
+    font-size: 45px;
+    background-color: transparent;
+    color: black;
+}
+#land .right-square {
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F7F7;
+    height: 100%;
+    padding: 10px 0 0 0;
+    width: 23%;
+    height: 95%;
+}
+#land .search-hotels-btn {
+    width: 205px;
+    height: 50px;
+    background-color: #CAC859;
+    color: white;
+    position: relative;
+    margin: auto;
+    font-weight: 400;
+    box-shadow: 1px 1px 5px #888888;
+}
+#land .square-arrow{
+    position: relative;
+    left: 29px;
+    top: 2px;
+}
+#land .right {
+    position: relative;
+    top: 30px;
+    right: 114px;
+    z-index: -1;
+}
+#land .guests-select{
+    display: flex;
+}
+#land .guests{
+    width: 100%;
+}
+#land option{
+    -webkit-appearance: none;
+    font-size: 15px;
+}
+#land .more-filters {
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+#land .all-cancun {
+    font-size: 20px;
+    margin-top: 13px;
+    width: 95%;
+    position: relative;
+    margin: 5px auto -6px auto;
+}
+#land .all-arrow{
+    position: relative;
+    left: 60px;
+}
+#land .text{
+    width: 80%;
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#land .picture-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#land .place-pic {
+    width: 47%;
+    margin: 10px;
+}
+#land .back-to-top {
+    width: 95%;
+    text-align: right;
+    color: #d8d8d8;
+    margin-right: 0px;
+    font-size: 12px;
+        margin: 15px;
+}
+
+@media screen and (max-width: 768px){
+    #land{
+        width: 95%;
+        position: relative;
+        margin: 0 auto;
+    }
+    #land .place-pic {
+        width: 95%;
+        margin: 5px auto;
+    }
+    #land .mobile-title{
+        font-size: 35px;
+        margin: 10px 0;
+    }
+    #land .little-underline{
+        width: 118px;
+        border-bottom: 3px solid black;
+        margin-bottom: 15px;
+    }
+    #land .search-hotels-btn{
+            margin: 18px 0px;
+    }
+    #land .text {
+        width: 99%;
+        position: relative;
+        margin: 20px auto;
+        text-align: left;
+    }
+    #land .mobile-text{
+        width: 99%;
+        position: relative;
+        margin: 20px auto;
+        text-align: left;
+    }
+    header{
+        background: none;
+        background-size: cover;
+        background-position: bottom;
+        z-index: -1;
+        height: auto;
+    }
+
+}
