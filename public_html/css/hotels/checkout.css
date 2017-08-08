@@ -30,7 +30,6 @@
 #check .big-right-column{
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 #check .body{
@@ -413,6 +412,15 @@
     display: flex;
     flex-direction: column;
 }
+#check .nav-fill {
+	position: relative;
+	width: 50%;
+	height: 45px;
+	top: 0;
+	right: 0;
+	background-color: #44bca2;
+    left: 400px;
+}
 
 
 
@@ -460,6 +468,11 @@
     #check select{
         margin: 3px 0;
     }
-    
+    #check .mobile-pic {
+        width: 76px;
+        height: 51px;
+        margin: 10px 5px 0 -5px;
+    }
+        
     
 }

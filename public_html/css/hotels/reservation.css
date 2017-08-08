@@ -36,7 +36,6 @@
 #reservation .big-right-column{
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 #reservation .body{
@@ -589,6 +588,15 @@
     top: 24px;
     right: 28px;
     z-index: -1;
+}
+#reservation .nav-fill {
+	position: relative;
+	width: 50%;
+	height: 45px;
+	top: 0;
+	right: 0;
+	background-color: #44bca2;
+    left: 400px;
 }
 
 
