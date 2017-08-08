@@ -1,4 +1,6 @@
 (function() {
+	flagMobile();
+
 	function $(selector, context) {
 		context = context && context.querySelectorAll ? context : null || document;
 		return context.querySelectorAll(selector);
@@ -107,6 +109,8 @@
 	}
 
 	window.addEventListener('load', function() {
+		window.addEventListener('resize', flagMobile);
+
 		forEach($('.hamburger-menu-main'), function(e) {
 			e.addEventListener('click', function(event) {
 				forEach($('.hamburger-menu-main'), function(el) {
@@ -180,4 +184,13 @@
 
 		document.addEventListener('click', hideAllInactiveMenus);
 	});
+
+	function flagMobile() {
+		$('body')[0].classList[window.matchMedia('(min-width:768px)').matches ? 'remove' : 'add']('is-mobile');
+		setNavIcon();
+	}
+
+	function setNavIcon() {
+		var isMobile = window.matchMedia('(min-width:768px)').matches;
+	}
 })();

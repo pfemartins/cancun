@@ -1054,3 +1054,7 @@ input[type="checkbox"]:checked:before {
 		padding: 5px 3px;
 	}
 }
+
+#navbar .hamburger-holder {
+	background-color: transparent;
+}

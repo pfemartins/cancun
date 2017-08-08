@@ -1,13 +1,48 @@
-#explore-regions > .img-container {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	background: linear-gradient(rgba(220, 220, 220, .15), rgba(220, 220, 220, .05)),
-		url(../../images/hotels/explore-regions/shutterstock_84440260.png);
-	background-size: cover;
-	width: 100vw;
-	z-index: -1;
-}
 #explore-regions {
 	height: 50vh;
+}
+
+header {
+	background: linear-gradient(to right, rgba(220, 220, 220, .15), rgba(220, 220, 220, .05)),
+		url(../../images/hotels/explore-regions/shutterstock_84440260.png);
+	background-size: cover;
+	background-position: bottom;
+	height: 50vh;
+	position: relative;
+}
+
+.explore-regions-head {
+	/*margin-left: 72px;*/
+	position: absolute;
+	bottom: 40px;
+	left: 72px;
+}
+
+.explore-regions-header {
+	color: white;
+	font-weight: 400;
+	font-size: 40px;
+	border-bottom: 3px solid white;
+	display: initial;
+	padding-bottom: 3px;
+}
+
+.explore-regions-sub-header {
+	font-size: 12px;
+	font-weight: 300;
+	margin-top: 14px;
+	color: white;
+	display: inline-block;
+}
+
+.explore-regions-header-btn {
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	display: inline-block;
+	margin-left: 20px;
+	height: 32px;
+	font-size: 12px;
+	line-height: .8;
+	font-weight: 300;
 }
