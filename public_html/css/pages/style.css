@@ -416,9 +416,9 @@ html.svg.touch #fusion .icon {
 }
 
 #fusion .icon-arrow-down {
-	width: 17px;
-	height: 10px;
-	background-position: -10px -252px;
+    width: 18px;
+    height: 10px;
+    background-position: -10px -157px;
 }
 
 #fusion .icon-arrow-down-small {
@@ -534,7 +534,7 @@ html.svg.touch #fusion .icon {
 #navbar .nav-fill {
 	position: absolute;
 	width: 50%;
-	height: 43px;
+	height: 53px;
 	top: 0;
 	right: 0;
 	background-color: #44bca2;
