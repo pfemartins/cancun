@@ -64,6 +64,7 @@
 }
 #check .location-and-phone{
     display: flex;
+    font-weight: 300;
 }
 #check .location-name{
     font-size: 14px;
@@ -79,6 +80,7 @@
 }
 #check .reviews-line{
     display: flex;
+    font-weight: 300;
 }
 #check .star-line{
     display: flex;
@@ -98,6 +100,7 @@
 #check .trip-details{
     display: flex;
     flex-direction: column;
+    font-weight: 300;
 }
 #check .all-inclusive{
     font-size: 14px;
@@ -122,10 +125,17 @@
     display: flex;
     flex-direction: column;
     width: 263px;
-    height: 107px;
+    height: 180px;
     background-color: #F7F7F7;
     justify-content: space-around;
     align-items: center;
+}
+#check .continue-smaller{
+    width: 242px;
+    height: 40px;
+    background-color: #CAC859;
+    color: white;
+    font-weight: 400;
 }
 #check .old-price{
     font-size: 12px;
@@ -215,7 +225,7 @@
     margin: 10px 0;
 }
 #check .far-right-column{
-    width: 150px;
+    width: 200px;
 }
 #check .more-details{
     font-size: 12px;
@@ -223,7 +233,7 @@
 }
 #check .subtitle {
     font-size: 12.5px;
-    font-weight: 400;
+    font-weight: 500;
     margin: 30px 0 10px 0;
     border-bottom: 1px solid lightgrey;
     padding-bottom: 4px;
@@ -377,6 +387,32 @@
 #check .fine-print-green{
     color: #42B299;
 }
+#check .number-select {
+    width: 100%;
+    border: none;
+    padding-left: 12px;
+    font-size: 18px;
+    background-color: transparent;
+}
+#check .right{
+    position: relative;
+    top: 24px;
+    right: 28px;
+    z-index: -1;
+}
+#check .top-squares{
+    display: flex !important;
+    width: 263px;
+}
+#check .square-arrow{
+    position: relative;
+    left: 29px;
+    top: 2px;
+}
+#check .billing-container{
+    display: flex;
+    flex-direction: column;
+}
 
 
 
@@ -420,6 +456,9 @@
         position: relative;
         margin: 5px auto;
         justify-content: center;
+    }
+    #check select{
+        margin: 3px 0;
     }
     
     

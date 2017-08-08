@@ -35,7 +35,6 @@
                                 <span class="icon icon-half-star-small star"></span>
                             </div>
                             <a class="based-on hide-for-small">Based on 45 Reviews</a>
-                            <a class="based-on">3.9/5 User Rating</a>
                             <span class="icon icon-tripadvisor"></span>
                             <div class="trip-advisor-score">4/5 Very Good!</div>
                         </div>
@@ -75,109 +74,122 @@
                 </div>
                 <div class="mobile-dates hide-for-large">
                     <div class="four-square">
-                        <div class="square square-top-left">
-                            <div class="square-title">CHECK-IN</div>
-                            <div class="square-date">
-                                <div class="square-num">2</div>
-                                <div class="square-month">/ Jun</div>
+                        <span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
+                        <div class="top-squares">
+                            <div class="square square-top-left">
+                                <div class="square-title">CHECK-IN</div>
+                                <div class="square-date">
+                                    <div class="square-num">2</div>
+                                    <div class="square-month">/ Jun</div>
+                                    <a><i class="square-arrow icon icon-arrow-down-small"></i></a>
+                                    <input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input"
+                                        value="Arrive" type="text" readonly="readonly" hidden>
+                                </div>
+                            </div>
+
+                            <div class="square square-top-right">
+                                <div class="square-title">CHECK-OUT</div>
+                                <div class="square-date">
+                                    <div class="square-num">27</div>
+                                    <div class="square-month">/ Jun</div>
+                                    <a><i class="square-arrow icon icon-arrow-down-small"></i></a>
+                                    <input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input"
+                                        value="Arrive" type="text" readonly="readonly" hidden>
+                                </div>
                             </div>
                         </div>
-                        <div class="square square-top-right">
-                            <div class="square-title">CHECK-OUT</div>
-                            <div class="square-date">
-                                <div class="square-num">27</div>
-                                <div class="square-month">/ Jun</div>
+                    </span>
+                    </div>
+                </div>
+                <form id="payment-form">
+                    <h2 class="subtitle supplement-title">GUEST INFORMATION</h2>
+                    <div class="guest-information-container">
+                        <div class="info-title">Room 1 Guest*</div>
+                        <input class="guest-info" type="text" placeholder="First and Last Name*">
+                        <input class="guest-info" type="text" type="email" placeholder="Email Address*">
+                        <input class="guest-info" type="text" type="phone" placeholder="Phone Number*">
+                    </div>
+                    <h2 class="subtitle supplement-title">DATA FOR TRANSFER</h2>
+                    <div class="data-for-transfer-container">
+                        <div class="info-title">Arrival time*</div>
+                        <div class="arrival-row">
+                            <div class="select-arrow-container">
+                                <select class="time-select">
+                                    <option value="hh">hh</option>
+                                </select>
+                                <span class="icon icon-arrow-down-small down-arrow"></span>
                             </div>
+                            <div class="select-arrow-container">
+                                <select class="time-select">
+                                    <option value="mm">mm</option>
+                                </select>
+                                <span class="icon icon-arrow-down-small down-arrow"></span>
+                            </div>
+                            <div class="select-arrow-container">
+                                <select class="airline-select">
+                                    <option value="Airline">Airline</option>
+                                </select>
+                                <span class="icon icon-arrow-down-small down-arrow"></span>
+                            </div>
+                            <input type="text" class="flight-num" placeholder="Flight Number">
+                        </div>
+                        <div class="info-title">Departure time*</div>
+                        <div class="arrival-row">
+                            <div class="select-arrow-container">
+                                <select class="time-select">
+                                    <option value="hh">hh</option>
+                                </select>
+                                <span class="icon icon-arrow-down-small down-arrow"></span>
+                            </div>
+                            <div class="select-arrow-container">
+                                <select class="time-select">
+                                    <option value="mm">mm</option>
+                                </select>
+                                <span class="icon icon-arrow-down-small down-arrow"></span>
+                            </div>
+                            <div class="select-arrow-container">
+                                <select class="airline-select">
+                                    <option value="Airline">Airline</option>
+                                </select>
+                                <span class="icon icon-arrow-down-small down-arrow"></span>
+                            </div>
+                            <input type="text" class="flight-num" placeholder="Flight Number">
                         </div>
                     </div>
-                </div>
-                <h2 class="subtitle supplement-title">GUEST INFORMATION</h2>
-                <div class="guest-information-container">
-                    <div class="info-title">Room 1 Guest*</div>
-                    <input class="guest-info" type="text" placeholder="First and Last Name*">
-                    <input class="guest-info" type="text" type="email" placeholder="Email Address*">
-                    <input class="guest-info" type="text" type="phone" placeholder="Phone Number*">
-                </div>
-                <h2 class="subtitle supplement-title">DATA FOR TRANSFER</h2>
-                <div class="data-for-transfer-container">
-                    <div class="info-title">Arrival time*</div>
-                    <div class="arrival-row">
+                    <h2 class="subtitle supplement-title">PAYMENT INFORMATION</h2>
+                    <div class="payment-information-container">
+                        <div class="info-title">Card Holder's Name*</div>
+                        <input class="guest-info" type="text" placeholder="First name as it appears on card">
+                        <input class="guest-info" type="text" placeholder="Last name as it appears on card">
+                        <input class="guest-info" type="text" placeholder="Credit card number*">
+                        <div class="info-title">Expiration Date*</div>
+                        <div class="expiration-container">
+                            <input class="expiration-input" type="text" placeholder="MM">
+                            <input class="expiration-input" type="text" placeholder="YY">
+                        </div>
+                        <div class="security-code-container">
+                            <input class="expiration-input" type="text" placeholder="Security Code*">
+                            <div class="what-this">What's this?</div>
+                        </div>
+                    </div>
+                    <h2 class="subtitle supplement-title">BILLING INFORMATION</h2>
+                    <div class="billing-container">
+                        <div class="info-title">Country*</div>
                         <div class="select-arrow-container">
-                            <select class="time-select">
-                                <option value="hh">hh</option>
-                            </select>
+                            <select class="country-select">
+                                    <option value="United States">United States</option>
+                                </select>
                             <span class="icon icon-arrow-down-small down-arrow"></span>
                         </div>
-                        <div class="select-arrow-container">
-                            <select class="time-select">
-                                <option value="mm">mm</option>
-                            </select>
-                            <span class="icon icon-arrow-down-small down-arrow"></span>
+                        <input class="guest-info" type="text" placeholder="Billing Address*">
+                        <input class="guest-info" type="text" placeholder="Zip Code*">
+                        <div class="checkbox-line">
+                            <input type="checkbox" class="green-checkbox">
+                            <div class="text-me">Text me my reservation</div>
                         </div>
-                        <div class="select-arrow-container">
-                            <select class="airline-select">
-                                <option value="Airline">Airline</option>
-                            </select>
-                            <span class="icon icon-arrow-down-small down-arrow"></span>
-                        </div>
-                        <input type="text" class="flight-num" placeholder="Flight Number">
                     </div>
-                    <div class="info-title">Departure time*</div>
-                    <div class="arrival-row">
-                        <div class="select-arrow-container">
-                            <select class="time-select">
-                                <option value="hh">hh</option>
-                            </select>
-                            <span class="icon icon-arrow-down-small down-arrow"></span>
-                        </div>
-                        <div class="select-arrow-container">
-                            <select class="time-select">
-                                <option value="mm">mm</option>
-                            </select>
-                            <span class="icon icon-arrow-down-small down-arrow"></span>
-                        </div>
-                        <div class="select-arrow-container">
-                            <select class="airline-select">
-                                <option value="Airline">Airline</option>
-                            </select>
-                            <span class="icon icon-arrow-down-small down-arrow"></span>
-                        </div>
-                        <input type="text" class="flight-num" placeholder="Flight Number">
-                    </div>
-                </div>
-                <h2 class="subtitle supplement-title">PAYMENT INFORMATION</h2>
-                <div class="payment-information-container">
-                    <div class="info-title">Card Holder's Name*</div>
-                    <input class="guest-info" type="text" placeholder="First name as it appears on card">
-                    <input class="guest-info" type="text" placeholder="Last name as it appears on card">
-                    <input class="guest-info" type="text" placeholder="Credit card number*">
-                    <div class="info-title">Expiration Date*</div>
-                    <div class="expiration-container">
-                        <input class="expiration-input" type="text" placeholder="MM">
-                        <input class="expiration-input" type="text" placeholder="YY">
-                    </div>
-                    <div class="security-code-container">
-                        <input class="expiration-input" type="text" placeholder="Security Code*">
-                        <div class="what-this">What's this?</div>
-                    </div>
-                </div>
-                <h2 class="subtitle supplement-title">BILLING INFORMATION</h2>
-                <div class="billing-container">
-                    <div class="info-title">Country*</div>
-                    <div class="select-arrow-container">
-                        <select class="country-select">
-                                <option value="United States">United States</option>
-                            </select>
-                        <span class="icon icon-arrow-down-small down-arrow"></span>
-                    </div>
-                    <input class="guest-info" type="text" placeholder="Billing Address*">
-                    <input class="guest-info" type="text" placeholder="Zip Code*">
-                    <div class="checkbox-line">
-                        <input type="checkbox" class="green-checkbox">
-                        <div class="text-me">Text me my reservation</div>
-                    </div>
-                </div>
-                <button class="book-btn">Book</button>
+                </form>
+                <button type="submit" form="payment-form" value="Continue to checkout" class="book-btn">Book</button>
                 <div class="fine-print">By continuing with your booking, you agree you have read and accept our <span class="fine-print-green">terms and conditions</span>,
                     <span class="fine-print-green">privacy policy</span>, and <span class="fine-print-green">hotel policies</span>.
                     Your credit card will be charged for the full payment upon submitting your reservation request.</div>
@@ -188,28 +200,54 @@
             <!--RIGHT COLUMN, HIDDEN ON MOBILE-->
             <div class="right-column hide-for-small">
                 <div class="four-square">
-                    <div class="square square-top-left">
-                        <div class="square-title">CHECK-IN</div>
-                        <div class="square-date">
-                            <div class="square-num">2</div>
-                            <div class="square-month">/ Jun</div>
-                        </div>
-                    </div>
+                    <span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
+                        <div class="top-squares">
+                            <div class="square square-top-left">
+                                <div class="square-title">CHECK-IN</div>
+                                <div class="square-date">
+                                    <div class="square-num">2</div>
+                                    <div class="square-month">/ Jun</div>
+                                    <a><i class="square-arrow icon icon-arrow-down-small"></i></a>
+                                    <input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input"
+                                        value="Arrive" type="text" readonly="readonly" hidden>
+                                </div>
+                            </div>
 
-                    <div class="square square-top-right">
-                        <div class="square-title">CHECK-OUT</div>
-                        <div class="square-date">
-                            <div class="square-num">27</div>
-                            <div class="square-month">/ Jun</div>
+                            <div class="square square-top-right">
+                                <div class="square-title">CHECK-OUT</div>
+                                <div class="square-date">
+                                    <div class="square-num">27</div>
+                                    <div class="square-month">/ Jun</div>
+                                    <a><i class="square-arrow icon icon-arrow-down-small"></i></a>
+                                    <input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input"
+                                        value="Arrive" type="text" readonly="readonly" hidden>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </span>
                     <div class="square square-bottom-left">
                         <div class="square-title">GUESTS</div>
-                        <div class="square-num">2</div>
+                        <a href=""><i class="icon icon-arrow-down-small right"></i></a>
+                        <div class="guests"><span class="number"><select class="number-select" name="guests_num" id="">
+									<option value="1" selected>1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+								</select></span></div>
                     </div>
                     <div class="square square-bottom-right">
                         <div class="square-title">ROOMS</div>
-                        <div class="square-num">1</div>
+                        <a href=""><i class="icon icon-arrow-down-small right"></i></a>
+                        <div class="rooms"><span class="number"><select class="number-select" name="room_num" id="">
+									<option value="1" selected>1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+								</select></span></div>
                     </div>
                 </div>
                 <div class="wip-container">
@@ -240,6 +278,7 @@
                     </div>
                     <div class="time-frame">Total 3 Nights/ Taxes included</div>
                     <div class="more-details">More details</div>
+                    <button class="continue-smaller">Continue to checkout</button>
                 </div>
             </div>
 
@@ -249,5 +288,6 @@
 
     </div>
 </div>
-</div>
-{% endblock %}{% block foot %} {{ parent() }} {% endblock %}
+{% endblock %}{% block foot %} {{ parent() }}
+<script src="public_html/js/hotels/landing.js?version=1"></script>
+{% endblock %}
