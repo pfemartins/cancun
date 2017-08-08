@@ -77,20 +77,31 @@
                 </div>
                 <div class="mobile-dates hide-for-large">
                     <div class="four-square">
-                        <div class="square square-top-left">
-                            <div class="square-title">CHECK-IN</div>
-                            <div class="square-date">
-                                <div class="square-num">2</div>
-                                <div class="square-month">/ Jun</div>
+                        <span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
+                        <div class="top-squares">
+                            <div class="square square-top-left">
+                                <div class="square-title">CHECK-IN</div>
+                                <div class="square-date">
+                                    <div class="square-num">2</div>
+                                    <div class="square-month">/ Jun</div>
+                                    <a><i class="square-arrow icon icon-arrow-down-small"></i></a>
+                                    <input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input"
+                                        value="Arrive" type="text" readonly="readonly" hidden>
+                                </div>
+                            </div>
+
+                            <div class="square square-top-right">
+                                <div class="square-title">CHECK-OUT</div>
+                                <div class="square-date">
+                                    <div class="square-num">27</div>
+                                    <div class="square-month">/ Jun</div>
+                                    <a><i class="square-arrow icon icon-arrow-down-small"></i></a>
+                                    <input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input"
+                                        value="Arrive" type="text" readonly="readonly" hidden>
+                                </div>
                             </div>
                         </div>
-                        <div class="square square-top-right">
-                            <div class="square-title">CHECK-OUT</div>
-                            <div class="square-date">
-                                <div class="square-num">27</div>
-                                <div class="square-month">/ Jun</div>
-                            </div>
-                        </div>
+                    </span>
                     </div>
                 </div>
                 <!--<h2 class="subtitle supplement-title">SUPPLEMENT YOUR TRIP</h2>
@@ -145,50 +156,52 @@
                     </div>
                     <!--NEED TO MAKE CHECK BOXES THAT CHANGE IMAGE WHEN CLICKED-->
                     <div class="check-section">
-                        <div class="check-line">
-                            <div class="check-line-top">
+                        <form id="shuttle-form">
+                            <div class="check-line">
+                                <div class="check-line-top">
+                                    <input type="checkbox" class="green-checkbox">
+                                    <div class="check-text">Shared Transportation- Vehicle with Air Conditioning and Wifi Recommended!</div>
+                                </div>
+                                <div class="check-line-bottom">
+                                    <div class="check-more-details"><a>More Details</a></div>
+                                    <div class="check-price">$40</div>
+                                </div>
+                            </div>
+                            <div class="check-line">
+                                <div class="check-line-top">
+                                    <input type="checkbox" class="green-checkbox">
+                                    <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
+                                </div>
+                                <div class="check-line-bottom">
+                                    <div class="check-more-details"><a>More Details</a></div>
+                                    <div class="check-price">$100</div>
+                                </div>
+                            </div>
+                            <div class="check-line">
+                                <div class="check-line-top">
+                                    <input type="checkbox" class="green-checkbox">
+                                    <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
+                                </div>
+                                <div class="check-line-bottom">
+                                    <div class="check-more-details"><a>More Details</a></div>
+                                    <div class="check-price">$170</div>
+                                </div>
+                            </div>
+                            <div class="check-line">
+                                <div class="check-line-top">
+                                    <input type="checkbox" class="green-checkbox">
+                                    <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
+                                </div>
+                                <div class="check-line-bottom">
+                                    <div class="check-more-details"><a>More Details</a></div>
+                                    <div class="check-price">$175</div>
+                                </div>
+                            </div>
+                            <div class="check-line last-check-line">
                                 <input type="checkbox" class="green-checkbox">
-                                <div class="check-text">Shared Transportation- Vehicle with Air Conditioning and Wifi Recommended!</div>
+                                <div class="check-text">None</div>
                             </div>
-                            <div class="check-line-bottom">
-                                <div class="check-more-details"><a>More Details</a></div>
-                                <div class="check-price">$40</div>
-                            </div>
-                        </div>
-                        <div class="check-line">
-                            <div class="check-line-top">
-                                <input type="checkbox" class="green-checkbox">
-                                <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
-                            </div>
-                            <div class="check-line-bottom">
-                                <div class="check-more-details"><a>More Details</a></div>
-                                <div class="check-price">$100</div>
-                            </div>
-                        </div>
-                        <div class="check-line">
-                            <div class="check-line-top">
-                                <input type="checkbox" class="green-checkbox">
-                                <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
-                            </div>
-                            <div class="check-line-bottom">
-                                <div class="check-more-details"><a>More Details</a></div>
-                                <div class="check-price">$170</div>
-                            </div>
-                        </div>
-                        <div class="check-line">
-                            <div class="check-line-top">
-                                <input type="checkbox" class="green-checkbox">
-                                <div class="check-text">Private Shuttle Van (9 Passengers)- Vehicle with Air Conditioning and Wifi</div>
-                            </div>
-                            <div class="check-line-bottom">
-                                <div class="check-more-details"><a>More Details</a></div>
-                                <div class="check-price">$175</div>
-                            </div>
-                        </div>
-                        <div class="check-line last-check-line">
-                            <input type="checkbox" class="green-checkbox">
-                            <div class="check-text">None</div>
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <!--CARS SECTION-->
@@ -371,37 +384,63 @@
                     </div>-->
                 <!--</div>
             <div class="more-cars">More tours</div>-->
-                <button class="continue hide-for-small">Continue to checkout</button>
+                <button type="submit" form="shuttle-form" value="Continue to checkout" class="continue hide-for-small">Continue to checkout</button>
                 <div class="add-btns hide-for-large">
                     <button class="no-thanks-continue">No thanks, continue</button>
-                    <button class="add-and-checkout">Add and checkout</button>
+                    <button type="submit" form="shuttle-form" value="Continue to checkout" class="add-and-checkout">Add and checkout</button>
                 </div>
             </div>
 
             <div class="right-column hide-for-small">
                 <div class="four-square">
-                    <div class="square square-top-left">
-                        <div class="square-title">CHECK-IN</div>
-                        <div class="square-date">
-                            <div class="square-num">2</div>
-                            <div class="square-month">/ Jun</div>
-                        </div>
-                    </div>
+                    <span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
+                        <div class="top-squares">
+                            <div class="square square-top-left">
+                                <div class="square-title">CHECK-IN</div>
+                                <div class="square-date">
+                                    <div class="square-num">2</div>
+                                    <div class="square-month">/ Jun</div>
+                                    <a><i class="square-arrow icon icon-arrow-down-small"></i></a>
+                                    <input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input"
+                                        value="Arrive" type="text" readonly="readonly" hidden>
+                                </div>
+                            </div>
 
-                    <div class="square square-top-right">
-                        <div class="square-title">CHECK-OUT</div>
-                        <div class="square-date">
-                            <div class="square-num">27</div>
-                            <div class="square-month">/ Jun</div>
+                            <div class="square square-top-right">
+                                <div class="square-title">CHECK-OUT</div>
+                                <div class="square-date">
+                                    <div class="square-num">27</div>
+                                    <div class="square-month">/ Jun</div>
+                                    <a><i class="square-arrow icon icon-arrow-down-small"></i></a>
+                                    <input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input"
+                                        value="Arrive" type="text" readonly="readonly" hidden>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </span>
                     <div class="square square-bottom-left">
                         <div class="square-title">GUESTS</div>
-                        <div class="square-num">2</div>
+                        <a href=""><i class="icon icon-arrow-down-small right"></i></a>
+                        <div class="guests"><span class="number"><select class="number-select" name="guests_num" id="">
+									<option value="1" selected>1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+								</select></span></div>
                     </div>
                     <div class="square square-bottom-right">
                         <div class="square-title">ROOMS</div>
-                        <div class="square-num">1</div>
+                        <a href=""><i class="icon icon-arrow-down-small right"></i></a>
+                        <div class="rooms"><span class="number"><select class="number-select" name="room_num" id="">
+									<option value="1" selected>1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+								</select></span></div>
                     </div>
                 </div>
                 <div class="wip-container">
@@ -441,4 +480,6 @@
         </div>
     </div>
 </div>
-{% endblock %}{% block foot %} {{ parent() }} {% endblock %}
+{% endblock %}{% block foot %} {{ parent() }}
+<script src="public_html/js/hotels/landing.js?version=1"></script>
+{% endblock %}

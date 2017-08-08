@@ -568,6 +568,28 @@
 #reservation .check-line-top{
     display: flex;
 }
+#reservation .top-squares{
+    display: flex !important;
+    width: 263px;
+}
+#reservation .square-arrow{
+    position: relative;
+    left: 29px;
+    top: 2px;
+}
+#reservation .number-select {
+    width: 100%;
+    border: none;
+    padding-left: 12px;
+    font-size: 18px;
+    background-color: transparent;
+}
+#reservation .right{
+    position: relative;
+    top: 24px;
+    right: 28px;
+    z-index: -1;
+}
 
 
 
@@ -683,6 +705,7 @@
     #reservation .add-btns{
         display: flex;
         justify-content: space-around;
+            margin-bottom: 20px;
         
     }
     #reservation .add-and-checkout{
