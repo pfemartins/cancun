@@ -49,6 +49,9 @@
     z-index: 2;
     display: none;
 }
+.filter-box.active {
+    display: block;
+}
 .filter-box .section, .mobile-search-bar .section {
     border-right: 1px solid #DFDFDF;
     box-sizing: border-box;
@@ -100,6 +103,8 @@
 }
 .filter-box a.more-filters-link {
     font-size: 12px;
+    cursor: pointer;
+    display: block;
 }
 #fusion .filter-box button.update-search {
     width: 100%;
@@ -112,6 +117,9 @@
     background: #fafafa;
     padding: 15px 0;
     display: none;
+}
+.filter-box .more-filters.active {
+    display: block;
 }
 #fusion .filter-box .more-filters label {
     font-size: 12px;
@@ -131,7 +139,7 @@
 #fusion .filter-box .more-filters .pure-g [class *="pure-u"].hr {
     padding: 0;
 }
-#fusion .filter-box .more-filters .pure-g [class *="pure-u"].hr hr {
+#fusion hr {
     height: 1px;
     background-color: #efefef;
     color: #efefef;
@@ -159,6 +167,11 @@
 .section-wrap {
     font-size: 12px;
     display: block;
+}
+#fusion .section-wrap:after {
+    display: block;
+    content: '';
+    clear: both;
 }
 
 
@@ -303,14 +316,18 @@ a.experience {
         display: none;
     }
     #banner {
-       /* height: 700px;*/
-        height: auto;
+       height: 700px;
+       background-position: center;
+    }
+    #fusion #banner a.button {
+        margin: 20px auto;
     }
     #banner h1 {
         font-weight: 500;
         text-align: center;
         font-size: 48px;
         line-height: 55px;
+        margin-top: 140px;
     }
     #banner h1 br {
         display: none;
@@ -405,12 +422,52 @@ a.experience {
         line-height: 1;
         cursor: pointer;
     }
-    #fusion #master .mobile-search-bar select {
+    #fusion .mobile-search-bar select {
         width: 100%;
         padding-right: 30px;
+        border: none;
     }
     #fusion #master .mobile-search-bar #child-age {
         font-size: 24px;
     }
-
+    #fusion .filter-box .section .date, #fusion .filter-box .section .guests, #fusion .filter-box .section .rooms, #fusion .mobile-search-bar .date, #fusion .mobile-search-bar .guests, #fusion .mobile-search-bar .rooms {
+        font-size: 12px;
+    }
+    .filter-box .section .date .number, #fusion .filter-box .section .guests .number, #fusion .filter-box .section .rooms .number, #fusion .mobile-search-bar .date .number, #fusion .mobile-search-bar .guests .number, #fusion .mobile-search-bar .rooms .number {
+        font-size: 28px;
+    }
+    #fusion .filters-sidebar h5 {
+        font-weight: 400;
+        font-size: 12px;
+        margin: 14px 0 10px;
+    }
+    #fusion .filters-sidebar label {
+        font-size: 12px;
+        color: #333;
+    }
+    #fusion .filters-sidebar input[type=checkbox] {
+        float: left;
+        margin: 4px 14px 10px 0;
+    }
+    #fusion .filters-sidebar label:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    #fusion .filters-sidebar a {
+        font-size: 12px;
+        display: block;
+        margin: 5px 0 14px 30px;
+    }
+    .mobile-search-bar .additional-filters a.button {
+        width: 98%;
+    }
+    #hotels .mobile-search-bar a.close {
+        float: right;
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 12px;
+        line-height: 1;
+        border: 1px solid #C9C9C9;
+    }
 }

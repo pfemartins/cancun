@@ -226,6 +226,32 @@ var master = {
             });
          }
       }
+      if (document.querySelector('a.desktop-filters')) {
+         for (var i = 0; i < document.querySelectorAll('a.desktop-filters').length; i++) {
+            document.querySelectorAll('a.desktop-filters')[i].addEventListener('click', function() {
+               var selector = this.parentNode.querySelectorAll('.filter-box');
+               var button = this.style.display = 'none';
+               f.toggleClass(this.querySelector('i'), 'active');
+
+               for (var i = 0; i < selector.length; i++) {
+                  f.toggleClass(selector[i], 'active');
+               }
+            });
+         }
+      }
+      if (document.querySelector('a.more-filters-link')) {
+         for (var i = 0; i < document.querySelectorAll('a.more-filters-link').length; i++) {
+            document.querySelectorAll('a.more-filters-link')[i].addEventListener('click', function() {
+               var selector = this.parentNode.parentNode.parentNode.querySelectorAll('.more-filters');
+               f.toggleClass(this.querySelector('i'), 'active');
+
+               for (var i = 0; i < selector.length; i++) {
+                  f.toggleClass(selector[i], 'active');
+               }
+            });
+         }
+      }
+
    }  
 }
 master.init();
