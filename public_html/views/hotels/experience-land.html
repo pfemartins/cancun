@@ -1,0 +1,85 @@
+ {% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent()
+}}
+<link rel="stylesheet" href="public_html/css/hotels/experience-land.css"> {% endblock %} {% block main %}
+<div id="land">
+    <div class="header-stuff hide-for-small">
+        <div class="desktop-title hide-for-small">Experiences on Land</div>
+        <div class="big-underline hide-for-small"></div>
+        <div class="desktop-text hide-for-small">Uniquely situated on the surface of a limestone slab hundreds of miles wide, the yucatan peninsula is one of the
+            most unique places to visit.</div>
+    </div>
+    <div class="body fusion-container">
+        <div class="title hide-for-small">Hotel Search</div>
+        <div class="mobile-title hide-for-large">Experiences on Land</div>
+        <div class="little-underline hide-for-large"></div>
+        <div class="mobile-text hide-for-large">Uniquely situated on the surface of a limestone slab hundreds of miles wide, the yucatan peninsula is one of the
+            most unique places to visit.</div>
+
+
+        <div class="four-square hide-for-small">
+            <span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
+                    <div class="top-squares">
+                        <div class="square square-top-left">
+                            <div class="square-title">CHECK-IN</div>
+                            <div class="square-date">
+                                <div class="square-num">2</div>
+                                <div class="square-month">/ Jun</div>
+                                <a><i class="square-arrow icon icon-arrow-down"></i></a>
+                                <input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input"
+                                    value="Arrive" type="text" readonly="readonly" hidden>
+                            </div>
+                        </div>
+
+                        <div class="square square-top-right">
+                            <div class="square-title">CHECK-OUT</div>
+                            <div class="square-date">
+                                <div class="square-num">27</div>
+                                <div class="square-month">/ Jun</div>
+                                <a><i class="square-arrow icon icon-arrow-down"></i></a>
+                                <input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input"
+                                    value="Arrive" type="text" readonly="readonly" hidden>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            <div class="square square-bottom-left">
+                <div class="square-title">GUESTS</div>
+                <div class="guests-select">
+                    <div class="guests"><span class="number"><select class="number-select" name="guests_num" id="">
+                            <option value="1" selected>01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                        </select></span></div>
+                    <a href=""><i class="icon icon-arrow-down right"></i></a>
+                </div>
+            </div>
+            <div class="right-square square">
+                <div class="all-cancun">All Cancun<span class="icon icon-arrow-down all-arrow"></span></div>
+                <button class="search-hotels-btn">Search Hotels</button>
+                <div class="more-filters">+ More filters</div>
+            </div>
+        </div>
+        <button class="search-hotels-btn hide-for-large">Search Hotels</button>
+
+        <div class="text">Dense jungles, rare animal species, ancient civilizations, colonial cities, and breathtaking cenotes are all waiting
+            to be discovered just a stone's throw from Cancun.</div>
+
+        <div class="picture-section">
+            <img class="place-pic" src="/cancun/public_html/images/hotels/experience-land/naturalwonders.png">
+            <img class="place-pic" src="/cancun/public_html/images/hotels/experience-land/golfing.png">
+            <img class="place-pic" src="/cancun/public_html/images/hotels/experience-land/flyovers.png">
+            <img class="place-pic" src="/cancun/public_html/images/hotels/experience-land/ecoparks.png">
+            <img class="place-pic" src="/cancun/public_html/images/hotels/experience-land/culture.png">
+            <img class="place-pic" src="/cancun/public_html/images/hotels/experience-land/ancientruins.png">
+        </div>
+
+        <div class="back-to-top">Back to top</div>
+    </div>
+</div>
+
+{% endblock %}{% block foot %} {{ parent() }}
+<script src="public_html/js/hotels/landing.js?version=1"></script>
+{% endblock %}

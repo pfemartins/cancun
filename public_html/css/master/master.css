@@ -4,6 +4,11 @@
     background-size: cover;
     box-sizing: border-box;
     position: relative;
+    margin-bottom: 50px;
+    display: block;
+    margin: 0 auto;
+    max-width: 1470px;
+    margin-bottom: 50px;
 }
 #banner .icon-logo {
     background-position: -10px -1241px;
@@ -24,13 +29,152 @@
 #banner a.button {
     width: 300px;
     padding: 15px;
+    cursor: pointer;
 }
+
+#fusion #home h2 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600s;
+    margin-bottom: 15px;
+}
+
+/* Filters styles */
+.filter-box {
+    box-shadow: 2px 6px 20px 0px #828282;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    display: none;
+}
+.filter-box .section, .mobile-search-bar .section {
+    border-right: 1px solid #DFDFDF;
+    box-sizing: border-box;
+    padding: 15px 20px!important;
+    position: relative;
+}
+.filter-box h4, .mobile-search-bar h4 {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 5px;
+}
+#fusion .filter-box .section .date, #fusion .filter-box .section .guests, #fusion .filter-box .section .rooms, #fusion .mobile-search-bar .date, #fusion .mobile-search-bar .guests, #fusion .mobile-search-bar .rooms {
+    font-size: 14px;
+}
+#fusion .filter-box input[type="text"] {
+    border: none;
+    color: #292929;
+    font-size: 18px;
+    width: 100%;
+    border-bottom: 1px solid #D5D5D5;
+}
+.filter-box .section .date .number, #fusion .filter-box .section .guests .number, #fusion .filter-box .section .rooms .number, #fusion .mobile-search-bar .date, #fusion .mobile-search-bar .guests, #fusion .mobile-search-bar .rooms, #fusion .filter-box span select {
+    font-size: 32px;
+}
+.filter-box .icon-arrow-down, #mobile-dates .section .icon-arrow-down {
+    position: absolute;
+    bottom: 8px;
+    right: 15px;
+}
+.filter-box .section .icon-arrow-down.last, #mobile-dates .section .icon-arrow-down.last {
+    top: 10px;
+    bottom: 0;
+}
+#fusion .filter-box select {
+    width: 100%;
+    color: #292929;
+    background: transparent;
+    border: none;
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 500;
+}
+.filter-box .section.last {
+    border-right: none;
+    background-color: #fafafa;
+}
+.filter-box a.more-filters-link {
+    font-size: 12px;
+}
+#fusion .filter-box button.update-search {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0 0;
+    padding: 14px 0;
+}
+.filter-box .more-filters {
+    background: #fafafa;
+    padding: 15px 0;
+    display: none;
+}
+#fusion .filter-box .more-filters label {
+    font-size: 12px;
+    color: #333;
+}
+#fusion .filter-box .more-filters input[type="text"] {
+    border: 1px solid #C9C9C9;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 18px;
+}
+#fusion .filter-box .more-filters .pure-g [class *="pure-u"] {
+    padding: 8px 25px;
+    box-sizing: border-box;
+}
+#fusion .filter-box .more-filters .pure-g [class *="pure-u"].hr {
+    padding: 0;
+}
+#fusion .filter-box .more-filters .pure-g [class *="pure-u"].hr hr {
+    height: 1px;
+    background-color: #efefef;
+    color: #efefef;
+    border: none;
+}
+.noUi-target {
+    border-radius: 10px;
+}
+.noUi-horizontal {
+    height: 10px;
+    margin: 12px 0;
+}
+.noUi-horizontal .noUi-handle {
+    top: -8px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 1px solid #c8c8c8;
+}
+.noUi-handle:after, .noUi-handle:before {
+    background: none;
+}
+.section-wrap {
+    font-size: 12px;
+    display: block;
+}
+
 
 /* Swipper styles */
 .swiper-slide {
     height: 313px;
     width: 230px;
     box-sizing: border-box;
+}
+.small-gallery .swiper-slide {
+    height: 146px;
+    width: 314px;
+}
+.thirds-gallery .swiper-slide {
+    background: #F7F7F7;
+    width: 312px;
 }
 .swiper-container .button-next {
     right: 10px;
@@ -62,17 +206,89 @@
     top: 0;
     z-index: 2;
 }
+#fusion .swiper-slide a p {
+    color: #fff;
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 36%;
+}
+h2.margin-top {
+    margin-top: 30px;
+}
+.gallery-know .swiper-slide {
+    height: 420px;
+}
+.swiper-slide .line {
+    background: #373737;
+    width: 40px;
+    height: 2px;
+    margin-top: 5px;
+}
+.gallery-blog {
+    margin-bottom: 30px;
+}
+.gallery-blog .swiper-slide {
+    height: 460px;
+}
+.gallery-blog .auth-info {
+    margin-top: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #949494;
+    font-size: 12px;
+}
+.gallery-blog .auth-info .date {
+    text-align: right;
+}
+.thirds-gallery .swiper-slide .content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* Map styles */
+.map {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.map img {
+    width: 100%;
+    height: auto;
+}
+
+a.experience {
+    display: block;
+    width: 338px;
+    margin: 0 auto 50px;
+}
 
 /* DESKTOP - Tablet */
 @media (min-width: 768px) {
     #banner {
-        min-height: 702px;
+        height: 702px;
     }
 }
 
+/* X-LARGE */
+@media (min-width: 1470px) {
+    .map img {
+        width: 1470px;
+        display: block;
+        margin: 0 auto;
+    }
+}
 
 /* DESKTOP */
-@media(min-width: 1040px) {
+@media(min-width: 1040px) and (max-width: 1469) {
 
 }
 
@@ -87,7 +303,8 @@
         display: none;
     }
     #banner {
-        height: 700px;
+       /* height: 700px;*/
+        height: auto;
     }
     #banner h1 {
         font-weight: 500;
@@ -101,6 +318,99 @@
     #banner .fusion-container {
         padding: 0 30px;
     }
-    /* Swipper styles */
+    #fusion .fusion-container {
+        padding: 0 15px;
+    }
+    /* Mobile search styles */
+    .mobile-search-bar {
+        display: none;
+    }
+    #master .sort-wrap {
+        margin-top: 10px;
+    }
+    #master .mobile-filters-button {
+        display: block;
+        float: right;
+        border: 1px solid #C9C9C9;
+        width: 135px;
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+    .mobile-search-bar .flying-from-city {
+        font-size: 24px;
+    }
+    .mobile-search-bar {
+        display: none;
+    }
+    #master .mobile-search-bar nav {
+        margin-bottom: 20px;
+    }
+    #master .mobile-search-bar a.close {
+        float: right;
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 12px;
+        line-height: 1;
+        border: 1px solid #C9C9C9;
+    }
+    #master .mobile-search-bar .additional-filters a.close {
+        font-size: 14px
+    }
+    #master .mobile-search-bar .additional-filters a.button {
+        width: 98%;
+    }
+    form.mobile-search-bar.open-filters {
+        position: fixed;
+        background: #fff;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        overflow-y: scroll;
+        max-height: 100%;
+        display: block;
+        height: 100%;
+    }
+    form.mobile-search-bar.open-filters .fusion-container {
+        padding: 10px;
+    }
+    #fusion .mobile-search-bar button {
+        width: 100%;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    #fusion .mobile-search-bar a.more-filters, #fusion .mobile-search-bar a.hide-filters {
+        text-align: center;
+        display: block;
+    }
+    #fusion #master .flight-info .duration-details p {
+        float: left;
+    }
+    #master .mobile-search-bar .counter-row {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    #master .mobile-search-bar .counter-row .counter-number {
+        text-align: center;
+    }
+    #master .mobile-search-bar .counter-row .circle {
+        width: 23px;
+        height: 23px;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 2px 0;
+        border-radius: 50%;
+        border: 1px solid #333333;
+        line-height: 1;
+        cursor: pointer;
+    }
+    #fusion #master .mobile-search-bar select {
+        width: 100%;
+        padding-right: 30px;
+    }
+    #fusion #master .mobile-search-bar #child-age {
+        font-size: 24px;
+    }
 
 }

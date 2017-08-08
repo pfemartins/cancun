@@ -342,10 +342,22 @@ html.svg.touch #fusion .icon {
 	background-position: -10px -1989px;
 }
 
+#fusion .icon-star-small {
+	width: 14px;
+	height: 12px;
+	background-position: -10px -1979px;
+}
+
 #fusion .icon-half-star {
 	width: 9px;
 	height: 13px;
 	background-position: -11px -940px;
+}
+
+#fusion .icon-half-star-small {
+	width: 9px;
+	height: 13px;
+	background-position: -11px -920px;
 }
 #fusion .icon-tripadvisor {
 	width: 21px;
@@ -402,13 +414,6 @@ html.svg.touch #fusion .icon {
 	height: 10px;
 	background-position: -10px -502px;
 }
-
-#fusion .icon-arrow-down {
-	width: 17px;
-	height: 10px;
-	background-position: -10px -252px;
-}
-
 #fusion .icon-arrow-down-small {
 	width: 12px;
 	height: 7px;
@@ -522,7 +527,7 @@ html.svg.touch #fusion .icon {
 #navbar .nav-fill {
 	position: absolute;
 	width: 50%;
-	height: 43px;
+	height: 53px;
 	top: 0;
 	right: 0;
 	background-color: #44bca2;
@@ -1012,7 +1017,7 @@ style.css: 494 #fusion a#scroll-to-top {
 	display: none;
 }
 
-input[type="checkbox"] {
+#fusion input.green-checkbox[type="checkbox"] {
 	content: '';
 	cursor: pointer;
 	width: 1em;
@@ -1025,10 +1030,10 @@ input[type="checkbox"] {
 	appearance: none;
 	position: relative;
 }
-input[type="checkbox"]:checked {
+#fusion input.green-checkbox[type="checkbox"]:checked {
 	border: 2px solid #42af96;
 }
-input[type="checkbox"]:checked:before {
+#fusion input.green-checkbox[type="checkbox"]:checked:before {
 	position: absolute;
 	left: 3px;
 	content: '';

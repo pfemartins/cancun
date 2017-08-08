@@ -40,6 +40,14 @@
                // $parameters['page'] = 'home';
                $twigPath = 'views/hotels/explore-regions.html';
                break;
+        case $url."hotel-checkout":
+               // $parameters['page'] = 'home';
+               $twigPath = 'views/hotels/checkout.html';
+               break;
+        case $url."experience-land":
+               // $parameters['page'] = 'home';
+               $twigPath = 'views/hotels/experience-land.html';
+               break;
         default:
                break;
      }
