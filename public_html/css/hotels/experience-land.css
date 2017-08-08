@@ -37,7 +37,7 @@ header {
 
 #land .four-square {
     display: flex;
-    flex-wrap: wrap;
+        flex-wrap: nowrap;
     align-items: center;
     height: 139px;
     box-shadow: 0px 0px 10px #F7F7F7;
