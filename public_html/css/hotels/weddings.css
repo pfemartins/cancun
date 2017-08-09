@@ -163,4 +163,21 @@ header {
         width: 100%;
         text-align: center;
     }
+    #wedding .body{
+        flex-direction: column;
+    }
+    #wedding .left-col {
+        order: 2;
+        width: 96%;
+        margin: auto;
+    }
+    #wedding .left-col .title{
+        margin-top: 5px;
+    }
+    #wedding .gray-underline {
+        width: 98%;
+        border-bottom: 1px solid darkgray;
+        margin-bottom: 12px;
+        margin-top: -6px;
+    }
 }
