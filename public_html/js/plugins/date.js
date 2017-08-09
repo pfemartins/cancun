@@ -765,7 +765,7 @@ https://github.com/dbushell/Pikaday
 
                     if (date.checkin) {
                          f.removeClass(document.body, 'dates-checkout');
-                         this.setMinDate(today);
+                         this.setMinDate(date.today);
                     } else {
                          f.addClass(document.body, 'dates-checkout');
                          if (date.start != "") {
@@ -1046,22 +1046,19 @@ date.configs = {
                     date.checkin = false;
                } else {
                     for (var i = 0; i < date.calendars.length; i++) {
-                         var a, checkin, checkout;
+                         var item, value;
 
-                         a = date.calendars[i]._o.output;
-                         a_format = date.calendars[i]._o.format;
-                         checkin = document.querySelectorAll(a[0])[0];
-                         checkout = a.length > 1 ? document.querySelectorAll(a[1])[0] : undefined;
+                         for (var e = 0; e < date.calendars[i]._o.output.length; e++) {
+                              item = document.querySelector(date.calendars[i]._o.output[e]);
+                              value = (e == 0 ? date.start : date.end);
 
-                         if (checkin.tagName.toLowerCase()=="input") {
-                              document.querySelectorAll(date.calendars[i]._o.output[0])[0].value = moment(date.start).format(a_format);
-                              if (checkout !== undefined) {
-                                   document.querySelectorAll(date.calendars[i]._o.output[1])[0].value = moment(date.end).format(a_format);
-                              }
-                         } else {
-                              document.querySelectorAll(date.calendars[i]._o.output[0])[0].innerHTML = moment(date.start).format(a_format);
-                              if (checkout !== undefined) {
-                                   document.querySelectorAll(date.calendars[i]._o.output[1])[0].innerHTML = moment(date.end).format(a_format);
+                              if (item) {
+                                   if (item.querySelector('.fusion-date-input')) {
+                                        item.querySelector('.fusion-date-input').value = moment(value).format(date.calendars[i]._o.format);
+                                   }
+                                   if (item.querySelector('.fusion-date-custom')) {
+                                        item.querySelector('.fusion-date-custom').innerHTML = moment(value).format('[<span class="number">]DD[</span> /] MMM');
+                                   }
                               }
                          }
 

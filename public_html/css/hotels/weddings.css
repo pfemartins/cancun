@@ -1,0 +1,183 @@
+header {
+    background: linear-gradient(to right, rgba(0, 209, 0, 0.10), rgba(0, 0, 0, 0.10)), url(../../images/hotels/weddings/pexels-photo-169188.png);
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;
+    height: 50vh;
+}
+
+#wedding .header-stuff{
+    position: relative;
+    bottom: 157px;
+}
+
+#wedding .desktop-title {
+    color: white;
+    font-size: 45px;
+    
+}
+
+#wedding .big-underline{
+    width: 385px;
+    border-bottom: 4px solid white;
+    margin: 20px 0;
+}
+
+#wedding .desktop-text{
+    color: white;
+}
+#wedding .mobile-title{
+        font-size: 35px;
+        margin: 10px 0;
+}
+#wedding .mobile-text{
+    width: 99%;
+    position: relative;
+    margin: 20px auto;
+    text-align: left;
+}
+#wedding .little-underline{
+    width: 118px;
+    border-bottom: 3px solid black;
+    margin-bottom: 15px;
+}
+#wedding .body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#wedding .left-col{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+#wedding .left-col .title{
+    margin-top: -158px;
+} 
+#wedding .left-item{
+    margin: 3px 0;
+    font-size: 15px;
+}
+#wedding .center-col{
+    display: flex;
+    flex-direction: column;
+    width: 78%;
+}
+#wedding .main{
+    display: flex;
+    flex-direction: column;
+    margin-top: -168px;
+}
+#wedding .pic-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px auto;
+}
+#wedding .card{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+#wedding .half-pic{
+    width: 100%;
+}
+#wedding .title{
+    font-size: 17px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    height: 25px;
+    margin: 10px auto;
+}
+#wedding .text {
+    font-size: 14px;
+    margin: 15px auto;
+}
+#wedding .card-text{
+    color: #7C7C7C;
+    font-size: 13px;
+}
+#wedding .right-ad{
+    position: relative;
+    top: -158px;
+    right: -5vw;
+}
+#wedding .title-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#wedding .mobile-box{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 768px){
+    header{
+        background: none;
+        background-size: cover;
+        background-position: bottom;
+        z-index: -1;
+        height: auto;
+    }
+    #wedding .invisible {
+        display: none !important;
+    }
+    #wedding .visible {
+        display: flex;
+    flex-direction: column;
+    }
+    #wedding .main{
+        margin-top: 0px;
+    }
+    #wedding .center-col {
+        width: 96%;
+        margin: auto;
+    }
+    #wedding .pic-row {
+        flex-wrap: wrap;
+    }
+    #wedding .card {
+        width: 100%;
+        margin-block-end: 15px;
+    }
+    #wedding .title{
+        width: auto; 
+     border-bottom: none; 
+     margin: 10px 0;
+    }
+    #wedding .plus {
+        font-size: 24px;
+        margin-right: 20px;
+            margin-top: -7px;
+    }
+    #wedding .minus{
+        font-size: 24px;
+        margin-right: 20px;
+            margin-top: -7px;
+    }
+    #wedding .collapse{
+        margin: 10px auto;
+        /* position: relative; */
+        color: darkgray;
+        width: 100%;
+        text-align: center;
+    }
+    #wedding .body{
+        flex-direction: column;
+    }
+    #wedding .left-col {
+        order: 2;
+        width: 96%;
+        margin: auto;
+    }
+    #wedding .left-col .title{
+        margin-top: 5px;
+    }
+    #wedding .gray-underline {
+        width: 98%;
+        border-bottom: 1px solid darkgray;
+        margin-bottom: 12px;
+        margin-top: -6px;
+    }
+}
