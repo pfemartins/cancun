@@ -37,6 +37,15 @@ var map = {
 				marker.setLabel(map.marker.label);
 			}
 
+			marker.set('info', new SnazzyInfoWindow({
+				marker: marker,
+				placement: 'top',
+				content: 'Sample content',
+				panOnOpen: false
+			}));
+
+			marker.info.open();
+
 			marker.setIcon(map.marker.icon);
 			marker.setZIndex(parseInt(id) * 10);
 
@@ -115,7 +124,7 @@ var map = {
 			         	map.events();
 			          f.update_watch.push(window.map.resize);
 			        	google.maps.event.trigger(map.canvas, 'resize');
-		          });
+		          }, true);
 			});
 		}
 	}),
