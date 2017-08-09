@@ -30,17 +30,16 @@ header {
 .explore-regions-sub-header {
 	font-size: 12px;
 	font-weight: 300;
-	margin-top: 14px;
+	margin: 14px 12px 10px 0;
 	color: white;
 	display: inline-block;
 }
 
-.explore-regions-header-btn {
+#navbar .explore-regions-header-btn {
 	background-color: transparent;
 	border: 1px solid white;
 	color: white;
 	display: inline-block;
-	margin-left: 20px;
 	height: 32px;
 	font-size: 12px;
 	line-height: .8;

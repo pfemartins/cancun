@@ -105,7 +105,7 @@ textarea,
 	color: #5e6067;
 	height: auto;
 }
-#
+
 #fusion .pure-input {
 	border: 1px solid #d3d3d3;
 	background: #ffffff;
@@ -276,6 +276,17 @@ sup {
 #fusion .icon {
 	display: inline-block;
 	background-image: url('../../images/global.png');
+}
+
+#fusion .icon.icon-logo-white {
+	background-image: url('../../images/global-white.png');
+	width: 120px;
+	height: 60px;
+	background-size: 120px 60px;
+}
+
+.icon.hide {
+	display: none;
 }
 
 html.svg.touch #fusion .icon {
@@ -515,7 +526,7 @@ html.svg.touch #fusion .icon {
 
 #navbar .Menu li > ul {
 	left: -64px;
-	top: 42px;
+	top: 47px;
 }
 #navbar .Menu li > ul li > ul {
 	position: static;
@@ -858,7 +869,6 @@ html.svg.touch #fusion .icon {
 @media screen and (max-width: 860px) {
 	#navbar .nav-item a {
 		padding: 0;
-		margin-right: 10px;
 	}
 	#fusion .right {
 		float: right;
@@ -1060,6 +1070,19 @@ style.css: 494 #fusion a#scroll-to-top {
 	}
 }
 
+.Menu > ul > li > a {
+	margin: 0px;
+}
+
 #navbar .hamburger-holder {
 	background-color: transparent;
+}
+
+#navbar .top .mobile-stuff.hide-for-large > div {
+	margin-right: 15px;
+}
+
+#navbar .navbar,
+#navbar .navbar > a {
+	height: 75px;
 }

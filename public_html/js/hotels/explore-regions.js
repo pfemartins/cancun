@@ -4,6 +4,7 @@ function populate() {
 	var navbar = document.getElementById('navbar');
 	var div = document.createElement('div');
 	div.classList.add('explore-regions-head');
+	div.classList.add('injected-content');
 	var header = document.createElement('h1');
 	header.classList.add('explore-regions-header');
 	header.innerHTML = 'Holbox';

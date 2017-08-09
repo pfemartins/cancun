@@ -1,5 +1,10 @@
 (function() {
-	flagMobile();
+	init();
+
+	function init() {
+		flagMobile();
+		setNavIcon();
+	}
 
 	function $(selector, context) {
 		context = context && context.querySelectorAll ? context : null || document;
@@ -109,7 +114,7 @@
 	}
 
 	window.addEventListener('load', function() {
-		window.addEventListener('resize', flagMobile);
+		window.addEventListener('resize', init);
 
 		forEach($('.hamburger-menu-main'), function(e) {
 			e.addEventListener('click', function(event) {
@@ -120,7 +125,9 @@
 					el.classList.add('show');
 				});
 				forEach(
-					$('.big-x, .mobile-login-row, .mobile-search, header > :not(:first-child):not(.gray-line)'),
+					$(
+						'.big-x, .mobile-login-row, .mobile-search, header > :not(:first-child):not(.gray-line):not(.injected-content)'
+					),
 					function(el) {
 						el.classList.remove('hide');
 					}
@@ -137,7 +144,9 @@
 					el.classList.remove('show');
 				});
 				forEach(
-					$('.big-x, .mobile-login-row, .mobile-search, header > :not(:first-child):not(.gray-line)'),
+					$(
+						'.big-x, .mobile-login-row, .mobile-search, header > :not(:first-child):not(.gray-line):not(.injected-content)'
+					),
 					function(el) {
 						el.classList.add('hide');
 					}
@@ -187,10 +196,37 @@
 
 	function flagMobile() {
 		$('body')[0].classList[window.matchMedia('(min-width:768px)').matches ? 'remove' : 'add']('is-mobile');
-		setNavIcon();
 	}
 
 	function setNavIcon() {
-		var isMobile = window.matchMedia('(min-width:768px)').matches;
+		var isMobile = !window.matchMedia('(min-width:768px)').matches;
+		var pageName = getParameterByName('page');
+
+		var shouldUseWhite = {
+			mobile: {
+				'explore-regions': false
+			},
+			desktop: {
+				'explore-regions': true
+			}
+		};
+
+		if (shouldUseWhite[isMobile ? 'mobile' : 'desktop'][pageName]) {
+			$('.icon.icon-logo')[0].classList.add('hide');
+			$('.icon.icon-logo-white')[0].classList.remove('hide');
+		} else {
+			$('.icon.icon-logo-white')[0].classList.add('hide');
+			$('.icon.icon-logo')[0].classList.remove('hide');
+		}
+	}
+
+	function getParameterByName(name, url) {
+		if (!url) url = window.location.href;
+		name = name.replace(/[\[\]]/g, '\\$&');
+		var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+			results = regex.exec(url);
+		if (!results) return null;
+		if (!results[2]) return '';
+		return decodeURIComponent(results[2].replace(/\+/g, ' '));
 	}
 })();
