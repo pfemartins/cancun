@@ -108,32 +108,42 @@ var map = {
 				scaleControl: false,
 				styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#333333"}]},{"featureType":"administrative.locality","elementType":"labels.text.fill","stylers":[{"color":"#305c64"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#305c64"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"lightness":"-25"},{"color":"#ffffff"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"},{"lightness":"-10"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"lightness":"15"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"hue":"#ff0000"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"hue":"#ff0000"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"color":"#4babb1"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#a7d5d2"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]}],
 	        	});
-
-		     google.maps.event.addListener(map.canvas, 'idle', function() {
-		        	google.maps.event.trigger(map.canvas, 'resize');
-
-				if (!map.marker.array.length) {
-					for (var a = 0; a < 1; a++) {
-						map.marker.array.push(map.marker.init(a));
-			        	}
-					map.marker.active(map.marker.array[0]);
-					map.canvas.setCenter(map.marker.array[0].getPosition());
-				}
-
-		        	map.resize();
-	        	});
-
-	        	google.maps.event.addListener(map.canvas, 'click', function() {
-
-				map.marker.reset();
-	        	});
 		} else {
 			f.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyACnDRF0TNeXEbMSeqWbKN-1zT8mUdJueA', function() {
-				map.init();
-		          f.update_watch.push(window.map.resize);
-		        	google.maps.event.trigger(map.canvas, 'resize');
+		          f.getScript(f.base.jsp + 'snazzy-info-window.js', function() {
+					map.init();
+			         	map.events();
+			          f.update_watch.push(window.map.resize);
+			        	google.maps.event.trigger(map.canvas, 'resize');
+		          });
 			});
 		}
+	}),
+	events: (function() {
+	     google.maps.event.addListener(map.canvas, 'idle', function() {
+	        	google.maps.event.trigger(map.canvas, 'resize');
+
+			if (!map.marker.array.length) {
+				for (var a = 0; a < 1; a++) {
+					map.marker.array.push(map.marker.init(a));
+		        	}
+				map.marker.active(map.marker.array[0]);
+				map.canvas.setCenter(map.marker.array[0].getPosition());
+			}
+
+	        	map.resize();
+        	});
+        	google.maps.event.addListener(map.canvas, 'click', function() {
+			map.marker.reset();
+        	});
+        	if (document.querySelector('#map-zoom')) {
+        		document.querySelector('#map-zoom-in').addEventListener(f.event, function() {
+        			map.canvas.setZoom(map.canvas.zoom + 1);
+        		});
+        		document.querySelector('#map-zoom-out').addEventListener(f.event, function() {
+        			map.canvas.setZoom(map.canvas.zoom - 1);
+        		});
+        	}
 	}),
 	resize: (function() {
         	google.maps.event.trigger(map.canvas, 'resize');

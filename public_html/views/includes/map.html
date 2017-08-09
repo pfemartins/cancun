@@ -16,13 +16,22 @@
 	</head>
 	<body>
 	     <div id="fusion" class="{{ page }}">
-	     	<div id="map">
+	     	<div id="map" class="pure-form">
 	     		<div id="map-canvas"></div>
-	     		<div id="map-zoom" class="map-box">
-					<div id="map-zoom-in"></div>
-					<div id="map-zoom-out"></div>
-	     		</div>
-				<div id="map-sort" class="map-box"></div>
+	     		{% if true %}
+		     		<div id="map-zoom" class="map-box">
+						<div id="map-zoom-in"></div>
+						<div id="map-zoom-out"></div>
+		     		</div>
+	     		{% endif %}
+				<div id="map-sort">
+					<span class="icon icon-arrow-down-small down-arrow"></span>
+					{# <span class="icon icon-arrow-down down-arrow"></span> #}
+					<select id="map_sort" class="map-box pure-input-1 pure-input">
+						{# <option value="" disabled="disabled" selected="selected">All Cancun</option> #}
+						<option value="" disabled="disabled" selected="selected">Restaurants</option>
+					</select>
+				</div>
 	     		<div id="map-popup"></div>
 	     	</div>>
 			<div id="fusion-scripts">
