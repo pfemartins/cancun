@@ -1,0 +1,54 @@
+#map {
+	position: relative;
+	height: 400px;
+}
+
+#map .map-box {
+	background: #FFFFFF;
+	box-shadow: 0 5px 14px 0 rgba(0,0,0,0.10);
+	border-radius: 3px;
+}
+
+#map-sort,
+#map-zoom,
+#map-canvas {
+	position: absolute;
+	margin: auto;
+}
+
+#map-sort,
+#map-zoom {
+	top: 10px;
+}
+
+#map-canvas {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#map-sort {
+	left: 10px;
+}
+
+#map-zoom {
+	right: 10px;
+	width: 28px;
+	text-align: center;
+	font-size: 24px;
+}
+
+#map-zoom-in:before,
+#map-zoom-out:before {
+	line-height: 27px;
+	display: block;
+}
+
+#map-zoom-in:before {
+	content: '+';
+}
+
+#map-zoom-out:before {
+	content: '-';
+}
