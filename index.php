@@ -48,6 +48,10 @@
                // $parameters['page'] = 'home';
                $twigPath = 'views/hotels/experience-land.html';
                break;
+        case $url."weddings":
+               // $parameters['page'] = 'home';
+               $twigPath = 'views/hotels/weddings.html';
+               break;
         default:
                break;
      }
