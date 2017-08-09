@@ -16,24 +16,33 @@
 	</head>
 	<body>
 	     <div id="fusion" class="{{ page }}">
-	     	<div id="map" class="pure-form">
-	     		<div id="map-canvas"></div>
+			<div class="f-items m d">
+	     		{% for a in 1..8 %}
+		     		<div class="f-item" data-map-marker="{{ loop.index0 }}" data-map-price="${{ random(100) + 100 }}">
+		     			<h3>Heading</h3>
+		     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci reprehenderit dolorem, ipsa optio! Architecto doloribus possimus distinctio cumque natus sit facere ratione error est. Obcaecati, perferendis dignissimos esse! Ad, omnis.</p>
+		     		</div>
+	     		{% endfor %}
+	     	</div>
+	     	<div class="f-map pure-form" data-map data-map-places data-map-price>
+	     		<div class="f-map-canvas"></div>
 	     		{% if true %}
-		     		<div id="map-zoom" class="map-box">
-						<div id="map-zoom-in"></div>
-						<div id="map-zoom-out"></div>
+		     		<div class="f-map-zoom f-map-box">
+						<div class="f-map-zoom-in"></div>
+						<div class="f-map-zoom-out"></div>
 		     		</div>
 	     		{% endif %}
-				<div id="map-sort">
+				<div class="f-map-sort">
 					<span class="icon icon-arrow-down-small down-arrow"></span>
 					{# <span class="icon icon-arrow-down down-arrow"></span> #}
-					<select id="map_sort" class="map-box pure-input-1 pure-input">
+					<select class="f-map-box pure-input-1 pure-input">
 						{# <option value="" disabled="disabled" selected="selected">All Cancun</option> #}
 						<option value="" disabled="disabled" selected="selected">Restaurants</option>
 					</select>
 				</div>
-	     		<div id="map-popup"></div>
-	     	</div>>
+	     		<div class="f-map-popup"></div>
+	     	</div>
+
 			<div id="fusion-scripts">
 				<script src="public_html/js/main.js"></script>
 				<script src="public_html/js/map.js"></script>

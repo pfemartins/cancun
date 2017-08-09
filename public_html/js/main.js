@@ -131,10 +131,10 @@ var f = {
 	          f.drag = true;
 	     });
 
-		window.onresize = function() {
-		     clearTimeout(f.update_timeout);
-		     f.update_timeout = setTimeout(f.update, 1);
-		};
+    		window.onresize = function() {
+    		     clearTimeout(f.update_timeout);
+    		     f.update_timeout = setTimeout(f.update, 1);
+    		};
 
           var scroller = document.getElementById('scroll-to-top');
           if(scroller) {

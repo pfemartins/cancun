@@ -1,57 +1,57 @@
-#map {
+#fusion .f-map {
 	position: relative;
 	height: 400px;
 }
 
-#map .map-box {
+#fusion .f-map-box {
 	background: #FFFFFF;
 	box-shadow: 0 5px 14px 0 rgba(0,0,0,0.10);
 	border-radius: 3px;
 }
 
-#map-sort,
-#map-zoom,
-#map-sort .icon,
-#map-canvas {
+#fusion .f-map-sort,
+#fusion .f-map-zoom,
+#fusion .f-map-sort .icon,
+#fusion .f-map-canvas {
 	position: absolute;
 	margin: auto;
 }
 
-#map-sort,
-#map-zoom {
+#fusion .f-map-sort,
+#fusion .f-map-zoom {
 	top: 10px;
 }
 
-#map-canvas {
+#fusion .f-map-canvas {
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 }
 
-#map-sort {
+#fusion .f-map-sort {
 	left: 10px;
 	/*width: 330px;*/
 	width: 175px;
 }
 
-#map-sort .icon {
+#fusion .f-map-sort .icon {
 	top: 0;
 	bottom: 0;
 	right: 15px;
 }
 
-#map-sort #map_sort {
+#fusion .f-map-sort select {
 	/*font-size: 20px;*/
 	font-size: 14px;
 	/*line-height: 50px;*/
 	line-height: 35px;
 	/*padding: 0 45px 0 20px;*/
-	padding: 0 30px 0 20px;
+	padding: 10px 30px 10px 20px;
 	border: 0;
 }
 
-#map-zoom {
+#fusion .f-map-zoom {
 	cursor: pointer;
 	right: 10px;
 	width: 28px;
@@ -59,16 +59,16 @@
 	font-size: 24px;
 }
 
-#map-zoom-in:before,
-#map-zoom-out:before {
+#fusion .f-map-zoom-in:before,
+#fusion .f-map-zoom-out:before {
 	line-height: 27px;
 	display: block;
 }
 
-#map-zoom-in:before {
+#fusion .f-map-zoom-in:before {
 	content: '+';
 }
 
-#map-zoom-out:before {
+#fusion .f-map-zoom-out:before {
 	content: '-';
 }
