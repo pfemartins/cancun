@@ -1,13 +1,13 @@
-#explore-regions {
+/*#explore-regions {
 	height: 50vh;
-}
+}*/
 
 header {
 	background: linear-gradient(to right, rgba(220, 220, 220, .15), rgba(220, 220, 220, .05)),
 		url(../../images/hotels/explore-regions/shutterstock_84440260.png);
 	background-size: cover;
 	background-position: bottom;
-	height: 50vh;
+	height: 400px;
 	position: relative;
 }
 
@@ -40,8 +40,151 @@ header {
 	border: 1px solid white;
 	color: white;
 	display: inline-block;
-	height: 32px;
+	height: 35px;
 	font-size: 12px;
-	line-height: .8;
+	line-height: 1.4;
 	font-weight: 300;
+	box-sizing: border-box;
+	padding: 5px;
+	text-align: center;
+	border-radius: 2px;
+	width: 145px;
+	cursor: pointer;
+}
+
+#navbar .explore-regions-header-btn > img {
+	max-width: 100%;
+	height: auto;
+	width: 20px;
+	vertical-align: top;
+	margin-right: 10px;
+}
+.explore-regions-header-btn > * {
+	cursor: pointer;
+}
+
+#explore-regions {
+	padding: 20px 40px;
+}
+#explore-regions .side-nav-category ul {
+	list-style-type: none;
+	padding-left: 0px;
+	margin-top: 10px;
+}
+#explore-regions .side-nav-category h3 {
+	font-size: 16px;
+	font-weight: 300;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
+}
+#explore-regions .side-nav-category {
+	margin-left: 35px;
+	padding-right: 20px;
+	margin-top: 10px;
+}
+#explore-regions .side-nav-category:not(:first-child) {
+	margin-top: 30px;
+}
+
+i.checkmark {
+	position: relative;
+	margin-right: 16px;
+}
+i.checkmark:before {
+	position: absolute;
+	content: '';
+	top: 4px;
+	left: 0px;
+
+	/*Make it a small rectangle so the border will create an L-shape*/
+	width: 4px;
+	height: 7px;
+
+	/*Add a white border on the bottom and left, creating that 'L' */
+	border: solid #42af96;
+	border-width: 0 2px 2px 0;
+
+	/*Rotate the L 45 degrees to turn it into a checkmark*/
+	transform: rotate(45deg);
+}
+#explore-regions .known-for li > span {
+	color: #777;
+	font-size: 14px;
+}
+#explore-regions .known-for li {
+	padding: 4px 0px;
+}
+#explore-regions .regions li {
+	color: #444;
+	font-size: 15px;
+	padding: 5px 0px;
+}
+
+#explore-regions .summary-box {
+	background-color: rgb(247, 247, 247);
+	padding: 10px;
+}
+
+#explore-regions > .pure-g > div {
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+#explore-regions .summary-box.pure-g > div {
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+#explore-regions .summary-box h4 {
+	color: #999;
+	font-weight: 400;
+	font-size: 12px;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #ccc;
+}
+#explore-regions .summary-box .info {
+	font-size: 18px;
+	color: #222;
+	margin-top: 7px;
+}
+#explore-regions .summary-box a {
+	font-size: 12px;
+	color: #42af96;
+}
+#explore-regions .pure-g > div {
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+#explore-regions .topic-header {
+	font-size: 16px;
+	font-weight: 300;
+	margin-top: 35px;
+}
+
+#explore-regions .underlined {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 8px;
+	margin-bottom: 10px;
+}
+
+#explore-regions .pure-g.img-group {
+	margin-bottom: 20px;
+}
+
+#explore-regions .pure-g.img-group > div:first-child {
+	padding-left: 0px;
+}
+
+#explore-regions .pure-g.img-group > div:last-child {
+	padding-right: 0px;
+}
+
+#explore-regions .description {
+	margin-bottom: 35px;
+}
+
+#explore-regions label {
+	color: #bbb;
+	font-size: 12px;
+	line-height: 1;
+	display: block;
 }
