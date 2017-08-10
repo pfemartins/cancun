@@ -9,7 +9,7 @@
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     <link href="//cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="public_html/css/pages/base.css">
-    <link rel="stylesheet" href="public_html/css/pages/style.css">
+    <link id="fusion-css-style" rel="stylesheet" href="public_html/css/pages/style.css">
     <link rel="stylesheet" href="public_html/css/pages/plugins.css">
     <link rel="stylesheet" href="public_html/css/pages/date.css">
     <link rel="stylesheet" href="public_html/css/hotels/reservation.css"> {% block head %}{% endblock %}
@@ -24,8 +24,8 @@
 
 <body>
     <div id="fusion" class="{{ page }}">
-        {% if 'master' in urlCurrent %}
-        <div id="banner">
+        {% if 'master' in urlCurrent or 'explore' in urlCurrent %}
+            <div id="banner">
             {% endif %} {% include 'views/includes/header.html' %} {% block main %}{% endblock %}
             <div class="fusion-overlay inactive"></div>
             {% include 'views/includes/footer.html' %}

@@ -15,7 +15,7 @@ var f = {
                link.rel = 'stylesheet';
                console.log(link.href);
                link.onload = false;
-               document.head.appendChild(link);
+               document.head.insertBefore(link, document.getElementById('fusion-css-style'));
           }
 
           script = document.createElement('script');
