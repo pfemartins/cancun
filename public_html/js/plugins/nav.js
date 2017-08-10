@@ -132,6 +132,7 @@
 						el.classList.remove('hide');
 					}
 				);
+				$('#navbar-bar')[0].classList.add('push-down');
 			});
 		});
 
@@ -151,6 +152,7 @@
 						el.classList.add('hide');
 					}
 				);
+				$('#navbar-bar')[0].classList.remove('push-down');
 			});
 		});
 
