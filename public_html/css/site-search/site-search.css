@@ -103,6 +103,36 @@
 	font-size: 12px;
 
 }
+#fusion .filters-sidebar h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    color: #7c7c7c;
+}
+#fusion .filters-sidebar h5 {
+    font-weight: 400;
+    font-size: 12px;
+    margin: 14px 0 10px;
+}
+#fusion .filters-sidebar label {
+    font-size: 12px;
+    color: #333;
+}
+#fusion .filters-sidebar input {
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 6px;
+    max-width: 100%;
+}
+#fusion .filters-sidebar input[type=checkbox] {
+    float: left;
+    margin: 4px 14px 10px 0;
+}
+#fusion .filters-sidebar label:after {
+    content: '';
+    display: block;
+    clear: both;
+}
 
 
 /* DESKTOP - Tablet */
@@ -165,6 +195,20 @@
 	    max-height: 100%;
 	    display: block;
 	    height: 100%;
+	}
+	#fusion .mobile-search-bar a.close {
+	    float: right;
+	    font-size: 32px;
+	    font-weight: 500;
+	    margin-bottom: 12px;
+	    line-height: 1;
+	    border: 1px solid #C9C9C9;
+	}
+	#fusion .filters-sidebar h3 {
+		margin-top: 30px;
+	}
+	#fusion .filters-sidebar {
+		padding-right: 0;
 	}
 }
 
