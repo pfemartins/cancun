@@ -4,6 +4,12 @@ mobile-search-bar
 */
 
 /* Banner styles */
+.gallery-popular-tours,
+#banner,
+#home {
+    margin-bottom: 50px;
+}
+
 #banner {
     background:url(../../images/hotels/explore/banner.jpg);
     background-size: cover;
@@ -13,7 +19,6 @@ mobile-search-bar
     display: block;
     margin: 0 auto;
     max-width: 1470px;
-    margin-bottom: 50px;
 }
 #banner .icon-logo {
     background-position: -10px -1241px;
@@ -186,7 +191,6 @@ mobile-search-bar
 }
 
 .small-gallery .swiper-slide {
-    height: 146px;
     width: 314px;
 }
 
@@ -210,6 +214,12 @@ mobile-search-bar
     display: block;
     height: 315px;
     margin-bottom: 5px;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.small-gallery .swiper-slide-featured {
+    height: 200px;
 }
 
 .swiper-container .button-next {
