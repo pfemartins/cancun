@@ -36,6 +36,10 @@
                // $parameters['page'] = 'home';
                $twigPath = 'views/hotels/reservation.html';
                break;
+        case $url."explore":
+               // $parameters['page'] = 'home';
+               $twigPath = 'views/hotels/explore.html';
+               break;
         case $url."explore-regions":
                // $parameters['page'] = 'home';
                $twigPath = 'views/hotels/explore-regions.html';

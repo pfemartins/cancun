@@ -1,0 +1,493 @@
+{% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent() }}
+<link rel="stylesheet" href="https://cdn.rawgit.com/nolimits4web/Swiper/d9f17789/dist/css/swiper.min.css">
+<link rel="stylesheet" href="public_html/css/hotels/explore.css"> 
+{% endblock %} {% block main %}
+	<div class="fusion-container">
+		<h1>Cancun is <br>waiting for <br>you</h1>
+		<a class="button yellow-bg hide-for-small desktop-filters">Book your trip!</a>
+		<a class="button yellow-bg mobile-filters-button hide-for-large hide-for-medium">Book your trip!</a>
+		<form action="" method="POST" class="filter-box">
+			<div class="pure-g row">
+				<span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
+					<div class="pure-u-1-4 section">
+						<h4 class="gray hide-for-small">Check-In</h4>
+						<div class="date"><span class="number">21</span> / June</div>
+						<a><i class="icon icon-arrow-down hide-for-small"></i></a>
+						<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
+					</div>
+					<div class="pure-u-1-4 section">
+						<h4 class="gray hide-for-small">Check-Out</h4>
+						<div class="date"><span class="number">27</span> / June</div>
+						<a><i class="icon icon-arrow-down hide-for-small"></i></a>
+						<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
+					</div>
+				</span>
+				<div class="pure-u-1-4 section">
+					<h4 class="gray">Guests</h4>
+						<div class="guests"><span class="number"><select name="guests_num" id="">
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+						</select></span></div>
+						<a><i class="icon icon-arrow-down"></i></a>
+				</div>
+				<div class="pure-u-1-4 section last">
+					<div class="location"><select name="location" id="">
+						<option value="cozumel" selected>Cozumel</option>
+						<option value="xel-ha">Xel-Ha</option>
+						<option value="puerto-vallarta">Puerto Vallarta</option>
+					</select></div>
+					<a><i class="icon icon-arrow-down hide-for-small last"></i></a>
+					<button class="update-search yellow-bg">Search hotels</button>
+					<a class="more-filters-link">+ More filters</a>
+				</div>
+			</div>
+			<div class="more-filters">
+				<div class="pure-g row">
+					<div class="pure-u-1-2">
+						<input type="text" id="hotel-name" class="curved" placeholder="Hotel name">
+						<div class="pure-g row">
+							<div class="pure-u-1 hr">
+								<hr>
+							</div>
+						</div>
+					</div>
+					<div class="pure-u-1-2">
+						<label for="price-range">Price Range per night</label>
+						<div id="price-range"></div>
+						<div class="section-wrap">
+							<div class="price-low left">from: $530</div>
+							<div class="price-high right">to: $<span id="price-high-value">1,700</span></div>
+						</div>
+						<input type="hidden" name="priceValue" id="priceValue" value="1700">
+						<div class="pure-g row">
+							<div class="pure-u-1 hr">
+								<hr>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="pure-g row">
+					<div class="pure-u-1-2">
+						<div class="section-wrap">
+							<label for="star-rating">Star rating  <i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i></label>
+							<div id="star-rating"></div>
+							<div class="value-wrap">
+								<div class="star-low left">from: 2.0</div>
+								<div class="star-high right">to: <span id="star-rating-value">4.8</span></div>
+							</div>
+						</div>
+						<input type="hidden" name="starValue" id="starValue" value="4.8">
+					</div>
+					<div class="pure-u-1-2">
+						<div class="section-wrap">
+							<label for="tripadvisor-rating">TripAdvisor rating  <i class="icon icon-tripadvisor"></i></label>
+							<div id="tripadvisor-rating"></div>
+							<div class="value-wrap">
+								<div class="star-low left">from: 2.5</div>
+								<div class="star-high right">to: <span id="tripadvisor-rating-value">4.8</span></div>
+							</div>
+						</div>
+						<input type="hidden" name="tripAdvisorValue" id="tripAdvisorValue" value="4.8">
+					</div>
+				</div>
+			</div>
+		</form>
+		
+	</div>
+</div><!-- end #banner -->
+	<main id="home">
+		<div class="fusion-container">
+			<h2>Choose your Cancun experience</h2>
+			<div class="swiper-container gallery-experience">
+				<div class="swiper-wrapper">
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/outdoor.jpg)"">
+		            	<a href="">
+		            		<p>Outdoor <br>
+		            		adventure</p>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/family.jpg)"">
+		            	<a href="">
+		            		<p>Family <br>
+		            		fun</p>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/recharge.jpg)"">
+		            	<a href="">
+		            		<p>Recharge <br>
+		            		and relax</p>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/cultural.jpg)"">
+		            	<a href="">
+		            		<p>Cultural <br>
+		            		exploration</p>
+		            	</a>
+		            </div>
+		        </div>
+		        <!-- Add Arrows -->
+		        <div class="swiper-overlay"></div>
+		        <div class="button-next"><i class="icon icon-arrow-right"></i></div>
+			</div>
+			
+			 
+		</div>
+		<div class="map">
+			<h2>Top Destinations</h2>
+			<img src="public_html/images/master/map.jpg" alt="">
+		</div>
+		<div class="fusion-container">
+			<h2 class="margin-top">On Land</h2>
+			<div class="swiper-container gallery-land">
+				<div class="swiper-wrapper">
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/ruins.jpg)">
+		            	<a href="">
+		            		<p>Ancient <br>
+		            		ruins</p>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/cenotes.jpg)">
+		            	<a href="">
+		            		<p>Cenotes</p>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/golfing.jpg)">
+		            	<a href="">
+		            		<p>Golfing</p>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/local-culture.jpg)">
+		            	<a href="">
+		            		<p>Local <br>
+		            		culture</p>
+		            	</a>
+		            </div>
+		        </div>
+		        <!-- Add Arrows -->
+		        <div class="swiper-overlay"></div>
+		        <div class="button-next"><i class="icon icon-arrow-right"></i></div>
+			</div>
+			
+			<h2 class="margin-top">At sea</h2>
+			<div class="swiper-container gallery-sea">
+				<div class="swiper-wrapper">
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/parasailing.jpg)">
+		            	<a href="">
+		            		<p><br>Parasailing</p>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/dolphins.jpg)">
+		            	<a href="">
+		            		<p>Swim with <br>
+		            		dolphins</p>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/snorkeling.jpg)">
+		            	<a href="">
+		            		<p>Snorkeling <br>
+		            		and scuba</p>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/kayaking.jpg)">
+		            	<a href="">
+		            		<p><br>Kayaking</p>
+		            	</a>
+		            </div>
+		        </div>
+		        <!-- Add Arrows -->
+		        <div class="swiper-overlay"></div>
+		        <div class="button-next"><i class="icon icon-arrow-right"></i></div>
+			</div>
+			<h2 class="margin-top">Group guides</h2>
+			<div class="swiper-container small-gallery gallery-guides">
+				<div class="swiper-wrapper">
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/weddings.jpg)">
+		            	<a href="">
+		            		<p>Weddings</p>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/reunions.jpg)">
+		            	<a href="">
+		            		<p>Reunions</p>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide" style="background-image:url(public_html/images/master/group-trips.jpg)">
+		            	<a href="">
+		            		<p>Group <br>
+		            		trips</p>
+		            	</a>
+		            </div>
+
+		        </div>
+			</div>
+			<h2 class="margin-top">Know before you go</h2>
+			<div class="swiper-container thirds-gallery gallery-know">
+				<div class="swiper-wrapper">
+		            <div class="swiper-slide">
+		            	<a href="">
+		            		<img src="public_html/images/master/GettingAround.png" alt="">
+		            		<div class="content">
+		            			Getting around
+		            			<div class="line"></div>
+		            		</div>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="">
+		            		<img src="public_html/images/master/ProTips.png" alt="">
+		            		<div class="content">
+		            			Cancun pro tips
+		            			<div class="line"></div>
+		            		</div>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="">
+		            		<img src="public_html/images/master/WhatToPack.png" alt="">
+		            		<div class="content">
+		            			What to pack
+		            			<div class="line"></div>
+		            		</div>
+		            	</a>
+		            </div>
+
+		        </div>
+			</div>
+			 <h2 class="margin-top">The blog</h2>
+			<div class="swiper-container thirds-gallery gallery-blog">
+				<div class="swiper-wrapper">
+		            <div class="swiper-slide">
+		            	<a href="">
+		            		<img src="public_html/images/master/sights.jpg" alt="">
+		            		<div class="content">
+		            			Top 10 sights to see while in Cancun 
+		            			<div class="pure-g row auth-info">
+		            				<div class="pure-u-1-2">
+		            					Emily Golightly
+		            				</div>
+		            				<div class="pure-u-1-2 date">
+		            					July 21, 2017
+		            				</div>
+		            			</div>
+		            		</div>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="">
+		            		<img src="public_html/images/master/spring-break.jpg" alt="">
+		            		<div class="content">
+		            			How to “Spring Break” in peace and avoid the crowd
+		            			<div class="pure-g row auth-info">
+		            				<div class="pure-u-1-2">
+		            					Emily Golightly
+		            				</div>
+		            				<div class="pure-u-1-2 date">
+		            					July 21, 2017
+		            				</div>
+		            			</div>
+		            		</div>
+		            	</a>
+		            </div>
+		            <div class="swiper-slide">
+		            	<a href="">
+		            		<img src="public_html/images/master/maya-riviera.jpg" alt="">
+		            		<div class="content">
+		            			The best food in Maya Riviera
+		            			<div class="pure-g row auth-info">
+		            				<div class="pure-u-1-2">
+		            					Emily Golightly
+		            				</div>
+		            				<div class="pure-u-1-2 date">
+		            					July 21, 2017
+		            				</div>
+		            			</div>
+		            		</div>
+		            	</a>
+		            </div>
+		        </div>
+			</div>
+			<a href="" class="button yellow-bg experience">Experience more</a>
+		</div>
+		<form method="POST" class="mobile-search-bar hide-for-large hide-for-medium" action="">
+			<div class="fusion-container">
+				<div class="pure-g row">
+					<div class="pure-u-1">
+						<a class="close">x</a>
+					</div>
+				</div>
+				<div class="pure-g row">
+					<div class="pure-u-1 nav-wrap">
+						<nav class="gradient-bg">
+							<ul>
+								<li><a>Hotels</a></li>
+								<li><a>Hotels + Flight</a></li>
+							</ul>
+						</nav>
+						<div class="gradient-bg nav-fill hide-for-medium hide-for-small"></div>
+					</div>
+					
+				</div>
+				<div class="pure-g row">
+					<div id="mobile-dates" class="fusion-dates" data-date-output="#mobile-dates .fusion-date-checkin,#mobile-dates .fusion-date-checkout">
+						<div class="pure-u-1-2 section check-in-wrap">
+							<h4 class="gray">Check-In</h4>
+							<div class="date"><span class="number">21</span> / June</div>
+							<a><i class="icon icon-arrow-down"></i></a>
+							<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
+						</div>
+						<div class="pure-u-1-2 section check-out-wrap">
+							<h4 class="gray">Check-Out</h4>
+							<div class="date"><span class="number">27</span> / June</div>
+							<a><i class="icon icon-arrow-down"></i></a>
+							<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
+						</div>
+					</div>
+				</div>
+				<div class="pure-g row">
+					<div class="pure-u-1">
+						<hr>
+					</div>
+				</div>
+				<div class="pure-g row">
+					<div class="pure-u-1-2 section">
+						<h4 class="gray">Guests</h4>
+						<a href=""><i class="icon icon-arrow-down right"></i></a>
+						<div class="date"><span class="number">02</span></div>
+					</div>
+					<div class="pure-u-1-2 section">
+						<h4 class="gray">Rooms</h4>
+						<a href=""><i class="icon icon-arrow-down right"></i></a>
+						<div class="date"><span class="number">01</span></div>
+					</div>
+				</div>
+				<div class="pure-g row">
+					<div class="pure-u-1">
+						<hr>
+					</div>
+				</div>
+				<div class="pure-g row">
+					<div class="pure-u-1">
+						<h4 class="gray">Area</h4>
+						<div class="fusion-select">
+							<i class="icon icon-arrow-down-small"></i>
+							<select name="area" id="area">
+								<option value="recommended" selected>All Cancun</option>
+								<option value="price-low">Price - Low</option>
+								<option value="price-high">Price - High</option>
+							</select>
+						</div>
+					</div>
+					<div class="pure-g row">
+						<div class="pure-u-1">
+							<button class="yellow-bg">
+								Go!
+							</button>
+						</div>
+					</div>
+					<div class="pure-g row">
+						<div class="pure-u-1">
+							<a class="more-filters">
+								+ More filters
+							</a>
+						</div>
+					</div>
+					<div class="additional-filters" style="display: none;">
+						<div class="pure-g row">
+							<div class="pure-u-1">
+								<h3>Filters</h3>
+							</div>
+						</div>
+						<div class="pure-g row">
+							<div class="pure-u-1 filters-sidebar">
+								<input type="hidden" name="price-range" value="">
+								<input type="hidden" name="star-rating" value="">
+								<input type="hidden" name="tripadvisor-rating" value="">
+								<label for="price-range">Price Range per night</label>
+								<div id="mobile-price-range"></div>
+								<div class="section-wrap">
+									<div class="price-low left">from: $530</div>
+									<div class="price-high right">to: $<span id="mobile-price-high-value">1,700</span></div>
+								</div>
+								<input type="hidden" name="priceValue" id="mobile-priceValue" value="1700">
+								<hr>
+								<div class="section-wrap">
+									<label for="star-rating">Star rating  <i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i></label>
+									<div id="mobile-star-rating"></div>
+									<div class="value-wrap">
+										<div class="star-low left">from: 2.0</div>
+										<div class="star-high right">to: <span id="mobile-star-rating-value">4.8</span></div>
+									</div>
+								</div>
+								<input type="hidden" name="starValue" id="mobile-starValue" value="4.8">
+								<hr>
+								<div class="section-wrap">
+									<label for="tripadvisor-rating">TripAdvisor rating  <i class="icon icon-tripadvisor"></i></label>
+									<div id="mobile-tripadvisor-rating"></div>
+									<div class="value-wrap">
+										<div class="star-low left">from: 2.5</div>
+										<div class="star-high right">to: <span id="mobile-tripadvisor-rating-value">4.8</span></div>
+									</div>
+								</div>
+								<input type="hidden" name="tripAdvisorValue" id="mobile-tripAdvisorValue" value="4.8">
+								<hr>
+								<h5>Amenities</h5>
+								<label><input type="checkbox" name="amenities" value="wifi"> Wireless internet (89)</label>
+								<label><input type="checkbox" name="amenities" value="pool"> Pool(s) (83)</label>
+								<label><input type="checkbox" name="amenities" value="beach"> Beach (51)</label>
+								<a href="">See more...</a>
+								<hr>
+								<h5>Meal Plan</h5>
+								<label><input type="checkbox" name="meal-plan" value="all inclusive"> All Inclusive (33)</label>
+								<label><input type="checkbox" name="meal-plan" value="room only"> Room Only (43)</label>
+								<label><input type="checkbox" name="meal-plan" value="continental breakfast"> Continental Breakfast Include (10)</label>
+								<a href="">See more...</a>
+								<hr>
+								<h5>Theme</h5>
+								<label><input type="checkbox" name="theme" value="all inclusive"> All Inclusive (33)</label>
+								<label><input type="checkbox" name="theme" value="beach"> Beach (63)</label>
+								<label><input type="checkbox" name="theme" value="family"> Family (37)</label>
+								<a href="">See more...</a>
+								<hr>
+								<h5>City/Zone</h5>
+								<label><input type="checkbox" name="city-zone" value="cancun hotel zone carribbean sea"> Cancun Hotel Zone Caribbean Sea (33)</label>
+								<label><input type="checkbox" name="city-zone" value="punta cancun cancun hotel zone"> Punta Cancun Cancun Hotel Zone (5)</label>
+								<label><input type="checkbox" name="city-zone" value="puerto juare cancun hotel zone"> Puerto Juare Cancun Hotel Zone (37)</label>
+								<a href="">See more...</a>
+								<hr>
+								<h5>Chain</h5>
+								<label><input type="checkbox" name="theme" value="oasis"> Oasis (5)</label>
+								<label><input type="checkbox" name="theme" value="playa resorts"> Playa Resorts (4)</label>
+								<label><input type="checkbox" name="theme" value="beach"> Secrets (2)</label>
+								<a href="">See more...</a>
+								<hr>
+							</div> 
+						</div>
+						<div class="pure-g row button-row">
+							<div class="pure-u-1-2">
+								<a class="button yellow-bg">Go!</a>
+							</div>
+							<div class="pure-u-1-2">
+								<a class="button close">Cancel</a>
+							</div>
+						</div>
+						<div class="pure-g row">
+							<div class="pure-u-1">
+								<p><a class="hide-filters">- Hide filters</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</main>
+{% endblock %}
+{% block foot %}
+	{{ parent() }}
+	<script src="https://cdn.rawgit.com/nolimits4web/Swiper/d9f17789/dist/js/swiper.min.js"></script>
+	<script src="public_html/js/hotels/explore.js"></script>
+{% endblock %}
