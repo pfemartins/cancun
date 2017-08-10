@@ -16,7 +16,7 @@
 	</head>
 	<body>
 	     <div id="fusion" class="{{ page }}">
-			<div class="f-items m d">
+			<div id="f-items" class="f-items m d">
 	     		{% for a in 1..8 %}
 		     		<div class="f-item" data-map-marker="{{ loop.index0 }}" data-map-price="${{ random(100) + 100 }}">
 		     			<h3>Heading</h3>
@@ -24,7 +24,7 @@
 		     		</div>
 	     		{% endfor %}
 	     	</div>
-	     	<div class="f-map pure-form" data-map data-map-places >
+	     	<div class="f-map pure-form" data-map data-map-list="#f-items" data-map-places>
 	     		<div class="f-map-canvas"></div>
 	     		{% if true %}
 		     		<div class="f-map-zoom f-map-box">
