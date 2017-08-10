@@ -1,7 +1,5 @@
-{% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent() }}
-<link rel="stylesheet" href="https://cdn.rawgit.com/nolimits4web/Swiper/d9f17789/dist/css/swiper.min.css">
-<link rel="stylesheet" href="public_html/css/hotels/explore.css"> 
-{% endblock %} {% block main %}
+{% extends '/views/includes/page.html' %}
+{% block main %}
 	<div class="fusion-container">
 		<h1>Cancun is <br>waiting for <br>you</h1>
 		<a class="button yellow-bg hide-for-small desktop-filters">Book your trip!</a>
@@ -486,8 +484,12 @@
 		</form>
 	</main>
 {% endblock %}
+{% block title %}Explore - {{ parent() }}{% endblock %}
+{% block head %} {{ parent() }}
+<link rel="stylesheet" href="https://cdn.rawgit.com/nolimits4web/Swiper/d9f17789/dist/css/swiper.min.css">
+<link rel="stylesheet" href="public_html/css/hotels/explore.css"> 
+{% endblock %}
 {% block foot %}
 	{{ parent() }}
-	<script src="https://cdn.rawgit.com/nolimits4web/Swiper/d9f17789/dist/js/swiper.min.js"></script>
 	<script src="public_html/js/hotels/explore.js"></script>
 {% endblock %}
