@@ -27,6 +27,7 @@ var map = {
 				position: map.marker.random(),
 				id: parseInt(item.getAttribute('data-map-marker')),
 				map: map.canvas,
+				container: item,
 				price: item.getAttribute('data-map-price'),
 				data: {
 					icon: {},
@@ -36,7 +37,7 @@ var map = {
 
 			marker.set('info', new SnazzyInfoWindow({
 				marker: marker,
-				content: 'Sample content',
+				content: marker.container.cloneNode(true),
 				panOnOpen: false,
 				callbacks: {
 					close: (function() {
