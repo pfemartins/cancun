@@ -9,15 +9,15 @@
 	border-radius: 3px;
 }
 
-#fusion .f-map-sort,
+#fusion .f-map-select,
 #fusion .f-map-zoom,
-#fusion .f-map-sort .icon,
+#fusion .f-map-select .icon,
 #fusion .f-map-canvas {
 	position: absolute;
 	margin: auto;
 }
 
-#fusion .f-map-sort,
+#fusion .f-map-select,
 #fusion .f-map-zoom {
 	top: 10px;
 }
@@ -29,32 +29,38 @@
 	left: 0;
 }
 
-#fusion .f-map-sort {
+#fusion .f-map-select {
 	left: 10px;
-	/*width: 330px;*/
-	width: 175px;
+	width: 330px;
 }
 
-#fusion .f-map-sort .icon {
+#fusion .f-map-select .icon {
 	top: 0;
 	bottom: 0;
 	right: 15px;
 }
 
-#fusion .f-map-sort select {
-	/*font-size: 20px;*/
-	font-size: 14px;
-	/*line-height: 50px;*/
-	line-height: 35px;
-	/*padding: 0 45px 0 20px;*/
-	padding: 10px 30px 10px 20px;
+#fusion .f-map-select select {
+	font-size: 20px;
+	line-height: 50px;
+	padding: 0 45px 0 20px;
 	border: 0;
+}
+
+#fusion .f-map-places.f-map-select {
+	width: 175px;
+}
+
+#fusion .f-map-places.f-map-select select {
+	font-size: 14px;
+	line-height: 35px;
+	padding: 0 30px 0 20px;
 }
 
 #fusion .f-map-zoom {
 	cursor: pointer;
-	right: 10px;
 	width: 28px;
+	right: 10px;
 	text-align: center;
 	font-size: 24px;
 }

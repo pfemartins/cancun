@@ -29,7 +29,7 @@
 }
 
 .si-wrapper-top {
-    margin-top: -15px;
+    margin-top: -22px;
     margin-left: 0px;
     -webkit-transform: translate(-50%, -100%);
     transform: translate(-50%, -100%);
@@ -135,7 +135,6 @@
     top: -1px;
     margin-bottom: 0px;
 }
-
 
 #fusion .si-close-button {
     font-weight: normal;
