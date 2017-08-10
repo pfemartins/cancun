@@ -1,0 +1,80 @@
+#fusion .f-map {
+	position: relative;
+	height: 400px;
+}
+
+#fusion .f-map-box {
+	background: #FFFFFF;
+	box-shadow: 0 5px 14px 0 rgba(0,0,0,0.10);
+	border-radius: 3px;
+}
+
+#fusion .f-map-select,
+#fusion .f-map-zoom,
+#fusion .f-map-select .icon,
+#fusion .f-map-canvas {
+	position: absolute;
+	margin: auto;
+}
+
+#fusion .f-map-select,
+#fusion .f-map-zoom {
+	top: 10px;
+}
+
+#fusion .f-map-canvas {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#fusion .f-map-select {
+	left: 10px;
+	width: 330px;
+}
+
+#fusion .f-map-select .icon {
+	top: 0;
+	bottom: 0;
+	right: 15px;
+}
+
+#fusion .f-map-select select {
+	font-size: 20px;
+	line-height: 50px;
+	padding: 0 45px 0 20px;
+	border: 0;
+}
+
+#fusion .f-map-places.f-map-select {
+	width: 175px;
+}
+
+#fusion .f-map-places.f-map-select select {
+	font-size: 14px;
+	line-height: 35px;
+	padding: 0 30px 0 20px;
+}
+
+#fusion .f-map-zoom {
+	cursor: pointer;
+	width: 28px;
+	right: 10px;
+	text-align: center;
+	font-size: 24px;
+}
+
+#fusion .f-map-zoom-in:before,
+#fusion .f-map-zoom-out:before {
+	line-height: 27px;
+	display: block;
+}
+
+#fusion .f-map-zoom-in:before {
+	content: '+';
+}
+
+#fusion .f-map-zoom-out:before {
+	content: '-';
+}

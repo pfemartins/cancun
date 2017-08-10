@@ -1,0 +1,141 @@
+.si-float-wrapper {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+}
+
+.si-float-wrapper,
+.si-float-wrapper * {
+    box-sizing: border-box;
+}
+
+.si-shadow-wrapper-top,
+.si-wrapper-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+[class*='si-wrapper'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: default;
+}
+
+.si-wrapper-top {
+    margin-top: -22px;
+    margin-left: 0px;
+    -webkit-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+}
+
+[class*='si-shadow-wrapper'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.29804;
+    z-index: 1;
+}
+
+.si-shadow-frame {
+    box-shadow: 0 1px 3px 0 #000;
+}
+
+[class*='si-shadow-pointer'] {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+}
+
+[class*='si-shadow-inner-pointer'] {
+    position: absolute;
+    width: 141%;
+    height: 141%;
+    box-shadow: -0.70711px 0.70711px 4px 0 rgba(0,0,0,1);
+}
+
+.si-shadow-inner-pointer-top {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.si-frame {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.si-content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.si-content {
+    overflow: auto;
+}
+
+.si-close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    color: inherit;
+    font-size: 30px;
+    line-height: 12px;
+    cursor: pointer;
+}
+
+[class*='si-pointer-border'] {
+    position: absolute;
+    border: 15px solid transparent;
+    z-index: 3;
+}
+
+[class*='si-pointer-bg'] {
+    position: relative;
+    border: 15px solid transparent;
+    z-index: 4;
+}
+
+.si-has-border [class*='si-pointer-bg'] {
+    border-width: 15px;
+}
+
+.si-pointer-top {
+    border-bottom: 0;
+}
+
+.si-pointer-bg-top {
+    border-top-color: #fff;
+}
+
+.si-has-border .si-pointer-bg-top {
+    top: -1px;
+    margin-bottom: 0px;
+}
+
+#fusion .si-close-button {
+    font-weight: normal;
+}

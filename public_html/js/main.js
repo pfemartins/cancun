@@ -6,11 +6,21 @@ var f = {
      base: {},
      page: {},
      event: 'click',
-     getScript: function(selector, callback) {
-          var script = document.createElement('script');
+     getScript: function(item, callback, css) {
+          var script, link;
 
-          script.src = selector;
-          console.log(selector);
+          if (css) {
+               link = document.createElement('link');
+               link.href = item.replace('/js', '/css').replace('.js', '.css');
+               link.rel = 'stylesheet';
+               console.log(link.href);
+               link.onload = false;
+               document.head.appendChild(link);
+          }
+
+          script = document.createElement('script');
+          script.src = item;
+          console.log(item);
           script.onload = callback || false;
 
           document.querySelector('#fusion-scripts').appendChild(script);
@@ -121,10 +131,10 @@ var f = {
 	          f.drag = true;
 	     });
 
-		window.onresize = function() {
-		     clearTimeout(f.update_timeout);
-		     f.update_timeout = setTimeout(f.update, 1);
-		};
+    		window.onresize = function() {
+    		     clearTimeout(f.update_timeout);
+    		     f.update_timeout = setTimeout(f.update, 1);
+    		};
 
           var scroller = document.getElementById('scroll-to-top');
           if(scroller) {
