@@ -119,7 +119,6 @@ var map = {
 					for (var a = 0; a < map.data.length; a++) {
 						map.marker.array.push(map.marker.init(map.data[a]));
 			        	}
-
 					map.marker.active(map.marker.array[0]);
 					map.canvas.setCenter(map.marker.array[0].getPosition());
 				}
