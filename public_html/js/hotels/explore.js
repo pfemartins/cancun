@@ -61,7 +61,7 @@ var page = {
                     slideToClickedSlide: true,
                });
                galleryBlog.params.control = galleryBlog;
-          });
+          }, true);
 
           f.getScript(f.base.jsp + 'nouislider.js', function() {
                f.getScript(f.base.jsp + 'wnumb.js', function() {
