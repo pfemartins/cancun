@@ -6,8 +6,8 @@ var map = {
 	marker: {
 		array: [],
 		active: (function(marker) {
-			map.marker.reset();
-
+	        	map.marker.reset();
+			
 			marker.info.open();
 
 			marker.data.icon.fillColor = '#CAC859';
@@ -25,10 +25,10 @@ var map = {
 		init: (function(item) {
 			var marker = new google.maps.Marker({
 				position: map.marker.random(),
-				id: parseInt(item.getAttribute('data-map-marker')),
+				id: parseInt(item.getAttribute('data-marker')),
 				map: map.canvas,
 				container: item,
-				price: item.getAttribute('data-map-marker-price'),
+				price: item.getAttribute('data-marker-price'),
 				data: {
 					icon: {},
 					label: {},
@@ -113,12 +113,13 @@ var map = {
 		     google.maps.event.addListener(map.canvas, 'idle', function() {
 		        	google.maps.event.trigger(map.canvas, 'resize');
 		      
-		        	map.data = document.querySelectorAll(map.container.getAttribute('data-map-list') + ' [data-map-marker]');
+		        	map.data = document.querySelectorAll(map.container.getAttribute('data-map-list') + ' [data-marker]');
 
 				if (!map.marker.array.length) {
-					for (var b = 0; b < map.data.length; b++) {
-						map.marker.array.push(map.marker.init(map.data[b]));
+					for (var a = 0; a < map.data.length; a++) {
+						map.marker.array.push(map.marker.init(map.data[a]));
 			        	}
+
 					map.marker.active(map.marker.array[0]);
 					map.canvas.setCenter(map.marker.array[0].getPosition());
 				}

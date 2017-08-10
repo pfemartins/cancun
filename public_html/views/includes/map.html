@@ -18,7 +18,7 @@
 	     <div id="fusion" class="{{ page }}">
 			<div id="f-items" class="f-items m d">
 	     		{% for a in 1..8 %}
-		     		<div class="f-item" data-map-marker="{{ loop.index0 }}" data-map-marker-price="${{ random(200) + 100 }}">
+		     		<div class="f-item" data-marker="{{ loop.index0 }}" data-marker-price="${{ random(200) + 100 }}" {{ loop.first ? 'data-marker-active data-marker-active-expanded' }}>
 		     			<h3>Heading</h3>
 		     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci reprehenderit dolorem, ipsa optio! Architecto doloribus possimus distinctio cumque natus sit facere ratione error est. Obcaecati, perferendis dignissimos esse! Ad, omnis.</p>
 		     		</div>
