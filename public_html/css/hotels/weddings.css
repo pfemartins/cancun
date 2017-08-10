@@ -1,9 +1,9 @@
 header {
-    background: linear-gradient(to right, rgba(0, 209, 0, 0.10), rgba(0, 0, 0, 0.10)), url(../../images/hotels/weddings/pexels-photo-169188.png);
+    background: linear-gradient(to right, rgba(0, 209, 0, 0.10), rgba(0, 0, 0, 0.10)), url(../../images/hotels/weddings/weddingHEAD.png);
     background-size: cover;
     background-position: bottom;
     z-index: -1;
-    height: 50vh;
+    height: 537px;
 }
 
 #wedding .header-stuff{
@@ -51,9 +51,11 @@ header {
     flex-direction: column;
     width: 20%;
 }
-#wedding .left-col .title{
+#wedding .left-col .title {
     margin-top: -158px;
-} 
+    width: 96%;
+    margin-left: 0;
+}
 #wedding .left-item{
     margin: 3px 0;
     font-size: 15px;
