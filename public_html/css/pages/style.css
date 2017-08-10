@@ -1048,6 +1048,7 @@ style.css: 494 #fusion a#scroll-to-top {
 	left: 3px;
 	content: '';
 	display: block;
+
 	/*Make it a small rectangle so the border will create an L-shape*/
 	width: 4px;
 	height: 7px;

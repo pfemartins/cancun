@@ -13,7 +13,7 @@ function populate() {
 	text.innerText = 'The island of flamingos where you can swim with sharks and sway in a hammock in the same day.';
 	var btn = document.createElement('button');
 	btn.classList.add('explore-regions-header-btn');
-	btn.innerHTML = 'View Gallery';
+	btn.innerHTML = '<img src="public_html/images/hotels/explore-regions/white-camera.png"> View Gallery';
 	div.appendChild(header);
 	div.appendChild(document.createElement('br'));
 	div.appendChild(text);
