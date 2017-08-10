@@ -28,7 +28,7 @@ var map = {
 				id: parseInt(item.getAttribute('data-map-marker')),
 				map: map.canvas,
 				container: item,
-				price: item.getAttribute('data-map-price'),
+				price: item.getAttribute('data-map-marker-price'),
 				data: {
 					icon: {},
 					label: {},
