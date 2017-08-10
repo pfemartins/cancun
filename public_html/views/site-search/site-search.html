@@ -1,39 +1,136 @@
 {% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent() }}
 <link rel="stylesheet" href="public_html/css/site-search/site-search.css"> 
 {% endblock %} {% block main %}
-	<main id="hotels">
-		<form action="" method="POST">
-			<div class="fusion-container">
-				<div class="pure-g row filter-box">
-					<input type="text" placeholder="Swim with dolphins">
-					<a href="">x</a>
-				</div>
-				<div class="pure-g row hide-for-large hide-for-medium">
-					<div class="pure-u-1-2">
-						<label for="cruise-sort" class="cruise-sort">Sort by:</label>
-						<div class="fusion-select">
-							<i class="icon icon-dropdown"></i>
-                   			<select name="ss-sortBy" id="ss-sortBy" class="fusion-change">
-                   				<option value="best-match" selected>Best match</option>
-                   				<option value="a-z">A - Z</option>
-                   				<option value="z-a" selected>Z - A</option>
-                   			</select>
-					</div>
-					<div class="pure-u-1-2">
-						<a href="" class="button filters clear">Filters</a>
-					</div>
-				</div>
-				<div class="pure-g row">
-					<div class="pure-u-md-7-24 hide-for-small filters-sidebar">
-						
-					</div> <!-- end filters sidebar -->
-					<div class="pure-u-1 pure-u-md-17-24 results-list">
-						
-					</div>
-				</div>
-
+	<main id="search">
+		<div class="fusion-container">
+			<div class="results-text hide-for-small">
+				Search results for “swim with dolphins”
 			</div>
-		</form>
+			<form action="" method="POST">
+				<div class="pure-g row filter-box">
+					<div class="pure-u-3-4 leaving-wrap">
+						<input type="text" placeholder="Swim with dolphins">
+						<a class="cancel">x</a>
+					</div>
+					<div class="pure-u-1-4">
+						<button class="clear">Search</button>
+					</div>
+				</div>
+			</form>
+			<div class="pure-g row hide-for-large hide-for-medium mobile-sort-filters">
+				<div class="pure-u-2-3">
+					<label for="search-sort" class="search-sort left">Sort by:</label>
+					<div class="fusion-select left">
+						<i class="icon icon-arrow-down-small"></i>
+               			<select name="ss-sortBy" id="ss-sortBy" class="fusion-change">
+               				<option value="best-match" selected>Best match</option>
+               				<option value="a-z">A - Z</option>
+               				<option value="z-a">Z - A</option>
+               			</select>
+               		</div>
+				</div>
+				<div class="pure-u-1-3">
+					<a href="" class="button filters clear">Filters</a>
+				</div>
+			</div>
+			<div class="pure-g row">
+				<div class="pure-u-md-7-24 hide-for-small filters-sidebar">
+					<h3>Filters</h3>
+					<hr>
+					<h5>Type</h5>
+					<label><input type="checkbox" name="type" value="blog"> Blog Page (12)</label>
+					<label><input type="checkbox" name="type" value="page"> Page (2)</label>
+					
+				</div> <!-- end filters sidebar -->
+				<div class="pure-u-1 pure-u-md-17-24 results-list">
+					<div class="pure-g row result">
+						<div class="pure-u-1 pure-u-md-7-12">
+							<h4>Blog Post</h4>
+							<h2>The best places to swim with dolphins in Cancun</h2> 
+							<p class="light">… jungles, rare animal species, ancient civilizations, colonial cities, and breathtaking cenotes <span class="regular">swim with dolphins</span> are all waiting to be discovered just a stone's throw from...</p>
+						</div>
+						<div class="pure-u-5-12 hide-for-small">
+							<img src="public_html/images/site-search/dolphin-solo.jpg" class="right">
+						</div>
+					</div>
+					<div class="pure-g row result">
+						<div class="pure-u-1 pure-u-md-7-12">
+							<h4>Page</h4>
+							<h2>Swimming with Dolphins</h2> 
+							<p class="light">… jungles, rare animal species, ancient civilizations, colonial cities, and breathtaking cenotes <span class="regular">swim with dolphins</span> are all waiting to be discovered just a stone's throw from...</p>
+						</div>
+						<div class="pure-u-5-12 hide-for-small">
+							<img src="public_html/images/site-search/dolphin-girl.jpg" class="right">
+						</div>
+					</div>
+					<div class="pure-g row result">
+						<div class="pure-u-1 pure-u-md-7-12">
+							<h4>Blog Post</h4>
+							<h2>Top attractions for the water lovers in your party</h2> 
+							<p class="light">… jungles, rare animal species, ancient civilizations, colonial cities, and breathtaking cenotes <span class="regular">swim with dolphins</span> are all waiting to be discovered just a stone's throw from...</p>
+						</div>
+						<div class="pure-u-5-12 hide-for-small">
+							<img src="public_html/images/site-search/fluke.jpg" class="right">
+						</div>
+					</div>
+					<div class="pure-g row result">
+						<div class="pure-u-1 pure-u-md-7-12">
+							<h4>Blog Post</h4>
+							<h2>The best places to swim with dolphins in Cancun</h2> 
+							<p class="light">… jungles, rare animal species, ancient civilizations, colonial cities, and breathtaking cenotes <span class="regular">swim with dolphins</span> are all waiting to be discovered just a stone's throw from...</p>
+						</div>
+						<div class="pure-u-5-12 hide-for-small">
+							<img src="public_html/images/site-search/dolphin-solo.jpg" class="right">
+						</div>
+					</div>
+					<div class="pure-g row result">
+						<div class="pure-u-1 pure-u-md-7-12">
+							<h4>Page</h4>
+							<h2>Swimming with Dolphins</h2> 
+							<p class="light">… jungles, rare animal species, ancient civilizations, colonial cities, and breathtaking cenotes <span class="regular">swim with dolphins</span> are all waiting to be discovered just a stone's throw from...</p>
+						</div>
+						<div class="pure-u-5-12 hide-for-small">
+							<img src="public_html/images/site-search/dolphin-girl.jpg" class="right">
+						</div>
+					</div>
+					<div class="pure-g row result">
+						<div class="pure-u-1 pure-u-md-7-12">
+							<h4>Blog Post</h4>
+							<h2>Top attractions for the water lovers in your party</h2> 
+							<p class="light">… jungles, rare animal species, ancient civilizations, colonial cities, and breathtaking cenotes <span class="regular">swim with dolphins</span> are all waiting to be discovered just a stone's throw from...</p>
+						</div>
+						<div class="pure-u-5-12 hide-for-small">
+							<img src="public_html/images/site-search/fluke.jpg" class="right">
+						</div>
+					</div>
+					<div class="pure-g row results-bottom">
+						<div class="pure-u-1-2 hide-for-small">
+							<a id="scroll-to-top" class="green">Back to top</a>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-2">
+							<div class="pure-g row">
+								<div class="pure-u-1 pure-u-md-1-2">
+									<p class="results">Showing Reults 1 - 50 of 274</p>
+								</div>
+								<div class="pure-u-1 pure-u-md-1-2 next-prev">
+									<div class="pure-g row">
+										<div class="pure-u-1-2">
+											<a href="" class="prev end">Prev</a>
+										</div>
+										<div class="pure-u-1-2">
+											<a href="" class="next">Next</a>
+										</div>
+									</div>
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
 		<form method="POST" class="mobile-search-bar hide-for-large hide-for-medium" action="">
 			<div class="fusion-container">
 				<div class="pure-g row">

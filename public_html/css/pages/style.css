@@ -272,6 +272,13 @@ sup {
 	font-weight: 300;
 }
 
+#fusion hr {
+	height: 1px;
+    background-color: #efefef;
+    color: #efefef;
+    border: none;
+}
+
 /* Icons */
 #fusion .icon {
 	display: inline-block;
