@@ -1,7 +1,6 @@
 var map = {
 	canvas : document.querySelector('[data-map] .f-map-canvas'),
 	container: document.querySelector('[data-map]'),
-	popup: document.querySelector('[data-map] .f-map-popup'),
 	places: [],
 	marker: {
 		array: [],
@@ -150,7 +149,6 @@ var map = {
 			f.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyACnDRF0TNeXEbMSeqWbKN-1zT8mUdJueA', function() {
 		          f.getScript(f.base.jsp + 'snazzy-info-window.js', function() {
 					f.addClass(document.body, 'f-map-init');
-					f.toggleClass(document.body, 'f-map-active');
 					map.init();
 		          }, true);
 			});
