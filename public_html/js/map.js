@@ -139,9 +139,9 @@ var map = {
 	        		});
 	        	}
 
-	        	if (map.container.querySelector('.f-map-select')) {
-	        		map.container.querySelector('.f-map-select').addEventListener('change', function() {
-	        			console.log(this);
+	        	if (map.container.querySelector('.f-map-select select')) {
+	        		map.container.querySelector('.f-map-select select').addEventListener('change', function() {
+	        			console.log(this.value);
 	        		});
 	        	}
 
