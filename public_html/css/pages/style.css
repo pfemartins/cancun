@@ -576,9 +576,6 @@ html.svg.touch #fusion .icon {
 	content: '';
 	display: none;
 }
-#fusion #banner nav.top ul li a {
-	text-transform: uppercase;
-}
 
 #navbar .navbar {
 	display: flex;

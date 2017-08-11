@@ -156,6 +156,7 @@ h2.margin-top {
 .swiper-slide-price {
     top: 0;
     right: 0;
+    font-weight: 400;
 }
 
 .swiper-slide-featured {
@@ -185,7 +186,7 @@ h2.margin-top {
     background: -o-linear-gradient(right, transparent 30%, #FFFFFF 86%);
     background: -moz-linear-gradient(right, transparent 30%, #FFFFFF 86%);
     background: linear-gradient(to right, transparent 30%, #FFFFFF 86%);
-    right: 1px;
+    right: -20px;
     left: auto;
     top: 0;
     z-index: 2;
