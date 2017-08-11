@@ -7,7 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
         <link rel="stylesheet" href="public_html/css/pages/base.css">
-        <link id="fusion-css-style" rel="stylesheet" href="public_html/css/pages/style.css">
+        <link rel="stylesheet" href="public_html/css/pages/style.css">
+        <style id="fusion-sprite">
+            {{- source('images/sprites/base.css') -}}
+        </style>
+        <link rel="stylesheet" href="public_html/css/pages/base.css">
         <link rel="stylesheet" href="public_html/css/pages/plugins.css">
         <link rel="stylesheet" href="public_html/css/pages/date.css">
         <link rel="stylesheet" href="public_html/css/hotels/reservation.css">
@@ -21,7 +25,7 @@
          <![endif]-->
     </head>
     <body>
-        <div id="fusion" class="{{ page }}">
+        <div id="fusion" class="{{ page }}" data-sprite="public_html/images/sprites/base.png">
             {% if banner %}
                 <div id="banner">
             {% endif %}

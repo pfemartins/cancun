@@ -67,8 +67,5 @@
         default:
                break;
      }
-
      echo $twig->render($twigPath, $parameters);
-
-     // Within a given twig file you should now be able to use {{ urlCurrent }} or any index within the $parameters array.
 ?>

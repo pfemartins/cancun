@@ -308,7 +308,9 @@
 	margin-right: 15px;
 }
 #fusion #hotels .flight-info .icon-arrow-down.active {
-	background-position: -10px -502px;
+     width: 17px;
+     height: 9px;
+     background-position: -10px -502px;
 }
 .flight-wrap .flight-dropdown-wrap {
 	display: none;

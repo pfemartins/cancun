@@ -15,7 +15,7 @@ var f = {
                link.rel = 'stylesheet';
                console.log(link.href);
                link.onload = false;
-               document.head.insertBefore(link, document.getElementById('fusion-css-style'));
+               document.head.insertBefore(link, document.getElementById('fusion-sprite'));
           }
 
           script = document.createElement('script');
@@ -80,6 +80,7 @@ var f = {
      },
 	init: function() {
 		f.paths();
+          f.sprites();
           f.update();
 		f.scripts();
 		f.binds();
@@ -155,6 +156,14 @@ var f = {
           }
           
 	},
+     sprites: (function() {
+          var image = document.createElement('img');
+          image.src = document.getElementById('fusion').getAttribute('data-sprite');
+          console.log(image.src);
+          image.onload = function() {
+               document.getElementById('fusion-sprite').appendChild(document.createTextNode('#fusion .icon {background-image:url(' + this.src + ');background-size:' + (this.naturalWidth / 2) + 'px ' + (this.naturalHeight / 2) + 'px;}')); 
+          }
+     }),
      update_watch: [],
      update_timeout: null,
 };
