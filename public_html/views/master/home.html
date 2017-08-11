@@ -1,104 +1,105 @@
 {% extends '/views/includes/page.html' %} {% block title %}Home - {{ parent() }}{% endblock %}{% block head %} {{ parent() }}
 <link rel="stylesheet" href="https://cdn.rawgit.com/nolimits4web/Swiper/d9f17789/dist/css/swiper.min.css">
 <link rel="stylesheet" href="public_html/css/master/master.css"> 
-{% endblock %} {% block main %}
-	<div class="fusion-container">
-		<h1>Cancun is <br>waiting for <br>you</h1>
-		<a class="button yellow-bg hide-for-small desktop-filters">Book your trip!</a>
-		<a class="button yellow-bg mobile-filters-button hide-for-large hide-for-medium">Book your trip!</a>
-		<form action="" method="POST" class="filter-box">
-			<div class="pure-g row">
-				<span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
-					<div class="pure-u-1-4 section">
-						<h4 class="gray hide-for-small">Check-In</h4>
-						<div class="date"><span class="number">21</span> / June</div>
-						<a><i class="icon icon-arrow-down hide-for-small"></i></a>
-						<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
-					</div>
-					<div class="pure-u-1-4 section">
-						<h4 class="gray hide-for-small">Check-Out</h4>
-						<div class="date"><span class="number">27</span> / June</div>
-						<a><i class="icon icon-arrow-down hide-for-small"></i></a>
-						<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
-					</div>
-				</span>
+{% endblock %}
+{% block banner %}
+	{{ parent() }}
+	<h1>Cancun is <br>waiting for <br>you</h1>
+	<a class="button yellow-bg hide-for-small desktop-filters">Book your trip!</a>
+	<a class="button yellow-bg mobile-filters-button hide-for-large hide-for-medium">Book your trip!</a>
+	<form action="" method="POST" class="filter-box">
+		<div class="pure-g row">
+			<span id="landing-dates" class="fusion-dates" data-date-output="#landing-dates .fusion-date-checkin,#landing-dates .fusion-date-checkout">
 				<div class="pure-u-1-4 section">
-					<h4 class="gray">Guests</h4>
-						<div class="guests"><span class="number"><select name="guests_num" id="">
-							<option value="1" selected>1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-						</select></span></div>
-						<a><i class="icon icon-arrow-down"></i></a>
+					<h4 class="gray hide-for-small">Check-In</h4>
+					<div class="date"><span class="number">21</span> / June</div>
+					<a><i class="icon icon-arrow-down hide-for-small"></i></a>
+					<input id="fusion-checkin" class="fusion-date-checkin pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Arrive" type="text" readonly="readonly" hidden>
 				</div>
-				<div class="pure-u-1-4 section last">
-					<div class="location"><select name="location" id="">
-						<option value="cozumel" selected>Cozumel</option>
-						<option value="xel-ha">Xel-Ha</option>
-						<option value="puerto-vallarta">Puerto Vallarta</option>
-					</select></div>
-					<a><i class="icon icon-arrow-down hide-for-small last"></i></a>
-					<button class="update-search yellow-bg">Search hotels</button>
-					<a class="more-filters-link">+ More filters</a>
+				<div class="pure-u-1-4 section">
+					<h4 class="gray hide-for-small">Check-Out</h4>
+					<div class="date"><span class="number">27</span> / June</div>
+					<a><i class="icon icon-arrow-down hide-for-small"></i></a>
+					<input id="fusion-checkout" class="fusion-date-checkout pure-input-1 curved ie-curved fusion-readonly dark fusion-date-input" value="Depart" type="text" readonly="readonly" hidden>
+				</div>
+			</span>
+			<div class="pure-u-1-4 section">
+				<h4 class="gray">Guests</h4>
+					<div class="guests"><span class="number"><select name="guests_num" id="">
+						<option value="1" selected>1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+					</select></span></div>
+					<a><i class="icon icon-arrow-down"></i></a>
+			</div>
+			<div class="pure-u-1-4 section last">
+				<div class="location"><select name="location" id="">
+					<option value="cozumel" selected>Cozumel</option>
+					<option value="xel-ha">Xel-Ha</option>
+					<option value="puerto-vallarta">Puerto Vallarta</option>
+				</select></div>
+				<a><i class="icon icon-arrow-down hide-for-small last"></i></a>
+				<button class="update-search yellow-bg">Search hotels</button>
+				<a class="more-filters-link">+ More filters</a>
+			</div>
+		</div>
+		<div class="more-filters">
+			<div class="pure-g row">
+				<div class="pure-u-1-2">
+					<input type="text" id="hotel-name" class="curved" placeholder="Hotel name">
+					<div class="pure-g row">
+						<div class="pure-u-1 hr">
+							<hr>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-1-2">
+					<label for="price-range">Price Range per night</label>
+					<div id="price-range"></div>
+					<div class="section-wrap">
+						<div class="price-low left">from: $530</div>
+						<div class="price-high right">to: $<span id="price-high-value">1,700</span></div>
+					</div>
+					<input type="hidden" name="priceValue" id="priceValue" value="1700">
+					<div class="pure-g row">
+						<div class="pure-u-1 hr">
+							<hr>
+						</div>
+					</div>
+					
 				</div>
 			</div>
-			<div class="more-filters">
-				<div class="pure-g row">
-					<div class="pure-u-1-2">
-						<input type="text" id="hotel-name" class="curved" placeholder="Hotel name">
-						<div class="pure-g row">
-							<div class="pure-u-1 hr">
-								<hr>
-							</div>
+			<div class="pure-g row">
+				<div class="pure-u-1-2">
+					<div class="section-wrap">
+						<label for="star-rating">Star rating  <i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i></label>
+						<div id="star-rating"></div>
+						<div class="value-wrap">
+							<div class="star-low left">from: 2.0</div>
+							<div class="star-high right">to: <span id="star-rating-value">4.8</span></div>
 						</div>
 					</div>
-					<div class="pure-u-1-2">
-						<label for="price-range">Price Range per night</label>
-						<div id="price-range"></div>
-						<div class="section-wrap">
-							<div class="price-low left">from: $530</div>
-							<div class="price-high right">to: $<span id="price-high-value">1,700</span></div>
-						</div>
-						<input type="hidden" name="priceValue" id="priceValue" value="1700">
-						<div class="pure-g row">
-							<div class="pure-u-1 hr">
-								<hr>
-							</div>
-						</div>
-						
-					</div>
+					<input type="hidden" name="starValue" id="starValue" value="4.8">
 				</div>
-				<div class="pure-g row">
-					<div class="pure-u-1-2">
-						<div class="section-wrap">
-							<label for="star-rating">Star rating  <i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i></label>
-							<div id="star-rating"></div>
-							<div class="value-wrap">
-								<div class="star-low left">from: 2.0</div>
-								<div class="star-high right">to: <span id="star-rating-value">4.8</span></div>
-							</div>
+				<div class="pure-u-1-2">
+					<div class="section-wrap">
+						<label for="tripadvisor-rating">TripAdvisor rating  <i class="icon icon-tripadvisor"></i></label>
+						<div id="tripadvisor-rating"></div>
+						<div class="value-wrap">
+							<div class="star-low left">from: 2.5</div>
+							<div class="star-high right">to: <span id="tripadvisor-rating-value">4.8</span></div>
 						</div>
-						<input type="hidden" name="starValue" id="starValue" value="4.8">
 					</div>
-					<div class="pure-u-1-2">
-						<div class="section-wrap">
-							<label for="tripadvisor-rating">TripAdvisor rating  <i class="icon icon-tripadvisor"></i></label>
-							<div id="tripadvisor-rating"></div>
-							<div class="value-wrap">
-								<div class="star-low left">from: 2.5</div>
-								<div class="star-high right">to: <span id="tripadvisor-rating-value">4.8</span></div>
-							</div>
-						</div>
-						<input type="hidden" name="tripAdvisorValue" id="tripAdvisorValue" value="4.8">
-					</div>
+					<input type="hidden" name="tripAdvisorValue" id="tripAdvisorValue" value="4.8">
 				</div>
 			</div>
-		</form>
-	</div>
-</div><!-- end #banner -->
+		</div>
+	</form>
+{% endblock %}
+{% block main %}
 	<main id="home">
 		<div class="fusion-container">
 			<h2>Choose your Cancun experience</h2>

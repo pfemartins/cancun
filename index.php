@@ -18,6 +18,7 @@
           // HOME
           case $url."master":
                // $parameters['page'] = 'home';
+               $parameters['banner'] = true;
                $twigPath = 'views/master/home.html';
                break;
           case $url."sr-hotels":
@@ -37,6 +38,7 @@
                $twigPath = 'views/hotels/reservation.html';
                break;
         case $url."explore":
+               $parameters['banner'] = true;
                // $parameters['page'] = 'home';
                $twigPath = 'views/hotels/explore.html';
                break;

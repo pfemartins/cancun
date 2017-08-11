@@ -138,18 +138,6 @@ h2.margin-top {
     height: 420px;
 }
 
-/* Map styles */
-.map {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-}
-.map img {
-    width: 100%;
-    height: auto;
-}
-
 @media (max-width: 767px) {
     .nav-wrap {
         display: none;

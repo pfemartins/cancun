@@ -24,16 +24,22 @@
 
 <body>
     <div id="fusion" class="{{ page }}">
-        {% if 'master' in urlCurrent or 'explore' in urlCurrent %}
+        {% if banner %}
             <div id="banner">
-            {% endif %} {% include 'views/includes/header.html' %} {% block main %}{% endblock %}
-            <div class="fusion-overlay inactive"></div>
-            {% include 'views/includes/footer.html' %}
-            <div id="fusion-scripts">
-                <script src="public_html/js/main.js"></script>
+                {% include 'views/includes/header.html' %}
+                <div class="fusion-container">
+                    {% block banner %}{% endblock %}
+                </div>
             </div>
-            {% block foot %} {% endblock %}
+        {% endif %}
+        {% block main %}{% endblock %}
+        <div class="fusion-overlay inactive"></div>
+        {% include 'views/includes/footer.html' %}
+        <div id="fusion-scripts">
+            <script src="public_html/js/main.js"></script>
         </div>
+        {% block foot %} {% endblock %}
+    </div>
 </body>
 
 </html>

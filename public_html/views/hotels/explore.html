@@ -1,14 +1,11 @@
 {% extends '/views/includes/page.html' %}
+{% block banner %}
+	{{ parent() }}
+	<h1>Explore</h1>
+{% endblock %}
 {% block main %}
-	<div class="fusion-container">
-		<h1>Explore</h1>
-	</div>
-</div><!-- end #banner -->
 	<main id="home">
-		<div class="map fusion-container-lg fusion-container">
-			<h2>Destinations Beyond Cancun</h2>
-			<img src="public_html/images/master/map.jpg" alt="UPDATE">
-		</div>
+		{# Map #}
 		<div class="fusion-container">
 			<h2 class="margin-top">Popular tours in Cancun</h2>
 			<div class="swiper-container gallery-popular-tours">
