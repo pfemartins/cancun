@@ -118,7 +118,11 @@ var f = {
           f.getScript(f.base.jsp + 'date.js', function() {
                date.init();
           }, true);
-          f.getScript(f.base.jsp + 'modal.js', false, true);
+     
+          if (document.querySelector('.f-modal')) {
+               f.getScript(f.base.jsp + 'modal.js', false, true);
+          }
+     
           f.getScript(f.base.jsp + 'nav.js', function() {});
 
           f.getScript(f.base.jsp + 'webfontloader.js', function() {

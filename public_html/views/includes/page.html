@@ -35,6 +35,16 @@
             <div id="fusion-scripts">
                 <script src="public_html/js/main.js"></script>
             </div>
+            <div id="fusion-modals">
+                {# {% if not 'account' in urlCurrent %} #}
+                    <a id="f-modal-account-trigger" class="f-modal-trigger-inactive f-modal-trigger f-hide" href="#f-modal-pikaday"></a>
+                    <div id="f-modal-account" class="f-modal f-hide">
+                        <div id="f-modal-account-inner" class="f-modal-inner f-rel f-pikaday">
+                            <i class="f-modal-close f-index-md icon f-abs f-abs-md-t f-abs-md-r icon-close-sm m"></i>
+                        </div>
+                    </div> 
+                {# {% endif %} #}
+            </div>
             {% block foot %}{% endblock %}
         </div>
     </body>
