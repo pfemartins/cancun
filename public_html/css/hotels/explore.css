@@ -5,8 +5,6 @@ mobile-search-bar
 
 /* Banner styles */
 #banner {
-    background:url(../../images/hotels/explore/banner.jpg);
-    background-size: cover;
     box-sizing: border-box;
     position: relative;
     display: block;
@@ -18,16 +16,17 @@ mobile-search-bar
     position: relative;
 }
 
-#banner nav.top ul.Menu > li > a,
-#banner #banner-content *,
-#banner #banner-title {
-    color: #FFFFFF;
+#banner #banner-title:before {
+    position: absolute;
 }
 
-#home h2,
-#banner #banner-content * {
+#home h2 {
     font-size: 16px;
     font-weight: 400;
+}
+
+#banner #banner-content * {
+    font-size: 14px;
 }
 
 .gallery-popular-tours,
@@ -39,19 +38,25 @@ h2.margin-top {
     margin-top: 45px;
 }
 
-#banner .icon-logo {
-    background-position: -10px -1241px;
-    width: 118px;
-    height: 54px;
-}
-
 #banner #banner-title {
     font-size: 28px;
     line-height: 28px;
     letter-spacing: 3px;
     font-weight: 700;
-    padding-bottom: 25px;
-    margin-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+#banner #banner-title:before {
+    content: '';
+    height: 3px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #373737;
+    max-width: 100px;
 }
 
 #banner a.button {
@@ -151,10 +156,8 @@ h2.margin-top {
         display: none;
     }
     #banner h1 {
-        text-align: center;
         font-size: 48px;
         line-height: 55px;
-        margin-top: 140px;
     }
     #fusion .fusion-container {
         padding: 0 15px;
@@ -162,16 +165,41 @@ h2.margin-top {
 }
 
 @media (min-width: 768px) {
+    #banner nav.top ul.Menu > li > a,
+    #banner #banner-content *,
+    #banner #banner-title {
+        color: #FFFFFF;
+    }
+    #banner {
+        background:url(../../images/hotels/explore/banner.jpg);
+        background-size: cover;
+    }
+    #banner .icon-logo {
+        background-position: -10px -1241px;
+        width: 118px;
+        height: 54px;
+    }
     #banner #banner-title {
         font-size: 54px;
         line-height: 62px;
         letter-spacing: 3px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+    #banner #banner-title:before {
+        background-color: #FFFFFF;
+        height: 5px;
+        max-width: 150px;
     }
     #banner #banner-inner {
-        padding-top: 350px;
+        padding-top: 150px;
         padding-bottom: 45px;
     }
     #banner #banner-content {
         max-width: 718px;
+    }
+    #banner #banner-content * {
+        font-size: 16px;
     }
 }
