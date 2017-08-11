@@ -25,7 +25,9 @@
         <div id="fusion" class="{{ page }}">
             {% if banner %}
                 <div id="banner">
+            {% endif %}
                     {% include 'views/includes/header.html' %}
+            {% if banner %}
                     {% block banner %}{% endblock %}
                 </div>
             {% endif %}
