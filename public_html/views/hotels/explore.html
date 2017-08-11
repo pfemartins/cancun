@@ -2,7 +2,10 @@
 {% block banner %}
 	{{ parent() }}
 	<div id="banner-inner" class="fusion-container">
-		<h1 id="banner-title">Explore</h1>
+		<h1 id="banner-title">
+			<span>Explore</span>
+			<span class="hide-for-large">Cancun</span>
+		</h1>
 		<div id="banner-content">
 			<p>Cancun, Quintana Roo, and the entirety of the Yucatan Peninsula are within range once you land.  Where will you explore?</p>
 		</div>
@@ -22,7 +25,10 @@
 				<span>Within Cancun</span>
 			</div>
 		</div>
-		{# Map #}
+		<div id="explore-map" class="fusion-container-lg fusion-container">
+			<h2 id="explore-map-title" class="margin-top">Destinations Beyond Cancun</h2>
+			<div id="explore-map-inner"></div>
+		</div>
 		<div class="fusion-container">
 			<h2 class="margin-top">Popular tours in Cancun</h2>
 			<div class="swiper-container gallery-popular-tours">

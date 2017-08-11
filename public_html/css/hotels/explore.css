@@ -52,6 +52,10 @@ h2.margin-top {
     background-position: 50% 50%;
 }
 
+#fusion .fusion-container {
+    padding: 0 15px;
+}
+
 #fusion .fusion-color {
     color: #39A58D;
 }
@@ -100,6 +104,11 @@ h2.margin-top {
 
 #explore #explore-summary-content *:last-child {
     margin-bottom: 0;
+}
+
+#explore #explore-map-inner {
+    background-color: #EEF8F9;
+    min-height: 550px;
 }
 
 #banner #banner-inner {
@@ -196,12 +205,13 @@ h2.margin-top {
     #explore #explore-summary-featured {
         height: 155px;
     }
-    #fusion .fusion-container {
-        padding: 0 15px;
-    }
 }
 
 @media (min-width: 768px) {
+    #fusion .fusion-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
     #banner nav.top ul.Menu > li > a,
     #banner #banner-content *,
     #banner #banner-title {
@@ -241,6 +251,9 @@ h2.margin-top {
     }
     #explore {
         padding-top: 35px;
+    }
+    #explore #explore-summary {
+        padding: 0;
     }
     #explore #explore-summary-inner {
         padding-right: 60%;
