@@ -193,6 +193,9 @@ h2.margin-top {
         padding-left: 7px;
         padding-right: 7px;
     }
+    #explore #explore-summary-featured {
+        height: 155px;
+    }
     #fusion .fusion-container {
         padding: 0 15px;
     }
