@@ -1,6 +1,13 @@
-{% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent() }}
-<link rel="stylesheet" href="public_html/css/hotels/search-results.css"> 
-{% endblock %} {% block main %}
+{% extends '/views/includes/page.html' %}
+{% block title %}
+	Search -
+	{{ parent()}}
+{% endblock %}
+{% block head %}
+	{{ parent() }}
+	<link rel="stylesheet" href="public_html/css/hotels/search-results.css"> 
+{% endblock %}
+{% block main %}
 	<main id="hotels">
 		<form action="" method="POST">
 			<div class="fusion-container">
