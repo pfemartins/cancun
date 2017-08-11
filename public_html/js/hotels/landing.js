@@ -80,33 +80,35 @@ function barsShowSlides(n) {
 } */
 
 /* Initialize Swiper */
-var galleryTop = new Swiper('.gallery-top', {
-   nextButton: '.swiper-button-next',
-   prevButton: '.swiper-button-prev',
-   spaceBetween: 10,
-   loop:true,
-   loopedSlides: 5, //looped slides should be the same     
-});
-var galleryThumbs = new Swiper('.gallery-thumbs', {
-   spaceBetween: 10,
-   slidesPerView: 8,
-   touchRatio: 0.2,
-   loop:true,
-   loopedSlides: 5, //looped slides should be the same
-   slideToClickedSlide: true,
-});
-var galleryBottom = new Swiper('.gallery-bottom', {
-   spaceBetween: 15,
-   slidesPerView: 1.4,
-   touchRatio: 0.8,
-   loop:true,
-   loopedSlides: 5, //looped slides should be the same
-   slideToClickedSlide: true,
-});
-galleryTop.params.control = galleryThumbs;
-galleryThumbs.params.control = galleryTop; 
-galleryBottom.params.control = galleryBottom;
 
+f.getScript(f.base.jsp + 'swiper.js', function() {
+  var galleryTop = new Swiper('.gallery-top', {
+     nextButton: '.swiper-button-next',
+     prevButton: '.swiper-button-prev',
+     spaceBetween: 10,
+     loop:true,
+     loopedSlides: 5, //looped slides should be the same     
+  });
+  var galleryThumbs = new Swiper('.gallery-thumbs', {
+     spaceBetween: 10,
+     slidesPerView: 8,
+     touchRatio: 0.2,
+     loop:true,
+     loopedSlides: 5, //looped slides should be the same
+     slideToClickedSlide: true,
+  });
+  var galleryBottom = new Swiper('.gallery-bottom', {
+     spaceBetween: 15,
+     slidesPerView: 1.4,
+     touchRatio: 0.8,
+     loop:true,
+     loopedSlides: 5, //looped slides should be the same
+     slideToClickedSlide: true,
+  });
+  galleryTop.params.control = galleryThumbs;
+  galleryThumbs.params.control = galleryTop; 
+  galleryBottom.params.control = galleryBottom;
+}, true);
 
 var hotel = {
   init: function() {

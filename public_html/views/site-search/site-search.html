@@ -1,6 +1,13 @@
-{% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent() }}
-<link rel="stylesheet" href="public_html/css/site-search/site-search.css"> 
-{% endblock %} {% block main %}
+{% extends '/views/includes/page.html' %}
+{% block title %}
+	Site Search -
+	{{ parent()}}
+{% endblock %}
+{% block head %}
+	{{ parent() }}
+	<link rel="stylesheet" href="public_html/css/site-search/site-search.css"> 
+{% endblock %}
+{% block main %}
 	<main id="search">
 		<div class="fusion-container">
 			<div class="results-text hide-for-small">
