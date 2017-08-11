@@ -1,7 +1,14 @@
-{% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent() }}
-<link rel="stylesheet" href="https://cdn.rawgit.com/nolimits4web/Swiper/d9f17789/dist/css/swiper.min.css">
-<link rel="stylesheet" href="public_html/css/hotels/landing.css"> 
-{% endblock %} {% block main %}
+{% extends '/views/includes/page.html' %}
+{% block title %}
+    Hotel Landing -
+    {{ parent()}}
+{% endblock %}
+{% block head %}
+    {{ parent() }}
+	<link rel="stylesheet" href="https://cdn.rawgit.com/nolimits4web/Swiper/d9f17789/dist/css/swiper.min.css">
+	<link rel="stylesheet" href="public_html/css/hotels/landing.css"> 
+{% endblock %}
+{% block main %}
 	<main id="hotels">
 		<div class="fusion-container">
 			<div class="pure-g row top-section">
