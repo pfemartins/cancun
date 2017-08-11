@@ -1,9 +1,3 @@
-/*
-TODOS - remove
-mobile-search-bar
-*/
-
-/* Banner styles */
 #banner {
     box-sizing: border-box;
     position: relative;
@@ -12,25 +6,40 @@ mobile-search-bar
 }
 
 .swiper-slide-inner,
+#explore #explore-summary-featured,
+#explore #explore-summary,
 #banner #banner-title {
     position: relative;
 }
 
+.swiper-overlay,
+.swiper-slide-price,
+.swiper-container .button-next,
 #banner #banner-title:before {
     position: absolute;
 }
 
-#home h2 {
-    font-size: 16px;
-    font-weight: 400;
+#explore #explore-summary-featured,
+#banner #banner-title {
+    font-weight: 700;
 }
 
-#banner #banner-content * {
-    font-size: 14px;
+.swiper-container .button-next,
+.swiper-overlay {
+    background: #FFFFFF;
+}
+
+.swiper-overlay,
+.swiper-slide-featured {
+    height: 315px;
+}
+
+.small-gallery .swiper-slide-featured {
+    height: 200px;
 }
 
 .gallery-popular-tours,
-#home {
+#explore {
     margin-bottom: 45px;
 }
 
@@ -38,12 +47,44 @@ h2.margin-top {
     margin-top: 45px;
 }
 
+.fusion-cover {
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#explore h2 {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#explore #explore-summary-featured {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#explore #explore-summary-inner {
+    background: #F7F7F7;
+    padding: 18px;
+}
+
+#banner #banner-inner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#banner #banner-content * {
+    font-size: 14px;
+}
+
 #banner #banner-title {
     font-size: 28px;
     line-height: 28px;
     letter-spacing: 3px;
-    font-weight: 700;
-    padding-top: 25px;
     padding-bottom: 15px;
     margin-bottom: 15px;
 }
@@ -55,22 +96,10 @@ h2.margin-top {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #373737;
+    background: #373737;
     max-width: 100px;
 }
 
-#banner a.button {
-    width: 300px;
-    padding: 15px;
-    cursor: pointer;
-}
-
-#home h2 {
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-/* Swipper styles */
 .swiper-slide {
     width: 230px;
     box-sizing: border-box;
@@ -80,41 +109,25 @@ h2.margin-top {
     width: 314px;
 }
 
-.thirds-gallery .swiper-slide {
-    background: #F7F7F7;
-    width: 312px;
-}
-
 .swiper-slide-inner {
-    position: relative;
     padding-right: 45px;
 }
 
 .swiper-slide-price {
-    position: absolute;
     top: 0;
     right: 0;
 }
 
 .swiper-slide-featured {
     display: block;
-    height: 315px;
     margin-bottom: 5px;
-    background-size: cover;
-    background-position: 50%;
-}
-
-.small-gallery .swiper-slide-featured {
-    height: 200px;
 }
 
 .swiper-container .button-next {
     right: 10px;
     left: auto;
-    background: #fff;
     padding: 7px 15px;
     border-radius: 50%;
-    position: absolute;
     top: 50%;
     margin-top: -22px;
     z-index: 10;
@@ -127,28 +140,15 @@ h2.margin-top {
 }
 
 .swiper-overlay {
-    height: 313px;
     width: 230px;
-    background: #fff;
-    background: -webkit-linear-gradient(left, transparent 30%, #fff 86%); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, transparent 30%, #fff 86%); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, transparent 30%, #fff 86%); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, transparent 30%, #fff 86%); /* Standard syntax */
-    position: absolute;
+    background: -webkit-linear-gradient(left, transparent 30%, #FFFFFF 86%);
+    background: -o-linear-gradient(right, transparent 30%, #FFFFFF 86%);
+    background: -moz-linear-gradient(right, transparent 30%, #FFFFFF 86%);
+    background: linear-gradient(to right, transparent 30%, #FFFFFF 86%);
     right: 1px;
     left: auto;
     top: 0;
     z-index: 2;
-}
-#fusion .swiper-slide a p {
-    color: #fff;
-    display: block;
-    font-weight: 700;
-    font-size: 24px;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    top: 36%;
 }
 
 @media (max-width: 767px) {
@@ -158,6 +158,10 @@ h2.margin-top {
     #banner h1 {
         font-size: 48px;
         line-height: 55px;
+    }
+    #explore #explore-summary {
+        padding-left: 7px;
+        padding-right: 7px;
     }
     #fusion .fusion-container {
         padding: 0 15px;
@@ -188,7 +192,7 @@ h2.margin-top {
         margin-bottom: 25px;
     }
     #banner #banner-title:before {
-        background-color: #FFFFFF;
+        background: #FFFFFF;
         height: 5px;
         max-width: 150px;
     }
@@ -201,5 +205,15 @@ h2.margin-top {
     }
     #banner #banner-content * {
         font-size: 16px;
+    }
+    #explore #explore-summary-inner {
+        padding-right: 50%;
+    }
+    #explore #explore-summary-featured {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 50%;
     }
 }
