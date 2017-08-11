@@ -134,10 +134,6 @@ h2.margin-top {
     margin-top: 30px;
 }
 
-.gallery-know .swiper-slide {
-    height: 420px;
-}
-
 @media (max-width: 767px) {
     .nav-wrap {
         display: none;
@@ -159,143 +155,8 @@ h2.margin-top {
     #banner h1 br {
         display: none;
     }
-    #banner .fusion-container {
-        padding: 0 30px;
-    }
     #fusion .fusion-container {
         padding: 0 15px;
-    }
-    /* Mobile search styles */
-    .mobile-search-bar {
-        display: none;
-    }
-    #master .sort-wrap {
-        margin-top: 10px;
-    }
-    #master .mobile-filters-button {
-        display: block;
-        float: right;
-        border: 1px solid #C9C9C9;
-        width: 135px;
-        font-weight: 400;
-        margin-bottom: 25px;
-    }
-    .mobile-search-bar .flying-from-city {
-        font-size: 24px;
-    }
-    .mobile-search-bar {
-        display: none;
-    }
-    #master .mobile-search-bar nav {
-        margin-bottom: 20px;
-    }
-    #master .mobile-search-bar a.close {
-        float: right;
-        font-size: 32px;
-        font-weight: 500;
-        margin-bottom: 12px;
-        line-height: 1;
-        border: 1px solid #C9C9C9;
-    }
-    #master .mobile-search-bar .additional-filters a.close {
-        font-size: 14px
-    }
-    #master .mobile-search-bar .additional-filters a.button {
-        width: 98%;
-    }
-    form.mobile-search-bar.open-filters {
-        position: fixed;
-        background: #fff;
-        width: 100%;
-        z-index: 1;
-        top: 0;
-        overflow-y: scroll;
-        max-height: 100%;
-        display: block;
-        height: 100%;
-    }
-    form.mobile-search-bar.open-filters .fusion-container {
-        padding: 10px;
-    }
-    #fusion .mobile-search-bar button {
-        width: 100%;
-        font-size: 14px;
-        font-weight: 700;
-        padding: 10px;
-        margin: 10px 0;
-    }
-    #fusion .mobile-search-bar a.more-filters, #fusion .mobile-search-bar a.hide-filters {
-        text-align: center;
-        display: block;
-    }
-    #fusion #master .flight-info .duration-details p {
-        float: left;
-    }
-    #master .mobile-search-bar .counter-row {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    #master .mobile-search-bar .counter-row .counter-number {
-        text-align: center;
-    }
-    #master .mobile-search-bar .counter-row .circle {
-        width: 23px;
-        height: 23px;
-        text-align: center;
-        box-sizing: border-box;
-        padding: 2px 0;
-        border-radius: 50%;
-        border: 1px solid #333333;
-        line-height: 1;
-        cursor: pointer;
-    }
-    #fusion .mobile-search-bar select {
-        width: 100%;
-        padding-right: 30px;
-        border: none;
-    }
-    #fusion #master .mobile-search-bar #child-age {
-        font-size: 24px;
-    }
-    #fusion .filter-box .section .date, #fusion .filter-box .section .guests, #fusion .filter-box .section .rooms, #fusion .mobile-search-bar .date, #fusion .mobile-search-bar .guests, #fusion .mobile-search-bar .rooms {
-        font-size: 12px;
-    }
-    .filter-box .section .date .number, #fusion .filter-box .section .guests .number, #fusion .filter-box .section .rooms .number, #fusion .mobile-search-bar .date .number, #fusion .mobile-search-bar .guests .number, #fusion .mobile-search-bar .rooms .number {
-        font-size: 28px;
-    }
-    #fusion .filters-sidebar h5 {
-        font-weight: 400;
-        font-size: 12px;
-        margin: 14px 0 10px;
-    }
-    #fusion .filters-sidebar label {
-        font-size: 12px;
-        color: #333;
-    }
-    #fusion .filters-sidebar input[type=checkbox] {
-        float: left;
-        margin: 4px 14px 10px 0;
-    }
-    #fusion .filters-sidebar label:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
-    #fusion .filters-sidebar a {
-        font-size: 12px;
-        display: block;
-        margin: 5px 0 14px 30px;
-    }
-    .mobile-search-bar .additional-filters a.button {
-        width: 98%;
-    }
-    #hotels .mobile-search-bar a.close {
-        float: right;
-        font-size: 32px;
-        font-weight: 500;
-        margin-bottom: 12px;
-        line-height: 1;
-        border: 1px solid #C9C9C9;
     }
 }
 
