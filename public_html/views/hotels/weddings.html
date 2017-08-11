@@ -1,9 +1,14 @@
- {% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent()
-}}
-<link rel="stylesheet" href="public_html/css/hotels/weddings.css"> {% endblock %} {% block main %}
-
+{% extends '/views/includes/page.html' %}
+{% block title %}
+    Weddings -
+    {{ parent()}}
+{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <link rel="stylesheet" href="public_html/css/hotels/weddings.css"> 
+{% endblock %}
+{% block main %}
 <div id="wedding">
-
     <div class="header-stuff hide-for-small fusion-container">
         <div class="desktop-title hide-for-small">Weddings</div>
         <div class="big-underline hide-for-small"></div>

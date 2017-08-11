@@ -1,6 +1,13 @@
-{% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent()
-}}
-<link rel="stylesheet" href="public_html/css/hotels/explore-regions.css"> {% endblock %} {% block main %}
+{% extends '/views/includes/page.html' %}
+{% block title %}
+    Explore Regions -
+    {{ parent()}}
+{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <link rel="stylesheet" href="public_html/css/hotels/explore-regions.css"> 
+{% endblock %}
+{% block main %}
 <div id="explore-regions">
     <div class="pure-g">
         <div class="pure-u-6-24">

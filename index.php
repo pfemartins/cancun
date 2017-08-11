@@ -61,6 +61,7 @@
         case $url."weddings":
                // $parameters['page'] = 'home';
                $twigPath = 'views/hotels/weddings.html';
+               break;
         case $url."map":
                $twigPath = 'views/includes/map.html';
                break;

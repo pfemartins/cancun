@@ -1,7 +1,13 @@
- {% extends '/views/includes/page.html' %} {% block title %}Cancun.com{{ parent() }}{% endblock %}{% block head %} {{ parent()
-}}
-<link rel="stylesheet" href="public_html/css/hotels/checkout.css"> {% endblock %} {% block main %}
-
+{% extends '/views/includes/page.html' %}
+{% block title %}
+    Hotel Checkout -
+    {{ parent()}}
+{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <link rel="stylesheet" href="public_html/css/hotels/checkout.css"> 
+{% endblock %}
+{% block main %}
 <div id="check">
     <!--<div class="left-column hide-for-small"></div>-->
 
