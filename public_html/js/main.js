@@ -25,6 +25,15 @@ var f = {
 
           document.querySelector('#fusion-scripts').appendChild(script);
      },
+     addEvent: function(item, callback, type) {
+          type = type || f.event;
+
+          if (document.querySelector(item)) {
+               for (var a = 0; a < document.querySelectorAll(item).length; a++) {
+                    document.querySelectorAll(item)[a].addEventListener(type, callback);
+               }
+          }
+     },
      hasClass: function(selector, value) {
           if (typeof selector !== 'object') {
                selector = document.querySelector(selector);
@@ -106,13 +115,11 @@ var f = {
 	     f.base.images = f.base.root + 'public_html/images/';
 	},
 	scripts: function() {
-		// For global plugins.
           f.getScript(f.base.jsp + 'date.js', function() {
                date.init();
-          });
-          f.getScript(f.base.jsp + 'nav.js', function() {
-              
-          });
+          }, true);
+          f.getScript(f.base.jsp + 'modal.js', false, true);
+          f.getScript(f.base.jsp + 'nav.js', function() {});
 
           f.getScript(f.base.jsp + 'webfontloader.js', function() {
                WebFont.load({

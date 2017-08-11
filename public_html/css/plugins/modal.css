@@ -1,0 +1,57 @@
+#fusion .f-modal,
+#fusion .f-modal-box .f-modal-inner {
+     background-color: #FFFFFF;
+}
+
+#fusion .f-modal {
+     position: fixed;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+}
+
+#fusion .f-modal-header {
+     min-height: 45px;
+}
+
+#fusion .f-modal {
+     -webkit-transition: opacity 0.2s linear;
+     -o-transition: opacity 0.2s linear;
+     transition: opacity 0.2s linear;
+     opacity: 0;
+     z-index: 1000;
+     max-height: 100%;
+     overflow-y: auto;
+}
+
+#fusion.f-modal-active .f-modal {
+     opacity: 1;
+}
+
+#fusion .f-modal-box {
+     overflow-y: initial;
+     background-color: transparent;
+     pointer-events: none;
+}
+
+#fusion .f-modal-box:before {
+     content: '';
+     display: inline-block;
+     margin-left: 0;
+     height: 100%;
+}
+
+#fusion .f-modal-box:before,
+#fusion .f-modal-box .f-modal-inner {
+     display: inline-block;
+     vertical-align: middle;
+}
+
+#fusion .f-modal-box .f-modal-inner {
+     width: 100%;
+     max-width: 100%;
+     max-height: 100%;
+     overflow-y: auto;
+     pointer-events: all;
+}
