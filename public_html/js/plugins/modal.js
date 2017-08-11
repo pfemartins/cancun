@@ -79,36 +79,6 @@ f.modals = {
           }, f.event);
 
           f.removeClass(document.getElementById('fusion-modal'), 'f-hide');
-          // Fix
-          // f.update_watch.array.push(window.f.modals.resize);
-     }),
-     resize: (function() {
-          // NEED TO REFACTOR
-          setTimeout(function() {
-               var item = {
-                    left: 0,
-                    modal: document.querySelector('#f-modal-pikaday.f-modal-animate'),
-                    offset: 15,
-                    trigger: document.querySelector('[data-trigger-active]'),
-                    top: 0,
-                    width: 760,
-               };
-
-               if (item.trigger && item.modal) {
-                    if (f.device !== 'mobile') {
-                         do {
-                              item.top += item.trigger.offsetTop || 0;
-                              item.left += item.trigger.offsetLeft || 0;
-                              item.trigger = item.trigger.offsetParent;
-                         } while (item.trigger)
-
-                         console.log(item.left);
-
-                         item.modal.style.top = (item.top + 42) + 'px';
-                         item.modal.style.left = (f.device !== 'tablet' ? (item.left + item.width) < f.width ? (item.left + 'px') : ((f.width - (item.width + item.offset)) + 'px') : '0' );
-                    }
-               }
-          }, 200);
      }),
      show: (function(item) {
           var show = true;
