@@ -4,31 +4,31 @@ mobile-search-bar
 */
 
 /* Banner styles */
-.gallery-popular-tours,
-#banner,
-#home {
-    margin-bottom: 50px;
-}
-
 #banner {
     background:url(../../images/hotels/explore/banner.jpg);
     background-size: cover;
     box-sizing: border-box;
     position: relative;
-    margin-bottom: 50px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     max-width: 1470px;
 }
+
+.gallery-popular-tours,
+#home {
+    margin-bottom: 50px;
+}
+
 #banner .icon-logo {
     background-position: -10px -1241px;
     width: 118px;
     height: 54px;
 }
-#fusion #banner nav.top ul.Menu > li > a {
-    color: #fff;
-    text-shadow: 2px 2px 2px #404040;
+
+#banner nav.top ul.Menu > li > a {
+    color: #FFFFFF;
 }
+
 #banner h1 {
     font-size: 70px;
     color: #fff;
@@ -42,9 +42,9 @@ mobile-search-bar
     cursor: pointer;
 }
 
-#fusion #home h2 {
+#home h2 {
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     margin-bottom: 10px;
 }
