@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <title>Cancun.com</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	    <link rel="stylesheet" href="public_html/css/pages/base.css">
+	    <link rel="stylesheet" href="public_html/css/pages/style.css">
+	    <link rel="stylesheet" href="public_html/css/pages/plugins.css">
+	    <link rel="stylesheet" href="public_html/css/pages/date.css">
+	    <link rel="stylesheet" href="public_html/css/hotels/reservation.css">
+	    <link rel="stylesheet" href="public_html/css/pages/map.css">
+	    {% block head %}{% endblock %}
+	</head>
+	<body>
+	     <div id="fusion" class="{{ page }}">
+			<div id="f-items" class="f-items m d">
+	     		{% for a in 1..8 %}
+	     			{{ map_price }}
+		     		<div class="f-item" data-marker="{{ loop.index0 }}" data-marker-price="${{ random(200) + 100 }}" {{ loop.first ? 'data-marker-active data-marker-active-expanded' }}>
+		     			<h3>Heading</h3>
+		     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci reprehenderit dolorem, ipsa optio! Architecto doloribus possimus distinctio cumque natus sit facere ratione error est. Obcaecati, perferendis dignissimos esse! Ad, omnis.</p>
+		     		</div>
+	     		{% endfor %}
+	     	</div>
+	     	<div class="f-map pure-form" data-map data-map-list="#f-items">
+	     		<div class="f-map-canvas"></div>
+	     		{% if true %}
+		     		<div class="f-map-zoom f-map-box">
+						<div class="f-map-zoom-in"></div>
+						<div class="f-map-zoom-out"></div>
+		     		</div>
+	     		{% endif %}
+				<div class="f-map-places f-map-select">
+					<span class="icon icon-arrow-down-small down-arrow"></span>
+					{# <span class="icon icon-arrow-down down-arrow"></span> #}
+					<select class="f-map-box pure-input-1 pure-input">
+						<option value="" selected="selected" disabled="disabled">Choose</option>
+						<option value="restaurant">Restaurants</option>
+					</select>
+				</div>
+			</div>
+			<div id="fusion-scripts">
+				<script src="public_html/js/main.js"></script>
+				<script src="public_html/js/map.js"></script>
+			</div>
+	     </div>
+	</body>
+</html>

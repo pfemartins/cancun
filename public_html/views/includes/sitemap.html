@@ -1,5 +1,5 @@
-{% extends '/views/includes/page.html' %} {% block head %}
-<link rel="stylesheet" href="public_html/css/pages/sitemap.css">{{ parent() }} {% endblock %} {% block main %}
+{% extends '/views/includes/page.html' %}
+{% block main %}
 <main id="sitemap">
     <div class="fusion-container pure-g row">
         <div class="fusion-list row nopad">
@@ -12,15 +12,14 @@
                     <li><a href="{{ domain }}hotel-landing">Hotel Landing Page</a></li>
                     <li><a href="{{ domain }}hotel-reservation">Hotel Reservation Page</a></li>
                     <li><a href="{{ domain }}hotel-checkout">Hotel Checkout Page</a></li>
+                    <li><a href="{{ domain }}explore">Explore</a></li>
                     <li><a href="{{ domain }}explore-regions">Explore Regions</a></li>
                     <li><a href="{{ domain }}experience-land">Explore Land</a></li>
                     <li><a href="{{ domain }}site-search">Site Search</a></li>
                     <li><a href="{{ domain }}weddings">Weddings</a></li>
                 </ul>
             </div>
-            <div class="pure-u-1 pure-sm-1-2">
-
-            </div>
+            <div class="pure-u-1 pure-sm-1-2"></div>
         </div>
     </div>
 </main>

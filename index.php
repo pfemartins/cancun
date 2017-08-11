@@ -18,6 +18,7 @@
           // HOME
           case $url."master":
                // $parameters['page'] = 'home';
+               $parameters['banner'] = true;
                $twigPath = 'views/master/home.html';
                break;
           case $url."sr-hotels":
@@ -35,6 +36,11 @@
         case $url."hotel-reservation":
                // $parameters['page'] = 'home';
                $twigPath = 'views/hotels/reservation.html';
+               break;
+        case $url."explore":
+               $parameters['banner'] = true;
+               // $parameters['page'] = 'home';
+               $twigPath = 'views/hotels/explore.html';
                break;
         case $url."explore-regions":
                // $parameters['page'] = 'home';
@@ -55,6 +61,8 @@
         case $url."weddings":
                // $parameters['page'] = 'home';
                $twigPath = 'views/hotels/weddings.html';
+        case $url."map":
+               $twigPath = 'views/includes/map.html';
                break;
         default:
                break;

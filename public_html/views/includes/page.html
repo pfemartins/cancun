@@ -1,39 +1,42 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Cancun.com</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    <link href="//cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" href="public_html/css/pages/base.css">
-    <link rel="stylesheet" href="public_html/css/pages/style.css">
-    <link rel="stylesheet" href="public_html/css/pages/plugins.css">
-    <link rel="stylesheet" href="public_html/css/pages/date.css">
-    <link rel="stylesheet" href="public_html/css/hotels/reservation.css"> {% block head %}{% endblock %}
-    <!--[if (gte IE 6)&(lte IE 8)]>
-     <link rel="stylesheet" href="public_html/css/pages/ie/ie-8.css">
-     <![endif]-->
-    <!--[if lt IE 10]>
-     <link rel="stylesheet" href="public_html/css/pages/ie/ie.css"/>
-     <script src="public_html/js/pages/ie.js"></script>
-     <![endif]-->
-</head>
-
-<body>
-    <div id="fusion" class="{{ page }}">
-        {% if 'master' in urlCurrent %}
-        <div id="banner">
-            {% endif %} {% include 'views/includes/header.html' %} {% block main %}{% endblock %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{% block title %}Cancun.com{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+        <link rel="stylesheet" href="public_html/css/pages/base.css">
+        <link id="fusion-css-style" rel="stylesheet" href="public_html/css/pages/style.css">
+        <link rel="stylesheet" href="public_html/css/pages/plugins.css">
+        <link rel="stylesheet" href="public_html/css/pages/date.css">
+        <link rel="stylesheet" href="public_html/css/hotels/reservation.css">
+        {% block head %}{% endblock %}
+        <!--[if (gte IE 6)&(lte IE 8)]>
+         <link rel="stylesheet" href="public_html/css/pages/ie/ie-8.css">
+         <![endif]-->
+        <!--[if lt IE 10]>
+         <link rel="stylesheet" href="public_html/css/pages/ie/ie.css"/>
+         <script src="public_html/js/pages/ie.js"></script>
+         <![endif]-->
+    </head>
+    <body>
+        <div id="fusion" class="{{ page }}">
+            {% if banner %}
+                <div id="banner">
+            {% endif %}
+                    {% include 'views/includes/header.html' %}
+            {% if banner %}
+                    {% block banner %}{% endblock %}
+                </div>
+            {% endif %}
+            {% block main %}{% endblock %}
             <div class="fusion-overlay inactive"></div>
             {% include 'views/includes/footer.html' %}
             <div id="fusion-scripts">
                 <script src="public_html/js/main.js"></script>
             </div>
-            {% block foot %} {% endblock %}
+            {% block foot %}{% endblock %}
         </div>
-</body>
-
+    </body>
 </html>

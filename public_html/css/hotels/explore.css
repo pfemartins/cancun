@@ -1,0 +1,270 @@
+#banner {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    max-width: 1470px;
+}
+
+.swiper-slide-inner,
+#explore #explore-summary-featured,
+#explore #explore-summary,
+#banner #banner-title {
+    position: relative;
+}
+
+.swiper-overlay,
+.swiper-slide-price,
+.swiper-container .button-next,
+#banner #banner-title:before {
+    position: absolute;
+}
+
+#explore #explore-summary-featured,
+#banner #banner-title {
+    font-weight: 700;
+}
+
+.swiper-container .button-next,
+.swiper-overlay {
+    background: #FFFFFF;
+}
+
+.swiper-overlay,
+.swiper-slide-featured {
+    height: 315px;
+}
+
+.small-gallery .swiper-slide-featured {
+    height: 200px;
+}
+
+.gallery-popular-tours,
+#explore {
+    margin-bottom: 45px;
+}
+
+h2.margin-top {
+    margin-top: 45px;
+}
+
+.fusion-cover {
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#fusion .fusion-container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#fusion .fusion-color {
+    color: #39A58D;
+}
+
+#explore h2,
+#explore #explore-summary-title {
+    font-weight: 400;
+}
+
+#explore h2 {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#explore #explore-summary-title,
+#explore #explore-summary-inner * {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#explore #explore-summary-title {
+    color: #7C7C7C;
+    letter-spacing: 0.67px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #E3E3E3;
+    margin-bottom: 10px;
+}
+
+#explore #explore-summary-featured {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#explore #explore-summary-inner {
+    background: #F7F7F7;
+    padding: 18px;
+}
+
+#explore #explore-summary-content * {
+    margin-bottom: 10px;
+}
+
+#explore #explore-summary-content *:last-child {
+    margin-bottom: 0;
+}
+
+#explore #explore-map-inner {
+    background-color: #EEF8F9;
+    min-height: 550px;
+}
+
+#banner #banner-inner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#banner #banner-content * {
+    font-size: 14px;
+}
+
+#banner #banner-title {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 3px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+#banner #banner-title:before {
+    content: '';
+    height: 3px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #373737;
+    max-width: 100px;
+}
+
+.swiper-slide {
+    width: 230px;
+    box-sizing: border-box;
+}
+
+.small-gallery .swiper-slide {
+    width: 314px;
+}
+
+.swiper-slide-inner {
+    padding-right: 45px;
+}
+
+.swiper-slide-price {
+    top: 0;
+    right: 0;
+    font-weight: 400;
+}
+
+.swiper-slide-featured {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.swiper-container .button-next {
+    right: 10px;
+    left: auto;
+    padding: 7px 15px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #CDCDCD;
+}
+
+.swiper-container .button-next .icon {
+    margin-top: 3px;
+}
+
+.swiper-overlay {
+    width: 230px;
+    background: -webkit-linear-gradient(left, transparent 30%, #FFFFFF 86%);
+    background: -o-linear-gradient(right, transparent 30%, #FFFFFF 86%);
+    background: -moz-linear-gradient(right, transparent 30%, #FFFFFF 86%);
+    background: linear-gradient(to right, transparent 30%, #FFFFFF 86%);
+    right: -20px;
+    left: auto;
+    top: 0;
+    z-index: 2;
+}
+
+@media (max-width: 767px) {
+    .nav-wrap {
+        display: none;
+    }
+    #banner h1 {
+        font-size: 48px;
+        line-height: 55px;
+    }
+    #explore #explore-summary {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    #explore #explore-summary-featured {
+        height: 155px;
+    }
+}
+
+@media (min-width: 768px) {
+    #fusion .fusion-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #banner nav.top ul.Menu > li > a,
+    #banner #banner-content *,
+    #banner #banner-title {
+        color: #FFFFFF;
+    }
+    #banner {
+        background:url(../../images/hotels/explore/banner.jpg);
+        background-size: cover;
+    }
+    #banner .icon-logo {
+        background-position: -10px -1241px;
+        width: 118px;
+        height: 54px;
+    }
+    #banner #banner-title {
+        font-size: 54px;
+        line-height: 62px;
+        letter-spacing: 3px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+    #banner #banner-title:before {
+        background: #FFFFFF;
+        height: 5px;
+        max-width: 150px;
+    }
+    #banner #banner-inner {
+        padding-top: 150px;
+        padding-bottom: 45px;
+    }
+    #banner #banner-content {
+        max-width: 718px;
+    }
+    #banner #banner-content * {
+        font-size: 16px;
+    }
+    #explore {
+        padding-top: 35px;
+    }
+    #explore #explore-summary {
+        padding: 0;
+    }
+    #explore #explore-summary-inner {
+        padding-right: 60%;
+    }
+    #explore #explore-summary-featured {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+    }
+}

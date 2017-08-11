@@ -1,0 +1,108 @@
+{% extends '/views/includes/page.html' %}
+{% block banner %}
+	{{ parent() }}
+	<div id="banner-inner" class="fusion-container">
+		<h1 id="banner-title">
+			<span>Explore</span>
+			<span class="hide-for-large">Cancun</span>
+		</h1>
+		<div id="banner-content">
+			<p>Cancun, Quintana Roo, and the entirety of the Yucatan Peninsula are within range once you land.  Where will you explore?</p>
+		</div>
+	</div>
+{% endblock %}
+{% block main %}
+	<main id="explore">
+		<div id="explore-summary" class="fusion-container">
+			<div id="explore-summary-inner">
+				<h3 id="explore-summary-title">Beyond Cancun</h3>
+				<div id="explore-summary-content">
+					<p>Stay in Cancun for your stay or go out and beyond to explore ruins, cenotes, peaceful islands, local villages and the entirety of the Yucatan.</p>
+					<a class="fusion-color" href="#">Learn more about the city of Cancun</a>
+				</div>
+			</div>
+			<div id="explore-summary-featured" class="fusion-align fusion-cover" style="background-image:url(public_html/images/hotels/explore/summary.jpg">
+				<span>Within Cancun</span>
+			</div>
+		</div>
+		<div id="explore-map" class="fusion-container-lg fusion-container">
+			<h2 id="explore-map-title" class="margin-top">Destinations Beyond Cancun</h2>
+			<div id="explore-map-inner"></div>
+		</div>
+		<div class="fusion-container">
+			<h2 class="margin-top">Popular tours in Cancun</h2>
+			<div class="swiper-container gallery-popular-tours">
+				<div class="swiper-wrapper">
+		            <a class="swiper-slide" href="#">
+		            	<span class="swiper-slide-featured fusion-cover" style="background-image:url(public_html/images/master/dolphins.jpg"></span>
+		            	<p class="swiper-slide-inner">
+		            		<span class="swiper-slide-content">Swim with dolphins</span>
+		            		<span class="swiper-slide-price">$120</span>
+		            	</p>
+		            </a>
+		            <a class="swiper-slide" href="#">
+		            	<span class="swiper-slide-featured fusion-cover" style="background-image:url(public_html/images/master/sailing.jpg"></span>
+		            	<p class="swiper-slide-inner">
+		            		<span class="swiper-slide-content">Take a sailing tour</span>
+		            		<span class="swiper-slide-price">$200</span>
+		            	</p>
+		            </a>
+		            <a class="swiper-slide" href="#">
+		            	<span class="swiper-slide-featured fusion-cover" style="background-image:url(public_html/images/master/ruins.jpg"></span>
+		            	<p class="swiper-slide-inner">
+		            		<span class="swiper-slide-content">Explore ancient ruins</span>
+		            		<span class="swiper-slide-price">$60</span>
+		            	</p>
+		            </a>
+		            <a class="swiper-slide" href="#">
+		            	<span class="swiper-slide-featured fusion-cover" style="background-image:url(public_html/images/master/scuba-diving.jpg"></span>
+		            	<p class="swiper-slide-inner">
+		            		<span class="swiper-slide-content">Scuba dive in crystal clear waters</span>
+		            		<span class="swiper-slide-price">$100</span>
+		            	</p>
+		            </a>
+		        </div>
+		        <!-- Add Arrows -->
+		        <div class="swiper-overlay"></div>
+		        <div class="button-next"><i class="icon icon-arrow-right"></i></div>
+			</div>
+			<h2 class="margin-top">Popular stays in Cancun</h2>
+			<div class="swiper-container small-gallery gallery-popular-stays">
+				<div class="swiper-wrapper">
+		              <a class="swiper-slide" href="#">
+		            	 <span class="swiper-slide-featured fusion-cover" style="background-image:url(public_html/images/hotels/explore/stays/1.jpg)"></span>
+		            	 <p class="swiper-slide-inner">
+		            		 <span class="swiper-slide-content">GR Caribe by Solaris Deluxe All Inclusive</span>
+		            		 <span class="swiper-slide-price">$205</span>
+		            	 </p>
+		             </a>
+		              <a class="swiper-slide" href="#">
+		            	 <span class="swiper-slide-featured fusion-cover" style="background-image:url(public_html/images/hotels/explore/stays/2.jpg)"></span>
+		            	 <p class="swiper-slide-inner">
+		            		 <span class="swiper-slide-content">GR Caribe by Solaris Deluxe All Inclusive</span>
+		            		 <span class="swiper-slide-price">$205</span>
+		            	 </p>
+		             </a>
+		              <a class="swiper-slide" href="#">
+		            	 <span class="swiper-slide-featured fusion-cover" style="background-image:url(public_html/images/hotels/explore/stays/3.jpg)"></span>
+		            	 <p class="swiper-slide-inner">
+		            		 <span class="swiper-slide-content">GR Caribe by Solaris Deluxe All Inclusive</span>
+		            		 <span class="swiper-slide-price">$205</span>
+		            	 </p>
+		             </a>
+		        </div>
+		        <div class="swiper-overlay"></div>
+		        <div class="button-next"><i class="icon icon-arrow-right"></i></div>
+			</div>
+		</div>
+	</main>
+{% endblock %}
+{% block title %}Explore - {{ parent() }}{% endblock %}
+{% block head %}
+	{{ parent() }}
+	<link rel="stylesheet" href="public_html/css/hotels/explore.css"> 
+{% endblock %}
+{% block foot %}
+	{{ parent() }}
+	<script src="public_html/js/hotels/explore.js"></script>
+{% endblock %}

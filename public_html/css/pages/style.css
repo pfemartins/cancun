@@ -245,9 +245,12 @@ sup {
 #fusion .fusion-container {
 	margin-left: auto;
 	margin-right: auto;
-	width: 977px;
-	min-height: 200px;
+	max-width: 977px;
 	box-sizing: border-box;
+}
+
+#fusion .fusion-container-lg {
+	max-width: 1470px;
 }
 
 #fusion header nav.fusion-container {
@@ -580,9 +583,6 @@ html.svg.touch #fusion .icon {
 	content: '';
 	display: none;
 }
-#fusion #banner nav.top ul li a {
-	text-transform: uppercase;
-}
 
 #navbar .navbar {
 	display: flex;
@@ -884,13 +884,13 @@ html.svg.touch #fusion .icon {
 	}
 }
 
-style.css: 494 #fusion a#scroll-to-top {
+#fusion a#scroll-to-top {
 	cursor: pointer;
 }
 
 /* FOOTER */
 #fusion footer .fusion-container {
-	border-top: 2px solid #eaeaea;
+	border-top: 1px solid #eaeaea;
 	padding-top: 40px;
 }
 #fusion footer a {
