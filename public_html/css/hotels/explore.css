@@ -10,13 +10,33 @@ mobile-search-bar
     box-sizing: border-box;
     position: relative;
     display: block;
-    margin: 0 auto 30px;
     max-width: 1470px;
+}
+
+.swiper-slide-inner,
+#banner #banner-title {
+    position: relative;
+}
+
+#banner nav.top ul.Menu > li > a,
+#banner #banner-content *,
+#banner #banner-title {
+    color: #FFFFFF;
+}
+
+#home h2,
+#banner #banner-content * {
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .gallery-popular-tours,
 #home {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
+}
+
+h2.margin-top {
+    margin-top: 45px;
 }
 
 #banner .icon-logo {
@@ -25,17 +45,15 @@ mobile-search-bar
     height: 54px;
 }
 
-#banner nav.top ul.Menu > li > a {
-    color: #FFFFFF;
+#banner #banner-title {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-#banner h1 {
-    font-size: 70px;
-    color: #fff;
-    font-weight: 700;
-    line-height: 79px;
-    margin-bottom: 50px;
-}
 #banner a.button {
     width: 300px;
     padding: 15px;
@@ -44,8 +62,6 @@ mobile-search-bar
 
 #home h2 {
     text-align: left;
-    font-size: 16px;
-    font-weight: 400;
     margin-bottom: 10px;
 }
 
@@ -130,30 +146,15 @@ mobile-search-bar
     top: 36%;
 }
 
-h2.margin-top {
-    margin-top: 30px;
-}
-
 @media (max-width: 767px) {
     .nav-wrap {
         display: none;
     }
-    #banner {
-       height: 700px;
-       background-position: center;
-    }
-    #fusion #banner a.button {
-        margin: 20px auto;
-    }
     #banner h1 {
-        font-weight: 500;
         text-align: center;
         font-size: 48px;
         line-height: 55px;
         margin-top: 140px;
-    }
-    #banner h1 br {
-        display: none;
     }
     #fusion .fusion-container {
         padding: 0 15px;
@@ -161,7 +162,16 @@ h2.margin-top {
 }
 
 @media (min-width: 768px) {
-    #banner {
-        height: 702px;
+    #banner #banner-title {
+        font-size: 54px;
+        line-height: 62px;
+        letter-spacing: 3px;
+    }
+    #banner #banner-inner {
+        padding-top: 350px;
+        padding-bottom: 45px;
+    }
+    #banner #banner-content {
+        max-width: 718px;
     }
 }
